@@ -1,5 +1,5 @@
 # Next Generation Virtual Private Network
-I'd like to share my efforts for making a Next Generation Virtual Private Network here.
+I'd like to share my efforts for making a Next Generation Virtual Private Network here. This is an ongoing project and everything is from scratch.
 
 For this project, I did the following steps and will explain each one separately:
 1. Making hardware (aka assembling the hardware components)
@@ -13,16 +13,15 @@ There are many hardware firewalls in the market. For example
 - Best firewalls for small businesses [link](https://www.digitaltrends.com/computing/best-firewalls-for-small-businesses/)
 - Cisco Meraki MX - $102.33
 
-
-Some of the more advanced firewalls use FPGA, such as Palo Alto Networks PA-7000 series [link](https://www.paloaltonetworks.com/resources/pa-series-next-generation-firewalls-hardware-architectures)
+- Some of the more advanced firewalls use FPGA, such as Palo Alto Networks PA-7000 series [link](https://www.paloaltonetworks.com/resources/pa-series-next-generation-firewalls-hardware-architectures)
 
 <p align="center">
 <img src="pics/PA-7000.png" alt="PA-7000" style="width:400px;"/>
 </p>
 
 
-## Can we make the hardware from scratch? YES
-I used two hardwares:
+## Can we make the hardware from scratch?
+YES. I used two hardwares:
 - I used the simplest processor: Raspberry pi 4
 <p align="center">
 <img src="pics/IMG_4981.jpg" alt="VPN simplest processor" style="width:800px;"/>
@@ -32,6 +31,9 @@ I used two hardwares:
 <p align="center">
 <img src="pics/IMG_4970.jpg" alt="VPN with FPGA Network Interface Card" style="width:800px;"/>
 </p>
+
+
+I like the Raspberry pi 4 hardware, it is powerful, cheap, small, low power consumption, light weight with the minimal hardware headache.
 
 (todo: I will add the list of the Components soon)
 
@@ -141,9 +143,9 @@ A router is a network device that connects two networks together.
 If you have two Ethernet ports on a computer, with different networks on each, your computer can act as a router.
 
 ## default router
-We have two interfaces (eth0 and wlan0) in the device (firewall), which one should be the default router?
+We have two interfaces (`eth0` and `wlan0`) in the device (firewall), which one should be the default router?
 
-For example in the device, you ping google.com, how to tell it should it route through wlan0 while keeping both ports as default?
+For example in the device, you `ping google.com`, how to tell it should it route through `wlan0` while keeping both ports as default?
 
 
 
@@ -179,8 +181,8 @@ I used OpenVPN.
 (todo)
 
 ## Proxy server
-For the Proxy server, I use the `squid` package.
-Here is an example to filter facebook that it works great:
+For the Proxy server, I use the `squid` package. The default port is 3128.
+Here is an example to filter facebook that it works great. The reply message is `403 Forbidden`:
 
 ```
 $ curl -v -x http://192.168.0.1:3128 http://www.facebook.com/
