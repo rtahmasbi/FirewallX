@@ -1,7 +1,12 @@
 # Next Generation Virtual Private Network
 I'd like to share my efforts for making a Next Generation Virtual Private Network here.
 
-For this project, I did the following steps and will explain each separately.
+For this project, I did the following steps and will explain each one separately:
+1. Making hardware (aka assembling the hardware components)
+2. making Linux from scratch as the VPN OS
+3. Configurations and settings
+4. Picking the components
+
 
 # Hardware
 There are many hardware firewalls in the market. For example 
@@ -10,18 +15,21 @@ There are many hardware firewalls in the market. For example
 
 
 Some of the more advanced firewalls use FPGA, such as Palo Alto Networks PA-7000 series [link](https://www.paloaltonetworks.com/resources/pa-series-next-generation-firewalls-hardware-architectures)
-![PA-7000](pics/PA-7000.jpg)
+
+<img src="pics/PA-7000.png" alt="PA-7000" style="width:800px;"/>
+
 
 
 ## Can we make the hardware from scratch? YES
 I used two hardwares:
 - I used the simplest processor: Raspberry pi 4
-![VPN simplest processor](pics/IMG_4981.jpg)
+<img src="pics/IMG_4981.jpg" alt="VPN simplest processor" style="width:800px;"/>
 
 - I also made more advanced version with FPGA Network Interface Card
-![VPN with FPGA Network Interface Card](pics/IMG_4970.jpg)
+<img src="pics/IMG_4970.jpg" alt="VPN with FPGA Network Interface Card" style="width:800px;"/>
 
-(I will add the list of the Components soon)
+
+(todo: I will add the list of the Components soon)
 
 
 
@@ -125,11 +133,25 @@ For example in the device, you ping google.com, how to tell it should it route t
 
 
 
-# Components (ip blocking, VPN, IPsec, TLS/SSL tunneling, url filtering, proxy, intrusion detection, QoS, UI, ML, ...)
+# Components
+- ip blocking
+- VPN
+- IPsec
+- TLS/SSL tunneling
+- url filtering
+- proxy
+- intrusion detection
+- QoS
+- UI
+- ML
+- etc.
+
 
 ## What is Next-generation firewall
-A good reference from [Cisco](https://www.cisco.com/c/en/us/products/security/firewalls/what-is-a-next-generation-firewall.html)
+A good reference for the definition of Next-generation firewall can be found from [Cisco](https://www.cisco.com/c/en/us/products/security/firewalls/what-is-a-next-generation-firewall.html)
 
+
+In summary:
 - deep packet inspection (DPI),
 - an intrusion prevention system (IPS). 
 - TLS/SSL encrypted traffic inspection, 
@@ -137,6 +159,7 @@ A good reference from [Cisco](https://www.cisco.com/c/en/us/products/security/fi
 - QoS/bandwidth management,
 - antivirus inspection
 - third-party identity management integration (i.e. LDAP, RADIUS, Active Directory)
+
 
 Protection based on ports, protocols, IP addresses is no more reliable and viable. This has led to the development of identity-based security approach
 NGFW: application awareness and control, integrated intrusion prevention, and cloud-delivered threat intelligence.
@@ -173,5 +196,5 @@ $ curl -v -x http://192.168.0.1:3128 http://www.facebook.com/
 ```
 
 
-## intrusion detection
-It will come soon
+## Intrusion detection
+(It will come soon)
