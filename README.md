@@ -57,19 +57,19 @@ You can start learning about making a linux from scratch [here](https://www.linu
 Before you start making a linux, you need to know the
 - Cross-compiling
 <p align="center">
-<img src="pics/cross_compiling.png" alt="Cross-compiling" style="width:200px;"/>
+<img src="pics/cross_compiling.png" alt="Cross-compiling" style="width:350px;"/>
 </p>
 
 
 - Canadian compiling
 <p align="center">
-<img src="pics/canadian_compiling.png" alt="Canadian compiling" style="width:200px;"/>
+<img src="pics/canadian_compiling.png" alt="Canadian compiling" style="width:350px;"/>
 </p>
 
 
 
-### List of packages to make the minimal linux OS
-For making a minimal linux distribution, you need to compile ~ 100 packages.
+### List of packages to make the minimal Linux OS
+For making a minimal Linux distribution, you need to compile ~ 100 packages.
 Here is a list of the fundamental packages:
 
 ```
@@ -77,7 +77,7 @@ Binutils-2.39 - Pass 1
 GCC-12.2.0 - Pass 1
 Linux-5.19.2 API Headers
 Glibc-2.36
-Libstdc++ from Man-pages-5.13
+Libstdc++
 Iana-Etc-20220812
 Glibc-2.36
 Zlib-1.2.12
@@ -103,7 +103,7 @@ Bash-5.1.16
 Automake-1.16.5
 OpenSSL-3.0.5
 Kmod-30
-Libelf from Elfutils-0.187
+Libelf
 Libffi-3.4.2
 Python-3.10.6
 Wheel-0.37.1
