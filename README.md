@@ -16,18 +16,22 @@ There are many hardware firewalls in the market. For example
 
 Some of the more advanced firewalls use FPGA, such as Palo Alto Networks PA-7000 series [link](https://www.paloaltonetworks.com/resources/pa-series-next-generation-firewalls-hardware-architectures)
 
-<img src="pics/PA-7000.png" alt="PA-7000" style="width:800px;"/>
-
+<p align="center">
+<img src="pics/PA-7000.png" alt="PA-7000" style="width:400px;"/>
+</p>
 
 
 ## Can we make the hardware from scratch? YES
 I used two hardwares:
 - I used the simplest processor: Raspberry pi 4
+<p align="center">
 <img src="pics/IMG_4981.jpg" alt="VPN simplest processor" style="width:800px;"/>
+</p>
 
 - I also made more advanced version with FPGA Network Interface Card
+<p align="center">
 <img src="pics/IMG_4970.jpg" alt="VPN with FPGA Network Interface Card" style="width:800px;"/>
-
+</p>
 
 (todo: I will add the list of the Components soon)
 
@@ -36,24 +40,32 @@ I used two hardwares:
 # Linux OS
 For making a VPN you need to make an operation system. One of the best options are making a new distribution from Linux. You also need the kernel programming knowledge.
 
-## Why we need a new OS (linux distribution of linux)?
+## Why we need a new OS for a VPN?
 - Security reasons (we don't know if there is any hidden code inside the distributions).
 - Flexibility
 - Lightweight (there are many packages in Ubuntu that are not used in firewall such as audio/video)
 
-## Can we create a new distribution of Linux from source? Yes
-But it is very hard and needs lots of linux knowledge.
+
+## Can we create a new distribution of Linux from source?
+Yes. But it is very hard and needs lots of linux knowledge.
 Linux kernel had over 30 million lines of code!
 
 
 ## Linux from Scratch
-I will add the codes and log files here soon.
-
 You can start learning about making a linux from scratch [here](https://www.linuxfromscratch.org/)
 
 Before you start making a linux, you need to know the
 - Cross-compiling
+<p align="center">
+<img src="pics/cross_compiling.png" alt="Cross-compiling" style="width:200px;"/>
+</p>
+
+
 - Canadian compiling
+<p align="center">
+<img src="pics/canadian_compiling.png" alt="Canadian compiling" style="width:200px;"/>
+</p>
+
 
 
 ### List of packages to make the minimal linux OS
@@ -104,6 +116,8 @@ Check-0.15.2
 
 For an advanced firewall you need ~ 700 packages.
 
+I will add the codes and log files here soon. (todo)
+
 
 ### booting
 One of the challenging part was to boot the hardware with my new Linux distribution. 
@@ -126,7 +140,9 @@ How to allow traffic pass through the device?
 A router is a network device that connects two networks together.
 If you have two Ethernet ports on a computer, with different networks on each, your computer can act as a router.
 
-## We have two interfaces (eth0 and wlan0) in the device (firewall), which one should be the default router?
+## default router
+We have two interfaces (eth0 and wlan0) in the device (firewall), which one should be the default router?
+
 For example in the device, you ping google.com, how to tell it should it route through wlan0 while keeping both ports as default?
 
 
@@ -134,18 +150,6 @@ For example in the device, you ping google.com, how to tell it should it route t
 
 
 # Components
-- ip blocking
-- VPN
-- IPsec
-- TLS/SSL tunneling
-- url filtering
-- proxy
-- intrusion detection
-- QoS
-- UI
-- ML
-- etc.
-
 
 ## What is Next-generation firewall
 A good reference for the definition of Next-generation firewall can be found from [Cisco](https://www.cisco.com/c/en/us/products/security/firewalls/what-is-a-next-generation-firewall.html)
@@ -163,6 +167,16 @@ In summary:
 
 Protection based on ports, protocols, IP addresses is no more reliable and viable. This has led to the development of identity-based security approach
 NGFW: application awareness and control, integrated intrusion prevention, and cloud-delivered threat intelligence.
+
+
+
+## ip blocking
+(todo)
+
+
+## VPN
+I used OpenVPN.
+(todo)
 
 ## Proxy server
 For the Proxy server, I use the `squid` package.
@@ -198,3 +212,11 @@ $ curl -v -x http://192.168.0.1:3128 http://www.facebook.com/
 
 ## Intrusion detection
 (It will come soon)
+
+
+## IPsec
+## TLS/SSL tunneling
+## url filtering
+## QoS
+## UI
+## ML
