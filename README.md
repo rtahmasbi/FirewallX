@@ -31,11 +31,12 @@ YES. I used two hardwares:
 <p align="center">
 <img src="pics/IMG_4970.jpg" alt="VPN with FPGA Network Interface Card" style="width:800px;"/>
 </p>
+(todo: I will add the list of the Components soon)
+
 
 
 I like the Raspberry pi 4 hardware, it is powerful, cheap, small, low power consumption, light weight with the minimal hardware headache.
 
-(todo: I will add the list of the Components soon)
 
 
 
