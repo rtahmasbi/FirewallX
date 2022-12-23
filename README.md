@@ -169,6 +169,7 @@ In summary:
 
 
 Protection based on ports, protocols, IP addresses is no more reliable and viable. This has led to the development of identity-based security approach
+
 NGFW: application awareness and control, integrated intrusion prevention, and cloud-delivered threat intelligence.
 
 
@@ -179,6 +180,7 @@ NGFW: application awareness and control, integrated intrusion prevention, and cl
 
 ## VPN
 I used OpenVPN.
+
 (todo)
 
 ## Proxy server
@@ -223,3 +225,7 @@ $ curl -v -x http://192.168.0.1:3128 http://www.facebook.com/
 ## QoS
 ## UI
 ## ML
+
+
+# Can we make it as the Cloud VPN (Virtual VPN)?
+Yes.
