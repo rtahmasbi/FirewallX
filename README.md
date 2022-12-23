@@ -3,9 +3,9 @@ I'd like to share my efforts for making a Next Generation Virtual Private Networ
 
 For this project, I did the following steps and will explain each one separately:
 1. Making hardware (aka assembling the hardware components)
-2. making Linux from scratch as the VPN OS
+2. Making Linux from scratch as the VPN OS
 3. Configurations and settings
-4. Picking the components
+4. Making the components
 
 
 # Hardware
@@ -60,13 +60,13 @@ You can start learning about making a linux from scratch [here](https://www.linu
 Before you start making a linux, you need to know the
 - Cross-compiling
 <p align="center">
-<img src="pics/cross_compiling.png" alt="Cross-compiling" style="width:350px;"/>
+<img src="pics/cross_compiling.png" alt="Cross-compiling" style="width:300px;"/>
 </p>
 
 
 - Canadian compiling
 <p align="center">
-<img src="pics/canadian_compiling.png" alt="Canadian compiling" style="width:350px;"/>
+<img src="pics/canadian_compiling.png" alt="Canadian compiling" style="width:400px;"/>
 </p>
 
 
