@@ -1,9 +1,10 @@
-# Next Generation Virtual Private Network
-I'd like to share my efforts for making a Next Generation Virtual Private Network here. This is an ongoing project and everything is from scratch.
+
+# Next Generation Firewall
+I'd like to share my efforts for making a Next Generation Firewall (NGFW) here. This is an ongoing project and everything is from scratch.
 
 For this project, I did the following steps and will explain each one separately:
 1. [Making hardware](#hardware) (aka assembling the hardware components)
-2. [Making Linux from scratch as the VPN OS](#linux-os)
+2. [Making Linux from scratch as the Firewall OS](#linux-os)
 3. [Configurations and settings](#configurations-and-settings)
 4. [Making the components](#components)
 
@@ -30,12 +31,12 @@ There are many hardware firewalls in the market. For example
 YES. I used two hardwares:
 - I used the simplest processor: Raspberry pi 4
 <p align="center">
-<img src="pics/IMG_4981.jpg" alt="VPN simplest processor" style="width:800px;"/>
+<img src="pics/IMG_4981.jpg" alt="NGFW simplest processor" style="width:800px;"/>
 </p>
 
 - I also made more advanced version with FPGA Network Interface Card
 <p align="center">
-<img src="pics/IMG_4970.jpg" alt="VPN with FPGA Network Interface Card" style="width:800px;"/>
+<img src="pics/IMG_4970.jpg" alt="NGFW with FPGA Network Interface Card" style="width:800px;"/>
 </p>
 (todo: I will add the list of the Components soon)
 
@@ -52,9 +53,9 @@ I like the Raspberry pi 4 hardware, it is powerful, cheap, small, low power cons
 
 
 # Linux OS
-For making a VPN you need to make an operation system. One of the best options are making a new distribution from Linux. You also need the kernel programming knowledge.
+For making a NGFW, you need to make an operation system. One of the best options are making a new distribution from Linux. You also need the kernel programming knowledge.
 
-## Why we need a new OS for a VPN?
+## Why we need a new OS for a NGFW?
 - Security reasons (we don't know if there is any hidden code inside the distributions).
 - Flexibility
 - Lightweight (there are many packages in Ubuntu that are not used in firewall such as audio/video)
@@ -131,9 +132,9 @@ Check-0.15.2
 For an advanced firewall you need ~ 700 packages.
 
 ## Codes and logs
-My codes are [here](Linux_VPN_codes/), you need to run them in the provided order because most of the packages are dependent to each other.
+My codes are [here](Linux_NGFW_codes/), you need to run them in the provided order because most of the packages are dependent to each other.
 
-The log files are provided [here](Linux_VPN_logs/)
+The log files are provided [here](Linux_NGFW_logs/)
 
 
 (todo: complete the list of codes and logs)
@@ -262,5 +263,5 @@ $ curl -v -x http://192.168.0.1:3128 http://www.facebook.com/
 
 
 
-# Can we make it as the Cloud VPN?
+# Can we make it as the Cloud NGFW?
 Yes.
