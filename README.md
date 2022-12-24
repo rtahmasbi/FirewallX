@@ -227,5 +227,5 @@ $ curl -v -x http://192.168.0.1:3128 http://www.facebook.com/
 ## ML
 
 
-# Can we make it as the Cloud VPN (Virtual VPN)?
+# Can we make it as the Cloud VPN?
 Yes.
