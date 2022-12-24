@@ -10,7 +10,7 @@ For this project, I did the following steps and will explain each one separately
 
 
 
-This custom Firewall OS has ability to be run on Cloud too.
+This custom Firewall OS has ability to be run on the Cloud too.
 
 
 
