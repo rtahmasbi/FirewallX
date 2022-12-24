@@ -13,7 +13,7 @@ There are many hardware firewalls in the market. For example
 - Best firewalls for small businesses [link](https://www.digitaltrends.com/computing/best-firewalls-for-small-businesses/)
 - Cisco Meraki MX - $102.33
 
-- Some of the more advanced firewalls use FPGA, such as Palo Alto Networks PA-7000 series [link](https://www.paloaltonetworks.com/resources/pa-series-next-generation-firewalls-hardware-architectures)
+- Some of the more advanced firewalls use FPGA, such as [Palo Alto Networks PA-7000 series](https://www.paloaltonetworks.com/resources/pa-series-next-generation-firewalls-hardware-architectures)
 
 <p align="center">
 <img src="pics/PA-7000.png" alt="PA-7000" style="width:400px;"/>
