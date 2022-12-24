@@ -119,7 +119,13 @@ Check-0.15.2
 
 For an advanced firewall you need ~ 700 packages.
 
-I will add the codes and log files here soon. (todo)
+## Codes and logs
+My codes are [here](Linux_VPN_codes/), you need to run them in the provided order because most of the packages are dependent to each other.
+
+The log files are provided [here](Linux_VPN_logs/)
+
+
+(todo: complete the list of codes and logs)
 
 
 ### booting
@@ -175,7 +181,11 @@ NGFW: application awareness and control, integrated intrusion prevention, and cl
 
 
 ## ip blocking
-(todo)
+You can find the lists of bad ip block:
+- https://ipblocklist.com/
+- http://www.squidguard.org/blacklists.html
+
+
 
 
 ## VPN

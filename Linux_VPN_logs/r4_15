@@ -1,0 +1,346 @@
+(lfs chroot) root:/sources# begin dosfstools-4.2 tar.gz
+[lfs-scripts] Starting build of dosfstools-4.2 at Wed Sep 28 09:14:35 PM -03 2022
+(lfs chroot) root:/sources/dosfstools-4.2# l
+total 772K
+-rw-r--r-- 1 1000 1000  95K Jan 31  2021 aclocal.m4
+-rwxr-xr-x 1 1000 1000  389 Jan 31  2021 autogen.sh
+-rw-r--r-- 1 1000 1000 166K Jan 31  2021 ChangeLog
+-rwxr-xr-x 1 1000 1000 7.3K Jan 31  2021 compile
+-rwxr-xr-x 1 1000 1000  44K Jan 31  2021 config.guess
+-rwxr-xr-x 1 1000 1000  19K Jan 31  2021 config.rpath
+-rwxr-xr-x 1 1000 1000  36K Jan 31  2021 config.sub
+-rwxr-xr-x 1 1000 1000 231K Jan 31  2021 configure
+-rw-r--r-- 1 1000 1000 2.9K Jan 31  2021 configure.ac
+-rw-r--r-- 1 1000 1000  35K Jan 31  2021 COPYING
+-rwxr-xr-x 1 1000 1000  24K Jan 31  2021 depcomp
+drwxr-xr-x 2 1000 1000 4.0K Jan 31  2021 doc
+-rwxr-xr-x 1 1000 1000  16K Jan 31  2021 install-sh
+-rw-r--r-- 1 1000 1000  315 Jan 31  2021 Makefile.am
+-rw-r--r-- 1 1000 1000  27K Jan 31  2021 Makefile.in
+drwxr-xr-x 2 1000 1000 4.0K Jan 31  2021 manpages
+-rwxr-xr-x 1 1000 1000 6.8K Jan 31  2021 missing
+-rw-r--r-- 1 1000 1000  13K Jan 31  2021 NEWS
+-rw-r--r-- 1 1000 1000 1.8K Jan 31  2021 README
+drwxr-xr-x 3 1000 1000 4.0K Jan 31  2021 src
+-rwxr-xr-x 1 1000 1000 4.6K Jan 31  2021 test-driver
+drwxr-xr-x 2 1000 1000 4.0K Jan 31  2021 tests
+(lfs chroot) root:/sources/dosfstools-4.2# ./configure --prefix=/usr            \
+            --enable-compat-symlinks \
+            --mandir=/usr/share/man  \
+            --docdir=/usr/share/doc/dosfstools-4.2
+checking for a BSD-compatible install... 
+/usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking whether ln -s works... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking err.h usability... yes
+checking err.h presence... yes
+checking for err.h... yes
+checking linux/fd.h usability... yes
+checking linux/fd.h presence... yes
+checking for linux/fd.h... yes
+checking linux/hdreg.h usability... yes
+checking linux/hdreg.h presence... yes
+checking for linux/hdreg.h... yes
+checking linux/version.h usability... yes
+checking linux/version.h presence... yes
+checking for linux/version.h... yes
+checking linux/loop.h usability... yes
+checking linux/loop.h presence... yes
+checking for linux/loop.h... yes
+checking sys/disk.h usability... no
+checking sys/disk.h presence... no
+checking for sys/disk.h... no
+checking sys/disklabel.h usability... no
+checking sys/disklabel.h presence... no
+checking for sys/disklabel.h... no
+checking sys/ioccom.h usability... no
+checking sys/ioccom.h presence... no
+checking for sys/ioccom.h... no
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/queue.h usability... yes
+checking sys/queue.h presence... yes
+checking for sys/queue.h... yes
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking sys/endian.h usability... no
+checking sys/endian.h presence... no
+checking for sys/endian.h... no
+checking libkern/OSByteOrder.h usability... no
+checking libkern/OSByteOrder.h presence... no
+checking for libkern/OSByteOrder.h... no
+checking for vasprintf... yes
+checking whether getmntent is declared... yes
+checking whether getmntinfo is declared... no
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking for iconv... yes
+checking for working iconv... yes
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking for xxd... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/version.h
+config.status: creating manpages/Makefile
+config.status: creating manpages/mkfs.fat.8
+config.status: creating manpages/fsck.fat.8
+config.status: creating manpages/fatlabel.8
+config.status: creating tests/Makefile
+config.status: executing depfiles commands
+(lfs chroot) root:/sources/dosfstools-4.2# 
+(lfs chroot) root:/sources/dosfstools-4.2# make
+Making all in src
+make[1]: Entering directory '/sources/dosfstools-4.2/src'
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT testdevinfo-testdevinfo.o -MD -MP -MF .deps/testdevinfo-testdevinfo.Tpo -c -o testdevinfo-testdevinfo.o `test -f 'testdevinfo.c' || echo './'`testdevinfo.c
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT testdevinfo-device_info.o -MD -MP -MF .deps/testdevinfo-device_info.Tpo -c -o testdevinfo-device_info.o `test -f 'device_info.c' || echo './'`device_info.c
+depbase=`echo check.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT check.o -MD -MP -MF $depbase.Tpo -c -o check.o check.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo file.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT file.o -MD -MP -MF $depbase.Tpo -c -o file.o file.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fsck.fat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT fsck.fat.o -MD -MP -MF $depbase.Tpo -c -o fsck.fat.o fsck.fat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo lfn.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT lfn.o -MD -MP -MF $depbase.Tpo -c -o lfn.o lfn.c &&\
+mv -f $depbase.Tpo $depbase.Po
+lfn.c: In function ‘lfn_add_slot’:
+lfn.c:202:5: warning: converting a packed ‘DIR_ENT’ pointer (alignment 1) to a ‘LFN_ENT’ pointer (alignment 2) may result in an unaligned pointer value [-Waddress-of-packed-member]
+  202 |     LFN_ENT *lfn = (LFN_ENT *) de;
+      |     ^~~~~~~
+In file included from lfn.c:33:
+fsck.fat.h:129:9: note: defined here
+  129 | typedef struct {
+      |         ^~~~~~
+lfn.c:37:9: note: defined here
+   37 | typedef struct {
+      |         ^~~~~~
+mv -f .deps/testdevinfo-testdevinfo.Tpo .deps/testdevinfo-testdevinfo.Po
+depbase=`echo boot.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT boot.o -MD -MP -MF $depbase.Tpo -c -o boot.o boot.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f .deps/testdevinfo-device_info.Tpo .deps/testdevinfo-device_info.Po
+depbase=`echo common.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT common.o -MD -MP -MF $depbase.Tpo -c -o common.o common.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT fat.o -MD -MP -MF $depbase.Tpo -c -o fat.o fat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo io.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT io.o -MD -MP -MF $depbase.Tpo -c -o io.o io.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo charconv.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT charconv.o -MD -MP -MF $depbase.Tpo -c -o charconv.o charconv.c &&\
+mv -f $depbase.Tpo $depbase.Po
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT mkfs_fat-mkfs.fat.o -MD -MP -MF .deps/mkfs_fat-mkfs.fat.Tpo -c -o mkfs_fat-mkfs.fat.o `test -f 'mkfs.fat.c' || echo './'`mkfs.fat.c
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT mkfs_fat-common.o -MD -MP -MF .deps/mkfs_fat-common.Tpo -c -o mkfs_fat-common.o `test -f 'common.c' || echo './'`common.c
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT mkfs_fat-charconv.o -MD -MP -MF .deps/mkfs_fat-charconv.Tpo -c -o mkfs_fat-charconv.o `test -f 'charconv.c' || echo './'`charconv.c
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT mkfs_fat-device_info.o -MD -MP -MF .deps/mkfs_fat-device_info.Tpo -c -o mkfs_fat-device_info.o `test -f 'device_info.c' || echo './'`device_info.c
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT blkdev/mkfs_fat-blkdev.o -MD -MP -MF blkdev/.deps/mkfs_fat-blkdev.Tpo -c -o blkdev/mkfs_fat-blkdev.o `test -f 'blkdev/blkdev.c' || echo './'`blkdev/blkdev.c
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT blkdev/mkfs_fat-linux_version.o -MD -MP -MF blkdev/.deps/mkfs_fat-linux_version.Tpo -c -o blkdev/mkfs_fat-linux_version.o `test -f 'blkdev/linux_version.c' || echo './'`blkdev/linux_version.c
+mv -f .deps/mkfs_fat-common.Tpo .deps/mkfs_fat-common.Po
+depbase=`echo fatlabel.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.    -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT fatlabel.o -MD -MP -MF $depbase.Tpo -c -o fatlabel.o fatlabel.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f blkdev/.deps/mkfs_fat-linux_version.Tpo blkdev/.deps/mkfs_fat-linux_version.Po
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT blkdev/testdevinfo-blkdev.o -MD -MP -MF blkdev/.deps/testdevinfo-blkdev.Tpo -c -o blkdev/testdevinfo-blkdev.o `test -f 'blkdev/blkdev.c' || echo './'`blkdev/blkdev.c
+mv -f .deps/mkfs_fat-charconv.Tpo .deps/mkfs_fat-charconv.Po
+gcc -DPACKAGE_NAME=\"dosfstools\" -DPACKAGE_TARNAME=\"dosfstools\" -DPACKAGE_VERSION=\"4.2\" -DPACKAGE_STRING=\"dosfstools\ 4.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"dosfstools\" -DVERSION=\"4.2\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_ERR_H=1 -DHAVE_LINUX_FD_H=1 -DHAVE_LINUX_HDREG_H=1 -DHAVE_LINUX_VERSION_H=1 -DHAVE_LINUX_LOOP_H=1 -DHAVE_SYS_QUEUE_H=1 -DHAVE_ENDIAN_H=1 -DHAVE_VASPRINTF=1 -DHAVE_DECL_GETMNTENT=1 -DHAVE_DECL_GETMNTINFO=0 -DHAVE_ICONV=1 -DICONV_CONST= -I.  -I./blkdev  -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2 -MT blkdev/testdevinfo-linux_version.o -MD -MP -MF blkdev/.deps/testdevinfo-linux_version.Tpo -c -o blkdev/testdevinfo-linux_version.o `test -f 'blkdev/linux_version.c' || echo './'`blkdev/linux_version.c
+mv -f blkdev/.deps/mkfs_fat-blkdev.Tpo blkdev/.deps/mkfs_fat-blkdev.Po
+mv -f .deps/mkfs_fat-device_info.Tpo .deps/mkfs_fat-device_info.Po
+gcc -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2   -o fsck.fat check.o file.o fsck.fat.o lfn.o boot.o common.o fat.o io.o charconv.o  
+mv -f blkdev/.deps/testdevinfo-linux_version.Tpo blkdev/.deps/testdevinfo-linux_version.Po
+mv -f blkdev/.deps/testdevinfo-blkdev.Tpo blkdev/.deps/testdevinfo-blkdev.Po
+gcc -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2   -o testdevinfo testdevinfo-testdevinfo.o testdevinfo-device_info.o blkdev/testdevinfo-blkdev.o blkdev/testdevinfo-linux_version.o  
+gcc -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2   -o fatlabel fatlabel.o boot.o common.o fat.o io.o charconv.o  
+mv -f .deps/mkfs_fat-mkfs.fat.Tpo .deps/mkfs_fat-mkfs.fat.Po
+gcc -Wall -Wextra -Wno-sign-compare -Wno-missing-field-initializers -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -g -O2   -o mkfs.fat mkfs_fat-mkfs.fat.o mkfs_fat-common.o mkfs_fat-charconv.o mkfs_fat-device_info.o blkdev/mkfs_fat-blkdev.o blkdev/mkfs_fat-linux_version.o  
+make[1]: Leaving directory '/sources/dosfstools-4.2/src'
+Making all in manpages
+make[1]: Entering directory '/sources/dosfstools-4.2/manpages'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/dosfstools-4.2/manpages'
+Making all in tests
+make[1]: Entering directory '/sources/dosfstools-4.2/tests'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/dosfstools-4.2/tests'
+make[1]: Entering directory '/sources/dosfstools-4.2'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/sources/dosfstools-4.2'
+(lfs chroot) root:/sources/dosfstools-4.2# vfat
+bash: vfat: command not found
+(lfs chroot) root:/sources/dosfstools-4.2# ch
+chacl      chattr     chcpu      chem       chgpasswd  chmem      choom      chpasswd   chrt       chvt       
+chage      chcon      checkmk    chfn       chgrp      chmod      chown      chroot     chsh       
+(lfs chroot) root:/sources/dosfstools-4.2# fsck
+fsck         fsck.cramfs  fsck.ext2    fsck.ext3    fsck.ext4    fsck.minix   
+(lfs chroot) root:/sources/dosfstools-4.2# fsck^C
+(lfs chroot) root:/sources/dosfstools-4.2# make install
+Making install in src
+make[1]: Entering directory '/sources/dosfstools-4.2/src'
+make[2]: Entering directory '/sources/dosfstools-4.2/src'
+make[2]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/usr/sbin'
+  /usr/bin/install -c fsck.fat mkfs.fat fatlabel '/usr/sbin'
+/usr/bin/make  install-exec-hook
+make[3]: Entering directory '/sources/dosfstools-4.2/src'
+cd /usr/sbin && ln -s -f fatlabel dosfslabel
+cd /usr/sbin && ln -s -f fsck.fat dosfsck
+cd /usr/sbin && ln -s -f fsck.fat fsck.msdos
+cd /usr/sbin && ln -s -f fsck.fat fsck.vfat
+cd /usr/sbin && ln -s -f mkfs.fat mkdosfs
+cd /usr/sbin && ln -s -f mkfs.fat mkfs.msdos
+cd /usr/sbin && ln -s -f mkfs.fat mkfs.vfat
+make[3]: Leaving directory '/sources/dosfstools-4.2/src'
+make[2]: Leaving directory '/sources/dosfstools-4.2/src'
+make[1]: Leaving directory '/sources/dosfstools-4.2/src'
+Making install in manpages
+make[1]: Entering directory '/sources/dosfstools-4.2/manpages'
+make[2]: Entering directory '/sources/dosfstools-4.2/manpages'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man8'
+ /usr/bin/install -c -m 644 fsck.fat.8 mkfs.fat.8 fatlabel.8 '/usr/share/man/man8'
+/usr/bin/make  install-data-hook
+make[3]: Entering directory '/sources/dosfstools-4.2/manpages'
+cd /usr/share/man/man8 && ln -s -f fatlabel.8 dosfslabel.8
+cd /usr/share/man/man8 && ln -s -f fsck.fat.8 dosfsck.8
+cd /usr/share/man/man8 && ln -s -f fsck.fat.8 fsck.msdos.8
+cd /usr/share/man/man8 && ln -s -f fsck.fat.8 fsck.vfat.8
+cd /usr/share/man/man8 && ln -s -f mkfs.fat.8 mkdosfs.8
+cd /usr/share/man/man8 && ln -s -f mkfs.fat.8 mkfs.msdos.8
+cd /usr/share/man/man8 && ln -s -f mkfs.fat.8 mkfs.vfat.8
+make[3]: Leaving directory '/sources/dosfstools-4.2/manpages'
+make[2]: Leaving directory '/sources/dosfstools-4.2/manpages'
+make[1]: Leaving directory '/sources/dosfstools-4.2/manpages'
+Making install in tests
+make[1]: Entering directory '/sources/dosfstools-4.2/tests'
+make[2]: Entering directory '/sources/dosfstools-4.2/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/dosfstools-4.2/tests'
+make[1]: Leaving directory '/sources/dosfstools-4.2/tests'
+make[1]: Entering directory '/sources/dosfstools-4.2'
+make[2]: Entering directory '/sources/dosfstools-4.2'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/doc/dosfstools-4.2'
+ /usr/bin/install -c -m 644 doc/ANNOUNCE.mkdosfs doc/ChangeLog.dosfsck doc/ChangeLog.dosfstools-2.x doc/ChangeLog.mkdosfs doc/README.dosfsck doc/README.dosfstools-2.x doc/README.mkdosfs doc/TODO.dosfstools-2.x COPYING ChangeLog NEWS README '/usr/share/doc/dosfstools-4.2'
+make[2]: Leaving directory '/sources/dosfstools-4.2'
+make[1]: Leaving directory '/sources/dosfstools-4.2'
+(lfs chroot) root:/sources/dosfstools-4.2# fsck
+fsck         fsck.cramfs  fsck.ext2    fsck.ext3    fsck.ext4    fsck.fat     fsck.minix   fsck.msdos   fsck.vfat    
+(lfs chroot) root:/sources/dosfstools-4.2# fsck^C
+(lfs chroot) root:/sources/dosfstools-4.2# nano 
+bash: nano: command not found
+(lfs chroot) root:/sources/dosfstools-4.2# finish
+[lfs-scripts] Finishing build of dosfstools-4.2 at Wed Sep 28 09:17:07 PM -03 2022
+(lfs chroot) root:/sources# begin nano-5.8 tar.xz
+[lfs-scripts] Starting build of nano-5.8 at Wed Sep 28 09:18:02 PM -03 2022
+(lfs chroot) root:/sources/nano-5.8# ./configure --prefix=/usr     \
+            --sysconfdir=/etc \
+            --enable-utf8     \
+            --docdir=/usr/share/doc/nano-5.8
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether the compiler is clang... no
+checking for compiler option needed when checking for declarations... none
+checking dependency style of gcc... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for dirent.h... yes
+checking for fnmatch.h... yes
+checking for getopt.h... yes
+checking for sys/cdefs.h... yes
+checking for sys/time.h... yes
+checking for sys/socket.h... yes
+checking for glob.h... yes
+checking for threads.h... yes
+checking for limits.h... yes
+checking for crtdefs.h... no
+checking for wctype.h... yes
+checking for langinfo.h... yes
+checking for xlocale.h... no
+checking for math.h... yes
+checking for sys/mman.h... yes
+checking for sys/param.h... yes
+checking for malloc.h... yes
+checking for features.h... yes
+checking for sys/wait.h... yes
+checking for utime.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... 

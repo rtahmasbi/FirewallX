@@ -1,0 +1,176 @@
+(lfs chroot) root:/sources# begin sgml-common-0.6.3 tgz
+[lfs-scripts] Starting build of sgml-common-0.6.3 at Sun Oct  2 12:18:32 AM -03 2022
+(lfs chroot) root:/sources/sgml-common-0.6.3# patch -Np1 -i ../sgml-common-0.6.3-manpage-1.patch &&
+> 
+> 
+> /
+patching file doc/man/Makefile.am
+bash: /: Is a directory
+(lfs chroot) root:/sources/sgml-common-0.6.3# 
+(lfs chroot) root:/sources/sgml-common-0.6.3# patch -Np1 -i ../sgml-common-0.6.3-manpage-1.patch
+patching file doc/man/Makefile.am
+Reversed (or previously applied) patch detected!  Skipping patch.
+1 out of 1 hunk ignored -- saving rejects to file doc/man/Makefile.am.rej
+(lfs chroot) root:/sources/sgml-common-0.6.3# autoreconf -f -i
+autoreconf: warning: autoconf input should be named 'configure.ac', not 'configure.in'
+aclocal: warning: autoconf input should be named 'configure.ac', not 'configure.in'
+configure.in:4: warning: AM_INIT_AUTOMAKE: two- and three-arguments forms are deprecated.
+./lib/autoconf/general.m4:2434: AC_DIAGNOSE is expanded from...
+aclocal.m4:139: AM_INIT_AUTOMAKE is expanded from...
+configure.in:4: the top level
+configure.in:19: warning: AC_OUTPUT should be used without arguments.
+configure.in:19: You should run autoupdate.
+automake: warning: autoconf input should be named 'configure.ac', not 'configure.in'
+configure.in:4: warning: AM_INIT_AUTOMAKE: two- and three-arguments forms are deprecated.  For more info, see:
+configure.in:4: https://www.gnu.org/software/automake/manual/automake.html#Modernize-AM_005fINIT_005fAUTOMAKE-invocation
+configure.in:4: installing './install-sh'
+configure.in:4: installing './missing'
+Makefile.am: installing './INSTALL'
+Makefile.am: installing './COPYING' using GNU General Public License v3 file
+Makefile.am:     Consider adding the COPYING file to the version control system
+Makefile.am:     for your code, to avoid questions about which license your project uses
+automake: warning: autoconf input should be named 'configure.ac', not 'configure.in'
+(lfs chroot) root:/sources/sgml-common-0.6.3# ./configure --prefix=/usr --sysconfdir=/etc
+make
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating bin/Makefile
+config.status: creating bin/install-catalog
+config.status: creating config/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/HTML/Makefile
+config.status: creating doc/man/Makefile
+config.status: creating doc/refentry/Makefile
+config.status: creating sgml-iso-entities/Makefile
+config.status: creating xml-iso-entities/Makefile
+Making all in bin
+make[1]: Entering directory '/sources/sgml-common-0.6.3/bin'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/bin'
+Making all in config
+make[1]: Entering directory '/sources/sgml-common-0.6.3/config'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/config'
+Making all in doc
+make[1]: Entering directory '/sources/sgml-common-0.6.3/doc'
+Making all in refentry
+make[2]: Entering directory '/sources/sgml-common-0.6.3/doc/refentry'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/doc/refentry'
+Making all in man
+make[2]: Entering directory '/sources/sgml-common-0.6.3/doc/man'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/doc/man'
+Making all in HTML
+make[2]: Entering directory '/sources/sgml-common-0.6.3/doc/HTML'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/doc/HTML'
+make[2]: Entering directory '/sources/sgml-common-0.6.3/doc'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/doc'
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/doc'
+Making all in sgml-iso-entities
+make[1]: Entering directory '/sources/sgml-common-0.6.3/sgml-iso-entities'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/sgml-iso-entities'
+Making all in xml-iso-entities
+make[1]: Entering directory '/sources/sgml-common-0.6.3/xml-iso-entities'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/xml-iso-entities'
+make[1]: Entering directory '/sources/sgml-common-0.6.3'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/sources/sgml-common-0.6.3'
+(lfs chroot) root:/sources/sgml-common-0.6.3# make docdir=/usr/share/doc install
+Making install in bin
+make[1]: Entering directory '/sources/sgml-common-0.6.3/bin'
+make[2]: Entering directory '/sources/sgml-common-0.6.3/bin'
+make[2]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/install -c install-catalog sgmlwhich '/usr/bin'
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/bin'
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/bin'
+Making install in config
+make[1]: Entering directory '/sources/sgml-common-0.6.3/config'
+make[2]: Entering directory '/sources/sgml-common-0.6.3/config'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/etc/sgml'
+ /usr/bin/install -c -m 644 sgml.conf '/etc/sgml'
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/config'
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/config'
+Making install in doc
+make[1]: Entering directory '/sources/sgml-common-0.6.3/doc'
+Making install in refentry
+make[2]: Entering directory '/sources/sgml-common-0.6.3/doc/refentry'
+make[3]: Entering directory '/sources/sgml-common-0.6.3/doc/refentry'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/sgml-common-0.6.3/doc/refentry'
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/doc/refentry'
+Making install in man
+make[2]: Entering directory '/sources/sgml-common-0.6.3/doc/man'
+make[3]: Entering directory '/sources/sgml-common-0.6.3/doc/man'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man8'
+ /usr/bin/install -c -m 644 install-catalog.8 '/usr/share/man/man8'
+make[3]: Leaving directory '/sources/sgml-common-0.6.3/doc/man'
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/doc/man'
+Making install in HTML
+make[2]: Entering directory '/sources/sgml-common-0.6.3/doc/HTML'
+make[3]: Entering directory '/sources/sgml-common-0.6.3/doc/HTML'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/doc/sgml-common-0.6.3/html'
+ /usr/bin/install -c -m 644 fdl.html index.html install-catalog.html introduction.html '/usr/share/doc/sgml-common-0.6.3/html'
+make[3]: Leaving directory '/sources/sgml-common-0.6.3/doc/HTML'
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/doc/HTML'
+make[2]: Entering directory '/sources/sgml-common-0.6.3/doc'
+make[3]: Entering directory '/sources/sgml-common-0.6.3/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/sgml-common-0.6.3/doc'
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/doc'
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/doc'
+Making install in sgml-iso-entities
+make[1]: Entering directory '/sources/sgml-common-0.6.3/sgml-iso-entities'
+make[2]: Entering directory '/sources/sgml-common-0.6.3/sgml-iso-entities'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/sgml/sgml-iso-entities-8879.1986'
+ /usr/bin/install -c -m 644 ISOamsa.ent ISOamsb.ent ISOamsc.ent ISOamsn.ent ISOamso.ent ISOamsr.ent ISObox.ent ISOcyr1.ent ISOcyr2.ent ISOdia.ent ISOgrk1.ent ISOgrk2.ent ISOgrk3.ent ISOgrk4.ent ISOlat1.ent ISOlat2.ent ISOnum.ent ISOpub.ent ISOtech.ent catalog '/usr/share/sgml/sgml-iso-entities-8879.1986'
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/sgml-iso-entities'
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/sgml-iso-entities'
+Making install in xml-iso-entities
+make[1]: Entering directory '/sources/sgml-common-0.6.3/xml-iso-entities'
+make[2]: Entering directory '/sources/sgml-common-0.6.3/xml-iso-entities'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/sgml/xml-iso-entities-8879.1986'
+ /usr/bin/install -c -m 644 ISOamsa.ent ISOamsb.ent ISOamsc.ent ISOamsn.ent ISOamso.ent ISOamsr.ent ISObox.ent ISOcyr1.ent ISOcyr2.ent ISOdia.ent ISOgrk1.ent ISOgrk2.ent ISOgrk3.ent ISOgrk4.ent ISOlat1.ent ISOlat2.ent ISOnum.ent ISOpub.ent ISOtech.ent catalog '/usr/share/sgml/xml-iso-entities-8879.1986'
+make[2]: Leaving directory '/sources/sgml-common-0.6.3/xml-iso-entities'
+make[1]: Leaving directory '/sources/sgml-common-0.6.3/xml-iso-entities'
+make[1]: Entering directory '/sources/sgml-common-0.6.3'
+make[2]: Entering directory '/sources/sgml-common-0.6.3'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/sgml'
+ /usr/bin/install -c -m 644 xml.dcl '/usr/share/sgml'
+make[2]: Leaving directory '/sources/sgml-common-0.6.3'
+make[1]: Leaving directory '/sources/sgml-common-0.6.3'
+(lfs chroot) root:/sources/sgml-common-0.6.3# install-catalog --add /etc/sgml/sgml-ent.cat \
+    /usr/share/sgml/sgml-iso-entities-8879.1986/catalog
+
+install-catalog --add /etc/sgml/sgml-docbook.cat \
+    /etc/sgml/sgml-ent.cat
+    
+which sgmlwhich
+install-catalog: addition of /usr/share/sgml/sgml-iso-entities-8879.1986/catalog in /etc/sgml/sgml-ent.cat
+install-catalog: addition of /etc/sgml/sgml-ent.cat in /etc/sgml/catalog
+install-catalog: addition of /etc/sgml/sgml-ent.cat in /etc/sgml/sgml-docbook.cat
+install-catalog: addition of /etc/sgml/sgml-docbook.cat in /etc/sgml/catalog
+/usr/bin/sgmlwhich
+(lfs chroot) root:/sources/sgml-common-0.6.3# finish
+[lfs-scripts] Finishing build of sgml-common-0.6.3 at Sun Oct  2 12:20:07 AM -03 2022
+(lfs chroot) root:/sources# 

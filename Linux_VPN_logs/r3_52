@@ -1,0 +1,758 @@
+(lfs chroot) root:/sources# # 8.54. Check-0.15.2
+begin check-0.15.2 tar.gz
+./configure --prefix=/usr --disable-static
+make
+make docdir=/usr/share/doc/check-0.15.2 install
+finish
+[lfs-scripts] Starting build of check-0.15.2 at Tue Sep 13 23:40:08 -03 2022
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether make supports nested variables... (cached) yes
+Subunit support will enable automatically.
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gawk... (cached) gawk
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking whether ln -s works... yes
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether the C compiler accepts the -Wextra flag... yes
+checking whether the C compiler accepts the -Wstrict-prototypes flag... yes
+checking whether the C compiler accepts the -Wmissing-prototypes flag... yes
+checking whether the C compiler accepts the -Wwrite-strings flag... yes
+checking whether the C compiler accepts the -Wno-variadic-macros flag... yes
+checking whether the C compiler accepts the -Wimport flag... yes
+checking whether the C compiler accepts the -Wfatal-errors flag... yes
+checking whether the C compiler accepts the -Wformat=2 flag... yes
+checking whether the C compiler accepts the -Winit-self flag... yes
+checking whether the C compiler accepts the -Wmissing-include-dirs flag... yes
+checking whether the C compiler accepts the -Wswitch-default flag... yes
+checking whether the C compiler accepts the -Wunknown-pragmas flag... yes
+checking for gcov... gcov
+checking for lcov... no
+checking for genhtml... no
+checking for makeinfo... ${SHELL} /sources/check-0.15.2/missing makeinfo
+checking for filterdiff... no
+configure: WARNING: filterdiff not installed; build will not be reproducible.
+checking for dot... no
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for floor in -lm... yes
+checking for clock_gettime, timer_create, timer_settime, timer_delete in -lrt... yes
+checking for struct timespec.tv_sec... yes
+checking for struct timespec.tv_nsec... yes
+checking for struct itimerspec.it_interval... yes
+checking for struct itimerspec.it_value... yes
+checking for ANSI C header files... (cached) yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for stdint types... stdint.h (shortcircuit)
+make use of stdint.h in check_stdint.h (assuming C99 compatible system)
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking regex.h usability... yes
+checking regex.h presence... yes
+checking for regex.h... yes
+checking windows.h usability... no
+checking windows.h presence... no
+checking for windows.h... no
+checking for InitOnceBeginInitialize... no
+checking for InitOnceComplete... no
+checking for regcomp... yes
+checking for regexec... yes
+checking for an ANSI C-conforming const... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking for intmax_t... yes
+checking for uintmax_t... yes
+checking for uint32_t... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking size of int... 4
+checking size of short... 2
+checking size of long... 8
+checking for clockid_t... yes
+checking for timer_t... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking for time.h... yes
+checking for stdarg.h... yes
+checking for timer_create... yes
+checking if timer_create is supported on the system... yes
+checking for alarm... yes
+checking for clock_gettime... yes
+checking for getline... yes
+checking for gettimeofday... yes
+checking for localtime_r... yes
+checking for strdup... yes
+checking for strsignal... yes
+checking whether alarm is declared... yes
+checking whether clock_gettime is declared... no
+checking whether getline is declared... yes
+checking whether gettimeofday is declared... no
+checking whether localtime_r is declared... no
+checking whether strdup is declared... yes
+checking whether strsignal is declared... yes
+checking whether setenv is declared... yes
+checking for setitimer... yes
+checking for fork... yes
+checking for sigaction... yes
+checking for mkstemp... yes
+checking for vsnprintf... yes
+checking whether vsnprintf is C99 compliant... yes
+checking for snprintf... yes
+checking whether snprintf is C99 compliant... yes
+checking for gawk... /usr/bin/gawk
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating checkmk/checkmk
+config.status: creating check.pc
+config.status: creating Makefile
+config.status: creating checkmk/Makefile
+config.status: creating doc/Makefile
+config.status: creating lib/Makefile
+config.status: creating src/check.h
+config.status: creating src/Makefile
+config.status: creating tests/Makefile
+config.status: creating tests/test_vars
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing check_stdint.h commands
+config.status: creating check_stdint.h : _CHECK_CHECK_STDINT_H
+config.status: executing checkmk-x commands
+
+==========================================
+Summary of Check 0.15.2 options:
+
+fork mode ............................ yes
+high resolution timer replacement .... no
+snprintf replacement ................. no
+subunit support....................... no
+timeout unit tests ................... yes
+POSIX regular expressions ............ yes
+build docs ........................... yes
+==========================================
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/sources/check-0.15.2'
+Making all in lib
+make[2]: Entering directory '/sources/check-0.15.2/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT libcompat.lo -MD -MP -MF .deps/libcompat.Tpo -c -o libcompat.lo libcompat.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT fpclassify.lo -MD -MP -MF .deps/fpclassify.Tpo -c -o fpclassify.lo fpclassify.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT fpclassify.lo -MD -MP -MF .deps/fpclassify.Tpo -c fpclassify.c  -fPIC -DPIC -o .libs/fpclassify.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT libcompat.lo -MD -MP -MF .deps/libcompat.Tpo -c libcompat.c  -fPIC -DPIC -o .libs/libcompat.o
+mv -f .deps/fpclassify.Tpo .deps/fpclassify.Plo
+mv -f .deps/libcompat.Tpo .deps/libcompat.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -no-undefined  -o libcompat.la  libcompat.lo fpclassify.lo   -lrt -lm 
+libtool: link: ar cru .libs/libcompat.a .libs/libcompat.o .libs/fpclassify.o 
+libtool: link: ranlib .libs/libcompat.a
+libtool: link: ( cd ".libs" && rm -f "libcompat.la" && ln -s "../libcompat.la" "libcompat.la" )
+make[2]: Leaving directory '/sources/check-0.15.2/lib'
+Making all in src
+make[2]: Entering directory '/sources/check-0.15.2/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check.lo -MD -MP -MF .deps/check.Tpo -c -o check.lo check.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_error.lo -MD -MP -MF .deps/check_error.Tpo -c -o check_error.lo check_error.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_list.lo -MD -MP -MF .deps/check_list.Tpo -c -o check_list.lo check_list.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_log.lo -MD -MP -MF .deps/check_log.Tpo -c -o check_log.lo check_log.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_msg.lo -MD -MP -MF .deps/check_msg.Tpo -c -o check_msg.lo check_msg.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_pack.lo -MD -MP -MF .deps/check_pack.Tpo -c -o check_pack.lo check_pack.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check.lo -MD -MP -MF .deps/check.Tpo -c check.c  -fPIC -DPIC -o .libs/check.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_log.lo -MD -MP -MF .deps/check_log.Tpo -c check_log.c  -fPIC -DPIC -o .libs/check_log.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_error.lo -MD -MP -MF .deps/check_error.Tpo -c check_error.c  -fPIC -DPIC -o .libs/check_error.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_pack.lo -MD -MP -MF .deps/check_pack.Tpo -c check_pack.c  -fPIC -DPIC -o .libs/check_pack.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_list.lo -MD -MP -MF .deps/check_list.Tpo -c check_list.c  -fPIC -DPIC -o .libs/check_list.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_msg.lo -MD -MP -MF .deps/check_msg.Tpo -c check_msg.c  -fPIC -DPIC -o .libs/check_msg.o
+mv -f .deps/check_error.Tpo .deps/check_error.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_print.lo -MD -MP -MF .deps/check_print.Tpo -c -o check_print.lo check_print.c
+mv -f .deps/check_list.Tpo .deps/check_list.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_run.lo -MD -MP -MF .deps/check_run.Tpo -c -o check_run.lo check_run.c
+mv -f .deps/check_msg.Tpo .deps/check_msg.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_str.lo -MD -MP -MF .deps/check_str.Tpo -c -o check_str.lo check_str.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_print.lo -MD -MP -MF .deps/check_print.Tpo -c check_print.c  -fPIC -DPIC -o .libs/check_print.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_run.lo -MD -MP -MF .deps/check_run.Tpo -c check_run.c  -fPIC -DPIC -o .libs/check_run.o
+mv -f .deps/check_log.Tpo .deps/check_log.Plo
+/usr/bin/sed -n -e 's/^..*CK_EXPORT[[:space:]][[:space:]]*\([[:alnum:]_][[:alnum:]_]*\)..*$/\1/p' ../src/check.h.in > exported.sym
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_str.lo -MD -MP -MF .deps/check_str.Tpo -c check_str.c  -fPIC -DPIC -o .libs/check_str.o
+mv -f .deps/check_pack.Tpo .deps/check_pack.Plo
+mv -f .deps/check.Tpo .deps/check.Plo
+mv -f .deps/check_print.Tpo .deps/check_print.Plo
+mv -f .deps/check_str.Tpo .deps/check_str.Plo
+mv -f .deps/check_run.Tpo .deps/check_run.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -no-undefined -export-symbols exported.sym  -o libcheck.la -rpath /usr/lib check.lo check_error.lo check_list.lo check_log.lo check_msg.lo check_pack.lo check_print.lo check_run.lo check_str.lo   ../lib/libcompat.la -lrt -lm 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -no-undefined  -o libcheckinternal.la  check.lo check_error.lo check_list.lo check_log.lo check_msg.lo check_pack.lo check_print.lo check_run.lo check_str.lo   ../lib/libcompat.la -lrt -lm 
+libtool: link: echo "{ global:" > .libs/libcheck.ver
+libtool: link:  cat exported.sym | sed -e "s/\(.*\)/\1;/" >> .libs/libcheck.ver
+libtool: link:  echo "local: *; };" >> .libs/libcheck.ver
+libtool: link:  gcc -shared  -fPIC -DPIC  .libs/check.o .libs/check_error.o .libs/check_list.o .libs/check_log.o .libs/check_msg.o .libs/check_pack.o .libs/check_print.o .libs/check_run.o .libs/check_str.o  -Wl,--whole-archive ../lib/.libs/libcompat.a -Wl,--no-whole-archive  -lrt -lm  -g -O2   -Wl,-soname -Wl,libcheck.so.0 -Wl,-version-script -Wl,.libs/libcheck.ver -o .libs/libcheck.so.0.0.0
+libtool: link: (cd .libs/libcheckinternal.lax/libcompat.a && ar x "/sources/check-0.15.2/src/../lib/.libs/libcompat.a")
+libtool: link: ar cru .libs/libcheckinternal.a .libs/check.o .libs/check_error.o .libs/check_list.o .libs/check_log.o .libs/check_msg.o .libs/check_pack.o .libs/check_print.o .libs/check_run.o .libs/check_str.o   .libs/libcheckinternal.lax/libcompat.a/fpclassify.o .libs/libcheckinternal.lax/libcompat.a/libcompat.o 
+libtool: link: ranlib .libs/libcheckinternal.a
+libtool: link: (cd ".libs" && rm -f "libcheck.so.0" && ln -s "libcheck.so.0.0.0" "libcheck.so.0")
+libtool: link: rm -fr .libs/libcheckinternal.lax
+libtool: link: (cd ".libs" && rm -f "libcheck.so" && ln -s "libcheck.so.0.0.0" "libcheck.so")
+libtool: link: ( cd ".libs" && rm -f "libcheckinternal.la" && ln -s "../libcheckinternal.la" "libcheckinternal.la" )
+libtool: link: ( cd ".libs" && rm -f "libcheck.la" && ln -s "../libcheck.la" "libcheck.la" )
+make[2]: Leaving directory '/sources/check-0.15.2/src'
+Making all in doc
+make[2]: Entering directory '/sources/check-0.15.2/doc'
+cd ../doc/example; \
+diff -U 100 src/money.1.h src/money.2.h  > /sources/check-0.15.2/doc/money.1-2.h.diff || test $? -eq 1; \
+cd -;
+cd ../doc/example; \
+diff -U 100 src/money.1.c src/money.3.c  > /sources/check-0.15.2/doc/money.1-3.c.diff || test $? -eq 1; \
+cd -;
+cd ../doc/example; \
+diff -U 100 src/money.3.c src/money.4.c  > /sources/check-0.15.2/doc/money.3-4.c.diff || test $? -eq 1; \
+cd -;
+cd ../doc/example; \
+diff -U 100 src/money.4.c src/money.5.c  > /sources/check-0.15.2/doc/money.4-5.c.diff || test $? -eq 1; \
+cd -;
+cd ../doc/example; \
+diff -U 100 src/money.5.c src/money.6.c  > /sources/check-0.15.2/doc/money.5-6.c.diff || test $? -eq 1; \
+cd -;
+cd ../doc/example; \
+diff -U 100 tests/check_money.1.c tests/check_money.2.c  > /sources/check-0.15.2/doc/check_money.1-2.c.diff || test $? -eq 1; \
+cd -;
+/sources/check-0.15.2/doc
+/sources/check-0.15.2/doc
+/sources/check-0.15.2/doc
+cd ../doc/example; \
+diff -U 100 tests/check_money.2.c tests/check_money.3.c  > /sources/check-0.15.2/doc/check_money.2-3.c.diff || test $? -eq 1; \
+cd -;
+cd ../doc/example; \
+diff -U 100 tests/check_money.3.c tests/check_money.6.c  > /sources/check-0.15.2/doc/check_money.3-6.c.diff || test $? -eq 1; \
+cd -;
+cd ../doc/example; \
+diff -U 100 tests/check_money.6.c tests/check_money.7.c  > /sources/check-0.15.2/doc/check_money.6-7.c.diff || test $? -eq 1; \
+cd -;
+/sources/check-0.15.2/doc
+/sources/check-0.15.2/doc
+/sources/check-0.15.2/doc
+/sources/check-0.15.2/doc
+/sources/check-0.15.2/doc
+/sources/check-0.15.2/doc
+make[2]: Leaving directory '/sources/check-0.15.2/doc'
+Making all in .
+make[2]: Entering directory '/sources/check-0.15.2'
+make[2]: Leaving directory '/sources/check-0.15.2'
+Making all in checkmk
+make[2]: Entering directory '/sources/check-0.15.2/checkmk'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/check-0.15.2/checkmk'
+Making all in tests
+make[2]: Entering directory '/sources/check-0.15.2/tests'
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check_export-check_check_sub.o -MD -MP -MF .deps/check_check_export-check_check_sub.Tpo -c -o check_check_export-check_check_sub.o `test -f 'check_check_sub.c' || echo './'`check_check_sub.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check_export-check_check_master.o -MD -MP -MF .deps/check_check_export-check_check_master.Tpo -c -o check_check_export-check_check_master.o `test -f 'check_check_master.c' || echo './'`check_check_master.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check_export-check_check_log.o -MD -MP -MF .deps/check_check_export-check_check_log.Tpo -c -o check_check_export-check_check_log.o `test -f 'check_check_log.c' || echo './'`check_check_log.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check_export-check_check_fork.o -MD -MP -MF .deps/check_check_export-check_check_fork.Tpo -c -o check_check_export-check_check_fork.o `test -f 'check_check_fork.c' || echo './'`check_check_fork.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check_export-check_check_tags.o -MD -MP -MF .deps/check_check_export-check_check_tags.Tpo -c -o check_check_export-check_check_tags.o `test -f 'check_check_tags.c' || echo './'`check_check_tags.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check_export-check_check_export_main.o -MD -MP -MF .deps/check_check_export-check_check_export_main.Tpo -c -o check_check_export-check_check_export_main.o `test -f 'check_check_export_main.c' || echo './'`check_check_export_main.c
+In file included from check_check_sub.c:26:
+check_check_sub.c: In function 'test_fail_unless_fn':
+check_check_sub.c:65:23: warning: too many arguments for format [-Wformat-extra-args]
+   65 |   fail_unless(1 == 2, "This test should fail");
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:472:77: note: in definition of macro 'fail_unless'
+  472 |     _ck_assert_failed(__FILE__, __LINE__, "Assertion '"#expr"' failed" , ## __VA_ARGS__, NULL)
+      |                                                                             ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_if_pass_fn':
+check_check_sub.c:73:19: warning: too many arguments for format [-Wformat-extra-args]
+   73 |   fail_if(1 == 2, "This test should pass");
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c:74:14: warning: too many arguments for format [-Wformat-extra-args]
+   74 |   fail_if(0, "This test should pass");
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_if_fail_fn':
+check_check_sub.c:83:19: warning: too many arguments for format [-Wformat-extra-args]
+   83 |   fail_if(1 == 1, "This test should fail");
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_null_msg_fn':
+check_check_sub.c:92:3: warning: too many arguments for format [-Wformat-extra-args]
+   92 |   fail_unless(2 == 3, NULL);
+      |   ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_no_msg_fn':
+check_check_sub.c:103:3: warning: too many arguments for format [-Wformat-extra-args]
+  103 |   fail_unless(4 == 5, NULL);
+      |   ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_if_null_msg_fn':
+check_check_sub.c:112:3: warning: too many arguments for format [-Wformat-extra-args]
+  112 |   fail_if(2 != 3, NULL);
+      |   ^~~~~~~
+check_check_sub.c: In function 'test_fail_if_no_msg_fn':
+check_check_sub.c:123:3: warning: too many arguments for format [-Wformat-extra-args]
+  123 |   fail_if(4 != 5, NULL);
+      |   ^~~~~~~
+In file included from check_check_sub.c:26:
+check_check_sub.c: In function 'test_fail_vararg_msg_1_fn':
+check_check_sub.c:135:23: warning: too many arguments for format [-Wformat-extra-args]
+  135 |   fail_unless(x == y, "%d != %d", x, y);
+      |                       ^~~~~~~~~~
+../src/check.h:472:77: note: in definition of macro 'fail_unless'
+  472 |     _ck_assert_failed(__FILE__, __LINE__, "Assertion '"#expr"' failed" , ## __VA_ARGS__, NULL)
+      |                                                                             ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_vararg_msg_2_fn':
+check_check_sub.c:147:19: warning: too many arguments for format [-Wformat-extra-args]
+  147 |   fail_if(x != y, "%d != %d", x, y);
+      |                   ^~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_vararg_msg_3_fn':
+check_check_sub.c:159:8: warning: too many arguments for format [-Wformat-extra-args]
+  159 |   fail("%d == %d", x, y);
+      |        ^~~~~~~~~~
+../src/check.h:494:71: note: in definition of macro 'fail'
+  494 | #define fail(...) _ck_assert_failed(__FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+      |                                                                       ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_empty_fn':
+check_check_sub.c:171:3: warning: too many arguments for format [-Wformat-extra-args]
+  171 |   fail(NULL);
+      |   ^~~~
+mv -f .deps/check_check_export-check_check_export_main.Tpo .deps/check_check_export-check_check_export_main.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_list.o -MD -MP -MF .deps/check_check-check_list.Tpo -c -o check_check-check_list.o `test -f 'check_list.c' || echo './'`check_list.c
+mv -f .deps/check_check_export-check_check_fork.Tpo .deps/check_check_export-check_check_fork.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_sub.o -MD -MP -MF .deps/check_check-check_check_sub.Tpo -c -o check_check-check_check_sub.o `test -f 'check_check_sub.c' || echo './'`check_check_sub.c
+mv -f .deps/check_check_export-check_check_log.Tpo .deps/check_check_export-check_check_log.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_master.o -MD -MP -MF .deps/check_check-check_check_master.Tpo -c -o check_check-check_check_master.o `test -f 'check_check_master.c' || echo './'`check_check_master.c
+In file included from check_check_sub.c:26:
+check_check_sub.c: In function 'test_fail_unless_fn':
+check_check_sub.c:65:23: warning: too many arguments for format [-Wformat-extra-args]
+   65 |   fail_unless(1 == 2, "This test should fail");
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:472:77: note: in definition of macro 'fail_unless'
+  472 |     _ck_assert_failed(__FILE__, __LINE__, "Assertion '"#expr"' failed" , ## __VA_ARGS__, NULL)
+      |                                                                             ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_if_pass_fn':
+check_check_sub.c:73:19: warning: too many arguments for format [-Wformat-extra-args]
+   73 |   fail_if(1 == 2, "This test should pass");
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c:74:14: warning: too many arguments for format [-Wformat-extra-args]
+   74 |   fail_if(0, "This test should pass");
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_if_fail_fn':
+check_check_sub.c:83:19: warning: too many arguments for format [-Wformat-extra-args]
+   83 |   fail_if(1 == 1, "This test should fail");
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_null_msg_fn':
+check_check_sub.c:92:3: warning: too many arguments for format [-Wformat-extra-args]
+   92 |   fail_unless(2 == 3, NULL);
+      |   ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_no_msg_fn':
+check_check_sub.c:103:3: warning: too many arguments for format [-Wformat-extra-args]
+  103 |   fail_unless(4 == 5, NULL);
+      |   ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_if_null_msg_fn':
+check_check_sub.c:112:3: warning: too many arguments for format [-Wformat-extra-args]
+  112 |   fail_if(2 != 3, NULL);
+      |   ^~~~~~~
+check_check_sub.c: In function 'test_fail_if_no_msg_fn':
+check_check_sub.c:123:3: warning: too many arguments for format [-Wformat-extra-args]
+  123 |   fail_if(4 != 5, NULL);
+      |   ^~~~~~~
+In file included from check_check_sub.c:26:
+check_check_sub.c: In function 'test_fail_vararg_msg_1_fn':
+check_check_sub.c:135:23: warning: too many arguments for format [-Wformat-extra-args]
+  135 |   fail_unless(x == y, "%d != %d", x, y);
+      |                       ^~~~~~~~~~
+../src/check.h:472:77: note: in definition of macro 'fail_unless'
+  472 |     _ck_assert_failed(__FILE__, __LINE__, "Assertion '"#expr"' failed" , ## __VA_ARGS__, NULL)
+      |                                                                             ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_vararg_msg_2_fn':
+check_check_sub.c:147:19: warning: too many arguments for format [-Wformat-extra-args]
+  147 |   fail_if(x != y, "%d != %d", x, y);
+      |                   ^~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_vararg_msg_3_fn':
+check_check_sub.c:159:8: warning: too many arguments for format [-Wformat-extra-args]
+  159 |   fail("%d == %d", x, y);
+      |        ^~~~~~~~~~
+../src/check.h:494:71: note: in definition of macro 'fail'
+  494 | #define fail(...) _ck_assert_failed(__FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+      |                                                                       ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_empty_fn':
+check_check_sub.c:171:3: warning: too many arguments for format [-Wformat-extra-args]
+  171 |   fail(NULL);
+      |   ^~~~
+mv -f .deps/check_check_export-check_check_master.Tpo .deps/check_check_export-check_check_master.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_msg.o -MD -MP -MF .deps/check_check-check_check_msg.Tpo -c -o check_check-check_check_msg.o `test -f 'check_check_msg.c' || echo './'`check_check_msg.c
+mv -f .deps/check_check-check_list.Tpo .deps/check_check-check_list.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_log.o -MD -MP -MF .deps/check_check-check_check_log.Tpo -c -o check_check-check_check_log.o `test -f 'check_check_log.c' || echo './'`check_check_log.c
+mv -f .deps/check_check_export-check_check_tags.Tpo .deps/check_check_export-check_check_tags.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_log_internal.o -MD -MP -MF .deps/check_check-check_check_log_internal.Tpo -c -o check_check-check_check_log_internal.o `test -f 'check_check_log_internal.c' || echo './'`check_check_log_internal.c
+mv -f .deps/check_check-check_check_msg.Tpo .deps/check_check-check_check_msg.Po
+mv -f .deps/check_check-check_check_log_internal.Tpo .deps/check_check-check_check_log_internal.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_limit.o -MD -MP -MF .deps/check_check-check_check_limit.Tpo -c -o check_check-check_check_limit.o `test -f 'check_check_limit.c' || echo './'`check_check_limit.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_fork.o -MD -MP -MF .deps/check_check-check_check_fork.Tpo -c -o check_check-check_check_fork.o `test -f 'check_check_fork.c' || echo './'`check_check_fork.c
+mv -f .deps/check_check-check_check_master.Tpo .deps/check_check-check_check_master.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_fixture.o -MD -MP -MF .deps/check_check-check_check_fixture.Tpo -c -o check_check-check_check_fixture.o `test -f 'check_check_fixture.c' || echo './'`check_check_fixture.c
+mv -f .deps/check_check-check_check_log.Tpo .deps/check_check-check_check_log.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_pack.o -MD -MP -MF .deps/check_check-check_check_pack.Tpo -c -o check_check-check_check_pack.o `test -f 'check_check_pack.c' || echo './'`check_check_pack.c
+In file included from check_check_pack.c:27:
+check_check_pack.c: In function 'test_pack_fmsg_fn':
+check_check_pack.c:60:10: warning: too many arguments for format [-Wformat-extra-args]
+   60 |     fail("%s", errm);
+      |          ^~~~
+../src/check.h:494:71: note: in definition of macro 'fail'
+  494 | #define fail(...) _ck_assert_failed(__FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+      |                                                                       ^~~~~~~~~~~
+check_check_pack.c: In function 'test_pack_loc_fn':
+check_check_pack.c:91:10: warning: too many arguments for format [-Wformat-extra-args]
+   91 |     fail("%s", errm);
+      |          ^~~~
+../src/check.h:494:71: note: in definition of macro 'fail'
+  494 | #define fail(...) _ck_assert_failed(__FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+      |                                                                       ^~~~~~~~~~~
+check_check_pack.c:98:10: warning: too many arguments for format [-Wformat-extra-args]
+   98 |     fail("%s", errm);
+      |          ^~~~
+../src/check.h:494:71: note: in definition of macro 'fail'
+  494 | #define fail(...) _ck_assert_failed(__FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+      |                                                                       ^~~~~~~~~~~
+check_check_pack.c: In function 'test_pack_ctx_fn':
+check_check_pack.c:126:10: warning: too many arguments for format [-Wformat-extra-args]
+  126 |     fail("%s", errm);
+      |          ^~~~
+../src/check.h:494:71: note: in definition of macro 'fail'
+  494 | #define fail(...) _ck_assert_failed(__FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+      |                                                                       ^~~~~~~~~~~
+check_check_pack.c: In function 'test_pack_len_fn':
+check_check_pack.c:150:10: warning: too many arguments for format [-Wformat-extra-args]
+  150 |     fail("%s", errm);
+      |          ^~~~
+../src/check.h:494:71: note: in definition of macro 'fail'
+  494 | #define fail(...) _ck_assert_failed(__FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+      |                                                                       ^~~~~~~~~~~
+mv -f .deps/check_check-check_check_limit.Tpo .deps/check_check-check_check_limit.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_exit.o -MD -MP -MF .deps/check_check-check_check_exit.Tpo -c -o check_check-check_check_exit.o `test -f 'check_check_exit.c' || echo './'`check_check_exit.c
+mv -f .deps/check_check-check_check_fork.Tpo .deps/check_check-check_check_fork.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_selective.o -MD -MP -MF .deps/check_check-check_check_selective.Tpo -c -o check_check-check_check_selective.o `test -f 'check_check_selective.c' || echo './'`check_check_selective.c
+mv -f .deps/check_check-check_check_exit.Tpo .deps/check_check-check_check_exit.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_tags.o -MD -MP -MF .deps/check_check-check_check_tags.Tpo -c -o check_check-check_check_tags.o `test -f 'check_check_tags.c' || echo './'`check_check_tags.c
+mv -f .deps/check_check-check_check_pack.Tpo .deps/check_check-check_check_pack.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_check-check_check_main.o -MD -MP -MF .deps/check_check-check_check_main.Tpo -c -o check_check-check_check_main.o `test -f 'check_check_main.c' || echo './'`check_check_main.c
+mv -f .deps/check_check-check_check_fixture.Tpo .deps/check_check-check_check_fixture.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_stress.o -MD -MP -MF .deps/check_stress.Tpo -c -o check_stress.o check_stress.c
+mv -f .deps/check_check-check_check_selective.Tpo .deps/check_check-check_check_selective.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_thread_stress-check_thread_stress.o -MD -MP -MF .deps/check_thread_stress-check_thread_stress.Tpo -c -o check_thread_stress-check_thread_stress.o `test -f 'check_thread_stress.c' || echo './'`check_thread_stress.c
+mv -f .deps/check_check-check_check_main.Tpo .deps/check_check-check_check_main.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_nofork.o -MD -MP -MF .deps/check_nofork.Tpo -c -o check_nofork.o check_nofork.c
+mv -f .deps/check_check_export-check_check_sub.Tpo .deps/check_check_export-check_check_sub.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_nofork_teardown.o -MD -MP -MF .deps/check_nofork_teardown.Tpo -c -o check_nofork_teardown.o check_nofork_teardown.c
+mv -f .deps/check_stress.Tpo .deps/check_stress.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src  -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_mem_leaks-check_mem_leaks.o -MD -MP -MF .deps/check_mem_leaks-check_mem_leaks.Tpo -c -o check_mem_leaks-check_mem_leaks.o `test -f 'check_mem_leaks.c' || echo './'`check_mem_leaks.c
+mv -f .deps/check_nofork.Tpo .deps/check_nofork.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src  -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_mem_leaks-check_check_log.o -MD -MP -MF .deps/check_mem_leaks-check_check_log.Tpo -c -o check_mem_leaks-check_check_log.o `test -f 'check_check_log.c' || echo './'`check_check_log.c
+mv -f .deps/check_thread_stress-check_thread_stress.Tpo .deps/check_thread_stress-check_thread_stress.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src  -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_mem_leaks-check_check_fork.o -MD -MP -MF .deps/check_mem_leaks-check_check_fork.Tpo -c -o check_mem_leaks-check_check_fork.o `test -f 'check_check_fork.c' || echo './'`check_check_fork.c
+mv -f .deps/check_nofork_teardown.Tpo .deps/check_nofork_teardown.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src  -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_mem_leaks-check_check_exit.o -MD -MP -MF .deps/check_mem_leaks-check_check_exit.Tpo -c -o check_mem_leaks-check_check_exit.o `test -f 'check_check_exit.c' || echo './'`check_check_exit.c
+mv -f .deps/check_mem_leaks-check_mem_leaks.Tpo .deps/check_mem_leaks-check_mem_leaks.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src  -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_mem_leaks-check_check_selective.o -MD -MP -MF .deps/check_mem_leaks-check_check_selective.Tpo -c -o check_mem_leaks-check_check_selective.o `test -f 'check_check_selective.c' || echo './'`check_check_selective.c
+mv -f .deps/check_check-check_check_sub.Tpo .deps/check_check-check_check_sub.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src  -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_mem_leaks-check_check_tags.o -MD -MP -MF .deps/check_mem_leaks-check_check_tags.Tpo -c -o check_mem_leaks-check_check_tags.o `test -f 'check_check_tags.c' || echo './'`check_check_tags.c
+mv -f .deps/check_check-check_check_tags.Tpo .deps/check_check-check_check_tags.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src  -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_mem_leaks-check_check_sub.o -MD -MP -MF .deps/check_mem_leaks-check_check_sub.Tpo -c -o check_mem_leaks-check_check_sub.o `test -f 'check_check_sub.c' || echo './'`check_check_sub.c
+mv -f .deps/check_mem_leaks-check_check_exit.Tpo .deps/check_mem_leaks-check_check_exit.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src  -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_mem_leaks-check_check_master.o -MD -MP -MF .deps/check_mem_leaks-check_check_master.Tpo -c -o check_mem_leaks-check_check_master.o `test -f 'check_check_master.c' || echo './'`check_check_master.c
+In file included from check_check_sub.c:26:
+check_check_sub.c: In function 'test_fail_unless_fn':
+check_check_sub.c:65:23: warning: too many arguments for format [-Wformat-extra-args]
+   65 |   fail_unless(1 == 2, "This test should fail");
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:472:77: note: in definition of macro 'fail_unless'
+  472 |     _ck_assert_failed(__FILE__, __LINE__, "Assertion '"#expr"' failed" , ## __VA_ARGS__, NULL)
+      |                                                                             ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_if_pass_fn':
+check_check_sub.c:73:19: warning: too many arguments for format [-Wformat-extra-args]
+   73 |   fail_if(1 == 2, "This test should pass");
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c:74:14: warning: too many arguments for format [-Wformat-extra-args]
+   74 |   fail_if(0, "This test should pass");
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+mv -f .deps/check_mem_leaks-check_check_fork.Tpo .deps/check_mem_leaks-check_check_fork.Po
+check_check_sub.c: In function 'test_fail_if_fail_fn':
+check_check_sub.c:83:19: warning: too many arguments for format [-Wformat-extra-args]
+   83 |   fail_if(1 == 1, "This test should fail");
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_null_msg_fn':
+check_check_sub.c:92:3: warning: too many arguments for format [-Wformat-extra-args]
+   92 |   fail_unless(2 == 3, NULL);
+      |   ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_no_msg_fn':
+check_check_sub.c:103:3: warning: too many arguments for format [-Wformat-extra-args]
+  103 |   fail_unless(4 == 5, NULL);
+      |   ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_if_null_msg_fn':
+check_check_sub.c:112:3: warning: too many arguments for format [-Wformat-extra-args]
+  112 |   fail_if(2 != 3, NULL);
+      |   ^~~~~~~
+check_check_sub.c: In function 'test_fail_if_no_msg_fn':
+check_check_sub.c:123:3: warning: too many arguments for format [-Wformat-extra-args]
+  123 |   fail_if(4 != 5, NULL);
+      |   ^~~~~~~
+In file included from check_check_sub.c:26:
+check_check_sub.c: In function 'test_fail_vararg_msg_1_fn':
+check_check_sub.c:135:23: warning: too many arguments for format [-Wformat-extra-args]
+  135 |   fail_unless(x == y, "%d != %d", x, y);
+      |                       ^~~~~~~~~~
+../src/check.h:472:77: note: in definition of macro 'fail_unless'
+  472 |     _ck_assert_failed(__FILE__, __LINE__, "Assertion '"#expr"' failed" , ## __VA_ARGS__, NULL)
+      |                                                                             ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_vararg_msg_2_fn':
+check_check_sub.c:147:19: warning: too many arguments for format [-Wformat-extra-args]
+  147 |   fail_if(x != y, "%d != %d", x, y);
+      |                   ^~~~~~~~~~
+../src/check.h:486:78: note: in definition of macro 'fail_if'
+  486 |      _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      |                                                                              ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_vararg_msg_3_fn':
+check_check_sub.c:159:8: warning: too many arguments for format [-Wformat-extra-args]
+  159 |   fail("%d == %d", x, y);
+      |        ^~~~~~~~~~
+../src/check.h:494:71: note: in definition of macro 'fail'
+  494 | #define fail(...) _ck_assert_failed(__FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+      |                                                                       ^~~~~~~~~~~
+check_check_sub.c: In function 'test_fail_empty_fn':
+check_check_sub.c:171:3: warning: too many arguments for format [-Wformat-extra-args]
+  171 |   fail(NULL);
+      |   ^~~~
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT check_set_max_msg_size.o -MD -MP -MF .deps/check_set_max_msg_size.Tpo -c -o check_set_max_msg_size.o check_set_max_msg_size.c
+mv -f .deps/check_mem_leaks-check_check_log.Tpo .deps/check_mem_leaks-check_check_log.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../src -I../src   -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -MT ex_output.o -MD -MP -MF .deps/ex_output.Tpo -c -o ex_output.o ex_output.c
+mv -f .deps/check_mem_leaks-check_check_selective.Tpo .deps/check_mem_leaks-check_check_selective.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas   -o check_check_export check_check_export-check_check_sub.o check_check_export-check_check_master.o check_check_export-check_check_log.o check_check_export-check_check_fork.o check_check_export-check_check_tags.o check_check_export-check_check_export_main.o ../src/libcheck.la ../lib/libcompat.la -lrt -lm 
+mv -f .deps/check_set_max_msg_size.Tpo .deps/check_set_max_msg_size.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas   -o check_check check_check-check_list.o check_check-check_check_sub.o check_check-check_check_master.o check_check-check_check_msg.o check_check-check_check_log.o check_check-check_check_log_internal.o check_check-check_check_limit.o check_check-check_check_fork.o check_check-check_check_fixture.o check_check-check_check_pack.o check_check-check_check_exit.o check_check-check_check_selective.o check_check-check_check_tags.o check_check-check_check_main.o ../src/libcheckinternal.la ../lib/libcompat.la -lrt -lm 
+mv -f .deps/ex_output.Tpo .deps/ex_output.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas   -o check_stress check_stress.o ../src/libcheck.la ../lib/libcompat.la -lrt -lm 
+libtool: link: gcc -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -o .libs/check_check_export check_check_export-check_check_sub.o check_check_export-check_check_master.o check_check_export-check_check_log.o check_check_export-check_check_fork.o check_check_export-check_check_tags.o check_check_export-check_check_export_main.o  ../src/.libs/libcheck.so ../lib/.libs/libcompat.a -lrt -lm
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas   -o check_thread_stress check_thread_stress-check_thread_stress.o ../src/libcheck.la ../lib/libcompat.la  -lrt -lm 
+libtool: link: gcc -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -o check_check check_check-check_list.o check_check-check_check_sub.o check_check-check_check_master.o check_check-check_check_msg.o check_check-check_check_log.o check_check-check_check_log_internal.o check_check-check_check_limit.o check_check-check_check_fork.o check_check-check_check_fixture.o check_check-check_check_pack.o check_check-check_check_exit.o check_check-check_check_selective.o check_check-check_check_tags.o check_check-check_check_main.o  ../src/.libs/libcheckinternal.a ../lib/.libs/libcompat.a -lrt -lm
+mv -f .deps/check_mem_leaks-check_check_tags.Tpo .deps/check_mem_leaks-check_check_tags.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas   -o check_nofork check_nofork.o ../src/libcheck.la ../lib/libcompat.la -lrt -lm 
+mv -f .deps/check_mem_leaks-check_check_master.Tpo .deps/check_mem_leaks-check_check_master.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas   -o check_nofork_teardown check_nofork_teardown.o ../src/libcheck.la ../lib/libcompat.la -lrt -lm 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas   -o check_set_max_msg_size check_set_max_msg_size.o ../src/libcheck.la ../lib/libcompat.la -lrt -lm 
+libtool: link: gcc -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -o .libs/check_stress check_stress.o  ../src/.libs/libcheck.so ../lib/.libs/libcompat.a -lrt -lm
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas   -o ex_output ex_output.o ../src/libcheck.la ../lib/libcompat.la -lrt -lm 
+libtool: link: gcc -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -o .libs/check_thread_stress check_thread_stress-check_thread_stress.o  ../src/.libs/libcheck.so ../lib/.libs/libcompat.a -lrt -lm
+libtool: link: gcc -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -o .libs/check_nofork check_nofork.o  ../src/.libs/libcheck.so ../lib/.libs/libcompat.a -lrt -lm
+libtool: link: gcc -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -o .libs/check_set_max_msg_size check_set_max_msg_size.o  ../src/.libs/libcheck.so ../lib/.libs/libcompat.a -lrt -lm
+libtool: link: gcc -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -o .libs/check_nofork_teardown check_nofork_teardown.o  ../src/.libs/libcheck.so ../lib/.libs/libcompat.a -lrt -lm
+libtool: link: gcc -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -o .libs/ex_output ex_output.o  ../src/.libs/libcheck.so ../lib/.libs/libcompat.a -lrt -lm
+mv -f .deps/check_mem_leaks-check_check_sub.Tpo .deps/check_mem_leaks-check_check_sub.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas   -o check_mem_leaks check_mem_leaks-check_mem_leaks.o check_mem_leaks-check_check_log.o check_mem_leaks-check_check_fork.o check_mem_leaks-check_check_exit.o check_mem_leaks-check_check_selective.o check_mem_leaks-check_check_tags.o check_mem_leaks-check_check_sub.o check_mem_leaks-check_check_master.o ../src/libcheck.la ../lib/libcompat.la -lrt -lm 
+libtool: link: gcc -DTIMEOUT_TESTS_ENABLED=0 -DMEMORY_LEAKING_TESTS_ENABLED=0 -g -O2 -Wextra -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings -Wno-variadic-macros -Wimport -Wfatal-errors -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default -Wunknown-pragmas -o .libs/check_mem_leaks check_mem_leaks-check_mem_leaks.o check_mem_leaks-check_check_log.o check_mem_leaks-check_check_fork.o check_mem_leaks-check_check_exit.o check_mem_leaks-check_check_selective.o check_mem_leaks-check_check_tags.o check_mem_leaks-check_check_sub.o check_mem_leaks-check_check_master.o  ../src/.libs/libcheck.so ../lib/.libs/libcompat.a -lrt -lm
+make[2]: Leaving directory '/sources/check-0.15.2/tests'
+make[1]: Leaving directory '/sources/check-0.15.2'
+Making install in lib
+make[1]: Entering directory '/sources/check-0.15.2/lib'
+make[2]: Entering directory '/sources/check-0.15.2/lib'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/check-0.15.2/lib'
+make[1]: Leaving directory '/sources/check-0.15.2/lib'
+Making install in src
+make[1]: Entering directory '/sources/check-0.15.2/src'
+make[2]: Entering directory '/sources/check-0.15.2/src'
+ /usr/bin/mkdir -p '/usr/lib'
+ /usr/bin/mkdir -p '/usr/include'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libcheck.la '/usr/lib'
+ /usr/bin/install -c -m 644 check.h '/usr/include'
+libtool: install: /usr/bin/install -c .libs/libcheck.so.0.0.0 /usr/lib/libcheck.so.0.0.0
+libtool: install: (cd /usr/lib && { ln -s -f libcheck.so.0.0.0 libcheck.so.0 || { rm -f libcheck.so.0 && ln -s libcheck.so.0.0.0 libcheck.so.0; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libcheck.so.0.0.0 libcheck.so || { rm -f libcheck.so && ln -s libcheck.so.0.0.0 libcheck.so; }; })
+libtool: install: /usr/bin/install -c .libs/libcheck.lai /usr/lib/libcheck.la
+libtool: finish: PATH="/usr/bin:/usr/sbin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Leaving directory '/sources/check-0.15.2/src'
+make[1]: Leaving directory '/sources/check-0.15.2/src'
+Making install in doc
+make[1]: Entering directory '/sources/check-0.15.2/doc'
+make[2]: Entering directory '/sources/check-0.15.2/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/doc/check-0.15.2/example'
+ /usr/bin/mkdir -p '/usr/share/doc/check-0.15.2/example/src'
+ /usr/bin/mkdir -p '/usr/share/doc/check-0.15.2/example/tests'
+ /usr/bin/mkdir -p '/usr/share/info'
+ /usr/bin/install -c -m 644 example/Makefile.am example/README example/configure.ac '/usr/share/doc/check-0.15.2/example'
+ /usr/bin/install -c -m 644 example/src/Makefile.am example/src/main.c example/src/money.c example/src/money.h example/src/money.1.h example/src/money.2.h example/src/money.1.c example/src/money.3.c example/src/money.4.c example/src/money.5.c example/src/money.6.c '/usr/share/doc/check-0.15.2/example/src'
+ /usr/bin/install -c -m 644 example/tests/Makefile.am example/tests/check_money.c example/tests/check_money.1.c example/tests/check_money.2.c example/tests/check_money.3.c example/tests/check_money.6.c example/tests/check_money.7.c '/usr/share/doc/check-0.15.2/example/tests'
+ /usr/bin/install -c -m 644 ./check.info '/usr/share/info'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/check.info'
+make[2]: Leaving directory '/sources/check-0.15.2/doc'
+make[1]: Leaving directory '/sources/check-0.15.2/doc'
+Making install in .
+make[1]: Entering directory '/sources/check-0.15.2'
+make[2]: Entering directory '/sources/check-0.15.2'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/doc/check-0.15.2'
+ /usr/bin/mkdir -p '/usr/include'
+ /usr/bin/mkdir -p '/usr/share/aclocal'
+ /usr/bin/mkdir -p '/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 ChangeLog NEWS README COPYING.LESSER '/usr/share/doc/check-0.15.2'
+ /usr/bin/install -c -m 644 check_stdint.h '/usr/include'
+ /usr/bin/install -c -m 644 check.m4 '/usr/share/aclocal'
+ /usr/bin/install -c -m 644 check.pc '/usr/lib/pkgconfig'
+make[2]: Leaving directory '/sources/check-0.15.2'
+make[1]: Leaving directory '/sources/check-0.15.2'
+Making install in checkmk
+make[1]: Entering directory '/sources/check-0.15.2/checkmk'
+make[2]: Entering directory '/sources/check-0.15.2/checkmk'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/install -c checkmk '/usr/bin'
+ /usr/bin/install -c -m 644 doc/checkmk.1 '/usr/share/man/man1'
+make[2]: Leaving directory '/sources/check-0.15.2/checkmk'
+make[1]: Leaving directory '/sources/check-0.15.2/checkmk'
+Making install in tests
+make[1]: Entering directory '/sources/check-0.15.2/tests'
+make[2]: Entering directory '/sources/check-0.15.2/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/check-0.15.2/tests'
+make[1]: Leaving directory '/sources/check-0.15.2/tests'
+[lfs-scripts] Finishing build of check-0.15.2 at Tue Sep 13 23:42:15 -03 2022
+(lfs chroot) root:/sources# 

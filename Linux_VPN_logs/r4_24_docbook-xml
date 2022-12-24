@@ -1,0 +1,169 @@
+(lfs chroot) root:/sources# l
+total 160M
+-rw-r--r--  1 root root  725K Oct  1 20:19 057.zip
+-rw-r--r--  1 root root  2.2M Jul 30  2021 btrfs-progs-v5.13.1.tar.xz
+drwxr-xr-x  3 root root  4.0K Oct  1 19:18 ca-certificates
+-rw-r--r--  1 root root  2.9K Oct 26  2006 ChangeLog
+-rw-r--r--  1 root root  1.3M Nov  6  2019 cpio-2.13.tar.bz2
+drwxr-xr-x  3 root root  4.0K Oct  2 00:24 docbook-xml-4.5
+-rw-r--r--  1 root root   97K Oct  2 00:16 docbook-xml-4.5.zip
+-rw-r--r--  1 root root  1.8K Aug 31 17:51 docbook-xsl-nons-1.79.2-stack_fix-1.patch
+-rw-r--r--  1 root root   23M Dec  7  2021 docbook-xsl-nons-1.79.2.tar.bz2
+-rw-r--r--  1 root root  314K Dec  7  2021 dosfstools-4.2.tar.gz
+-rw-r--r--  1 root root  471K Jun 24 13:10 dracut-057.tar.gz
+-rw-r--r--  1 root root  313K Jan 18  2022 ethtool-5.16.tar.xz
+-rw-r--r--  1 root root  2.7M Dec  8  2021 fuse-3.10.4.tar.xz
+-rw-r--r--  1 root root  527K Mar  4  2011 jfsutils-1.1.15.tar.gz
+-rw-r--r--  1 root root  1.7M Nov  9  2021 libtasn1-4.18.0.tar.gz
+-rw-r--r--  1 root root  2.6M Aug 29 11:56 libxml2-2.10.2.tar.xz
+-rw-r--r--  1 root root  1.6M Aug 17 10:42 libxslt-1.1.36.tar.xz
+drwxrwxr-x 24 root root  4.0K Sep 30 19:36 linux-5.13.12
+-rw-r--r--  1 root root  114M Sep 30 15:05 linux-5.13.12.tar.xz
+drwxrwxr-x 19 root wheel 4.0K Oct  1 17:25 LVM2.2.03.13
+-rw-r--r--  1 root root  2.5M Aug 11  2021 LVM2.2.03.13.tgz
+-rw-r--r--  1 root root   31K Jan 10  2022 make-ca-1.10.tar.xz
+-rw-r--r--  1 root root  431K Oct 26  2018 mdadm-4.1.tar.xz
+-rw-r--r--  1 root root  1.4M Jun 15  2021 nano-5.8.tar.xz
+-rw-r--r--  1 root root  1.3M Aug 22  2021 ntfs-3g_ntfsprogs-2021.8.22.tgz
+-rw-r--r--  1 root root  819K Jan 17  2022 p11-kit-0.24.1.tar.xz
+-rw-r--r--  1 root root   601 Aug 31 17:51 sgml-common-0.6.3-manpage-1.patch
+-rw-r--r--  1 root root   75K May 25  2001 sgml-common-0.6.3.tgz
+-rw-r--r--  1 root root  969K Dec 30  2020 smartmontools-7.2.tar.gz
+-rw-r--r--  1 root root  597K Mar  1  2022 unzip-6.0-consolidated_fixes-1.patch
+-rw-r--r--  1 root root  1.4M Apr 30  2009 unzip60.tar.gz
+(lfs chroot) root:/sources# cd docbook-xml-4.5
+(lfs chroot) root:/sources/docbook-xml-4.5# install -v -d -m755 /usr/share/xml/docbook/xml-dtd-4.5
+install -v -d -m755 /etc/xml
+/usr/bin/install: creating directory '/usr/share/xml/docbook/xml-dtd-4.5'
+(lfs chroot) root:/sources/docbook-xml-4.5# chown -R root:root . 
+(lfs chroot) root:/sources/docbook-xml-4.5# cp -v -af docbook.cat *.dtd ent/ *.mod \
+    /usr/share/xml/docbook/xml-dtd-4.5
+'docbook.cat' -> '/usr/share/xml/docbook/xml-dtd-4.5/docbook.cat'
+'calstblx.dtd' -> '/usr/share/xml/docbook/xml-dtd-4.5/calstblx.dtd'
+'docbookx.dtd' -> '/usr/share/xml/docbook/xml-dtd-4.5/docbookx.dtd'
+'soextblx.dtd' -> '/usr/share/xml/docbook/xml-dtd-4.5/soextblx.dtd'
+'ent/' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent'
+'ent/README' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/README'
+'ent/isoamsa.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isoamsa.ent'
+'ent/isoamsb.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isoamsb.ent'
+'ent/isoamsc.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isoamsc.ent'
+'ent/isoamsn.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isoamsn.ent'
+'ent/isoamso.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isoamso.ent'
+'ent/isoamsr.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isoamsr.ent'
+'ent/isobox.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isobox.ent'
+'ent/isocyr1.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isocyr1.ent'
+'ent/isocyr2.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isocyr2.ent'
+'ent/isodia.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isodia.ent'
+'ent/isogrk1.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isogrk1.ent'
+'ent/isogrk2.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isogrk2.ent'
+'ent/isogrk3.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isogrk3.ent'
+'ent/isogrk4.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isogrk4.ent'
+'ent/isolat1.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isolat1.ent'
+'ent/isolat2.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isolat2.ent'
+'ent/isonum.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isonum.ent'
+'ent/isopub.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isopub.ent'
+'ent/isotech.ent' -> '/usr/share/xml/docbook/xml-dtd-4.5/ent/isotech.ent'
+'dbcentx.mod' -> '/usr/share/xml/docbook/xml-dtd-4.5/dbcentx.mod'
+'dbgenent.mod' -> '/usr/share/xml/docbook/xml-dtd-4.5/dbgenent.mod'
+'dbhierx.mod' -> '/usr/share/xml/docbook/xml-dtd-4.5/dbhierx.mod'
+'dbnotnx.mod' -> '/usr/share/xml/docbook/xml-dtd-4.5/dbnotnx.mod'
+'dbpoolx.mod' -> '/usr/share/xml/docbook/xml-dtd-4.5/dbpoolx.mod'
+'htmltblx.mod' -> '/usr/share/xml/docbook/xml-dtd-4.5/htmltblx.mod'
+(lfs chroot) root:/sources/docbook-xml-4.5# if [ ! -e /etc/xml/docbook ]; then
+    xmlcatalog --noout --create /etc/xml/docbook
+fi &&
+xmlcatalog --noout --add "public" \
+    "-//OASIS//DTD DocBook XML V4.5//EN" \
+    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+    "-//OASIS//DTD DocBook XML CALS Table Model V4.5//EN" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/calstblx.dtd" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+    "-//OASIS//DTD XML Exchange Table Model 19990315//EN" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/soextblx.dtd" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+    "-//OASIS//ELEMENTS DocBook XML Information Pool V4.5//EN" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbpoolx.mod" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+    "-//OASIS//ELEMENTS DocBook XML Document Hierarchy V4.5//EN" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbhierx.mod" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+    "-//OASIS//ELEMENTS DocBook XML HTML Tables V4.5//EN" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/htmltblx.mod" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+    "-//OASIS//ENTITIES DocBook XML Notations V4.5//EN" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbnotnx.mod" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+    "-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbcentx.mod" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "public" \
+    "-//OASIS//ENTITIES DocBook XML Additional General Entities V4.5//EN" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5/dbgenent.mod" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "rewriteSystem" \
+    "http://www.oasis-open.org/docbook/xml/4.5" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5" \
+    /etc/xml/docbook &&
+xmlcatalog --noout --add "rewriteURI" \
+    "http://www.oasis-open.org/docbook/xml/4.5" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5" \
+    /etc/xml/docbook
+
+(lfs chroot) root:/sources/docbook-xml-4.5# 
+(lfs chroot) root:/sources/docbook-xml-4.5# if [ ! -e /etc/xml/catalog ]; then
+    xmlcatalog --noout --create /etc/xml/catalog
+fi &&
+xmlcatalog --noout --add "delegatePublic" \
+    "-//OASIS//ENTITIES DocBook XML" \
+    "file:///etc/xml/docbook" \
+    /etc/xml/catalog &&
+xmlcatalog --noout --add "delegatePublic" \
+    "-//OASIS//DTD DocBook XML" \
+    "file:///etc/xml/docbook" \
+    /etc/xml/catalog &&
+xmlcatalog --noout --add "delegateSystem" \
+    "http://www.oasis-open.org/docbook/" \
+    "file:///etc/xml/docbook" \
+    /etc/xml/catalog &&
+xmlcatalog --noout --add "delegateURI" \
+    "http://www.oasis-open.org/docbook/" \
+    "file:///etc/xml/docbook" \
+    /etc/xml/catalog
+(lfs chroot) root:/sources/docbook-xml-4.5# l /etc/xml/docbook
+-rw-r--r-- 1 root root 1.8K Oct  2 00:26 /etc/xml/docbook
+(lfs chroot) root:/sources/docbook-xml-4.5# l /etc/xml/catalog 
+-rw-r--r-- 1 root root 1.6K Oct  2 00:26 /etc/xml/catalog
+(lfs chroot) root:/sources/docbook-xml-4.5# for DTDVERSION in 4.1.2 4.2 4.3 4.4
+do
+  xmlcatalog --noout --add "public" \
+    "-//OASIS//DTD DocBook XML V$DTDVERSION//EN" \
+    "http://www.oasis-open.org/docbook/xml/$DTDVERSION/docbookx.dtd" \
+    /etc/xml/docbook
+  xmlcatalog --noout --add "rewriteSystem" \
+    "http://www.oasis-open.org/docbook/xml/$DTDVERSION" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5" \
+    /etc/xml/docbook
+  xmlcatalog --noout --add "rewriteURI" \
+    "http://www.oasis-open.org/docbook/xml/$DTDVERSION" \
+    "file:///usr/share/xml/docbook/xml-dtd-4.5" \
+    /etc/xml/docbook
+  xmlcatalog --noout --add "delegateSystem" \
+    "http://www.oasis-open.org/docbook/xml/$DTDVERSION/" \
+    "file:///etc/xml/docbook" \
+    /etc/xml/catalog
+  xmlcatalog --noout --add "delegateURI" \
+    "http://www.oasis-open.org/docbook/xml/$DTDVERSION/" \
+    "file:///etc/xml/docbook" \
+    /etc/xml/catalog
+done
+(lfs chroot) root:/sources/docbook-xml-4.5# finish
+[lfs-scripts] Finishing build of docbook-xml-4.5 at Sun Oct  2 12:27:25 AM -03 2022
+(lfs chroot) root:/sources# 

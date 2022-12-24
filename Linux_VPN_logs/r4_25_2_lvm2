@@ -1,0 +1,2845 @@
+(lfs chroot) root:/sources# l
+total 160M
+-rw-r--r--  1 root root 725K Oct  1 20:19 057.zip
+-rw-r--r--  1 root root 2.2M Jul 30  2021 btrfs-progs-v5.13.1.tar.xz
+-rw-r--r--  1 root root 2.9K Oct 26  2006 ChangeLog
+-rw-r--r--  1 root root 1.3M Nov  6  2019 cpio-2.13.tar.bz2
+-rw-r--r--  1 root root  97K Oct  2 00:16 docbook-xml-4.5.zip
+-rw-r--r--  1 root root 1.8K Aug 31 17:51 docbook-xsl-nons-1.79.2-stack_fix-1.patch
+-rw-r--r--  1 root root  23M Dec  7  2021 docbook-xsl-nons-1.79.2.tar.bz2
+-rw-r--r--  1 root root 314K Dec  7  2021 dosfstools-4.2.tar.gz
+-rw-r--r--  1 root root 471K Jun 24 13:10 dracut-057.tar.gz
+-rw-r--r--  1 root root 313K Jan 18  2022 ethtool-5.16.tar.xz
+-rw-r--r--  1 root root 2.7M Dec  8  2021 fuse-3.10.4.tar.xz
+-rw-r--r--  1 root root 527K Mar  4  2011 jfsutils-1.1.15.tar.gz
+-rw-r--r--  1 root root  38K Feb 24  2019 libaio-0.3.112.tar.xz
+-rw-r--r--  1 root root 1.7M Nov  9  2021 libtasn1-4.18.0.tar.gz
+-rw-r--r--  1 root root 2.6M Aug 29 11:56 libxml2-2.10.2.tar.xz
+-rw-r--r--  1 root root 1.6M Aug 17 10:42 libxslt-1.1.36.tar.xz
+drwxrwxr-x 24 root root 4.0K Sep 30 19:36 linux-5.13.12
+-rw-r--r--  1 root root 114M Sep 30 15:05 linux-5.13.12.tar.xz
+-rw-r--r--  1 root root 2.5M Aug 11  2021 LVM2.2.03.13.tgz
+-rw-r--r--  1 root root  31K Jan 10  2022 make-ca-1.10.tar.xz
+-rw-r--r--  1 root root 431K Oct 26  2018 mdadm-4.1.tar.xz
+-rw-r--r--  1 root root 1.4M Jun 15  2021 nano-5.8.tar.xz
+-rw-r--r--  1 root root 1.3M Aug 22  2021 ntfs-3g_ntfsprogs-2021.8.22.tgz
+-rw-r--r--  1 root root 819K Jan 17  2022 p11-kit-0.24.1.tar.xz
+-rw-r--r--  1 root root  601 Aug 31 17:51 sgml-common-0.6.3-manpage-1.patch
+-rw-r--r--  1 root root  75K May 25  2001 sgml-common-0.6.3.tgz
+-rw-r--r--  1 root root 969K Dec 30  2020 smartmontools-7.2.tar.gz
+-rw-r--r--  1 root root 597K Mar  1  2022 unzip-6.0-consolidated_fixes-1.patch
+-rw-r--r--  1 root root 1.4M Apr 30  2009 unzip60.tar.gz
+(lfs chroot) root:/sources# begin LVM2.2.03.13 tgz
+[lfs-scripts] Starting build of LVM2.2.03.13 at Sun Oct  2 12:53:17 AM -03 2022
+(lfs chroot) root:/sources/LVM2.2.03.13# PATH+=:/usr/sbin                \
+./configure --prefix=/usr       \
+            --enable-cmdlib     \
+            --enable-pkgconfig  \
+            --enable-udev_sync  \
+                        --with-usrlibdir=/usr/lib \
+                        --with-udevdir=/lib/udev/rules.d \
+                        --with-default-locking-dir=/run/lvm \
+                        --enable-lvmetad \
+                        --enable-udev_rules
+configure: WARNING: unrecognized options: --enable-lvmetad
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking target system type... aarch64-unknown-linux-gnu
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gawk... gawk
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking whether gcc needs -traditional... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for ranlib... ranlib
+checking for ar... ar
+checking for cflow... no
+checking for cscope... no
+checking for chmod... /usr/bin/chmod
+checking for wc... /usr/bin/wc
+checking for sort... /usr/bin/sort
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether sys/types.h defines makedev... no
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for ANSI C header files... (cached) yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking assert.h usability... yes
+checking assert.h presence... yes
+checking for assert.h... yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking float.h usability... yes
+checking float.h presence... yes
+checking for float.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for inttypes.h... (cached) yes
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking libgen.h usability... yes
+checking libgen.h presence... yes
+checking for libgen.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking for sys/stat.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking for sys/wait.h... (cached) yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking for unistd.h... (cached) yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking sys/timerfd.h usability... yes
+checking sys/timerfd.h presence... yes
+checking for sys/timerfd.h... yes
+checking sys/vfs.h usability... yes
+checking sys/vfs.h presence... yes
+checking for sys/vfs.h... yes
+checking linux/magic.h usability... yes
+checking linux/magic.h presence... yes
+checking for linux/magic.h... yes
+checking linux/fiemap.h usability... yes
+checking linux/fiemap.h presence... yes
+checking for linux/fiemap.h... yes
+checking libaio.h usability... yes
+checking libaio.h presence... yes
+checking for libaio.h... yes
+checking asm/byteorder.h usability... yes
+checking asm/byteorder.h presence... yes
+checking for asm/byteorder.h... yes
+checking linux/fs.h usability... yes
+checking linux/fs.h presence... yes
+checking for linux/fs.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for struct stat.st_rdev... yes
+checking for ptrdiff_t... yes
+checking for struct stat.st_blocks... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for off_t... yes
+checking for pid_t... yes
+checking return type of signal handlers... void
+checking for size_t... yes
+checking for mode_t... yes
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for ssize_t... yes
+checking for uid_t in sys/types.h... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for __builtin_clz... yes
+checking for __builtin_clzll... yes
+checking for ftruncate... yes
+checking for gethostname... yes
+checking for getpagesize... yes
+checking for gettimeofday... yes
+checking for localtime_r... yes
+checking for memchr... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for mkfifo... yes
+checking for munmap... yes
+checking for nl_langinfo... yes
+checking for pselect... yes
+checking for realpath... yes
+checking for rmdir... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strcspn... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strndup... yes
+checking for strrchr... yes
+checking for strspn... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for uname... yes
+checking for prlimit... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether closedir returns void... no
+checking for unistd.h... (cached) yes
+checking for working chown... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether lstat accepts an empty string... no
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for working memcmp... yes
+checking for sys/time.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for sys/param.h... (cached) yes
+checking for alarm... yes
+checking for working mktime... yes
+checking for getpagesize... (cached) yes
+checking for working mmap... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking whether stat accepts an empty string... no
+checking for working strtod... yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking whether to enable dependency tracking... yes
+checking whether to build silently... yes
+checking whether to use static linking... no
+checking whether gcc accepts -pie flag... yes
+checking whether gcc accepts -Wl,-z,relro,-z,now ld flags... yes
+checking file owner... 
+checking group owner... 
+checking device node uid... 0
+checking device node gid... 0
+checking device node mode... 0600
+checking when to create device nodes... on resume
+checking default name mangling... auto
+checking whether to include snapshots... internal
+checking whether to include mirrors... internal
+checking whether to include thin provisioning... internal
+checking for thin_check... no
+configure: WARNING: thin_check not found in path /usr/bin:/usr/sbin:/usr/sbin:/usr/sbin
+configure: WARNING: /usr/sbin/thin_check: Bad version "" found
+checking for thin_dump... no
+configure: WARNING: thin_dump not found in path /usr/bin:/usr/sbin:/usr/sbin:/usr/sbin
+checking for thin_repair... no
+configure: WARNING: thin_repair not found in path /usr/bin:/usr/sbin:/usr/sbin:/usr/sbin
+checking for thin_restore... no
+configure: WARNING: thin_restore not found in path /usr/bin:/usr/sbin:/usr/sbin:/usr/sbin
+checking whether thin_check supports the needs-check flag... no
+checking whether to include cache... internal
+checking for cache_check... no
+configure: WARNING: cache_check not found in path /usr/bin:/usr/sbin:/usr/sbin:/usr/sbin
+configure: WARNING: /usr/sbin/cache_check: Bad version "" found
+checking for cache_dump... no
+configure: WARNING: cache_dump not found in path /usr/bin:/usr/sbin:/usr/sbin:/usr/sbin
+checking for cache_repair... no
+configure: WARNING: cache_repair not found in path /usr/bin:/usr/sbin:/usr/sbin:/usr/sbin
+checking for cache_restore... no
+configure: WARNING: cache_restore not found in path /usr/bin:/usr/sbin:/usr/sbin:/usr/sbin
+checking whether cache_check supports the needs-check flag... no
+checking whether to include vdo... internal
+checking for vdoformat... no
+configure: WARNING: vdoformat not found in path /usr/bin:/usr/sbin:/usr/sbin:/usr/sbin
+checking whether to include writecache... internal
+checking whether to include integrity... internal
+checking whether to enable realtime support... yes
+checking whether to enable OCF resource agents... no
+checking for default run directory... /run
+checking whether to build cluster mirror log daemon... no
+checking whether to enable debugging... no
+checking whether gcc accepts -Wjump-misses-init flag... yes
+checking whether gcc accepts -Wclobbered flag... yes
+checking whether gcc accepts -Wsync-nand flag... yes
+checking for C optimisation flag... -O2
+checking whether to use symbol versioning... gnu
+checking whether to gather gcov profiling data... no
+checking whether to enable valgrind awareness of pools... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for PKGCONFIGINIT... no
+pkg-config initialized
+checking for VALGRIND... no
+checking whether to use device-mapper... yes
+checking whether to build lvmpolld... no
+checking whether to build lvmlockdsanlock... no
+checking whether to build lvmlockddlm... no
+checking whether to build lvmlockddlmcontrol... no
+checking whether to build lvmlockdidm... no
+checking whether to build lvmlockd... no
+checking whether to build dmfilemapd... no
+checking whether to build notifydbus... no
+checking for BLKID... yes
+checking whether to enable libblkid detection of signatures when wiping... yes
+checking for SYSTEMD... no
+checking whether to use udev-systemd protocol for jobs in background... no
+checking whether to enable synchronisation with udev processing... yes
+checking for UDEV... yes
+checking for udev_device_get_is_initialized in -ludev... yes
+checking whether to enable installation of udev rules required for synchronisation... yes
+checking whether to enable executable path detection in udev rules... no
+checking whether udev supports built-in blkid... yes
+checking whether to enable O_DIRECT... yes
+checking whether to compile liblvm2cmd.so... yes
+checking whether to include Python D-Bus support... no
+checking whether to install fsadm... yes
+checking whether to install vdoimport... yes
+checking whether to install blkdeactivate... yes
+checking whether to use dmeventd... no
+checking for getline in -lc... yes
+checking for canonicalize_file_name in -lc... yes
+checking for dlopen in -ldl... yes
+checking for log10 in -lm... yes
+checking for pthread_mutex_lock in -lpthread... yes
+checking whether to enable selinux support... yes
+checking for sepol_check_context in -lsepol... no
+checking for is_selinux_enabled in -lselinux... no
+configure: WARNING: Disabling selinux
+checking for BLKZEROOUT in sys/ioctl.h.... yes
+checking whether to use BLKZEROOUT for device zeroing... yes
+checking for clock_gettime... yes
+checking for struct stat has st_ctim.... yes
+checking for getopt.h... (cached) yes
+checking for library containing tgetent... -lncurses
+checking for readline in -lreadline... yes
+checking for rl_line_buffer in -lreadline... yes
+checking for rl_completion_matches... yes
+checking whether to enable internationalisation... no
+Package systemd was not found in the pkg-config search path.
+Perhaps you should add the directory containing `systemd.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'systemd' found
+Package systemd was not found in the pkg-config search path.
+Perhaps you should add the directory containing `systemd.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'systemd' found
+checking readline/readline.h usability... yes
+checking readline/readline.h presence... yes
+checking for readline/readline.h... yes
+checking readline/history.h usability... yes
+checking readline/history.h presence... yes
+checking for readline/history.h... yes
+checking whether to enable readline... yes
+checking whether to enable editline... no
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking sys/ipc.h usability... yes
+checking sys/ipc.h presence... yes
+checking for sys/ipc.h... yes
+checking sys/sem.h usability... yes
+checking sys/sem.h presence... yes
+checking for sys/sem.h... yes
+checking for modprobe... /usr/sbin/modprobe
+checking for kernel interface choice... ioctl
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating make.tmpl
+config.status: creating libdm/make.tmpl
+config.status: creating daemons/Makefile
+config.status: creating daemons/cmirrord/Makefile
+config.status: creating daemons/dmeventd/Makefile
+config.status: creating daemons/dmeventd/libdevmapper-event.pc
+config.status: creating daemons/dmeventd/plugins/Makefile
+config.status: creating daemons/dmeventd/plugins/lvm2/Makefile
+config.status: creating daemons/dmeventd/plugins/raid/Makefile
+config.status: creating daemons/dmeventd/plugins/mirror/Makefile
+config.status: creating daemons/dmeventd/plugins/snapshot/Makefile
+config.status: creating daemons/dmeventd/plugins/thin/Makefile
+config.status: creating daemons/dmeventd/plugins/vdo/Makefile
+config.status: creating daemons/lvmdbusd/Makefile
+config.status: creating daemons/lvmdbusd/lvmdbusd
+config.status: creating daemons/lvmdbusd/lvmdb.py
+config.status: creating daemons/lvmdbusd/lvm_shell_proxy.py
+config.status: creating daemons/lvmdbusd/path.py
+config.status: creating daemons/lvmpolld/Makefile
+config.status: creating daemons/lvmlockd/Makefile
+config.status: creating conf/Makefile
+config.status: creating conf/example.conf
+config.status: creating conf/lvmlocal.conf
+config.status: creating conf/command_profile_template.profile
+config.status: creating conf/metadata_profile_template.profile
+config.status: creating include/Makefile
+config.status: creating lib/Makefile
+config.status: creating include/lvm-version.h
+config.status: creating libdaemon/Makefile
+config.status: creating libdaemon/client/Makefile
+config.status: creating libdaemon/server/Makefile
+config.status: creating libdm/Makefile
+config.status: creating libdm/dm-tools/Makefile
+config.status: creating libdm/libdevmapper.pc
+config.status: creating man/Makefile
+config.status: creating po/Makefile
+config.status: creating scripts/lvm2-pvscan.service
+config.status: creating scripts/blkdeactivate.sh
+config.status: creating scripts/blk_availability_init_red_hat
+config.status: creating scripts/blk_availability_systemd_red_hat.service
+config.status: creating scripts/cmirrord_init_red_hat
+config.status: creating scripts/com.redhat.lvmdbus1.service
+config.status: creating scripts/dm_event_systemd_red_hat.service
+config.status: creating scripts/dm_event_systemd_red_hat.socket
+config.status: creating scripts/lvm2_cmirrord_systemd_red_hat.service
+config.status: creating scripts/lvm2_lvmdbusd_systemd_red_hat.service
+config.status: creating scripts/lvm2_lvmpolld_init_red_hat
+config.status: creating scripts/lvm2_lvmpolld_systemd_red_hat.service
+config.status: creating scripts/lvm2_lvmpolld_systemd_red_hat.socket
+config.status: creating scripts/lvmlockd.service
+config.status: creating scripts/lvmlocks.service
+config.status: creating scripts/lvm2_monitoring_init_red_hat
+config.status: creating scripts/lvm2_monitoring_systemd_red_hat.service
+config.status: creating scripts/lvm2_tmpfiles_red_hat.conf
+config.status: creating scripts/lvmdump.sh
+config.status: creating scripts/Makefile
+config.status: creating test/Makefile
+config.status: creating tools/Makefile
+config.status: creating udev/Makefile
+config.status: creating include/configure.h
+configure: WARNING: unrecognized options: --enable-lvmetad
+configure: WARNING: Support for thin provisioning is limited since some thin provisioning tools are missing!
+configure: WARNING: You should also install latest thin_check vsn 0.7.0 (or later) for lvm2 thin provisioning
+configure: WARNING: Support for cache is limited since some cache tools are missing!
+configure: WARNING: You should install latest cache_check vsn 0.7.0 to use lvm2 cache metadata format 2
+configure: WARNING: Unrecognized 'vdoformat' tool is REQUIRED for VDO logical volume creation!
+(lfs chroot) root:/sources/LVM2.2.03.13# make -j8
+/usr/bin/make -C libdm device-mapper
+/usr/bin/make -C conf device-mapper
+/usr/bin/make -C include device-mapper
+/usr/bin/make -C lib device-mapper
+/usr/bin/make -C libdaemon device-mapper
+/usr/bin/make -C man device-mapper
+/usr/bin/make -C scripts device-mapper
+/usr/bin/make -C udev device-mapper
+make[1]: Entering directory '/sources/LVM2.2.03.13/include'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm'
+make[1]: Entering directory '/sources/LVM2.2.03.13/lib'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+make[1]: Entering directory '/sources/LVM2.2.03.13/udev'
+make[1]: Entering directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Entering directory '/sources/LVM2.2.03.13/conf'
+make[1]: Entering directory '/sources/LVM2.2.03.13/man'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/conf'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/scripts'
+    [CC] bitset.c
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/udev'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/include'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/lib'
+    [CC] hash.c
+    [CC] hash.c
+    [CC] list.c
+    [CC] list.c
+    [MAN] dmsetup.8
+    [CC] libdm-common.c
+    [CC] libdm-config.c
+    [MAN] dmstats.8
+    [MAN] blkdeactivate.8
+    [MAN] dmeventd.8
+    [MAN] dmfilemapd.8
+    [CC] libdm-deptree.c
+make[1]: Leaving directory '/sources/LVM2.2.03.13/man'
+    [CC] radix-tree.c
+    [CC] libdm-file.c
+    [CC] bitset.c
+    [CC] libdm-report.c
+    [CC] libdm-iface.c
+    [CC] libdm-common.c
+    [CC] libdm-stats.c
+    [CC] libdm-config.c
+    [CC] libdm-deptree.c
+In function ‘_find_dm_tree_node_by_uuid’,
+    inlined from ‘dm_tree_find_node_by_uuid’ at libdm-deptree.c:785:9:
+libdm-deptree.c:585:32: warning: ‘strncpy’ specified bound 129 equals destination size [-Wstringop-truncation]
+  585 |                         (void) strncpy(uuid_without_suffix, uuid, sizeof(uuid_without_suffix));
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘_lookup_dev_name’,
+    inlined from ‘_flatten’ at device_mapper/ioctl/libdm-iface.c:1240:8,
+    inlined from ‘_do_dm_ioctl’ at device_mapper/ioctl/libdm-iface.c:1841:8,
+    inlined from ‘dm_task_run’ at device_mapper/ioctl/libdm-iface.c:2068:14:
+device_mapper/ioctl/libdm-iface.c:1091:25: warning: ‘strncpy’ specified bound 128 equals destination size [-Wstringop-truncation]
+ 1091 |                         strncpy(buf, names->name, len);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘_flatten’,
+    inlined from ‘_do_dm_ioctl’ at device_mapper/ioctl/libdm-iface.c:1841:8,
+    inlined from ‘dm_task_run’ at device_mapper/ioctl/libdm-iface.c:2068:14:
+device_mapper/ioctl/libdm-iface.c:1253:17: warning: ‘strncpy’ specified bound 128 equals destination size [-Wstringop-truncation]
+ 1253 |                 strncpy(dmi->name, DEV_NAME(dmt), sizeof(dmi->name));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+device_mapper/ioctl/libdm-iface.c:1256:17: warning: ‘strncpy’ specified bound 129 equals destination size [-Wstringop-truncation]
+ 1256 |                 strncpy(dmi->uuid, DEV_UUID(dmt), sizeof(dmi->uuid));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [CC] libdm-file.c
+    [CC] libdm-report.c
+    [CC] libdm-string.c
+    [CC] libdm-targets.c
+    [CC] libdm-timestamp.c
+    [CC] libdm-string.c
+    [CC] libdm-targets.c
+    [CC] libdm-timestamp.c
+In function ‘_find_dm_tree_node_by_uuid’,
+    inlined from ‘dm_tree_find_node_by_uuid’ at device_mapper/libdm-deptree.c:823:9:
+device_mapper/libdm-deptree.c:623:32: warning: ‘strncpy’ specified bound 129 equals destination size [-Wstringop-truncation]
+  623 |                         (void) strncpy(uuid_without_suffix, uuid, sizeof(uuid_without_suffix));
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [CC] pool.c
+    [CC] dbg_malloc.c
+    [CC] pool.c
+    [CC] matcher.c
+    [CC] matcher.c
+    [CC] parse_rx.c
+    [CC] ttree.c
+    [CC] parse_rx.c
+    [CC] libdm-iface.c
+    [CC] ttree.c
+    [CC] status.c
+    [CC] vdo_target.c
+    [AR] base/libbase.a
+/usr/bin/ar: creating base/libbase.a
+In function ‘_lookup_dev_name’,
+    inlined from ‘_flatten’ at ioctl/libdm-iface.c:1231:8,
+    inlined from ‘_do_dm_ioctl’ at ioctl/libdm-iface.c:1817:8,
+    inlined from ‘dm_task_run’ at ioctl/libdm-iface.c:2046:14:
+ioctl/libdm-iface.c:1094:25: warning: ‘strncpy’ specified bound 128 equals destination size [-Wstringop-truncation]
+ 1094 |                         strncpy(buf, names->name, len);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘_flatten’,
+    inlined from ‘_do_dm_ioctl’ at ioctl/libdm-iface.c:1817:8,
+    inlined from ‘dm_task_run’ at ioctl/libdm-iface.c:2046:14:
+ioctl/libdm-iface.c:1248:17: warning: ‘strncpy’ specified bound 128 equals destination size [-Wstringop-truncation]
+ 1248 |                 strncpy(dmi->name, DEV_NAME(dmt), sizeof(dmi->name));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ioctl/libdm-iface.c:1251:17: warning: ‘strncpy’ specified bound 129 equals destination size [-Wstringop-truncation]
+ 1251 |                 strncpy(dmi->uuid, DEV_UUID(dmt), sizeof(dmi->uuid));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [AR] device_mapper/libdevice-mapper.a
+/usr/bin/ar: creating device_mapper/libdevice-mapper.a
+    [CC] ioctl/libdevmapper.so.1.02
+    [LN] libdevmapper.so.1.02
+    [LN] ioctl/libdevmapper.so
+    [CHECK] ioctl/libdevmapper.so
+    [LN] ioctl/libdevmapper.so
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm'
+/usr/bin/make -C daemons device-mapper
+/usr/bin/make -C tools device-mapper
+make[1]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Entering directory '/sources/LVM2.2.03.13/tools'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+    [GEN] command-count.h
+    [GEN] command-lines-input.h
+    [GEN] cmds.h
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/tools'
+/usr/bin/make -C libdm
+/usr/bin/make -C conf
+/usr/bin/make -C libdaemon
+/usr/bin/make -C include
+/usr/bin/make -C udev
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+make[1]: Entering directory '/sources/LVM2.2.03.13/conf'
+make[1]: Entering directory '/sources/LVM2.2.03.13/udev'
+make[1]: Entering directory '/sources/LVM2.2.03.13/include'
+/usr/bin/make -C dm-tools device-mapper
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/conf'
+/usr/bin/make -C client device-mapper
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/include'
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+    [CC] dmsetup.c
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+/usr/bin/make -C client
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/udev'
+    [CC] daemon-io.c
+    [CC] config-util.c
+    [CC] daemon-client.c
+    [AR] libdaemonclient.a
+/usr/bin/ar: creating libdaemonclient.a
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C lib
+make[1]: Entering directory '/sources/LVM2.2.03.13/lib'
+    [CC] lvmcache.c
+    [CC] activate.c
+    [CC] integrity.c
+    [CC] writecache.c
+    [CC] cache.c
+    [CC] toolcontext.c
+    [CC] config.c
+    [CC] btree.c
+    [CC] str_list.c
+    [CC] bcache.c
+    [CC] bcache-utils.c
+    [CC] dev-cache.c
+    [CC] device_id.c
+    [CC] dev-ext.c
+cache/lvmcache.c: In function ‘lvmcache_add’:
+cache/lvmcache.c:2252:17: warning: ‘strncpy’ specified bound 32 equals destination size [-Wstringop-truncation]
+ 2252 |                 strncpy((char *)&vgsummary.vgid, vgid, sizeof(vgsummary.vgid));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [CC] dev-io.c
+    [CC] dev-md.c
+    [CC] dev-mpath.c
+    [CC] dev-swap.c
+    [CC] dev-type.c
+    [CC] dev-luks.c
+    [CC] dev-dasd.c
+    [CC] dev-lvm1-pool.c
+    [CC] display.c
+    [CC] errseg.c
+    [CC] unknown.c
+    [CC] filter-composite.c
+    [CC] filter-persistent.c
+    [CC] filter-regex.c
+    [CC] filter-sysfs.c
+    [CC] filter-md.c
+    [CC] filter-fwraid.c
+    [CC] filter-mpath.c
+    [CC] filter-partitioned.c
+    [CC] filter-type.c
+    [CC] dmsetup
+    [CC] filter-usable.c
+    [CC] filter-internal.c
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+/usr/bin/make -C dm-tools
+    [CC] filter-signature.c
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm'
+    [CC] filter-deviceid.c
+    [CC] archive.c
+    [CC] archiver.c
+    [CC] export.c
+    [CC] flags.c
+    [CC] format-text.c
+    [CC] import.c
+    [CC] import_vsn1.c
+    [CC] text_label.c
+    [CC] freeseg.c
+    [CC] label.c
+    [CC] hints.c
+    [CC] file_locking.c
+    [CC] locking.c
+    [CC] log.c
+    [CC] cache_manip.c
+    [CC] writecache_manip.c
+    [CC] integrity_manip.c
+    [CC] lv.c
+    [CC] lv_manip.c
+    [CC] merge.c
+    [CC] metadata.c
+    [CC] mirror.c
+    [CC] pool_manip.c
+    [CC] pv.c
+    [CC] pv_list.c
+    [CC] pv_manip.c
+    [CC] pv_map.c
+    [CC] raid_manip.c
+    [CC] segtype.c
+    [CC] snapshot_manip.c
+    [CC] thin_manip.c
+    [CC] vdo_manip.c
+    [CC] vg.c
+    [CC] mirrored.c
+    [CC] crc.c
+    [CC] lvm-exec.c
+    [CC] lvm-file.c
+    [CC] lvm-flock.c
+    [CC] lvm-globals.c
+    [CC] lvm-maths.c
+    [CC] lvm-signal.c
+    [CC] lvm-string.c
+    [CC] lvm-wrappers.c
+    [CC] lvm-percent.c
+    [CC] sharedlib.c
+    [CC] memlock.c
+    [CC] lvmnotify.c
+    [CC] prop_common.c
+    [CC] raid.c
+    [CC] properties.c
+    [CC] report.c
+mm/memlock.c: In function ‘_allocate_memory’:
+mm/memlock.c:190:24: warning: ‘mallinfo’ is deprecated [-Wdeprecated-declarations]
+  190 |                 struct mallinfo inf = mallinfo();
+      |                        ^~~~~~~~
+In file included from mm/memlock.c:28:
+/usr/include/malloc.h:113:24: note: declared here
+  113 | extern struct mallinfo mallinfo (void) __THROW __MALLOC_DEPRECATED;
+      |                        ^~~~~~~~
+mm/memlock.c:196:17: warning: ‘mallinfo’ is deprecated [-Wdeprecated-declarations]
+  196 |                 inf = mallinfo();
+      |                 ^~~
+In file included from mm/memlock.c:28:
+/usr/include/malloc.h:113:24: note: declared here
+  113 | extern struct mallinfo mallinfo (void) __THROW __MALLOC_DEPRECATED;
+      |                        ^~~~~~~~
+    [CC] snapshot.c
+    [CC] striped.c
+    [CC] thin.c
+    [CC] uuid.c
+    [CC] zero.c
+    [CC] dev_manager.c
+    [CC] fs.c
+    [CC] vdo.c
+    [AR] liblvm-internal.a
+/usr/bin/ar: creating liblvm-internal.a
+make[1]: Leaving directory '/sources/LVM2.2.03.13/lib'
+/usr/bin/make -C tools
+/usr/bin/make -C scripts
+make[1]: Entering directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Entering directory '/sources/LVM2.2.03.13/tools'
+    [CC] lvm2_activation_generator_systemd_red_hat.c
+    [CC] cmdnames.h
+    [CC] dumpconfig.c
+    [CC] command.c
+    [CC] lvconvert.c
+    [CC] lvchange.c
+    [CC] lvconvert_poll.c
+    [CC] formats.c
+    [CC] lvcreate.c
+    [CC] lvdisplay.c
+lvconvert.c: In function ‘_lvconvert_integrity_remove’:
+lvconvert.c:6297:30: warning: unused variable ‘vg’ [-Wunused-variable]
+ 6297 |         struct volume_group *vg = lv->vg;
+      |                              ^~
+    [CC] lvextend.c
+    [CC] lvm2_activation_generator_systemd_red_hat
+    [CC] lvmcmdline.c
+make[1]: Leaving directory '/sources/LVM2.2.03.13/scripts'
+    [CC] lvmdevices.c
+    [CC] lvmdiskscan.c
+    [CC] lvpoll.c
+    [CC] lvreduce.c
+    [CC] lvremove.c
+    [CC] lvrename.c
+    [CC] lvresize.c
+    [CC] lvscan.c
+    [CC] polldaemon.c
+    [CC] pvchange.c
+    [CC] pvck.c
+    [CC] pvcreate.c
+    [CC] pvdisplay.c
+    [CC] pvmove.c
+    [CC] pvmove_poll.c
+    [CC] pvremove.c
+    [CC] pvresize.c
+    [CC] pvscan.c
+    [CC] reporter.c
+    [CC] segtypes.c
+    [CC] tags.c
+    [CC] toollib.c
+    [CC] vgcfgbackup.c
+    [CC] vgcfgrestore.c
+    [CC] vgchange.c
+    [CC] vgck.c
+    [CC] vgcreate.c
+    [CC] vgdisplay.c
+    [CC] vgexport.c
+    [CC] vgextend.c
+    [CC] vgimport.c
+    [CC] vgimportclone.c
+    [CC] vgimportdevices.c
+    [CC] vgmerge.c
+    [CC] vgmknodes.c
+    [CC] vgreduce.c
+    [CC] vgremove.c
+    [CC] vgrename.c
+    [CC] vgscan.c
+    [CC] vgsplit.c
+    [CC] lvmcmdlib.c
+    [CC] lvm2cmd.c
+    [CC] lvm.c
+    [LN] man-generator.c
+    [CC] man-generator.c
+In function ‘_get_all_devices’,
+    inlined from ‘process_each_pv’ at toollib.c:4456:13:
+toollib.c:3891:25: warning: ‘strncpy’ output may be truncated copying 32 bytes from a string of length 32 [-Wstringop-truncation]
+ 3891 |                         strncpy(dil->pvid, hint->pvid, ID_LEN);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+toollib.c:3911:17: warning: ‘strncpy’ output may be truncated copying 32 bytes from a string of length 32 [-Wstringop-truncation]
+ 3911 |                 strncpy(dil->pvid, dev->pvid, ID_LEN);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘_get_arg_devices’,
+    inlined from ‘process_each_pv’ at toollib.c:4461:13:
+toollib.c:3857:25: warning: ‘strncpy’ output may be truncated copying 32 bytes from a string of length 32 [-Wstringop-truncation]
+ 3857 |                         strncpy(dil->pvid, dil->dev->pvid, ID_LEN);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [AR] liblvm2cmd.a
+    [CC] lvm
+    [CC] liblvm2cmd.so
+    [LN] liblvm2cmd.so.2.03
+    [CC] man-generator
+make[1]: Leaving directory '/sources/LVM2.2.03.13/tools'
+/usr/bin/make -C daemons
+/usr/bin/make -C man
+make[1]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Entering directory '/sources/LVM2.2.03.13/man'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+    [MAN] lvm.conf.5
+    [MAN] lvmsystemid.7
+    [MAN] lvmraid.7
+    [MAN] lvmreport.7
+    [MAN] lvmcache.7
+    [MAN] lvmthin.7
+    [MAN] lvmvdo.7
+    [MAN] lvm.8
+    [MAN] lvmdump.8
+    [TSTMAN] test.gen
+    [MAN] lvmsadc.8
+    [MAN] lvmsar.8
+    [MAN] lvmpolld.8
+    [MAN] lvmlockd.8
+    [MAN] fsadm.8
+    [MAN] lvmlockctl.8
+    [MAN] lvmdbusd.8
+    [MAN] vdoimport.8
+    [MAN] cmirrord.8
+    [MAN] lvm2-activation-generator.8
+    [MAN] lvm-fullreport.8
+    [MAN] lvm-lvpoll.8
+    [MAN] lvcreate.8
+    [MAN] lvchange.8
+    [MAN] lvmconfig.8
+    [MAN] lvconvert.8
+    [MAN] lvdisplay.8
+    [MAN] lvextend.8
+    [MAN] lvreduce.8
+    [MAN] lvremove.8
+    [MAN] lvrename.8
+    [MAN] lvresize.8
+    [MAN] lvs.8
+    [MAN] lvscan.8
+    [MAN] pvchange.8
+    [MAN] pvck.8
+    [MAN] pvcreate.8
+    [MAN] pvdisplay.8
+    [MAN] pvmove.8
+    [MAN] pvremove.8
+    [MAN] pvresize.8
+    [MAN] pvs.8
+    [MAN] pvscan.8
+    [MAN] vgcfgbackup.8
+    [MAN] vgcfgrestore.8
+    [MAN] vgchange.8
+    [MAN] vgck.8
+    [MAN] vgcreate.8
+    [MAN] vgconvert.8
+    [MAN] vgdisplay.8
+    [MAN] vgexport.8
+    [MAN] vgextend.8
+    [MAN] vgimport.8
+    [MAN] vgimportclone.8
+    [MAN] vgmerge.8
+    [MAN] vgmknodes.8
+    [MAN] vgreduce.8
+    [MAN] vgremove.8
+    [MAN] vgrename.8
+    [MAN] vgs.8
+    [MAN] vgscan.8
+    [MAN] vgsplit.8
+    [MAN] lvmdiskscan.8
+    [MAN] lvmdevices.8
+    [MAN] vgimportdevices.8
+    [MAN] lvm-config.8
+    [MAN] lvm-dumpconfig.8
+make[1]: Leaving directory '/sources/LVM2.2.03.13/man'
+(lfs chroot) root:/sources/LVM2.2.03.13# make -C tools install_tools_dynamic
+make: Entering directory '/sources/LVM2.2.03.13/tools'
+    [INSTALL] lvm
+Creating symbolic links for individual commands in /usr/sbin
+make: Leaving directory '/sources/LVM2.2.03.13/tools'
+(lfs chroot) root:/sources/LVM2.2.03.13# make -C udev  install
+make -C libdm install
+make S=shell/thin-flags.sh check_local
+make: Entering directory '/sources/LVM2.2.03.13/udev'
+    [INSTALL] 69-dm-lvm-metad.rules
+    [INSTALL] 10-dm.rules
+    [INSTALL] 11-dm-lvm.rules
+    [INSTALL] 95-dm-notify.rules
+    [INSTALL] 13-dm-disk.rules
+make: Leaving directory '/sources/LVM2.2.03.13/udev'
+make: Entering directory '/sources/LVM2.2.03.13/libdm'
+/usr/bin/make -C dm-tools device-mapper
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+    [INSTALL] ioctl/libdevmapper.so
+    [INSTALL] libdevmapper.pc
+    [INSTALL] libdevmapper.h
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+/usr/bin/make -C dm-tools
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+/usr/bin/make -C dm-tools install
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+    [INSTALL] dmsetup
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make: Leaving directory '/sources/LVM2.2.03.13/libdm'
+/usr/bin/make -C libdm device-mapper
+/usr/bin/make -C conf device-mapper
+/usr/bin/make -C include device-mapper
+/usr/bin/make -C lib device-mapper
+/usr/bin/make -C libdaemon device-mapper
+/usr/bin/make -C man device-mapper
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm'
+make[1]: Entering directory '/sources/LVM2.2.03.13/include'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+make[1]: Entering directory '/sources/LVM2.2.03.13/conf'
+make[1]: Entering directory '/sources/LVM2.2.03.13/man'
+make[1]: Entering directory '/sources/LVM2.2.03.13/lib'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm'
+/usr/bin/make -C scripts device-mapper
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/conf'
+/usr/bin/make -C tools device-mapper
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C udev device-mapper
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/include'
+/usr/bin/make -C daemons device-mapper
+make[1]: Entering directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/man'
+make[1]: Entering directory '/sources/LVM2.2.03.13/tools'
+make[1]: Entering directory '/sources/LVM2.2.03.13/udev'
+make[1]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/lib'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/udev'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/tools'
+/usr/bin/make -C libdaemon
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C client device-mapper
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+/usr/bin/make -C client
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C lib
+make[1]: Entering directory '/sources/LVM2.2.03.13/lib'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/lib'
+/usr/bin/make -C tools
+make[1]: Entering directory '/sources/LVM2.2.03.13/tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/tools'
+/usr/bin/make -C daemons
+make[1]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+/usr/bin/make -C test check_local
+make[1]: Entering directory '/sources/LVM2.2.03.13/test'
+    [LIB-STAMP]
+    [CC] dmsecuretest.c
+    [CC] lib/securetest
+    [CC] lib/dmsecuretest
+    [CP] lib/check
+    [CP] lib/aux
+    [CP] lib/inittest
+    [CP] lib/utils
+    [CP] lib/get
+    [CP] lib/lvm-wrapper
+    [PATHS] lib/paths-common
+    [PATHS] lib/paths
+    [CXX] runner.cpp
+    [CXX] lib/runner
+    [CC] not.c
+    [CC] lib/not
+    [LN] lib/invalid
+    [LN] lib/fail
+    [LN] lib/should
+    [FLAVOUR] lib/flavour-ndev-lvmpolld.sh
+    [FLAVOUR] lib/flavour-ndev-vanilla.sh
+    [FLAVOUR] lib/flavour-ndev-devicesfile.sh
+    [FLAVOUR] lib/flavour-udev-lvmpolld.sh
+    [FLAVOUR] lib/flavour-udev-lvmlockd-sanlock.sh
+    [FLAVOUR] lib/flavour-udev-lvmlockd-dlm.sh
+    [FLAVOUR] lib/flavour-udev-lvmlockd-idm.sh
+    [FLAVOUR] lib/flavour-udev-lvmlockd-test.sh
+    [FLAVOUR] lib/flavour-udev-vanilla.sh
+    [MAKE] 
+make[2]: Entering directory '/sources/LVM2.2.03.13'
+    [CC] activation-generator_t.c
+    [CC] bcache_t.c
+    [CC] bitset_t.c
+    [CC] bcache_utils_t.c
+    [CC] config_t.c
+    [CC] dmlist_t.c
+    [CC] dmstatus_t.c
+    [CC] framework.c
+    [CC] io_engine_t.c
+    [CC] matcher_t.c
+    [CC] percent_t.c
+    [CC] radix_tree_t.c
+    [CC] run.c
+    [CC] string_t.c
+    [CC] vdo_t.c
+/usr/bin/make -C libdm device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/libdm'
+/usr/bin/make -C conf device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/conf'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/libdm'
+/usr/bin/make -C include device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/include'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/conf'
+/usr/bin/make -C lib device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/lib'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/include'
+/usr/bin/make -C libdaemon device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/lib'
+/usr/bin/make -C man device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/man'
+/usr/bin/make -C scripts device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/scripts'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C tools device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/tools'
+/usr/bin/make -C udev device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/udev'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/man'
+/usr/bin/make -C daemons device-mapper
+make[3]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/scripts'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/udev'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/tools'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+/usr/bin/make -C libdaemon
+make[3]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C client device-mapper
+make[4]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+/usr/bin/make -C client
+make[4]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[3]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C lib
+make[3]: Entering directory '/sources/LVM2.2.03.13/lib'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/lib'
+/usr/bin/make -C tools
+make[3]: Entering directory '/sources/LVM2.2.03.13/tools'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/tools'
+/usr/bin/make -C daemons
+make[3]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+    [LD] test/unit/unit-test
+make[2]: Leaving directory '/sources/LVM2.2.03.13'
+    [TEST-STAMP]
+VERBOSE=0 ./lib/runner \
+	--testdir . --outdir results \
+	--flavours ndev-vanilla --only . --skip shell/thin-flags.sh
+running 388 tests
+###      running: [ndev-vanilla] api/dbustest.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149228!
+###       failed: [ndev-vanilla] api/dbustest.sh
+###      running: [ndev-vanilla] shell/000-basic.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST149251!
+###       failed: [ndev-vanilla] shell/000-basic.sh
+###      running: [ndev-vanilla] shell/aa-lvmlockd-dlm-prepare.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149274!
+###       failed: [ndev-vanilla] shell/aa-lvmlockd-dlm-prepare.sh
+###      running: [ndev-vanilla] shell/aa-lvmlockd-idm-prepare.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149297!
+###       failed: [ndev-vanilla] shell/aa-lvmlockd-idm-prepare.sh
+###      running: [ndev-vanilla] shell/aa-lvmlockd-sanlock-prepare.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149320!
+###       failed: [ndev-vanilla] shell/aa-lvmlockd-sanlock-prepare.sh
+###      running: [ndev-vanilla] shell/activate-minor.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST149343!
+###       failed: [ndev-vanilla] shell/activate-minor.sh
+###      running: [ndev-vanilla] shell/activate-missing-segment.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149366!
+###       failed: [ndev-vanilla] shell/activate-missing-segment.sh
+###      running: [ndev-vanilla] shell/activate-missing.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149389!
+###       failed: [ndev-vanilla] shell/activate-missing.sh
+###      running: [ndev-vanilla] shell/activate-partial.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149412!
+###       failed: [ndev-vanilla] shell/activate-partial.sh
+###      running: [ndev-vanilla] shell/activation-skip.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST149435!
+###       failed: [ndev-vanilla] shell/activation-skip.sh
+###      running: [ndev-vanilla] shell/allow-mixed-block-sizes.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149458!
+###       failed: [ndev-vanilla] shell/allow-mixed-block-sizes.sh
+###      running: [ndev-vanilla] shell/autoactivation-metadata.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149481!
+###       failed: [ndev-vanilla] shell/autoactivation-metadata.sh
+###      running: [ndev-vanilla] shell/backup-read-only.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149504!
+###       failed: [ndev-vanilla] shell/backup-read-only.sh
+###      running: [ndev-vanilla] shell/cache-metadata2.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149527!
+###       failed: [ndev-vanilla] shell/cache-metadata2.sh
+###      running: [ndev-vanilla] shell/cache-no-discard.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149550!
+###       failed: [ndev-vanilla] shell/cache-no-discard.sh
+###      running: [ndev-vanilla] shell/cache-single-options.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149573!
+###       failed: [ndev-vanilla] shell/cache-single-options.sh
+###      running: [ndev-vanilla] shell/cache-single-split.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149596!
+###       failed: [ndev-vanilla] shell/cache-single-split.sh
+###      running: [ndev-vanilla] shell/cache-single-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149619!
+###       failed: [ndev-vanilla] shell/cache-single-thin.sh
+###      running: [ndev-vanilla] shell/cache-single-types.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST149642!
+###       failed: [ndev-vanilla] shell/cache-single-types.sh
+###      running: [ndev-vanilla] shell/cache-single-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149665!
+###       failed: [ndev-vanilla] shell/cache-single-usage.sh
+###      running: [ndev-vanilla] shell/cachevol-cachedevice.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149688!
+###       failed: [ndev-vanilla] shell/cachevol-cachedevice.sh
+###      running: [ndev-vanilla] shell/component-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149711!
+###       failed: [ndev-vanilla] shell/component-cache.sh
+###      running: [ndev-vanilla] shell/component-mirror.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST149734!
+###       failed: [ndev-vanilla] shell/component-mirror.sh
+###      running: [ndev-vanilla] shell/component-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149757!
+###       failed: [ndev-vanilla] shell/component-raid.sh
+###      running: [ndev-vanilla] shell/component-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149780!
+###       failed: [ndev-vanilla] shell/component-thin.sh
+###      running: [ndev-vanilla] shell/covercmd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149803!
+###       failed: [ndev-vanilla] shell/covercmd.sh
+###      running: [ndev-vanilla] shell/creation-time.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149826!
+###       failed: [ndev-vanilla] shell/creation-time.sh
+###      running: [ndev-vanilla] shell/dev-aliases.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST149849!
+###       failed: [ndev-vanilla] shell/dev-aliases.sh
+###      running: [ndev-vanilla] shell/devicesfile-basic.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149872!
+###       failed: [ndev-vanilla] shell/devicesfile-basic.sh
+###      running: [ndev-vanilla] shell/devicesfile-devname.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149895!
+###       failed: [ndev-vanilla] shell/devicesfile-devname.sh
+###      running: [ndev-vanilla] shell/devicesfile-realdevs.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149918!
+###       failed: [ndev-vanilla] shell/devicesfile-realdevs.sh
+###      running: [ndev-vanilla] shell/discards-thin.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST149941!
+###       failed: [ndev-vanilla] shell/discards-thin.sh
+###      running: [ndev-vanilla] shell/dmeventd-restart.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149964!
+###       failed: [ndev-vanilla] shell/dmeventd-restart.sh
+###      running: [ndev-vanilla] shell/dmsecuretest.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST149987!
+###       failed: [ndev-vanilla] shell/dmsecuretest.sh
+###      running: [ndev-vanilla] shell/dmsetup-integrity-keys.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150010!
+###       failed: [ndev-vanilla] shell/dmsetup-integrity-keys.sh
+###      running: [ndev-vanilla] shell/dmsetup-keyring.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150033!
+###       failed: [ndev-vanilla] shell/dmsetup-keyring.sh
+###      running: [ndev-vanilla] shell/dmstats-create.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST150056!
+###       failed: [ndev-vanilla] shell/dmstats-create.sh
+###      running: [ndev-vanilla] shell/dmstats-report.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150079!
+###       failed: [ndev-vanilla] shell/dmstats-report.sh
+###      running: [ndev-vanilla] shell/dumpconfig.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150103!
+###       failed: [ndev-vanilla] shell/dumpconfig.sh
+###      running: [ndev-vanilla] shell/duplicate-pvs-md0.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150126!
+###       failed: [ndev-vanilla] shell/duplicate-pvs-md0.sh
+###      running: [ndev-vanilla] shell/duplicate-pvs-md1.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150149!
+###       failed: [ndev-vanilla] shell/duplicate-pvs-md1.sh
+###      running: [ndev-vanilla] shell/duplicate-vgnames.sh 0
+| [ 0:01] DM table already has devices with prefix LVMTEST150172!
+###       failed: [ndev-vanilla] shell/duplicate-vgnames.sh
+###      running: [ndev-vanilla] shell/duplicate-vgrename.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150195!
+###       failed: [ndev-vanilla] shell/duplicate-vgrename.sh
+###      running: [ndev-vanilla] shell/error-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150218!
+###       failed: [ndev-vanilla] shell/error-usage.sh
+###      running: [ndev-vanilla] shell/exported.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150241!
+###       failed: [ndev-vanilla] shell/exported.sh
+###      running: [ndev-vanilla] shell/fsadm-crypt.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST150264!
+###       failed: [ndev-vanilla] shell/fsadm-crypt.sh
+###      running: [ndev-vanilla] shell/fsadm-renamed.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150287!
+###       failed: [ndev-vanilla] shell/fsadm-renamed.sh
+###      running: [ndev-vanilla] shell/fsadm.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150310!
+###       failed: [ndev-vanilla] shell/fsadm.sh
+###      running: [ndev-vanilla] shell/hints.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150333!
+###       failed: [ndev-vanilla] shell/hints.sh
+###      running: [ndev-vanilla] shell/idm_fabric_failure.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150356!
+###       failed: [ndev-vanilla] shell/idm_fabric_failure.sh
+###      running: [ndev-vanilla] shell/idm_fabric_failure_half_brain.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST150379!
+###       failed: [ndev-vanilla] shell/idm_fabric_failure_half_brain.sh
+###      running: [ndev-vanilla] shell/idm_fabric_failure_timeout.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150402!
+###       failed: [ndev-vanilla] shell/idm_fabric_failure_timeout.sh
+###      running: [ndev-vanilla] shell/idm_ilm_failure.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150425!
+###       failed: [ndev-vanilla] shell/idm_ilm_failure.sh
+###      running: [ndev-vanilla] shell/inconsistent-metadata.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150448!
+###       failed: [ndev-vanilla] shell/inconsistent-metadata.sh
+###      running: [ndev-vanilla] shell/integrity-blocksize-2.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST150471!
+###       failed: [ndev-vanilla] shell/integrity-blocksize-2.sh
+###      running: [ndev-vanilla] shell/integrity-blocksize-3.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150494!
+###       failed: [ndev-vanilla] shell/integrity-blocksize-3.sh
+###      running: [ndev-vanilla] shell/integrity-blocksize.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150517!
+###       failed: [ndev-vanilla] shell/integrity-blocksize.sh
+###      running: [ndev-vanilla] shell/integrity-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150540!
+###       failed: [ndev-vanilla] shell/integrity-dmeventd.sh
+###      running: [ndev-vanilla] shell/integrity-large.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST150563!
+###       failed: [ndev-vanilla] shell/integrity-large.sh
+###      running: [ndev-vanilla] shell/integrity-misc.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150586!
+###       failed: [ndev-vanilla] shell/integrity-misc.sh
+###      running: [ndev-vanilla] shell/integrity-syncaction.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150609!
+###       failed: [ndev-vanilla] shell/integrity-syncaction.sh
+###      running: [ndev-vanilla] shell/integrity.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150632!
+###       failed: [ndev-vanilla] shell/integrity.sh
+###      running: [ndev-vanilla] shell/large-physical-sector-size.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150655!
+###       failed: [ndev-vanilla] shell/large-physical-sector-size.sh
+###      running: [ndev-vanilla] shell/listings.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST150678!
+###       failed: [ndev-vanilla] shell/listings.sh
+###      running: [ndev-vanilla] shell/lock-blocking.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150701!
+###       failed: [ndev-vanilla] shell/lock-blocking.sh
+###      running: [ndev-vanilla] shell/lock-parallel.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150725!
+###       failed: [ndev-vanilla] shell/lock-parallel.sh
+###      running: [ndev-vanilla] shell/losetup-partscan.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150748!
+###       failed: [ndev-vanilla] shell/losetup-partscan.sh
+###      running: [ndev-vanilla] shell/lv-ancestry.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST150771!
+###       failed: [ndev-vanilla] shell/lv-ancestry.sh
+###      running: [ndev-vanilla] shell/lvchange-cache-mode.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150794!
+###       failed: [ndev-vanilla] shell/lvchange-cache-mode.sh
+###      running: [ndev-vanilla] shell/lvchange-cache-old.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150817!
+###       failed: [ndev-vanilla] shell/lvchange-cache-old.sh
+###      running: [ndev-vanilla] shell/lvchange-cache-syncaction-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150840!
+###       failed: [ndev-vanilla] shell/lvchange-cache-syncaction-raid.sh
+###      running: [ndev-vanilla] shell/lvchange-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150863!
+###       failed: [ndev-vanilla] shell/lvchange-cache.sh
+###      running: [ndev-vanilla] shell/lvchange-mirror.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150886!
+###       failed: [ndev-vanilla] shell/lvchange-mirror.sh
+###      running: [ndev-vanilla] shell/lvchange-partial-raid10.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150909!
+###       failed: [ndev-vanilla] shell/lvchange-partial-raid10.sh
+###      running: [ndev-vanilla] shell/lvchange-partial.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150932!
+###       failed: [ndev-vanilla] shell/lvchange-partial.sh
+###      running: [ndev-vanilla] shell/lvchange-raid-transient-failures.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST150955!
+###       failed: [ndev-vanilla] shell/lvchange-raid-transient-failures.sh
+###      running: [ndev-vanilla] shell/lvchange-raid.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST150978!
+###       failed: [ndev-vanilla] shell/lvchange-raid.sh
+###      running: [ndev-vanilla] shell/lvchange-raid1-writemostly.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151001!
+###       failed: [ndev-vanilla] shell/lvchange-raid1-writemostly.sh
+###      running: [ndev-vanilla] shell/lvchange-raid10.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151024!
+###       failed: [ndev-vanilla] shell/lvchange-raid10.sh
+###      running: [ndev-vanilla] shell/lvchange-raid456.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151047!
+###       failed: [ndev-vanilla] shell/lvchange-raid456.sh
+###      running: [ndev-vanilla] shell/lvchange-rebuild-raid.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151070!
+###       failed: [ndev-vanilla] shell/lvchange-rebuild-raid.sh
+###      running: [ndev-vanilla] shell/lvchange-syncaction-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151093!
+###       failed: [ndev-vanilla] shell/lvchange-syncaction-raid.sh
+###      running: [ndev-vanilla] shell/lvchange-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151116!
+###       failed: [ndev-vanilla] shell/lvchange-thin.sh
+###      running: [ndev-vanilla] shell/lvchange-vdo.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151139!
+###       failed: [ndev-vanilla] shell/lvchange-vdo.sh
+###      running: [ndev-vanilla] shell/lvconvert-cache-abort.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151162!
+###       failed: [ndev-vanilla] shell/lvconvert-cache-abort.sh
+###      running: [ndev-vanilla] shell/lvconvert-cache-chunks.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151185!
+###       failed: [ndev-vanilla] shell/lvconvert-cache-chunks.sh
+###      running: [ndev-vanilla] shell/lvconvert-cache-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151208!
+###       failed: [ndev-vanilla] shell/lvconvert-cache-raid.sh
+###      running: [ndev-vanilla] shell/lvconvert-cache-smq.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151231!
+###       failed: [ndev-vanilla] shell/lvconvert-cache-smq.sh
+###      running: [ndev-vanilla] shell/lvconvert-cache-snapshot.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151254!
+###       failed: [ndev-vanilla] shell/lvconvert-cache-snapshot.sh
+###      running: [ndev-vanilla] shell/lvconvert-cache-thin.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151277!
+###       failed: [ndev-vanilla] shell/lvconvert-cache-thin.sh
+###      running: [ndev-vanilla] shell/lvconvert-cache-vdo.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151300!
+###       failed: [ndev-vanilla] shell/lvconvert-cache-vdo.sh
+###      running: [ndev-vanilla] shell/lvconvert-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151323!
+###       failed: [ndev-vanilla] shell/lvconvert-cache.sh
+###      running: [ndev-vanilla] shell/lvconvert-m-raid1-degraded.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151346!
+###       failed: [ndev-vanilla] shell/lvconvert-m-raid1-degraded.sh
+###      running: [ndev-vanilla] shell/lvconvert-mirror-basic-0.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151369!
+###       failed: [ndev-vanilla] shell/lvconvert-mirror-basic-0.sh
+###      running: [ndev-vanilla] shell/lvconvert-mirror-basic-1.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151392!
+###       failed: [ndev-vanilla] shell/lvconvert-mirror-basic-1.sh
+###      running: [ndev-vanilla] shell/lvconvert-mirror-basic-2.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151415!
+###       failed: [ndev-vanilla] shell/lvconvert-mirror-basic-2.sh
+###      running: [ndev-vanilla] shell/lvconvert-mirror-basic-3.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151438!
+###       failed: [ndev-vanilla] shell/lvconvert-mirror-basic-3.sh
+###      running: [ndev-vanilla] shell/lvconvert-mirror-basic.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151461!
+###       failed: [ndev-vanilla] shell/lvconvert-mirror-basic.sh
+###      running: [ndev-vanilla] shell/lvconvert-mirror-split.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151484!
+###       failed: [ndev-vanilla] shell/lvconvert-mirror-split.sh
+###      running: [ndev-vanilla] shell/lvconvert-mirror-updown.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151507!
+###       failed: [ndev-vanilla] shell/lvconvert-mirror-updown.sh
+###      running: [ndev-vanilla] shell/lvconvert-mirror.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151530!
+###       failed: [ndev-vanilla] shell/lvconvert-mirror.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-allocation.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151553!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-allocation.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-regionsize.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151576!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-regionsize.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape-linear_to_raid6-single-type.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151599!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape-linear_to_raid6-single-type.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape-linear_to_striped-single-type.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151622!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape-linear_to_striped-single-type.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape-linear_to_striped.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151645!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape-linear_to_striped.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape-load.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151668!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape-load.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape-striped_to_linear-single-type.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151691!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape-striped_to_linear-single-type.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape-striped_to_linear.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151714!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape-striped_to_linear.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape-stripes-load-fail.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151737!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape-stripes-load-fail.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape-stripes-load-reload.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151760!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape-stripes-load-reload.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape-stripes-load.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151783!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape-stripes-load.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-reshape.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151806!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-reshape.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-restripe-linear.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151829!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-restripe-linear.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-status-validation.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151852!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-status-validation.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-takeover-alloc-failure.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151875!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-takeover-alloc-failure.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-takeover-linear_to_raid4.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151898!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-takeover-linear_to_raid4.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-takeover-raid4_to_linear.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151921!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-takeover-raid4_to_linear.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-takeover-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151944!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-takeover-thin.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid-takeover.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST151967!
+###       failed: [ndev-vanilla] shell/lvconvert-raid-takeover.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST151990!
+###       failed: [ndev-vanilla] shell/lvconvert-raid.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid0-striped.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152013!
+###       failed: [ndev-vanilla] shell/lvconvert-raid0-striped.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid0_to_raid10.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152036!
+###       failed: [ndev-vanilla] shell/lvconvert-raid0_to_raid10.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid1-split-trackchanges.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST152059!
+###       failed: [ndev-vanilla] shell/lvconvert-raid1-split-trackchanges.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid10.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152082!
+###       failed: [ndev-vanilla] shell/lvconvert-raid10.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid456.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152105!
+###       failed: [ndev-vanilla] shell/lvconvert-raid456.sh
+###      running: [ndev-vanilla] shell/lvconvert-raid5_to_raid10.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152128!
+###       failed: [ndev-vanilla] shell/lvconvert-raid5_to_raid10.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152151!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-cache.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-dmeventd.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST152174!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-dmeventd.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-mirror.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152197!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-mirror.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-policy.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152220!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-policy.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-raid-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152243!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-raid-dmeventd.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-raid.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST152266!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-raid.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-replace.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152289!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-replace.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-snapshot.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152312!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-snapshot.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-thin-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152335!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-thin-raid.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152358!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-thin.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-transient-dmeventd.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST152381!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-transient-dmeventd.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair-transient.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152404!
+###       failed: [ndev-vanilla] shell/lvconvert-repair-transient.sh
+###      running: [ndev-vanilla] shell/lvconvert-repair.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152427!
+###       failed: [ndev-vanilla] shell/lvconvert-repair.sh
+###      running: [ndev-vanilla] shell/lvconvert-snapshot-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152450!
+###       failed: [ndev-vanilla] shell/lvconvert-snapshot-cache.sh
+###      running: [ndev-vanilla] shell/lvconvert-snapshot-mirror.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST152473!
+###       failed: [ndev-vanilla] shell/lvconvert-snapshot-mirror.sh
+###      running: [ndev-vanilla] shell/lvconvert-snapshot-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152496!
+###       failed: [ndev-vanilla] shell/lvconvert-snapshot-raid.sh
+###      running: [ndev-vanilla] shell/lvconvert-snapshot-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152519!
+###       failed: [ndev-vanilla] shell/lvconvert-snapshot-thin.sh
+###      running: [ndev-vanilla] shell/lvconvert-snapshot.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152542!
+###       failed: [ndev-vanilla] shell/lvconvert-snapshot.sh
+###      running: [ndev-vanilla] shell/lvconvert-striped-raid0.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152565!
+###       failed: [ndev-vanilla] shell/lvconvert-striped-raid0.sh
+###      running: [ndev-vanilla] shell/lvconvert-thin-external-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152588!
+###       failed: [ndev-vanilla] shell/lvconvert-thin-external-cache.sh
+###      running: [ndev-vanilla] shell/lvconvert-thin-external.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152611!
+###       failed: [ndev-vanilla] shell/lvconvert-thin-external.sh
+###      running: [ndev-vanilla] shell/lvconvert-thin-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152634!
+###       failed: [ndev-vanilla] shell/lvconvert-thin-raid.sh
+###      running: [ndev-vanilla] shell/lvconvert-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152657!
+###       failed: [ndev-vanilla] shell/lvconvert-thin.sh
+###      running: [ndev-vanilla] shell/lvconvert-twostep.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST152680!
+###       failed: [ndev-vanilla] shell/lvconvert-twostep.sh
+###      running: [ndev-vanilla] shell/lvconvert-vdo-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152703!
+###       failed: [ndev-vanilla] shell/lvconvert-vdo-raid.sh
+###      running: [ndev-vanilla] shell/lvconvert-vdo.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152726!
+###       failed: [ndev-vanilla] shell/lvconvert-vdo.sh
+###      running: [ndev-vanilla] shell/lvcreate-cache-fail.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152749!
+###       failed: [ndev-vanilla] shell/lvcreate-cache-fail.sh
+###      running: [ndev-vanilla] shell/lvcreate-cache-no-tools.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST152772!
+###       failed: [ndev-vanilla] shell/lvcreate-cache-no-tools.sh
+###      running: [ndev-vanilla] shell/lvcreate-cache-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152795!
+###       failed: [ndev-vanilla] shell/lvcreate-cache-raid.sh
+###      running: [ndev-vanilla] shell/lvcreate-cache-snapshot.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152818!
+###       failed: [ndev-vanilla] shell/lvcreate-cache-snapshot.sh
+###      running: [ndev-vanilla] shell/lvcreate-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152841!
+###       failed: [ndev-vanilla] shell/lvcreate-cache.sh
+###      running: [ndev-vanilla] shell/lvcreate-external-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152864!
+###       failed: [ndev-vanilla] shell/lvcreate-external-dmeventd.sh
+###      running: [ndev-vanilla] shell/lvcreate-large-raid.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST152887!
+###       failed: [ndev-vanilla] shell/lvcreate-large-raid.sh
+###      running: [ndev-vanilla] shell/lvcreate-large-raid10.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152910!
+###       failed: [ndev-vanilla] shell/lvcreate-large-raid10.sh
+###      running: [ndev-vanilla] shell/lvcreate-large.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152933!
+###       failed: [ndev-vanilla] shell/lvcreate-large.sh
+###      running: [ndev-vanilla] shell/lvcreate-mirror.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST152956!
+###       failed: [ndev-vanilla] shell/lvcreate-mirror.sh
+###      running: [ndev-vanilla] shell/lvcreate-missing.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST152979!
+###       failed: [ndev-vanilla] shell/lvcreate-missing.sh
+###      running: [ndev-vanilla] shell/lvcreate-operation.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153002!
+###       failed: [ndev-vanilla] shell/lvcreate-operation.sh
+###      running: [ndev-vanilla] shell/lvcreate-pvtags.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153025!
+###       failed: [ndev-vanilla] shell/lvcreate-pvtags.sh
+###      running: [ndev-vanilla] shell/lvcreate-raid-nosync.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153048!
+###       failed: [ndev-vanilla] shell/lvcreate-raid-nosync.sh
+###      running: [ndev-vanilla] shell/lvcreate-raid-volume_list.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST153071!
+###       failed: [ndev-vanilla] shell/lvcreate-raid-volume_list.sh
+###      running: [ndev-vanilla] shell/lvcreate-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153094!
+###       failed: [ndev-vanilla] shell/lvcreate-raid.sh
+###      running: [ndev-vanilla] shell/lvcreate-raid1-read-error.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153117!
+###       failed: [ndev-vanilla] shell/lvcreate-raid1-read-error.sh
+###      running: [ndev-vanilla] shell/lvcreate-raid10.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153140!
+###       failed: [ndev-vanilla] shell/lvcreate-raid10.sh
+###      running: [ndev-vanilla] shell/lvcreate-repair.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153163!
+###       failed: [ndev-vanilla] shell/lvcreate-repair.sh
+###      running: [ndev-vanilla] shell/lvcreate-signature-wiping.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST153186!
+###       failed: [ndev-vanilla] shell/lvcreate-signature-wiping.sh
+###      running: [ndev-vanilla] shell/lvcreate-small-snap.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153209!
+###       failed: [ndev-vanilla] shell/lvcreate-small-snap.sh
+###      running: [ndev-vanilla] shell/lvcreate-striped-mirror.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153232!
+###       failed: [ndev-vanilla] shell/lvcreate-striped-mirror.sh
+###      running: [ndev-vanilla] shell/lvcreate-thin-big.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153255!
+###       failed: [ndev-vanilla] shell/lvcreate-thin-big.sh
+###      running: [ndev-vanilla] shell/lvcreate-thin-cache.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST153278!
+###       failed: [ndev-vanilla] shell/lvcreate-thin-cache.sh
+###      running: [ndev-vanilla] shell/lvcreate-thin-external-size.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153301!
+###       failed: [ndev-vanilla] shell/lvcreate-thin-external-size.sh
+###      running: [ndev-vanilla] shell/lvcreate-thin-external.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153324!
+###       failed: [ndev-vanilla] shell/lvcreate-thin-external.sh
+###      running: [ndev-vanilla] shell/lvcreate-thin-limits.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153347!
+###       failed: [ndev-vanilla] shell/lvcreate-thin-limits.sh
+###      running: [ndev-vanilla] shell/lvcreate-thin-power2.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153370!
+###       failed: [ndev-vanilla] shell/lvcreate-thin-power2.sh
+###      running: [ndev-vanilla] shell/lvcreate-thin-snap.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153393!
+###       failed: [ndev-vanilla] shell/lvcreate-thin-snap.sh
+###      running: [ndev-vanilla] shell/lvcreate-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153416!
+###       failed: [ndev-vanilla] shell/lvcreate-thin.sh
+###      running: [ndev-vanilla] shell/lvcreate-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153439!
+###       failed: [ndev-vanilla] shell/lvcreate-usage.sh
+###      running: [ndev-vanilla] shell/lvcreate-vdo-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153462!
+###       failed: [ndev-vanilla] shell/lvcreate-vdo-cache.sh
+###      running: [ndev-vanilla] shell/lvcreate-vdo.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST153485!
+###       failed: [ndev-vanilla] shell/lvcreate-vdo.sh
+###      running: [ndev-vanilla] shell/lvdisplay-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153508!
+###       failed: [ndev-vanilla] shell/lvdisplay-raid.sh
+###      running: [ndev-vanilla] shell/lvextend-caches-on-thindata.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153531!
+###       failed: [ndev-vanilla] shell/lvextend-caches-on-thindata.sh
+###      running: [ndev-vanilla] shell/lvextend-caches.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153554!
+###       failed: [ndev-vanilla] shell/lvextend-caches.sh
+###      running: [ndev-vanilla] shell/lvextend-percent-extents.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153577!
+###       failed: [ndev-vanilla] shell/lvextend-percent-extents.sh
+###      running: [ndev-vanilla] shell/lvextend-raid.sh 0
+| [ 0:01] DM table already has devices with prefix LVMTEST153600!
+###       failed: [ndev-vanilla] shell/lvextend-raid.sh
+###      running: [ndev-vanilla] shell/lvextend-snapshot-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153623!
+###       failed: [ndev-vanilla] shell/lvextend-snapshot-dmeventd.sh
+###      running: [ndev-vanilla] shell/lvextend-snapshot-policy.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153646!
+###       failed: [ndev-vanilla] shell/lvextend-snapshot-policy.sh
+###      running: [ndev-vanilla] shell/lvextend-thin-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153669!
+###       failed: [ndev-vanilla] shell/lvextend-thin-cache.sh
+###      running: [ndev-vanilla] shell/lvextend-thin-data-dmeventd.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST153692!
+###       failed: [ndev-vanilla] shell/lvextend-thin-data-dmeventd.sh
+###      running: [ndev-vanilla] shell/lvextend-thin-full.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153715!
+###       failed: [ndev-vanilla] shell/lvextend-thin-full.sh
+###      running: [ndev-vanilla] shell/lvextend-thin-metadata-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153738!
+###       failed: [ndev-vanilla] shell/lvextend-thin-metadata-dmeventd.sh
+###      running: [ndev-vanilla] shell/lvextend-thin-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153761!
+###       failed: [ndev-vanilla] shell/lvextend-thin-raid.sh
+###      running: [ndev-vanilla] shell/lvextend-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153784!
+###       failed: [ndev-vanilla] shell/lvextend-thin.sh
+###      running: [ndev-vanilla] shell/lvextend-vdo-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153807!
+###       failed: [ndev-vanilla] shell/lvextend-vdo-dmeventd.sh
+###      running: [ndev-vanilla] shell/lvextend-vdo.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153830!
+###       failed: [ndev-vanilla] shell/lvextend-vdo.sh
+###      running: [ndev-vanilla] shell/lvm-conf-error.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153853!
+###       failed: [ndev-vanilla] shell/lvm-conf-error.sh
+###      running: [ndev-vanilla] shell/lvm-init.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153876!
+###       failed: [ndev-vanilla] shell/lvm-init.sh
+###      running: [ndev-vanilla] shell/lvm-on-md.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST153899!
+###       failed: [ndev-vanilla] shell/lvm-on-md.sh
+###      running: [ndev-vanilla] shell/lvmcache-exercise.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153922!
+###       failed: [ndev-vanilla] shell/lvmcache-exercise.sh
+###      running: [ndev-vanilla] shell/lvmlockd-hello-world.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153945!
+###       failed: [ndev-vanilla] shell/lvmlockd-hello-world.sh
+###      running: [ndev-vanilla] shell/lvmlockd-lv-types.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153968!
+###       failed: [ndev-vanilla] shell/lvmlockd-lv-types.sh
+###      running: [ndev-vanilla] shell/lvmlockd_failure.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST153991!
+###       failed: [ndev-vanilla] shell/lvmlockd_failure.sh
+###      running: [ndev-vanilla] shell/lvremove-thindata-caches.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154014!
+###       failed: [ndev-vanilla] shell/lvremove-thindata-caches.sh
+###      running: [ndev-vanilla] shell/lvrename-cache-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154037!
+###       failed: [ndev-vanilla] shell/lvrename-cache-thin.sh
+###      running: [ndev-vanilla] shell/lvrename-vdo.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154060!
+###       failed: [ndev-vanilla] shell/lvrename-vdo.sh
+###      running: [ndev-vanilla] shell/lvresize-full.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154083!
+###       failed: [ndev-vanilla] shell/lvresize-full.sh
+###      running: [ndev-vanilla] shell/lvresize-mirror.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST154106!
+###       failed: [ndev-vanilla] shell/lvresize-mirror.sh
+###      running: [ndev-vanilla] shell/lvresize-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154129!
+###       failed: [ndev-vanilla] shell/lvresize-raid.sh
+###      running: [ndev-vanilla] shell/lvresize-raid10.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154152!
+###       failed: [ndev-vanilla] shell/lvresize-raid10.sh
+###      running: [ndev-vanilla] shell/lvresize-rounding.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154175!
+###       failed: [ndev-vanilla] shell/lvresize-rounding.sh
+###      running: [ndev-vanilla] shell/lvresize-thin-external-origin.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST154198!
+###       failed: [ndev-vanilla] shell/lvresize-thin-external-origin.sh
+###      running: [ndev-vanilla] shell/lvresize-thin-metadata.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154221!
+###       failed: [ndev-vanilla] shell/lvresize-thin-metadata.sh
+###      running: [ndev-vanilla] shell/lvresize-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154244!
+###       failed: [ndev-vanilla] shell/lvresize-usage.sh
+###      running: [ndev-vanilla] shell/lvresize-vdo.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154267!
+###       failed: [ndev-vanilla] shell/lvresize-vdo.sh
+###      running: [ndev-vanilla] shell/lvs-cache.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST154290!
+###       failed: [ndev-vanilla] shell/lvs-cache.sh
+###      running: [ndev-vanilla] shell/mda-rollback.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154313!
+###       failed: [ndev-vanilla] shell/mda-rollback.sh
+###      running: [ndev-vanilla] shell/mdata-strings.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154336!
+###       failed: [ndev-vanilla] shell/mdata-strings.sh
+###      running: [ndev-vanilla] shell/metadata-bad-mdaheader.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154359!
+###       failed: [ndev-vanilla] shell/metadata-bad-mdaheader.sh
+###      running: [ndev-vanilla] shell/metadata-bad-text.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154382!
+###       failed: [ndev-vanilla] shell/metadata-bad-text.sh
+###      running: [ndev-vanilla] shell/metadata-balance.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST154405!
+###       failed: [ndev-vanilla] shell/metadata-balance.sh
+###      running: [ndev-vanilla] shell/metadata-full.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154428!
+###       failed: [ndev-vanilla] shell/metadata-full.sh
+###      running: [ndev-vanilla] shell/metadata-old.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154451!
+###       failed: [ndev-vanilla] shell/metadata-old.sh
+###      running: [ndev-vanilla] shell/metadata-zero-space.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154474!
+###       failed: [ndev-vanilla] shell/metadata-zero-space.sh
+###      running: [ndev-vanilla] shell/metadata.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST154497!
+###       failed: [ndev-vanilla] shell/metadata.sh
+###      running: [ndev-vanilla] shell/mirror-names.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154520!
+###       failed: [ndev-vanilla] shell/mirror-names.sh
+###      running: [ndev-vanilla] shell/mirror-vgreduce-removemissing.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154543!
+###       failed: [ndev-vanilla] shell/mirror-vgreduce-removemissing.sh
+###      running: [ndev-vanilla] shell/missing-pv-unused.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154566!
+###       failed: [ndev-vanilla] shell/missing-pv-unused.sh
+###      running: [ndev-vanilla] shell/missing-pv.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST154589!
+###       failed: [ndev-vanilla] shell/missing-pv.sh
+###      running: [ndev-vanilla] shell/multi_hosts_lv_ex_timeout_hosta.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154612!
+###       failed: [ndev-vanilla] shell/multi_hosts_lv_ex_timeout_hosta.sh
+###      running: [ndev-vanilla] shell/multi_hosts_lv_ex_timeout_hostb.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154635!
+###       failed: [ndev-vanilla] shell/multi_hosts_lv_ex_timeout_hostb.sh
+###      running: [ndev-vanilla] shell/multi_hosts_lv_hosta.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154658!
+###       failed: [ndev-vanilla] shell/multi_hosts_lv_hosta.sh
+###      running: [ndev-vanilla] shell/multi_hosts_lv_hostb.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154681!
+###       failed: [ndev-vanilla] shell/multi_hosts_lv_hostb.sh
+###      running: [ndev-vanilla] shell/multi_hosts_lv_sh_timeout_hosta.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST154704!
+###       failed: [ndev-vanilla] shell/multi_hosts_lv_sh_timeout_hosta.sh
+###      running: [ndev-vanilla] shell/multi_hosts_lv_sh_timeout_hostb.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154727!
+###       failed: [ndev-vanilla] shell/multi_hosts_lv_sh_timeout_hostb.sh
+###      running: [ndev-vanilla] shell/multi_hosts_vg_hosta.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154750!
+###       failed: [ndev-vanilla] shell/multi_hosts_vg_hosta.sh
+###      running: [ndev-vanilla] shell/multi_hosts_vg_hostb.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154773!
+###       failed: [ndev-vanilla] shell/multi_hosts_vg_hostb.sh
+###      running: [ndev-vanilla] shell/name-mangling.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST154796!
+###       failed: [ndev-vanilla] shell/name-mangling.sh
+###      running: [ndev-vanilla] shell/nomda-missing.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154819!
+###       failed: [ndev-vanilla] shell/nomda-missing.sh
+###      running: [ndev-vanilla] shell/nomda-restoremissing.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154842!
+###       failed: [ndev-vanilla] shell/nomda-restoremissing.sh
+###      running: [ndev-vanilla] shell/open-file-limit.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154865!
+###       failed: [ndev-vanilla] shell/open-file-limit.sh
+###      running: [ndev-vanilla] shell/orphan-ondisk.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST154888!
+###       failed: [ndev-vanilla] shell/orphan-ondisk.sh
+###      running: [ndev-vanilla] shell/outdated-pv.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154911!
+###       failed: [ndev-vanilla] shell/outdated-pv.sh
+###      running: [ndev-vanilla] shell/pe-align.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154934!
+###       failed: [ndev-vanilla] shell/pe-align.sh
+###      running: [ndev-vanilla] shell/pool-labels.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154957!
+###       failed: [ndev-vanilla] shell/pool-labels.sh
+###      running: [ndev-vanilla] shell/process-each-duplicate-pvs.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST154980!
+###       failed: [ndev-vanilla] shell/process-each-duplicate-pvs.sh
+###      running: [ndev-vanilla] shell/process-each-lv.sh 0
+| [ 0:01] DM table already has devices with prefix LVMTEST155003!
+###       failed: [ndev-vanilla] shell/process-each-lv.sh
+###      running: [ndev-vanilla] shell/process-each-pv-nomda-all.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155026!
+###       failed: [ndev-vanilla] shell/process-each-pv-nomda-all.sh
+###      running: [ndev-vanilla] shell/process-each-pv-nomda.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155049!
+###       failed: [ndev-vanilla] shell/process-each-pv-nomda.sh
+###      running: [ndev-vanilla] shell/process-each-pv.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155072!
+###       failed: [ndev-vanilla] shell/process-each-pv.sh
+###      running: [ndev-vanilla] shell/process-each-pvresize.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155095!
+###       failed: [ndev-vanilla] shell/process-each-pvresize.sh
+###      running: [ndev-vanilla] shell/process-each-vg.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155118!
+###       failed: [ndev-vanilla] shell/process-each-vg.sh
+###      running: [ndev-vanilla] shell/process-each-vgreduce.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155141!
+###       failed: [ndev-vanilla] shell/process-each-vgreduce.sh
+###      running: [ndev-vanilla] shell/profiles-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155164!
+###       failed: [ndev-vanilla] shell/profiles-cache.sh
+###      running: [ndev-vanilla] shell/profiles-thin.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155187!
+###       failed: [ndev-vanilla] shell/profiles-thin.sh
+###      running: [ndev-vanilla] shell/profiles-vdo.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155210!
+###       failed: [ndev-vanilla] shell/profiles-vdo.sh
+###      running: [ndev-vanilla] shell/profiles.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155233!
+###       failed: [ndev-vanilla] shell/profiles.sh
+###      running: [ndev-vanilla] shell/pv-check-dev-size.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155256!
+###       failed: [ndev-vanilla] shell/pv-check-dev-size.sh
+###      running: [ndev-vanilla] shell/pv-corruption.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155279!
+###       failed: [ndev-vanilla] shell/pv-corruption.sh
+###      running: [ndev-vanilla] shell/pv-duplicate-uuid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155302!
+###       failed: [ndev-vanilla] shell/pv-duplicate-uuid.sh
+###      running: [ndev-vanilla] shell/pv-ext-flags.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155325!
+###       failed: [ndev-vanilla] shell/pv-ext-flags.sh
+###      running: [ndev-vanilla] shell/pv-ext-update.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155348!
+###       failed: [ndev-vanilla] shell/pv-ext-update.sh
+###      running: [ndev-vanilla] shell/pv-min-size.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155371!
+###       failed: [ndev-vanilla] shell/pv-min-size.sh
+###      running: [ndev-vanilla] shell/pv-range-overflow.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155394!
+###       failed: [ndev-vanilla] shell/pv-range-overflow.sh
+###      running: [ndev-vanilla] shell/pvchange-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155417!
+###       failed: [ndev-vanilla] shell/pvchange-usage.sh
+###      running: [ndev-vanilla] shell/pvck-dump.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155440!
+###       failed: [ndev-vanilla] shell/pvck-dump.sh
+###      running: [ndev-vanilla] shell/pvck-repair.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155463!
+###       failed: [ndev-vanilla] shell/pvck-repair.sh
+###      running: [ndev-vanilla] shell/pvcreate-bootloaderarea.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155486!
+###       failed: [ndev-vanilla] shell/pvcreate-bootloaderarea.sh
+###      running: [ndev-vanilla] shell/pvcreate-ff.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155509!
+###       failed: [ndev-vanilla] shell/pvcreate-ff.sh
+###      running: [ndev-vanilla] shell/pvcreate-md-fake-hdr.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155532!
+###       failed: [ndev-vanilla] shell/pvcreate-md-fake-hdr.sh
+###      running: [ndev-vanilla] shell/pvcreate-metadata0.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155555!
+###       failed: [ndev-vanilla] shell/pvcreate-metadata0.sh
+###      running: [ndev-vanilla] shell/pvcreate-operation-md.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155578!
+###       failed: [ndev-vanilla] shell/pvcreate-operation-md.sh
+###      running: [ndev-vanilla] shell/pvcreate-operation.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155601!
+###       failed: [ndev-vanilla] shell/pvcreate-operation.sh
+###      running: [ndev-vanilla] shell/pvcreate-restore.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155624!
+###       failed: [ndev-vanilla] shell/pvcreate-restore.sh
+###      running: [ndev-vanilla] shell/pvcreate-usage.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155647!
+###       failed: [ndev-vanilla] shell/pvcreate-usage.sh
+###      running: [ndev-vanilla] shell/pvmove-abort-all.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155673!
+###       failed: [ndev-vanilla] shell/pvmove-abort-all.sh
+###      running: [ndev-vanilla] shell/pvmove-abort.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155696!
+###       failed: [ndev-vanilla] shell/pvmove-abort.sh
+###      running: [ndev-vanilla] shell/pvmove-all-segtypes.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155719!
+###       failed: [ndev-vanilla] shell/pvmove-all-segtypes.sh
+###      running: [ndev-vanilla] shell/pvmove-background.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155742!
+###       failed: [ndev-vanilla] shell/pvmove-background.sh
+###      running: [ndev-vanilla] shell/pvmove-basic.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155765!
+###       failed: [ndev-vanilla] shell/pvmove-basic.sh
+###      running: [ndev-vanilla] shell/pvmove-cache-segtypes.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155788!
+###       failed: [ndev-vanilla] shell/pvmove-cache-segtypes.sh
+###      running: [ndev-vanilla] shell/pvmove-lvs.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155811!
+###       failed: [ndev-vanilla] shell/pvmove-lvs.sh
+###      running: [ndev-vanilla] shell/pvmove-raid-segtypes.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155834!
+###       failed: [ndev-vanilla] shell/pvmove-raid-segtypes.sh
+###      running: [ndev-vanilla] shell/pvmove-restart.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155857!
+###       failed: [ndev-vanilla] shell/pvmove-restart.sh
+###      running: [ndev-vanilla] shell/pvmove-resume-1.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155880!
+###       failed: [ndev-vanilla] shell/pvmove-resume-1.sh
+###      running: [ndev-vanilla] shell/pvmove-resume-2.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155903!
+###       failed: [ndev-vanilla] shell/pvmove-resume-2.sh
+###      running: [ndev-vanilla] shell/pvmove-resume-multiseg.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155926!
+###       failed: [ndev-vanilla] shell/pvmove-resume-multiseg.sh
+###      running: [ndev-vanilla] shell/pvmove-thin-segtypes.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST155949!
+###       failed: [ndev-vanilla] shell/pvmove-thin-segtypes.sh
+###      running: [ndev-vanilla] shell/pvremove-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155972!
+###       failed: [ndev-vanilla] shell/pvremove-thin.sh
+###      running: [ndev-vanilla] shell/pvremove-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST155995!
+###       failed: [ndev-vanilla] shell/pvremove-usage.sh
+###      running: [ndev-vanilla] shell/pvremove-warnings.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156018!
+###       failed: [ndev-vanilla] shell/pvremove-warnings.sh
+###      running: [ndev-vanilla] shell/pvresize-mdas.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156041!
+###       failed: [ndev-vanilla] shell/pvresize-mdas.sh
+###      running: [ndev-vanilla] shell/pvscan-autoactivate.sh 0
+| [ 0:01] DM table already has devices with prefix LVMTEST156064!
+###       failed: [ndev-vanilla] shell/pvscan-autoactivate.sh
+###      running: [ndev-vanilla] shell/pvscan-autoactivation-polling.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156087!
+###       failed: [ndev-vanilla] shell/pvscan-autoactivation-polling.sh
+###      running: [ndev-vanilla] shell/pvscan-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156110!
+###       failed: [ndev-vanilla] shell/pvscan-cache.sh
+###      running: [ndev-vanilla] shell/pvscan-nomda-bg.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156133!
+###       failed: [ndev-vanilla] shell/pvscan-nomda-bg.sh
+###      running: [ndev-vanilla] shell/read-ahead.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST156156!
+###       failed: [ndev-vanilla] shell/read-ahead.sh
+###      running: [ndev-vanilla] shell/relative-sign-options.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156179!
+###       failed: [ndev-vanilla] shell/relative-sign-options.sh
+###      running: [ndev-vanilla] shell/report-fields.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156202!
+###       failed: [ndev-vanilla] shell/report-fields.sh
+###      running: [ndev-vanilla] shell/report-hidden.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156225!
+###       failed: [ndev-vanilla] shell/report-hidden.sh
+###      running: [ndev-vanilla] shell/scan-lvs.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156248!
+###       failed: [ndev-vanilla] shell/scan-lvs.sh
+###      running: [ndev-vanilla] shell/select-report.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156271!
+###       failed: [ndev-vanilla] shell/select-report.sh
+###      running: [ndev-vanilla] shell/select-tools-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156294!
+###       failed: [ndev-vanilla] shell/select-tools-thin.sh
+###      running: [ndev-vanilla] shell/select-tools.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156317!
+###       failed: [ndev-vanilla] shell/select-tools.sh
+###      running: [ndev-vanilla] shell/snapshot-autoumount-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156340!
+###       failed: [ndev-vanilla] shell/snapshot-autoumount-dmeventd.sh
+###      running: [ndev-vanilla] shell/snapshot-cluster.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST156363!
+###       failed: [ndev-vanilla] shell/snapshot-cluster.sh
+###      running: [ndev-vanilla] shell/snapshot-maxsize.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156386!
+###       failed: [ndev-vanilla] shell/snapshot-maxsize.sh
+###      running: [ndev-vanilla] shell/snapshot-merge-stack.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156409!
+###       failed: [ndev-vanilla] shell/snapshot-merge-stack.sh
+###      running: [ndev-vanilla] shell/snapshot-merge-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156432!
+###       failed: [ndev-vanilla] shell/snapshot-merge-thin.sh
+###      running: [ndev-vanilla] shell/snapshot-merge.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST156455!
+###       failed: [ndev-vanilla] shell/snapshot-merge.sh
+###      running: [ndev-vanilla] shell/snapshot-reactivate.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156478!
+###       failed: [ndev-vanilla] shell/snapshot-reactivate.sh
+###      running: [ndev-vanilla] shell/snapshot-remove-dmsetup.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156501!
+###       failed: [ndev-vanilla] shell/snapshot-remove-dmsetup.sh
+###      running: [ndev-vanilla] shell/snapshot-rename.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156524!
+###       failed: [ndev-vanilla] shell/snapshot-rename.sh
+###      running: [ndev-vanilla] shell/snapshot-usage-exa.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156547!
+###       failed: [ndev-vanilla] shell/snapshot-usage-exa.sh
+###      running: [ndev-vanilla] shell/snapshot-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156570!
+###       failed: [ndev-vanilla] shell/snapshot-usage.sh
+###      running: [ndev-vanilla] shell/snapshots-of-mirrors.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156593!
+###       failed: [ndev-vanilla] shell/snapshots-of-mirrors.sh
+###      running: [ndev-vanilla] shell/stray-device-node.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156616!
+###       failed: [ndev-vanilla] shell/stray-device-node.sh
+###      running: [ndev-vanilla] shell/stress_multi_threads_1.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156639!
+###       failed: [ndev-vanilla] shell/stress_multi_threads_1.sh
+###      running: [ndev-vanilla] shell/stress_multi_threads_2.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST156662!
+###       failed: [ndev-vanilla] shell/stress_multi_threads_2.sh
+###      running: [ndev-vanilla] shell/stress_single_thread.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156685!
+###       failed: [ndev-vanilla] shell/stress_single_thread.sh
+###      running: [ndev-vanilla] shell/system_id.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156708!
+###       failed: [ndev-vanilla] shell/system_id.sh
+###      running: [ndev-vanilla] shell/tags.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156731!
+###       failed: [ndev-vanilla] shell/tags.sh
+###      running: [ndev-vanilla] shell/test-partition.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST156754!
+###       failed: [ndev-vanilla] shell/test-partition.sh
+###      running: [ndev-vanilla] shell/thin-16g.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156777!
+###       failed: [ndev-vanilla] shell/thin-16g.sh
+###      running: [ndev-vanilla] shell/thin-autoumount-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156800!
+###       failed: [ndev-vanilla] shell/thin-autoumount-dmeventd.sh
+###      running: [ndev-vanilla] shell/thin-defaults.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156823!
+###       failed: [ndev-vanilla] shell/thin-defaults.sh
+###      running: [ndev-vanilla] shell/thin-dmeventd-warns.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156846!
+###       failed: [ndev-vanilla] shell/thin-dmeventd-warns.sh
+###      running: [ndev-vanilla] shell/thin-errors.sh 0
+| [ 0:01] DM table already has devices with prefix LVMTEST156869!
+###       failed: [ndev-vanilla] shell/thin-errors.sh
+###      running: [ndev-vanilla] shell/thin-foreign-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156892!
+###       failed: [ndev-vanilla] shell/thin-foreign-dmeventd.sh
+###      running: [ndev-vanilla] shell/thin-foreign-repair.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156915!
+###       failed: [ndev-vanilla] shell/thin-foreign-repair.sh
+###      running: [ndev-vanilla] shell/thin-large.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156938!
+###       failed: [ndev-vanilla] shell/thin-large.sh
+###      running: [ndev-vanilla] shell/thin-many-dmeventd.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST156961!
+###       failed: [ndev-vanilla] shell/thin-many-dmeventd.sh
+###      running: [ndev-vanilla] shell/thin-merge.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST156984!
+###       failed: [ndev-vanilla] shell/thin-merge.sh
+###      running: [ndev-vanilla] shell/thin-overprovisioning.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157007!
+###       failed: [ndev-vanilla] shell/thin-overprovisioning.sh
+###      running: [ndev-vanilla] shell/thin-resize-match.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157030!
+###       failed: [ndev-vanilla] shell/thin-resize-match.sh
+###      running: [ndev-vanilla] shell/thin-restore.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST157053!
+###       failed: [ndev-vanilla] shell/thin-restore.sh
+###      running: [ndev-vanilla] shell/thin-vglock.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157076!
+###       failed: [ndev-vanilla] shell/thin-vglock.sh
+###      running: [ndev-vanilla] shell/thin-volume-list.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157099!
+###       failed: [ndev-vanilla] shell/thin-volume-list.sh
+###      running: [ndev-vanilla] shell/thin-zero-meta.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157122!
+###       failed: [ndev-vanilla] shell/thin-zero-meta.sh
+###      running: [ndev-vanilla] shell/topology-support.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST157145!
+###       failed: [ndev-vanilla] shell/topology-support.sh
+###      running: [ndev-vanilla] shell/unknown-segment.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157168!
+###       failed: [ndev-vanilla] shell/unknown-segment.sh
+###      running: [ndev-vanilla] shell/unlost-pv.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157191!
+###       failed: [ndev-vanilla] shell/unlost-pv.sh
+###      running: [ndev-vanilla] shell/vdo-autoumount-dmeventd.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157214!
+###       failed: [ndev-vanilla] shell/vdo-autoumount-dmeventd.sh
+###      running: [ndev-vanilla] shell/vdo-convert.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157237!
+###       failed: [ndev-vanilla] shell/vdo-convert.sh
+###      running: [ndev-vanilla] shell/vg-check-devs-used.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST157260!
+###       failed: [ndev-vanilla] shell/vg-check-devs-used.sh
+###      running: [ndev-vanilla] shell/vg-name-from-env.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157283!
+###       failed: [ndev-vanilla] shell/vg-name-from-env.sh
+###      running: [ndev-vanilla] shell/vgcfgbackup-lvm1.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157306!
+###       failed: [ndev-vanilla] shell/vgcfgbackup-lvm1.sh
+###      running: [ndev-vanilla] shell/vgcfgbackup-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157329!
+###       failed: [ndev-vanilla] shell/vgcfgbackup-usage.sh
+###      running: [ndev-vanilla] shell/vgchange-many.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST157352!
+###       failed: [ndev-vanilla] shell/vgchange-many.sh
+###      running: [ndev-vanilla] shell/vgchange-maxlv.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157375!
+###       failed: [ndev-vanilla] shell/vgchange-maxlv.sh
+###      running: [ndev-vanilla] shell/vgchange-partial.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157398!
+###       failed: [ndev-vanilla] shell/vgchange-partial.sh
+###      running: [ndev-vanilla] shell/vgchange-sysinit.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157421!
+###       failed: [ndev-vanilla] shell/vgchange-sysinit.sh
+###      running: [ndev-vanilla] shell/vgchange-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157444!
+###       failed: [ndev-vanilla] shell/vgchange-usage.sh
+###      running: [ndev-vanilla] shell/vgck.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST157467!
+###       failed: [ndev-vanilla] shell/vgck.sh
+###      running: [ndev-vanilla] shell/vgcreate-many-pvs.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157490!
+###       failed: [ndev-vanilla] shell/vgcreate-many-pvs.sh
+###      running: [ndev-vanilla] shell/vgcreate-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157513!
+###       failed: [ndev-vanilla] shell/vgcreate-usage.sh
+###      running: [ndev-vanilla] shell/vgextend-restoremissing.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157536!
+###       failed: [ndev-vanilla] shell/vgextend-restoremissing.sh
+###      running: [ndev-vanilla] shell/vgextend-usage.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST157559!
+###       failed: [ndev-vanilla] shell/vgextend-usage.sh
+###      running: [ndev-vanilla] shell/vgimportclone.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157582!
+###       failed: [ndev-vanilla] shell/vgimportclone.sh
+###      running: [ndev-vanilla] shell/vgmerge-operation.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157605!
+###       failed: [ndev-vanilla] shell/vgmerge-operation.sh
+###      running: [ndev-vanilla] shell/vgmerge-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157628!
+###       failed: [ndev-vanilla] shell/vgmerge-usage.sh
+###      running: [ndev-vanilla] shell/vgreduce-removemissing-snapshot.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157651!
+###       failed: [ndev-vanilla] shell/vgreduce-removemissing-snapshot.sh
+###      running: [ndev-vanilla] shell/vgreduce-usage.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST157674!
+###       failed: [ndev-vanilla] shell/vgreduce-usage.sh
+###      running: [ndev-vanilla] shell/vgremove-corrupt-vg.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157697!
+###       failed: [ndev-vanilla] shell/vgremove-corrupt-vg.sh
+###      running: [ndev-vanilla] shell/vgrename-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157720!
+###       failed: [ndev-vanilla] shell/vgrename-usage.sh
+###      running: [ndev-vanilla] shell/vgsplit-cache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157743!
+###       failed: [ndev-vanilla] shell/vgsplit-cache.sh
+###      running: [ndev-vanilla] shell/vgsplit-operation.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST157766!
+###       failed: [ndev-vanilla] shell/vgsplit-operation.sh
+###      running: [ndev-vanilla] shell/vgsplit-raid.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157789!
+###       failed: [ndev-vanilla] shell/vgsplit-raid.sh
+###      running: [ndev-vanilla] shell/vgsplit-stacked.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157812!
+###       failed: [ndev-vanilla] shell/vgsplit-stacked.sh
+###      running: [ndev-vanilla] shell/vgsplit-thin.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157835!
+###       failed: [ndev-vanilla] shell/vgsplit-thin.sh
+###      running: [ndev-vanilla] shell/vgsplit-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157858!
+###       failed: [ndev-vanilla] shell/vgsplit-usage.sh
+###      running: [ndev-vanilla] shell/vgsplit-vdo.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157881!
+###       failed: [ndev-vanilla] shell/vgsplit-vdo.sh
+###      running: [ndev-vanilla] shell/writecache-cache-blocksize-2.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157904!
+###       failed: [ndev-vanilla] shell/writecache-cache-blocksize-2.sh
+###      running: [ndev-vanilla] shell/writecache-cache-blocksize.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157927!
+###       failed: [ndev-vanilla] shell/writecache-cache-blocksize.sh
+###      running: [ndev-vanilla] shell/writecache-large.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157950!
+###       failed: [ndev-vanilla] shell/writecache-large.sh
+###      running: [ndev-vanilla] shell/writecache-misc.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST157973!
+###       failed: [ndev-vanilla] shell/writecache-misc.sh
+###      running: [ndev-vanilla] shell/writecache-split.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST157996!
+###       failed: [ndev-vanilla] shell/writecache-split.sh
+###      running: [ndev-vanilla] shell/writecache.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST158019!
+###       failed: [ndev-vanilla] shell/writecache.sh
+###      running: [ndev-vanilla] shell/zero-usage.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST158042!
+###       failed: [ndev-vanilla] shell/zero-usage.sh
+###      running: [ndev-vanilla] shell/zz-lvmlockd-dlm-remove.sh 1
+| [ 0:01] DM table already has devices with prefix LVMTEST158065!
+###       failed: [ndev-vanilla] shell/zz-lvmlockd-dlm-remove.sh
+###      running: [ndev-vanilla] shell/zz-lvmlockd-idm-remove.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST158088!
+###       failed: [ndev-vanilla] shell/zz-lvmlockd-idm-remove.sh
+###      running: [ndev-vanilla] shell/zz-lvmlockd-sanlock-remove.sh 0
+| [ 0:00] DM table already has devices with prefix LVMTEST158111!
+###       failed: [ndev-vanilla] shell/zz-lvmlockd-sanlock-remove.sh
+###      running: [ndev-vanilla] unit/unit-test.sh 3
+| [ 0:00] Kernel is Linux server1 5.15.0-48-generic #54-Ubuntu SMP Fri Aug 26 13:26:29 UTC 2022 aarch64 GNU/Linux
+| [ 0:00] Selinux mode is not installed.
+| [ 0:00]                total        used        free      shared  buff/cache   available
+| [ 0:00] Mem:           64257         476       62801           2         979       63175
+| [ 0:00] Swap:           2047           0        2047
+| [ 0:00] Filesystem      Size  Used Avail Use% Mounted on
+| [ 0:01] /dev/sda3       9.8G  5.2G  4.1G  57% /
+| [ 0:01] udev             32G     0   32G   0% /dev
+| [ 0:01] tmpfs            32G     0   32G   0% /run
+| [ 0:01] /dev/sda1       112M   88M   25M  78% /boot
+| [ 0:01] /dev/sda2        32M  152K   32M   1% /boot/efi
+| [ 0:01] @TESTDIR=/tmp/LVMTEST158134.67sBlFDWpO
+| [ 0:01] @PREFIX=LVMTEST158134
+| [ 0:01] <======== Processing test: "unit-test.sh" ========>
+| [ 0:01] 
+| [ 0:01] aux unittest run
+| [ 0:01] #unit-test.sh:21+ aux unittest run
+| [ 0:01] [RUN    ] /activation-generator/begins-with
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /activation-generator/get-config
+| [ 0:01] _parse_line() failed
+| [ 0:01] _parse_line() failed
+| [ 0:01] _parse_line() failed
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /activation-generator/get-config-bad-exit
+| [ 0:01] lvmconfig failed
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /activation-generator/get-config-bad-path
+| [ 0:01] execv failed: No such file or directory
+| [ 0:01] lvmconfig failed
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /activation-generator/parse-bool
+| [ 0:01] couldn't parse bool value ''
+| [ 0:01] couldn't parse bool value 'fish'
+| [ 0:01] couldn't parse bool value 'true'
+| [ 0:01] couldn't parse bool value 'false'
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /activation-generator/parse-line
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/bitset/and
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/bitset/equal
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/bitset/get_next
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/list/splice
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/bcache-scenario
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/bcache-scenario-2
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/bcache-scenario-3
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/create-destroy
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/destroy-calls-dtr
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/insert-16-bit-keys
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/insert-one
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/insert-single-byte-keys
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/iterate-all
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/iterate-single
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/iterate-subset
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/iterate-vary-middle
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/overwrite-single-byte-keys
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/prefix-keys
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/prefix-keys-reversed
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/remove-calls-dtr
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/remove-one
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/remove-one-byte-keys
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/remove-one-byte-keys-reversed
+| [ 0:01] [     OK]
+| [ 0:01] [RUN    ] /base/data-struct/radix-tree/remove-prefix
+| [ 0:01] [     OK]
+| [ 0:02] [RUN    ] /base/data-struct/radix-tree/remove-prefix-keys
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/data-struct/radix-tree/remove-prefix-keys-reversed
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/data-struct/radix-tree/remove-prefix-single
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/data-struct/radix-tree/size-spots-duplicates
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/data-struct/radix-tree/sparse-keys
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/data-struct/string/asprint
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/data-struct/string/strncpy
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/abort-forces-read
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/abort-single-block
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/abort-specific-di
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/abort-with-no-blocks
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/block-size-multiple-page
+| [ 0:02]   bcache block size must be a multiple of page size
+| [ 0:02]   bcache block size must be a multiple of page size
+| [ 0:02]   bcache block size must be a multiple of page size
+| [ 0:02]   bcache block size must be a multiple of page size
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/block-size-positive
+| [ 0:02]   bcache must have a non zero block size
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/blocks-get-evicted
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/cache-blocks-positive
+| [ 0:02]   bcache must have at least one cache block
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/concurrent-reads-after-invalidate
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/create-destroy
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/flush-waits
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/get-reads
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/invalidate-fails-in-held
+| [ 0:02]   bcache_invalidate: block (17, 0) still held
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/invalidate-not-present
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/invalidate-present
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/invalidate-read-error
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/invalidate-write-error
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/io-engine/bcache-write-bytes
+| [ 0:02] assertion failed: 'f->e'
+| [ 0:02] [   FAIL] /base/device/bcache/io-engine/bcache-write-bytes
+| [ 0:02] [RUN    ] /base/device/bcache/io-engine/create-destroy
+| [ 0:02] assertion failed: 'f->e'
+| [ 0:02] [   FAIL] /base/device/bcache/io-engine/create-destroy
+| [ 0:02] [RUN    ] /base/device/bcache/io-engine/read
+| [ 0:02] assertion failed: 'f->e'
+| [ 0:02] [   FAIL] /base/device/bcache/io-engine/read
+| [ 0:02] [RUN    ] /base/device/bcache/io-engine/write
+| [ 0:02] assertion failed: 'f->e'
+| [ 0:02] [   FAIL] /base/device/bcache/io-engine/write
+| [ 0:02] [RUN    ] /base/device/bcache/prefetch-never-waits
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/prefetch-reads
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/read-bad-io
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/read-bad-io-intermittent
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/read-bad-issue
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/read-bad-issue-intermittent
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/read-multiple-files
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/reads-cached
+| [ 0:02] [     OK]
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/rw-cross-one-boundary
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/rw-cross-one-boundary
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/rw-first-block
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/rw-first-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/rw-last-block
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/rw-last-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/rw-many-boundaries
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/rw-many-boundaries
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/rw-several-blocks
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/rw-several-blocks
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/rw-within-single-block
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/rw-within-single-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/set-cross-one-boundary
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/set-cross-one-boundary
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/set-first-block
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/set-first-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/set-last-block
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/set-last-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/set-many-boundaries
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/set-many-boundaries
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/set-several-blocks
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/set-several-blocks
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/set-within-single-block
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/set-within-single-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/zero-cross-one-boundary
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/zero-cross-one-boundary
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/zero-first-block
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/zero-first-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/zero-last-block
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/zero-last-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/zero-many-boundaries
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/zero-many-boundaries
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/zero-several-blocks
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/zero-several-blocks
+| [ 0:02] [RUN    ] /base/device/bcache/utils/async/zero-within-single-block
+| [ 0:02] assertion failed: 'e'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/async/zero-within-single-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/rw-cross-one-boundary
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/rw-cross-one-boundary
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/rw-first-block
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/rw-first-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/rw-last-block
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/rw-last-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/rw-many-boundaries
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/rw-many-boundaries
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/rw-several-blocks
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/rw-several-blocks
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/rw-within-single-block
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/rw-within-single-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/set-cross-one-boundary
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/set-cross-one-boundary
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/set-first-block
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/set-first-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/set-last-block
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/set-last-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/set-many-boundaries
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/set-many-boundaries
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/set-several-blocks
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/set-several-blocks
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/set-within-single-block
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/set-within-single-block
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/zero-cross-one-boundary
+| [ 0:02] assertion failed: 'engine'
+| [ 0:02] [   FAIL] /base/device/bcache/utils/sync/zero-cross-one-boundary
+| [ 0:02] [RUN    ] /base/device/bcache/utils/sync/zero-first-block
+| [ 0:02] assertion failed: 'engine'
+| [ 0:03] [   FAIL] /base/device/bcache/utils/sync/zero-first-block
+| [ 0:03] [RUN    ] /base/device/bcache/utils/sync/zero-last-block
+| [ 0:03] assertion failed: 'engine'
+| [ 0:03] [   FAIL] /base/device/bcache/utils/sync/zero-last-block
+| [ 0:03] [RUN    ] /base/device/bcache/utils/sync/zero-many-boundaries
+| [ 0:03] assertion failed: 'engine'
+| [ 0:03] [   FAIL] /base/device/bcache/utils/sync/zero-many-boundaries
+| [ 0:03] [RUN    ] /base/device/bcache/utils/sync/zero-several-blocks
+| [ 0:03] assertion failed: 'engine'
+| [ 0:03] [   FAIL] /base/device/bcache/utils/sync/zero-several-blocks
+| [ 0:03] [RUN    ] /base/device/bcache/utils/sync/zero-within-single-block
+| [ 0:03] assertion failed: 'engine'
+| [ 0:03] [   FAIL] /base/device/bcache/utils/sync/zero-within-single-block
+| [ 0:03] [RUN    ] /base/device/bcache/write-bad-io-stops-flush
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /base/device/bcache/write-bad-issue-stops-flush
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /base/device/bcache/writeback-occurs
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /base/device/bcache/zero-flag-dirties
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /base/formatting/percent/0
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /base/formatting/percent/100
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /base/regex/fingerprints
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /base/regex/kabi-query
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /base/regex/matching
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/mirror/status
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/bad
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/compression-state-bad
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/compression-state-good
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/device-names
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/index-state-bad
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/index-state-good
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/operating-mode-bad
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/operating-mode-good
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/recovering-bad
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/recovering-good
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/total-blocks-bad
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/total-blocks-good
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/used-blocks-bad
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /device-mapper/vdo/status/used-blocks-good
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /metadata/config/cascade
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /metadata/config/clone
+| [ 0:03] [     OK]
+| [ 0:03] [RUN    ] /metadata/config/parse
+| [ 0:03] [     OK]
+| [ 0:03] 
+| [ 0:03] 89/129 tests passed
+| [ 0:03] cd $TESTOLDPWD; rm -rf "${TESTDIR:?}"
+| [ 0:03] #unit-test.sh:1+ cd /sources/LVM2.2.03.13/test
+| [ 0:03] #unit-test.sh:1+ rm -rf /tmp/LVMTEST158134.67sBlFDWpO
+###       failed: [ndev-vanilla] unit/unit-test.sh
+
+### 388 tests: 0 passed, 0 skipped, 0 timed out, 0 warned, 388 failed
+make[1]: *** [Makefile:138: check_local] Error 1
+rm lib/not.o
+make[1]: Leaving directory '/sources/LVM2.2.03.13/test'
+make: *** [Makefile:89: check_local] Error 2
+(lfs chroot) root:/sources/LVM2.2.03.13# make install
+/usr/bin/make -C libdm device-mapper
+/usr/bin/make -C conf device-mapper
+/usr/bin/make -C include device-mapper
+/usr/bin/make -C lib device-mapper
+/usr/bin/make -C libdaemon device-mapper
+/usr/bin/make -C man device-mapper
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+make[1]: Entering directory '/sources/LVM2.2.03.13/lib'
+make[1]: Entering directory '/sources/LVM2.2.03.13/conf'
+make[1]: Entering directory '/sources/LVM2.2.03.13/man'
+make[1]: Entering directory '/sources/LVM2.2.03.13/include'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm'
+/usr/bin/make -C scripts device-mapper
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/conf'
+/usr/bin/make -C tools device-mapper
+make[1]: Entering directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/man'
+/usr/bin/make -C udev device-mapper
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C daemons device-mapper
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/include'
+make[1]: Entering directory '/sources/LVM2.2.03.13/tools'
+make[1]: Entering directory '/sources/LVM2.2.03.13/udev'
+make[1]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/lib'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/udev'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/tools'
+/usr/bin/make -C libdm
+/usr/bin/make -C conf
+/usr/bin/make -C libdaemon
+/usr/bin/make -C include
+/usr/bin/make -C udev
+make[1]: Entering directory '/sources/LVM2.2.03.13/conf'
+make[1]: Entering directory '/sources/LVM2.2.03.13/include'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+make[1]: Entering directory '/sources/LVM2.2.03.13/udev'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm'
+/usr/bin/make -C dm-tools device-mapper
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/include'
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/udev'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/conf'
+/usr/bin/make -C client device-mapper
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+/usr/bin/make -C dm-tools
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+/usr/bin/make -C client
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C lib
+make[1]: Entering directory '/sources/LVM2.2.03.13/lib'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/lib'
+/usr/bin/make -C tools
+/usr/bin/make -C scripts
+make[1]: Entering directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Entering directory '/sources/LVM2.2.03.13/tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/tools'
+/usr/bin/make -C daemons
+/usr/bin/make -C man
+make[1]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Entering directory '/sources/LVM2.2.03.13/man'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/man'
+/usr/bin/make -C libdm install
+/usr/bin/make -C conf install
+/usr/bin/make -C daemons install
+/usr/bin/make -C include install
+/usr/bin/make -C lib install
+/usr/bin/make -C libdaemon install
+make[1]: Entering directory '/sources/LVM2.2.03.13/conf'
+make[1]: Entering directory '/sources/LVM2.2.03.13/include'
+make[1]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm'
+make[1]: Entering directory '/sources/LVM2.2.03.13/lib'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C dm-tools device-mapper
+/usr/bin/make -C client device-mapper
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+/usr/bin/make -C man install
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/include'
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[1]: Entering directory '/sources/LVM2.2.03.13/man'
+/usr/bin/install -c -p -m 644 -D example.conf /etc/lvm/lvm.conf
+/usr/bin/install -c -p -m 644 -D lvmlocal.conf /etc/lvm/lvmlocal.conf
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/lib'
+/usr/bin/make -C scripts install
+/usr/bin/make -C tools install
+    [INSTALL] command_profile_template.profile
+make[1]: Entering directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Entering directory '/sources/LVM2.2.03.13/tools'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/conf'
+/usr/bin/make -C udev install
+make[1]: Entering directory '/sources/LVM2.2.03.13/udev'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+    [INSTALL] ioctl/libdevmapper.so
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+/usr/bin/make -C client
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+    [INSTALL] lvm.conf.5
+    [INSTALL] libdevmapper.pc
+    [INSTALL] lvmsystemid.7 lvmreport.7 lvmraid.7 lvmcache.7 lvmthin.7 lvmvdo.7
+    [INSTALL] libdevmapper.h
+make[1]: Leaving directory '/sources/LVM2.2.03.13/scripts'
+/usr/bin/make -C dm-tools
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+    [INSTALL] 11-dm-lvm.rules
+    [INSTALL] 69-dm-lvm-metad.rules
+    [INSTALL] lvm.8 lvmdump.8 lvm-fullreport.8 lvm-lvpoll.8 lvcreate.8 lvchange.8 lvmconfig.8 lvconvert.8 lvdisplay.8 lvextend.8 lvreduce.8 lvremove.8 lvrename.8 lvresize.8 lvs.8 lvscan.8 pvchange.8 pvck.8 pvcreate.8 pvdisplay.8 pvmove.8 pvremove.8 pvresize.8 pvs.8 pvscan.8 vgcfgbackup.8 vgcfgrestore.8 vgchange.8 vgck.8 vgcreate.8 vgconvert.8 vgdisplay.8 vgexport.8 vgextend.8 vgimport.8 vgimportclone.8 vgmerge.8 vgmknodes.8 vgreduce.8 vgremove.8 vgrename.8 vgs.8 vgscan.8 vgsplit.8 lvmsar.8 lvmsadc.8 lvmdiskscan.8 lvmdevices.8 vgimportdevices.8 fsadm.8 vdoimport.8 lvm-config.8 lvm-dumpconfig.8
+    [INSTALL] lvm
+    [INSTALL] dmsetup.8 dmstats.8 blkdeactivate.8
+    [INSTALL] 10-dm.rules
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+/usr/bin/make -C client install
+    [INSTALL] 13-dm-disk.rules
+make[1]: Leaving directory '/sources/LVM2.2.03.13/man'
+Creating symbolic links for individual commands in /usr/sbin
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+    [INSTALL] 95-dm-notify.rules
+    [INSTALL] liblvm2cmd.so
+make[1]: Leaving directory '/sources/LVM2.2.03.13/udev'
+    [INSTALL] lvm2cmd.h
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+/usr/bin/make -C dm-tools install
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[2]: Nothing to be done for 'install'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+    [INSTALL] dmsetup
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/tools'
+(lfs chroot) root:/sources/LVM2.2.03.13# 
+(lfs chroot) root:/sources/LVM2.2.03.13# which lvm
+/usr/sbin/lvm
+(lfs chroot) root:/sources/LVM2.2.03.13# finish
+[lfs-scripts] Finishing build of LVM2.2.03.13 at Sun Oct  2 01:00:16 AM -03 2022
+(lfs chroot) root:/sources# which fsadm
+/usr/sbin/fsadm
+(lfs chroot) root:/sources# 

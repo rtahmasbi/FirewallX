@@ -1,0 +1,262 @@
+(lfs chroot) root:/sources# begin ethtool-5.16 tar.xz
+[lfs-scripts] Starting build of ethtool-5.16 at Sun Oct  2 02:30:22 AM -03 2022
+(lfs chroot) root:/sources/ethtool-5.16# ./configure --prefix=/usr
+MAKETUNING=-j8
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking whether gcc needs -traditional... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking whether <linux/types.h> defines big-endian types... yes
+checking for ANSI C header files... yes
+checking for socket... yes
+checking for strtol... yes
+checking for bash-completion directory... ${datadir}/bash-completion/completions
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libmnl... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating ethtool.spec
+config.status: creating ethtool.8
+config.status: creating ethtool-config.h
+config.status: executing depfiles commands
+(lfs chroot) root:/sources/ethtool-5.16# make $(MAKETUNING)
+bash: MAKETUNING: command not found
+/usr/bin/make  all-am
+make[1]: Entering directory '/sources/ethtool-5.16'
+depbase=`echo ethtool.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT ethtool.o -MD -MP -MF $depbase.Tpo -c -o ethtool.o ethtool.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo rxclass.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT rxclass.o -MD -MP -MF $depbase.Tpo -c -o rxclass.o rxclass.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo common.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT common.o -MD -MP -MF $depbase.Tpo -c -o common.o common.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo json_writer.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT json_writer.o -MD -MP -MF $depbase.Tpo -c -o json_writer.o json_writer.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo json_print.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT json_print.o -MD -MP -MF $depbase.Tpo -c -o json_print.o json_print.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo amd8111e.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT amd8111e.o -MD -MP -MF $depbase.Tpo -c -o amd8111e.o amd8111e.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo de2104x.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT de2104x.o -MD -MP -MF $depbase.Tpo -c -o de2104x.o de2104x.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo dsa.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT dsa.o -MD -MP -MF $depbase.Tpo -c -o dsa.o dsa.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo e100.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT e100.o -MD -MP -MF $depbase.Tpo -c -o e100.o e100.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo e1000.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT e1000.o -MD -MP -MF $depbase.Tpo -c -o e1000.o e1000.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo et131x.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT et131x.o -MD -MP -MF $depbase.Tpo -c -o et131x.o et131x.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo igb.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT igb.o -MD -MP -MF $depbase.Tpo -c -o igb.o igb.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fec.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT fec.o -MD -MP -MF $depbase.Tpo -c -o fec.o fec.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fec_8xx.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT fec_8xx.o -MD -MP -MF $depbase.Tpo -c -o fec_8xx.o fec_8xx.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ibm_emac.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT ibm_emac.o -MD -MP -MF $depbase.Tpo -c -o ibm_emac.o ibm_emac.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ixgb.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT ixgb.o -MD -MP -MF $depbase.Tpo -c -o ixgb.o ixgb.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ixgbe.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT ixgbe.o -MD -MP -MF $depbase.Tpo -c -o ixgbe.o ixgbe.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo natsemi.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT natsemi.o -MD -MP -MF $depbase.Tpo -c -o natsemi.o natsemi.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo pcnet32.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT pcnet32.o -MD -MP -MF $depbase.Tpo -c -o pcnet32.o pcnet32.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo realtek.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT realtek.o -MD -MP -MF $depbase.Tpo -c -o realtek.o realtek.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tg3.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT tg3.o -MD -MP -MF $depbase.Tpo -c -o tg3.o tg3.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo marvell.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT marvell.o -MD -MP -MF $depbase.Tpo -c -o marvell.o marvell.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo vioc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT vioc.o -MD -MP -MF $depbase.Tpo -c -o vioc.o vioc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo smsc911x.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT smsc911x.o -MD -MP -MF $depbase.Tpo -c -o smsc911x.o smsc911x.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo at76c50x-usb.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT at76c50x-usb.o -MD -MP -MF $depbase.Tpo -c -o at76c50x-usb.o at76c50x-usb.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sfc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT sfc.o -MD -MP -MF $depbase.Tpo -c -o sfc.o sfc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo stmmac.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT stmmac.o -MD -MP -MF $depbase.Tpo -c -o stmmac.o stmmac.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sff-common.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT sff-common.o -MD -MP -MF $depbase.Tpo -c -o sff-common.o sff-common.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sfpid.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT sfpid.o -MD -MP -MF $depbase.Tpo -c -o sfpid.o sfpid.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sfpdiag.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT sfpdiag.o -MD -MP -MF $depbase.Tpo -c -o sfpdiag.o sfpdiag.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ixgbevf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT ixgbevf.o -MD -MP -MF $depbase.Tpo -c -o ixgbevf.o ixgbevf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tse.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT tse.o -MD -MP -MF $depbase.Tpo -c -o tse.o tse.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo vmxnet3.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT vmxnet3.o -MD -MP -MF $depbase.Tpo -c -o vmxnet3.o vmxnet3.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo qsfp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT qsfp.o -MD -MP -MF $depbase.Tpo -c -o qsfp.o qsfp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fjes.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT fjes.o -MD -MP -MF $depbase.Tpo -c -o fjes.o fjes.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo lan78xx.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT lan78xx.o -MD -MP -MF $depbase.Tpo -c -o lan78xx.o lan78xx.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo igc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT igc.o -MD -MP -MF $depbase.Tpo -c -o igc.o igc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo cmis.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT cmis.o -MD -MP -MF $depbase.Tpo -c -o cmis.o cmis.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo bnxt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT bnxt.o -MD -MP -MF $depbase.Tpo -c -o bnxt.o bnxt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/netlink.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/netlink.o -MD -MP -MF $depbase.Tpo -c -o netlink/netlink.o netlink/netlink.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/msgbuff.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/msgbuff.o -MD -MP -MF $depbase.Tpo -c -o netlink/msgbuff.o netlink/msgbuff.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/nlsock.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/nlsock.o -MD -MP -MF $depbase.Tpo -c -o netlink/nlsock.o netlink/nlsock.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/strset.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/strset.o -MD -MP -MF $depbase.Tpo -c -o netlink/strset.o netlink/strset.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/monitor.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/monitor.o -MD -MP -MF $depbase.Tpo -c -o netlink/monitor.o netlink/monitor.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/bitset.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/bitset.o -MD -MP -MF $depbase.Tpo -c -o netlink/bitset.o netlink/bitset.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/settings.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/settings.o -MD -MP -MF $depbase.Tpo -c -o netlink/settings.o netlink/settings.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/parser.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/parser.o -MD -MP -MF $depbase.Tpo -c -o netlink/parser.o netlink/parser.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/permaddr.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/permaddr.o -MD -MP -MF $depbase.Tpo -c -o netlink/permaddr.o netlink/permaddr.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/prettymsg.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/prettymsg.o -MD -MP -MF $depbase.Tpo -c -o netlink/prettymsg.o netlink/prettymsg.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/features.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/features.o -MD -MP -MF $depbase.Tpo -c -o netlink/features.o netlink/features.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/privflags.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/privflags.o -MD -MP -MF $depbase.Tpo -c -o netlink/privflags.o netlink/privflags.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/rings.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/rings.o -MD -MP -MF $depbase.Tpo -c -o netlink/rings.o netlink/rings.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/channels.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/channels.o -MD -MP -MF $depbase.Tpo -c -o netlink/channels.o netlink/channels.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/coalesce.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/coalesce.o -MD -MP -MF $depbase.Tpo -c -o netlink/coalesce.o netlink/coalesce.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/pause.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/pause.o -MD -MP -MF $depbase.Tpo -c -o netlink/pause.o netlink/pause.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/eee.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/eee.o -MD -MP -MF $depbase.Tpo -c -o netlink/eee.o netlink/eee.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/tsinfo.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/tsinfo.o -MD -MP -MF $depbase.Tpo -c -o netlink/tsinfo.o netlink/tsinfo.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/fec.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/fec.o -MD -MP -MF $depbase.Tpo -c -o netlink/fec.o netlink/fec.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/stats.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/stats.o -MD -MP -MF $depbase.Tpo -c -o netlink/stats.o netlink/stats.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/desc-ethtool.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/desc-ethtool.o -MD -MP -MF $depbase.Tpo -c -o netlink/desc-ethtool.o netlink/desc-ethtool.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/desc-genlctrl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/desc-genlctrl.o -MD -MP -MF $depbase.Tpo -c -o netlink/desc-genlctrl.o netlink/desc-genlctrl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/module-eeprom.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/module-eeprom.o -MD -MP -MF $depbase.Tpo -c -o netlink/module-eeprom.o netlink/module-eeprom.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/desc-rtnl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/desc-rtnl.o -MD -MP -MF $depbase.Tpo -c -o netlink/desc-rtnl.o netlink/desc-rtnl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/cable_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/cable_test.o -MD -MP -MF $depbase.Tpo -c -o netlink/cable_test.o netlink/cable_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo netlink/tunnels.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./uapi   -Wall -Wextra -g -O2 -MT netlink/tunnels.o -MD -MP -MF $depbase.Tpo -c -o netlink/tunnels.o netlink/tunnels.c &&\
+mv -f $depbase.Tpo $depbase.Po
+gcc -Wall -Wextra -g -O2   -o ethtool ethtool.o rxclass.o common.o json_writer.o json_print.o amd8111e.o de2104x.o dsa.o e100.o e1000.o et131x.o igb.o fec.o fec_8xx.o ibm_emac.o ixgb.o ixgbe.o natsemi.o pcnet32.o realtek.o tg3.o marvell.o vioc.o smsc911x.o at76c50x-usb.o sfc.o stmmac.o sff-common.o sfpid.o sfpdiag.o ixgbevf.o tse.o vmxnet3.o qsfp.o fjes.o lan78xx.o igc.o cmis.o bnxt.o netlink/netlink.o netlink/msgbuff.o netlink/nlsock.o netlink/strset.o netlink/monitor.o netlink/bitset.o netlink/settings.o netlink/parser.o netlink/permaddr.o netlink/prettymsg.o netlink/features.o netlink/privflags.o netlink/rings.o netlink/channels.o netlink/coalesce.o netlink/pause.o netlink/eee.o netlink/tsinfo.o netlink/fec.o netlink/stats.o netlink/desc-ethtool.o netlink/desc-genlctrl.o netlink/module-eeprom.o netlink/desc-rtnl.o netlink/cable_test.o netlink/tunnels.o -lm -lmnl 
+make[1]: Leaving directory '/sources/ethtool-5.16'
+(lfs chroot) root:/sources/ethtool-5.16# make install
+make[1]: Entering directory '/sources/ethtool-5.16'
+ /usr/bin/mkdir -p '/usr/share/bash-completion/completions'
+ /usr/bin/mkdir -p '/usr/share/man/man8'
+ /usr/bin/mkdir -p '/usr/sbin'
+ /usr/bin/install -c -m 644 shell-completion/bash/ethtool '/usr/share/bash-completion/completions'
+  /usr/bin/install -c ethtool '/usr/sbin'
+ /usr/bin/install -c -m 644 ethtool.8 '/usr/share/man/man8'
+make[1]: Leaving directory '/sources/ethtool-5.16'
+(lfs chroot) root:/sources/ethtool-5.16# ethtool 
+ethtool: bad command line argument(s)
+For more information run ethtool -h
+(lfs chroot) root:/sources/ethtool-5.16# which ethtool 
+/usr/sbin/ethtool
+(lfs chroot) root:/sources/ethtool-5.16# finish
+[lfs-scripts] Finishing build of ethtool-5.16 at Sun Oct  2 02:32:54 AM -03 2022
+(lfs chroot) root:/sources# 

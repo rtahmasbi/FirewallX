@@ -1,0 +1,514 @@
+(lfs chroot) root:/sources# # 8.60. Gzip-1.10
+begin gzip-1.10 tar.xz
+./configure --prefix=/usr
+make
+make install
+finish
+[lfs-scripts] Starting build of gzip-1.10 at Wed Sep 14 00:44:45 -03 2022
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for nm... nm
+checking whether ln -s works... yes
+checking for ranlib... ranlib
+checking for a POSIX-compliant shell... /bin/sh
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for dirent.h... yes
+checking for features.h... yes
+checking for getopt.h... yes
+checking for sys/cdefs.h... yes
+checking for sys/time.h... yes
+checking for limits.h... yes
+checking for math.h... yes
+checking for sys/mman.h... yes
+checking for wchar.h... yes
+checking for utime.h... yes
+checking for crtdefs.h... no
+checking for fcntl.h... yes
+checking for memory.h... yes
+checking for time.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for egrep... /usr/bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether malloc, realloc, calloc are POSIX compliant... yes
+checking for _set_invalid_parameter_handler... no
+checking for fchdir... yes
+checking for fdopendir... yes
+checking for strerror_r... yes
+checking for fcntl... yes
+checking for symlink... yes
+checking for mempcpy... yes
+checking for vasnprintf... no
+checking for snprintf... yes
+checking for fpurge... no
+checking for __fpurge... yes
+checking for __freading... yes
+checking for __fseterr... no
+checking for fstatat... yes
+checking for fsync... yes
+checking for getdtablesize... yes
+checking for getprogname... no
+checking for getexecname... no
+checking for gettimeofday... yes
+checking for lstat... yes
+checking for mprotect... yes
+checking for openat... yes
+checking for __xpg_strerror_r... yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for siginterrupt... yes
+checking for strdup... yes
+checking for catgets... yes
+checking for pipe... yes
+checking for unlinkat... yes
+checking for utime... yes
+checking for futimes... yes
+checking for futimesat... yes
+checking for futimens... yes
+checking for utimensat... yes
+checking for lutimes... yes
+checking for chown... yes
+checking for fchmod... yes
+checking for fchown... yes
+checking whether the preprocessor supports include_next... yes
+checking whether system header files limit the line length... no
+checking how gcc reports undeclared, standard C functions... error
+checking whether // is distinct from /... no
+checking for complete errno.h... yes
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... yes
+checking whether fchdir is declared... yes
+checking for working fcntl.h... yes
+checking for pid_t... yes
+checking for mode_t... yes
+checking for promoted mode_t type... mode_t
+checking whether fdatasync is declared... yes
+checking for stdint.h... yes
+checking for inttypes.h... yes
+checking whether printf supports size specifiers as in C99... yes
+checking whether printf supports 'long double' arguments... yes
+checking whether printf supports infinite 'double' arguments... yes
+checking whether byte ordering is bigendian... no
+checking whether long double and double are the same... no
+checking whether printf supports infinite 'long double' arguments... yes
+checking whether printf supports the 'a' and 'A' directives... yes
+checking whether printf supports the 'F' directive... yes
+checking whether printf supports the 'n' directive... yes
+checking whether printf supports the 'ls' directive... yes
+checking whether printf supports POSIX/XSI format strings with positions... yes
+checking whether printf supports the grouping flag... yes
+checking whether printf supports the left-adjust flag correctly... yes
+checking whether printf supports the zero flag correctly... yes
+checking whether printf supports large precisions... yes
+checking whether printf survives out-of-memory conditions... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking for wchar_t... yes
+checking for wint_t... yes
+checking whether wint_t is too small... no
+checking for intmax_t... yes
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking whether snprintf returns a byte count as in C99... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking whether frexp() can be used without linking with libm... yes
+checking whether alarm is declared... yes
+checking whether stdin defaults to large file offsets... yes
+checking whether fseeko is declared... yes
+checking for fseeko... yes
+checking whether fflush works on input streams... no
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether ftello is declared... yes
+checking for ftello... yes
+checking whether ftello works... yes
+checking whether getcwd (NULL, 0) allocates memory for result... yes
+checking for getcwd with POSIX signature... yes
+checking whether getdtablesize is declared... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... yes
+checking for working GNU getopt_long function... yes
+checking for C/C++ restrict keyword... __restrict
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking where to find the exponent in a 'float'... word 0 bit 23
+checking whether limits.h has LLONG_MAX, WORD_BIT, ULLONG_WIDTH etc.... yes
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... no
+checking for the common suffixes of directories in the library search path... lib64,lib64
+checking whether imported symbols can be declared weak... yes
+checking whether the linker supports --as-needed... yes
+checking whether the linker supports --push-state... yes
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking for multithread API to use... posix
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for stdlib.h... yes
+checking for GNU libc compatible malloc... yes
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether memrchr is declared... yes
+checking for O_CLOEXEC... yes
+checking whether strerror(0) succeeds... yes
+checking for strerror_r with POSIX signature... no
+checking whether __xpg_strerror_r works... yes
+checking whether C symbols are prefixed with underscore at the linker level... no
+checking for sigset_t... yes
+checking for uid_t in sys/types.h... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h predates C++11... no
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking whether strdup is declared... yes
+checking for struct timespec in <time.h>... yes
+checking whether the utimes function works... yes
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking for 64-bit time_t... yes
+checking for alloca as a compiler built-in... yes
+checking for GNU libc compatible calloc... yes
+checking whether this system has an arbitrary file name length limit... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking for closedir... yes
+checking for dirfd... yes
+checking whether dirfd is declared... yes
+checking whether dirfd is a macro... no
+checking whether // is distinct from /... (cached) no
+checking whether dup works... yes
+checking whether dup2 works... yes
+checking for error_at_line... yes
+checking whether fflush works on input streams... (cached) no
+checking whether fcntl handles F_DUPFD correctly... yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... needs runtime check
+checking for library containing fdatasync... none required
+checking whether fdopendir is declared... yes
+checking whether fdopendir works... yes
+checking whether fflush works on input streams... (cached) no
+checking whether conversion from 'int' to 'long double' works... yes
+checking whether fpurge is declared... no
+checking whether frexp works... yes
+checking whether frexpl is declared... yes
+checking whether frexpl() can be used without linking with libm... yes
+checking whether frexpl works... yes
+checking for fseeko... (cached) yes
+checking whether fflush works on input streams... (cached) no
+checking for _fseeki64... no
+checking whether fstatat (..., 0) works... yes
+checking for ftello... (cached) yes
+checking whether ftello works... (cached) yes
+checking whether getdtablesize works... yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether __argv is declared... no
+checking whether gettimeofday clobbers localtime buffer... no
+checking for gettimeofday with POSIX signature... yes
+checking whether isnan(double) can be used without linking with libm... yes
+checking whether isnan(float) can be used without linking with libm... yes
+checking whether isnan(float) works... yes
+checking whether isnan(long double) can be used without linking with libm... yes
+checking whether isnanl works... yes
+checking for C compiler flag to ignore unused libraries... -Wl,--as-needed
+checking for pthread_rwlock_t... yes
+checking whether pthread_rwlock_rdlock prefers a writer to a reader... no
+checking whether lseek detects pipes... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... (cached) yes
+checking whether NAN macro works... yes
+checking whether HUGE_VAL works... yes
+checking for mempcpy... (cached) yes
+checking for memrchr... yes
+checking whether open recognizes a trailing slash... yes
+checking for opendir... yes
+checking whether perror matches strerror... yes
+checking whether frexp works... (cached) yes
+checking whether ldexp can be used without linking with libm... yes
+checking whether frexpl() can be used without linking with libm... (cached) yes
+checking whether frexpl works... (cached) yes
+checking whether frexpl is declared... (cached) yes
+checking whether ldexpl() can be used without linking with libm... yes
+checking whether ldexpl works... yes
+checking whether ldexpl is declared... yes
+checking for raise... yes
+checking for sigprocmask... yes
+checking for readdir... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking whether rmdir works... yes
+checking for struct sigaction.sa_sigaction... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking for signbit macro... yes
+checking for signbit compiler built-ins... yes
+checking for sigprocmask... (cached) yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for ssize_t... yes
+checking whether stat handles trailing slashes on files... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking for working stdnoreturn.h... yes
+checking for stpcpy... yes
+checking for working strerror function... yes
+checking for nlink_t... (cached) yes
+checking whether unlink honors trailing slashes... yes
+checking whether unlink of a parent directory fails as it should... guessing yes
+checking for ptrdiff_t... yes
+checking for stdint.h... (cached) yes
+checking for underline in external names... no
+checking for an assembler syntax supported by this package... no
+checking for library containing strerror... none required
+checking for an ANSI C-conforming const... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking return type of signal handlers... void
+checking for size_t... (cached) yes
+checking for off_t... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating lib/Makefile
+config.status: creating tests/Makefile
+config.status: creating lib/config.h
+config.status: executing depfiles commands
+  GEN      version.c
+  GEN      version.h
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/sources/gzip-1.10'
+Making all in lib
+make[2]: Entering directory '/sources/gzip-1.10/lib'
+  GEN      alloca.h
+  GEN      fcntl.h
+  GEN      dirent.h
+  GEN      limits.h
+  GEN      signal.h
+  GEN      math.h
+  GEN      stdio.h
+  GEN      stdlib.h
+  GEN      string.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      sys/types.h
+  GEN      time.h
+  GEN      unistd.h
+  GEN      wchar.h
+/usr/bin/make  all-am
+make[3]: Entering directory '/sources/gzip-1.10/lib'
+  CC       cloexec.o
+  CC       opendir-safer.o
+  CC       dirname-lgpl.o
+  CC       basename-lgpl.o
+  CC       stripslash.o
+  CC       exitfail.o
+  CC       creat-safer.o
+  CC       open-safer.o
+  CC       fd-safer-flag.o
+  CC       fd-hook.o
+  CC       dup-safer-flag.o
+  CC       filenamecat-lgpl.o
+  CC       freading.o
+  CC       getprogname.o
+  CC       gettime.o
+  CC       malloca.o
+  CC       math.o
+  CC       openat-die.o
+  CC       openat-safer.o
+  CC       printf-frexp.o
+  CC       printf-frexpl.o
+  CC       save-cwd.o
+  CC       savedir.o
+  CC       sig-handler.o
+  CC       stat-time.o
+  CC       statat.o
+  CC       glthread/threadlib.o
+  CC       timespec.o
+  CC       unistd.o
+  CC       dup-safer.o
+  CC       fd-safer.o
+  CC       pipe-safer.o
+  CC       utimens.o
+  CC       xmalloc.o
+  CC       xalloc-die.o
+  CC       xsize.o
+  CC       yesno.o
+  CC       asnprintf.o
+utimens.c: In function 'fdutimens':
+utimens.c:382:17: warning: 'update_timespec' accessing 16 bytes in a region of size 8 [-Wstringop-overflow=]
+  382 |       if (ts && update_timespec (&st, &ts))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+utimens.c:382:17: note: referencing argument 2 of type 'struct timespec **'
+utimens.c:133:1: note: in a call to function 'update_timespec'
+  133 | update_timespec (struct stat const *statbuf, struct timespec *ts[2])
+      | ^~~~~~~~~~~~~~~
+  CC       chdir-long.o
+utimens.c: In function 'lutimens':
+utimens.c:595:17: warning: 'update_timespec' accessing 16 bytes in a region of size 8 [-Wstringop-overflow=]
+  595 |       if (ts && update_timespec (&st, &ts))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+utimens.c:595:17: note: referencing argument 2 of type 'struct timespec **'
+utimens.c:133:1: note: in a call to function 'update_timespec'
+  133 | update_timespec (struct stat const *statbuf, struct timespec *ts[2])
+      | ^~~~~~~~~~~~~~~
+  CC       fclose.o
+  CC       fcntl.o
+  CC       fflush.o
+  CC       fpurge.o
+  CC       fseek.o
+  CC       fseeko.o
+  CC       fseterr.o
+  CC       localtime-buffer.o
+  CC       openat-proc.o
+  CC       printf-args.o
+  CC       printf-parse.o
+  CC       strerror_r.o
+  CC       vasnprintf.o
+  CC       glthread/lock.o
+  AR       libgzip.a
+make[3]: Leaving directory '/sources/gzip-1.10/lib'
+make[2]: Leaving directory '/sources/gzip-1.10/lib'
+Making all in doc
+make[2]: Entering directory '/sources/gzip-1.10/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/gzip-1.10/doc'
+Making all in .
+make[2]: Entering directory '/sources/gzip-1.10'
+  CC       lzw.o
+  CC       bits.o
+  CC       deflate.o
+  CC       inflate.o
+  CC       trees.o
+  CC       gzip.o
+  CC       unlzh.o
+  CC       unlzw.o
+  CC       unpack.o
+  CC       unzip.o
+  CC       util.o
+  CC       zip.o
+  CC       version.o
+  GEN      gunzip
+  GEN      gzexe
+  GEN      zcat
+  GEN      zcmp
+  GEN      zdiff
+  GEN      zegrep
+  GEN      zfgrep
+  GEN      zforce
+  GEN      zgrep
+  GEN      zless
+  GEN      zmore
+  GEN      znew
+  AR       libver.a
+  CCLD     gzip
+make[2]: Leaving directory '/sources/gzip-1.10'
+Making all in tests
+make[2]: Entering directory '/sources/gzip-1.10/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/gzip-1.10/tests'
+make[1]: Leaving directory '/sources/gzip-1.10'
+/usr/bin/make  install-recursive
+make[1]: Entering directory '/sources/gzip-1.10'
+Making install in lib
+make[2]: Entering directory '/sources/gzip-1.10/lib'
+/usr/bin/make  install-am
+make[3]: Entering directory '/sources/gzip-1.10/lib'
+make[4]: Entering directory '/sources/gzip-1.10/lib'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/gzip-1.10/lib'
+make[3]: Leaving directory '/sources/gzip-1.10/lib'
+make[2]: Leaving directory '/sources/gzip-1.10/lib'
+Making install in doc
+make[2]: Entering directory '/sources/gzip-1.10/doc'
+make[3]: Entering directory '/sources/gzip-1.10/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/info'
+ /usr/bin/install -c -m 644 ./gzip.info '/usr/share/info'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/gzip.info'
+make[3]: Leaving directory '/sources/gzip-1.10/doc'
+make[2]: Leaving directory '/sources/gzip-1.10/doc'
+Making install in .
+make[2]: Entering directory '/sources/gzip-1.10'
+make[3]: Entering directory '/sources/gzip-1.10'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/install -c gunzip gzexe zcat zcmp zdiff zegrep zfgrep zforce zgrep zless zmore znew '/usr/bin'
+  /usr/bin/install -c gzip '/usr/bin'
+/usr/bin/make  install-exec-hook
+ /usr/bin/install -c -m 644 gunzip.1 gzexe.1 gzip.1 zcat.1 zcmp.1 zdiff.1 zforce.1 zgrep.1 zless.1 zmore.1 znew.1 '/usr/share/man/man1'
+make[4]: Entering directory '/sources/gzip-1.10'
++ cd /usr/bin
++ rm -f uncompress
++ case remove-installed-links in
++ cd /usr/bin
++ rm -f uncompress
++ case install-exec-hook in
++ ln gunzip uncompress
+make[4]: Leaving directory '/sources/gzip-1.10'
+make[3]: Leaving directory '/sources/gzip-1.10'
+make[2]: Leaving directory '/sources/gzip-1.10'
+Making install in tests
+make[2]: Entering directory '/sources/gzip-1.10/tests'
+make[3]: Entering directory '/sources/gzip-1.10/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/gzip-1.10/tests'
+make[2]: Leaving directory '/sources/gzip-1.10/tests'
+make[1]: Leaving directory '/sources/gzip-1.10'
+[lfs-scripts] Finishing build of gzip-1.10 at Wed Sep 14 00:48:40 -03 2022
+(lfs chroot) root:/sources# 

@@ -1,0 +1,373 @@
+(lfs chroot) root:/sources# begin libmnl-1.0.4 tar.bz2
+[lfs-scripts] Starting build of libmnl-1.0.4 at Sun Oct  2 02:27:41 AM -03 2022
+(lfs chroot) root:/sources/libmnl-1.0.4# ./configure --prefix=/usr
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether compiler accepts -fvisibility=hidden... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating include/Makefile
+config.status: creating include/libmnl/Makefile
+config.status: creating include/linux/Makefile
+config.status: creating include/linux/netfilter/Makefile
+config.status: creating examples/Makefile
+config.status: creating examples/genl/Makefile
+config.status: creating examples/kobject/Makefile
+config.status: creating examples/netfilter/Makefile
+config.status: creating examples/rtnl/Makefile
+config.status: creating libmnl.pc
+config.status: creating doxygen.cfg
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+(lfs chroot) root:/sources/libmnl-1.0.4# make -j8
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/sources/libmnl-1.0.4'
+Making all in src
+make[2]: Entering directory '/sources/libmnl-1.0.4/src'
+  CC       socket.lo
+  CC       nlmsg.lo
+  CC       callback.lo
+  CC       attr.lo
+  CCLD     libmnl.la
+make[2]: Leaving directory '/sources/libmnl-1.0.4/src'
+Making all in include
+make[2]: Entering directory '/sources/libmnl-1.0.4/include'
+Making all in libmnl
+make[3]: Entering directory '/sources/libmnl-1.0.4/include/libmnl'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/include/libmnl'
+Making all in linux
+make[3]: Entering directory '/sources/libmnl-1.0.4/include/linux'
+Making all in netfilter
+make[4]: Entering directory '/sources/libmnl-1.0.4/include/linux/netfilter'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/sources/libmnl-1.0.4/include/linux/netfilter'
+make[4]: Entering directory '/sources/libmnl-1.0.4/include/linux'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/sources/libmnl-1.0.4/include/linux'
+make[3]: Leaving directory '/sources/libmnl-1.0.4/include/linux'
+make[3]: Entering directory '/sources/libmnl-1.0.4/include'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/include'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/include'
+Making all in examples
+make[2]: Entering directory '/sources/libmnl-1.0.4/examples'
+Making all in genl
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples/genl'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples/genl'
+Making all in kobject
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples/kobject'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples/kobject'
+Making all in netfilter
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples/netfilter'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples/netfilter'
+Making all in rtnl
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples/rtnl'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples/rtnl'
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/examples'
+make[2]: Entering directory '/sources/libmnl-1.0.4'
+make[2]: Leaving directory '/sources/libmnl-1.0.4'
+make[1]: Leaving directory '/sources/libmnl-1.0.4'
+(lfs chroot) root:/sources/libmnl-1.0.4# make install
+Making install in src
+make[1]: Entering directory '/sources/libmnl-1.0.4/src'
+make[2]: Entering directory '/sources/libmnl-1.0.4/src'
+make[2]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/usr/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libmnl.la '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libmnl.so.0.2.0 /usr/lib/libmnl.so.0.2.0
+libtool: install: (cd /usr/lib && { ln -s -f libmnl.so.0.2.0 libmnl.so.0 || { rm -f libmnl.so.0 && ln -s libmnl.so.0.2.0 libmnl.so.0; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libmnl.so.0.2.0 libmnl.so || { rm -f libmnl.so && ln -s libmnl.so.0.2.0 libmnl.so; }; })
+libtool: install: /usr/bin/install -c .libs/libmnl.lai /usr/lib/libmnl.la
+libtool: finish: PATH="/usr/bin:/usr/sbin:/sbin" ldconfig -n /usr/lib
+/usr/sbin/ldconfig: /usr/lib/libbz2.so.1.0 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libzstd.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libctf-nobfd.so.0 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libncursesw.so.6 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libefiboot.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libgdbm.so.6 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libefivar.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libgmp.so.10 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libgettextlib-0.21.so is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libltdl.so.7 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libbfd-2.37.so is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libfl.so.2 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libgdbm_compat.so.4 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libfdisk.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libcap.so.2 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libe2p.so.2 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libffi.so.8 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libkmod.so.2 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libpipeline.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libpopt.so.0 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libext2fs.so.2 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libtextstyle.so.0 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libopcodes-2.37.so is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/liblzma.so.5 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libblkid.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libctf.so.0 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libprocps.so.8 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libgettextpo.so.0 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libz.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libmount.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libuuid.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libhistory.so.8 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libmpfr.so.6 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libefisec.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libsubid.so.3 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libexpat.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libreadline.so.8 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libcheck.so.0 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libmenuw.so.6 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libsmartcols.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libacl.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libgettextsrc-0.21.so is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libmpc.so.3 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libudev.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libpanelw.so.6 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libgmpxx.so.4 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libasprintf.so.0 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libcom_err.so.2 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libss.so.2 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libmagic.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libformw.so.6 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libattr.so.1 is not a symbolic link
+
+/usr/sbin/ldconfig: /usr/lib/libpsx.so.2 is not a symbolic link
+
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Leaving directory '/sources/libmnl-1.0.4/src'
+make[1]: Leaving directory '/sources/libmnl-1.0.4/src'
+Making install in include
+make[1]: Entering directory '/sources/libmnl-1.0.4/include'
+Making install in libmnl
+make[2]: Entering directory '/sources/libmnl-1.0.4/include/libmnl'
+make[3]: Entering directory '/sources/libmnl-1.0.4/include/libmnl'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/include/libmnl'
+ /usr/bin/install -c -m 644 libmnl.h '/usr/include/libmnl'
+make[3]: Leaving directory '/sources/libmnl-1.0.4/include/libmnl'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/include/libmnl'
+Making install in linux
+make[2]: Entering directory '/sources/libmnl-1.0.4/include/linux'
+Making install in netfilter
+make[3]: Entering directory '/sources/libmnl-1.0.4/include/linux/netfilter'
+make[4]: Entering directory '/sources/libmnl-1.0.4/include/linux/netfilter'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/libmnl-1.0.4/include/linux/netfilter'
+make[3]: Leaving directory '/sources/libmnl-1.0.4/include/linux/netfilter'
+make[3]: Entering directory '/sources/libmnl-1.0.4/include/linux'
+make[4]: Entering directory '/sources/libmnl-1.0.4/include/linux'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/libmnl-1.0.4/include/linux'
+make[3]: Leaving directory '/sources/libmnl-1.0.4/include/linux'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/include/linux'
+make[2]: Entering directory '/sources/libmnl-1.0.4/include'
+make[3]: Entering directory '/sources/libmnl-1.0.4/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/include'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/include'
+make[1]: Leaving directory '/sources/libmnl-1.0.4/include'
+Making install in examples
+make[1]: Entering directory '/sources/libmnl-1.0.4/examples'
+Making install in genl
+make[2]: Entering directory '/sources/libmnl-1.0.4/examples/genl'
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples/genl'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples/genl'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/examples/genl'
+Making install in kobject
+make[2]: Entering directory '/sources/libmnl-1.0.4/examples/kobject'
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples/kobject'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples/kobject'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/examples/kobject'
+Making install in netfilter
+make[2]: Entering directory '/sources/libmnl-1.0.4/examples/netfilter'
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples/netfilter'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples/netfilter'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/examples/netfilter'
+Making install in rtnl
+make[2]: Entering directory '/sources/libmnl-1.0.4/examples/rtnl'
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples/rtnl'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples/rtnl'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/examples/rtnl'
+make[2]: Entering directory '/sources/libmnl-1.0.4/examples'
+make[3]: Entering directory '/sources/libmnl-1.0.4/examples'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/libmnl-1.0.4/examples'
+make[2]: Leaving directory '/sources/libmnl-1.0.4/examples'
+make[1]: Leaving directory '/sources/libmnl-1.0.4/examples'
+make[1]: Entering directory '/sources/libmnl-1.0.4'
+make[2]: Entering directory '/sources/libmnl-1.0.4'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libmnl.pc '/usr/lib/pkgconfig'
+make[2]: Leaving directory '/sources/libmnl-1.0.4'
+make[1]: Leaving directory '/sources/libmnl-1.0.4'
+(lfs chroot) root:/sources/libmnl-1.0.4# finish
+[lfs-scripts] Finishing build of libmnl-1.0.4 at Sun Oct  2 02:29:31 AM -03 2022
+(lfs chroot) root:/sources# 

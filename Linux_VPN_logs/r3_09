@@ -1,0 +1,401 @@
+(lfs chroot) root:/sources# begin readline-8.1 tar.gz
+sed -i '/MV.*old/d' Makefile.in
+sed -i '/{OLDSUFF}/c:' support/shlib-install
+./configure --prefix=/usr    \
+            --disable-static \
+            --with-curses    \
+            --docdir=/usr/share/doc/readline-8.1
+[lfs-scripts] Starting build of readline-8.1 at Mon Sep 12 22:06:41 -03 2022
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+
+Beginning configuration for readline-8.1 for aarch64-unknown-linux-gnu
+
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether gcc needs -traditional... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for ar... ar
+checking for ranlib... ranlib
+checking for an ANSI C-conforming const... yes
+checking for function prototypes... yes
+checking whether char is unsigned... yes
+checking for working volatile... yes
+checking return type of signal handlers... void
+checking for size_t... yes
+checking for ssize_t... yes
+checking for ANSI C header files... (cached) yes
+checking whether stat file-mode macros are broken... no
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for fcntl... yes
+checking for kill... yes
+checking for lstat... yes
+checking for readlink... yes
+checking for fnmatch... yes
+checking for memmove... yes
+checking for pselect... yes
+checking for putenv... yes
+checking for select... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for strcasecmp... yes
+checking for strpbrk... yes
+checking for tcgetattr... yes
+checking for vsnprintf... yes
+checking for isascii... yes
+checking for isxdigit... yes
+checking for getpwent... yes
+checking for getpwnam... yes
+checking for getpwuid... yes
+checking for uid_t in sys/types.h... yes
+checking for unistd.h... (cached) yes
+checking for working chown... yes
+checking for working strcoll... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking varargs.h usability... no
+checking varargs.h presence... no
+checking for varargs.h... no
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking stdbool.h usability... yes
+checking stdbool.h presence... yes
+checking for stdbool.h... yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking for memory.h... (cached) yes
+checking termcap.h usability... yes
+checking termcap.h presence... yes
+checking for termcap.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking termio.h usability... yes
+checking termio.h presence... yes
+checking for termio.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/pte.h usability... no
+checking sys/pte.h presence... no
+checking for sys/pte.h... no
+checking sys/stream.h usability... no
+checking sys/stream.h presence... no
+checking for sys/stream.h... no
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking for sys/ptem.h... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for type of signal functions... posix
+checking if signal handlers must be reinstalled when invoked... no
+checking for presence of POSIX-style sigsetjmp/siglongjmp... present
+checking for lstat... yes
+checking whether or not strcoll and strcmp differ... no
+checking whether the ctype macros accept non-ascii characters... yes
+checking whether getpw functions are declared in pwd.h... yes
+checking whether termios.h defines TIOCGWINSZ... no
+checking whether sys/ioctl.h defines TIOCGWINSZ... yes
+checking for sig_atomic_t in signal.h... yes
+checking whether signal handlers are of type void... yes
+checking for TIOCSTAT in sys/ioctl.h... no
+checking for FIONREAD in sys/ioctl.h... yes
+checking for speed_t in sys/types.h... no
+checking for struct winsize in sys/ioctl.h and termios.h... sys/ioctl.h
+checking for struct dirent.d_ino... yes
+checking for struct dirent.d_fileno... yes
+checking libaudit.h usability... no
+checking libaudit.h presence... no
+checking for libaudit.h... no
+checking whether AUDIT_USER_TTY is declared... yes
+checking for tgetent... no
+checking for tgetent in -ltermcap... no
+checking for tgetent in -ltinfo... no
+checking for tgetent in -lcurses... no
+checking for tgetent in -lncurses... yes
+checking which library has the termcap functions... using libncurses
+checking ncurses/termcap.h usability... no
+checking ncurses/termcap.h presence... no
+checking for ncurses/termcap.h... no
+checking wctype.h usability... yes
+checking wctype.h presence... yes
+checking for wctype.h... yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking mbstr.h usability... no
+checking mbstr.h presence... no
+checking for mbstr.h... no
+checking for mbrlen... yes
+checking for mbscasecmp... no
+checking for mbscmp... no
+checking for mbsnrtowcs... yes
+checking for mbsrtowcs... yes
+checking for mbschr... no
+checking for wcrtomb... yes
+checking for wcscoll... yes
+checking for wcsdup... yes
+checking for wcwidth... yes
+checking for wctype... yes
+checking for wcswidth... yes
+checking whether mbrtowc and mbstate_t are properly declared... yes
+checking for iswlower... yes
+checking for iswupper... yes
+checking for towlower... yes
+checking for towupper... yes
+checking for iswctype... yes
+checking for nl_langinfo and CODESET... yes
+checking for wchar_t in wchar.h... yes
+checking for wctype_t in wctype.h... yes
+checking for wint_t in wctype.h... yes
+checking for wcwidth broken with unicode combining characters... no
+checking size of wchar_t... 4
+checking configuration for building shared libraries... supported
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating examples/Makefile
+config.status: creating shlib/Makefile
+config.status: creating readline.pc
+config.status: creating config.h
+config.status: executing default commands
+(lfs chroot) root:/sources/readline-8.1# make SHLIB_LIBS="-lncursesw"
+make SHLIB_LIBS="-lncursesw" install
+test -d shlib || mkdir shlib
+( cd shlib ; /usr/bin/make -j6 --jobserver-auth=3,4 all )
+make[1]: warning: -j6 forced in submake: resetting jobserver mode.
+make[1]: Entering directory '/sources/readline-8.1/shlib'
+rm -f readline.so
+rm -f vi_mode.so
+rm -f funmap.so
+rm -f keymaps.so
+rm -f parens.so
+rm -f search.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o readline.o ../readline.c 
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o funmap.o ../funmap.c 
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o vi_mode.o ../vi_mode.c 
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o keymaps.o ../keymaps.c 
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o parens.o ../parens.c 
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o search.o ../search.c 
+mv funmap.o funmap.so
+rm -f rltty.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o rltty.o ../rltty.c 
+mv keymaps.o keymaps.so
+rm -f complete.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o complete.o ../complete.c 
+mv parens.o parens.so
+rm -f bind.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o bind.o ../bind.c 
+mv search.o search.so
+rm -f isearch.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o isearch.o ../isearch.c 
+mv readline.o readline.so
+rm -f display.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o display.o ../display.c 
+mv rltty.o rltty.so
+rm -f signals.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o signals.o ../signals.c 
+mv isearch.o isearch.so
+rm -f util.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o util.o ../util.c 
+mv signals.o signals.so
+rm -f kill.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o kill.o ../kill.c 
+mv vi_mode.o vi_mode.so
+rm -f undo.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o undo.o ../undo.c 
+mv util.o util.so
+rm -f macro.so
+mv complete.o complete.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o macro.o ../macro.c 
+rm -f input.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o input.o ../input.c 
+mv kill.o kill.so
+rm -f callback.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o callback.o ../callback.c 
+mv undo.o undo.so
+rm -f terminal.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o terminal.o ../terminal.c 
+mv bind.o bind.so
+rm -f text.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o text.o ../text.c 
+mv macro.o macro.so
+rm -f nls.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o nls.o ../nls.c 
+mv input.o input.so
+rm -f misc.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o misc.o ../misc.c 
+mv callback.o callback.so
+rm -f history.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o history.o ../history.c 
+mv nls.o nls.so
+rm -f histexpand.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o histexpand.o ../histexpand.c 
+mv terminal.o terminal.so
+rm -f histfile.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o histfile.o ../histfile.c 
+mv display.o display.so
+rm -f histsearch.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o histsearch.o ../histsearch.c 
+mv misc.o misc.so
+rm -f shell.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o shell.o ../shell.c 
+mv history.o history.so
+rm -f mbutil.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o mbutil.o ../mbutil.c 
+mv text.o text.so
+rm -f tilde.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -DREADLINE_LIBRARY -c -o tilde.o ../tilde.c
+mv histfile.o histfile.so
+rm -f colors.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o colors.o ../colors.c 
+mv shell.o shell.so
+rm -f parse-colors.so
+mv histsearch.o histsearch.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o parse-colors.o ../parse-colors.c 
+rm -f xmalloc.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o xmalloc.o ../xmalloc.c 
+mv mbutil.o mbutil.so
+rm -f xfree.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o xfree.o ../xfree.c 
+mv xmalloc.o xmalloc.so
+rm -f compat.so
+gcc -c -DHAVE_CONFIG_H   -I. -I.. -I..  -DRL_LIBRARY_VERSION='"8.1"' -DBRACKETED_PASTE_DEFAULT=1 -g -O2 -Wno-parentheses -Wno-format-security -fPIC -o compat.o ../compat.c 
+mv tilde.o tilde.so
+mv colors.o colors.so
+mv histexpand.o histexpand.so
+mv xfree.o xfree.so
+mv parse-colors.o parse-colors.so
+rm -f libhistory.so.8.1
+gcc -shared -Wl,-soname,libhistory.so.8.1 -Wl,-rpath,/usr/lib -Wl,-soname,`basename libhistory.so.8.1 .1` -o libhistory.so.8.1 history.so histexpand.so histfile.so histsearch.so shell.so mbutil.so xmalloc.so xfree.so -lncursesw
+mv compat.o compat.so
+rm -f libreadline.so.8.1
+gcc -shared -Wl,-soname,libreadline.so.8.1 -Wl,-rpath,/usr/lib -Wl,-soname,`basename libreadline.so.8.1 .1` -o libreadline.so.8.1 readline.so vi_mode.so funmap.so keymaps.so parens.so search.so rltty.so complete.so bind.so isearch.so display.so signals.so util.so kill.so undo.so macro.so input.so callback.so terminal.so text.so nls.so misc.so history.so histexpand.so histfile.so histsearch.so shell.so mbutil.so tilde.so colors.so parse-colors.so xmalloc.so xfree.so compat.so -lncursesw
+make[1]: Leaving directory '/sources/readline-8.1/shlib'
+/bin/sh ./support/mkinstalldirs /usr/include \
+	/usr/include/readline /usr/lib \
+	/usr/share/info /usr/share/man/man3 /usr/share/doc/readline-8.1 \
+	/usr/lib/pkgconfig
+test -d shlib || mkdir shlib
+( cd shlib ; /usr/bin/make -j6 --jobserver-auth=3,4 all )
+make[1]: warning: -j6 forced in submake: resetting jobserver mode.
+mkdir -p -- /usr/include/readline /usr/lib /usr/share/info /usr/share/man/man3 /usr/share/doc/readline-8.1 /usr/lib/pkgconfig
+for f in readline.h chardefs.h keymaps.h history.h tilde.h rlstdc.h rlconf.h rltypedefs.h; do \
+	/usr/bin/install -c -m 644 ./$f /usr/include/readline ; \
+done
+/usr/bin/install -c -m 644 ./CHANGES ./INSTALL ./README /usr/share/doc/readline-8.1
+/usr/bin/install -c -m 644 /sources/readline-8.1/readline.pc /usr/lib/pkgconfig/readline.pc
+make[1]: Entering directory '/sources/readline-8.1/shlib'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/readline-8.1/shlib'
+( if test -d doc ; then \
+	cd doc && \
+	/usr/bin/make -j6 --jobserver-auth=3,4 infodir=/usr/share/info DESTDIR= install; \
+  fi )
+make[1]: warning: -j6 forced in submake: resetting jobserver mode.
+make[1]: Entering directory '/sources/readline-8.1/doc'
+/bin/sh ../support/mkdirs /usr/share/info /usr/share/man/man3
+if test -n "" ; then \
+	/bin/sh ../support/mkdirs  ; \
+fi
+if test -f readline.info; then \
+	/usr/bin/install -c -m 644 readline.info /usr/share/info/readline.info; \
+else \
+	/usr/bin/install -c -m 644 ./readline.info /usr/share/info/readline.info; \
+fi
+if test -f rluserman.info; then \
+	/usr/bin/install -c -m 644 rluserman.info /usr/share/info/rluserman.info; \
+else \
+	/usr/bin/install -c -m 644 ./rluserman.info /usr/share/info/rluserman.info; \
+fi
+if test -f history.info; then \
+	/usr/bin/install -c -m 644 history.info /usr/share/info/history.info; \
+else \
+	/usr/bin/install -c -m 644 ./history.info /usr/share/info/history.info; \
+fi
+if /bin/sh -c 'install-info --version' >/dev/null 2>&1; then \
+	install-info --dir-file=/usr/share/info/dir \
+		/usr/share/info/readline.info ; \
+	install-info --dir-file=/usr/share/info/dir \
+		/usr/share/info/history.info ; \
+	install-info --dir-file=/usr/share/info/dir \
+		/usr/share/info/rluserman.info ; \
+else true; fi
+/usr/bin/install -c -m 644 ./readline.3 /usr/share/man/man3/readline.3
+/usr/bin/install -c -m 644 ./history.3 /usr/share/man/man3/history.3
+if test -n "" ; then \
+	if test -f readline.html; then \
+		/usr/bin/install -c -m 644 readline.html /readline.html; \
+	else \
+		/usr/bin/install -c -m 644 ./readline.html /readline.html; \
+	fi ; \
+	if test -f history.html; then \
+		/usr/bin/install -c -m 644 history.html /history.html; \
+	else \
+		/usr/bin/install -c -m 644 ./history.html /history.html; \
+	fi ; \
+	if test -f rluserman.html; then \
+		/usr/bin/install -c -m 644 rluserman.html /rluserman.html; \
+	else \
+		/usr/bin/install -c -m 644 ./rluserman.html /rluserman.html; \
+	fi ; \
+fi
+make[1]: Leaving directory '/sources/readline-8.1/doc'
+( cd shlib ; /usr/bin/make -j6 --jobserver-auth=3,4 DESTDIR= install )
+make[1]: warning: -j6 forced in submake: resetting jobserver mode.
+make[1]: Entering directory '/sources/readline-8.1/shlib'
+/bin/sh ../support/mkdirs /usr/lib
+/bin/sh ../support/mkdirs /usr/bin
+/bin/sh ../support/shlib-install -O linux-gnu -V unknown -d /usr/lib -b /usr/bin -i "/usr/bin/install -c -m 644" libhistory.so.8.1
+/bin/sh ../support/shlib-install -O linux-gnu -V unknown -d /usr/lib -b /usr/bin -i "/usr/bin/install -c -m 644" libreadline.so.8.1
+install: you may need to run ldconfig
+make[1]: Leaving directory '/sources/readline-8.1/shlib'
+(lfs chroot) root:/sources/readline-8.1# finish
+[lfs-scripts] Finishing build of readline-8.1 at Mon Sep 12 22:08:44 -03 2022
+(lfs chroot) root:/sources# 

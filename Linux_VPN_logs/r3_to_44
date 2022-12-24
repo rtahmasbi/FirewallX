@@ -1,0 +1,1031 @@
+(lfs chroot) root:/sources# # 8.42. XML::Parser-2.46
+begin XML-Parser-2.46 tar.gz
+perl Makefile.PL
+make
+make install
+finish
+[lfs-scripts] Starting build of XML-Parser-2.46 at Tue Sep 13 16:10:25 -03 2022
+Checking if your kit is complete...
+Looks good
+Warning: prerequisite LWP::UserAgent 0 not found.
+Writing MYMETA.yml and MYMETA.json
+Generating a Unix-style Makefile
+Writing Makefile for XML::Parser
+Writing MYMETA.yml and MYMETA.json
+make[1]: Entering directory '/sources/XML-Parser-2.46/Expat'
+cp Parser.pm blib/lib/XML/Parser.pm
+cp Parser/Encodings/windows-1252.enc blib/lib/XML/Parser/Encodings/windows-1252.enc
+cp Parser/Encodings/x-sjis-jdk117.enc blib/lib/XML/Parser/Encodings/x-sjis-jdk117.enc
+cp Parser/Encodings/iso-8859-2.enc blib/lib/XML/Parser/Encodings/iso-8859-2.enc
+cp Parser/Encodings/x-sjis-jisx0221.enc blib/lib/XML/Parser/Encodings/x-sjis-jisx0221.enc
+cp Parser/Style/Tree.pm blib/lib/XML/Parser/Style/Tree.pm
+cp Parser/Encodings/x-sjis-cp932.enc blib/lib/XML/Parser/Encodings/x-sjis-cp932.enc
+cp Parser/Encodings/README blib/lib/XML/Parser/Encodings/README
+cp Parser/Style/Subs.pm blib/lib/XML/Parser/Style/Subs.pm
+cp Parser/Encodings/koi8-r.enc blib/lib/XML/Parser/Encodings/koi8-r.enc
+cp Parser/Encodings/big5.enc blib/lib/XML/Parser/Encodings/big5.enc
+cp Parser/Encodings/windows-1255.enc blib/lib/XML/Parser/Encodings/windows-1255.enc
+cp Parser/Encodings/iso-8859-9.enc blib/lib/XML/Parser/Encodings/iso-8859-9.enc
+cp Parser/Encodings/euc-kr.enc blib/lib/XML/Parser/Encodings/euc-kr.enc
+cp Parser/Style/Stream.pm blib/lib/XML/Parser/Style/Stream.pm
+cp Parser/Encodings/x-euc-jp-jisx0221.enc blib/lib/XML/Parser/Encodings/x-euc-jp-jisx0221.enc
+cp Parser/Style/Debug.pm blib/lib/XML/Parser/Style/Debug.pm
+cp Parser/LWPExternEnt.pl blib/lib/XML/Parser/LWPExternEnt.pl
+cp Parser/Encodings/iso-8859-7.enc blib/lib/XML/Parser/Encodings/iso-8859-7.enc
+cp Parser/Encodings/Japanese_Encodings.msg blib/lib/XML/Parser/Encodings/Japanese_Encodings.msg
+cp Parser/Encodings/iso-8859-4.enc blib/lib/XML/Parser/Encodings/iso-8859-4.enc
+cp Parser/Encodings/windows-1250.enc blib/lib/XML/Parser/Encodings/windows-1250.enc
+cp Parser/Encodings/windows-1251.enc blib/lib/XML/Parser/Encodings/windows-1251.enc
+cp Parser/Style/Objects.pm blib/lib/XML/Parser/Style/Objects.pm
+cp Parser/Encodings/iso-8859-3.enc blib/lib/XML/Parser/Encodings/iso-8859-3.enc
+cp Parser/Encodings/iso-8859-5.enc blib/lib/XML/Parser/Encodings/iso-8859-5.enc
+cp Parser/Encodings/ibm866.enc blib/lib/XML/Parser/Encodings/ibm866.enc
+cp Parser/Encodings/iso-8859-8.enc blib/lib/XML/Parser/Encodings/iso-8859-8.enc
+cp Parser/Encodings/x-sjis-unicode.enc blib/lib/XML/Parser/Encodings/x-sjis-unicode.enc
+cp Parser/Encodings/iso-8859-15.enc blib/lib/XML/Parser/Encodings/iso-8859-15.enc
+cp Parser/Encodings/x-euc-jp-unicode.enc blib/lib/XML/Parser/Encodings/x-euc-jp-unicode.enc
+"/usr/bin/perl" "/usr/lib/perl5/5.34/core_perl/ExtUtils/xsubpp" -noprototypes -typemap '/usr/lib/perl5/5.34/core_perl/ExtUtils/typemap' -typemap '/sources/XML-Parser-2.46/Expat/typemap'  Expat.xs > Expat.xsc
+Running Mkbootstrap for Expat ()
+cp Expat.pm ../blib/lib/XML/Parser/Expat.pm
+chmod 644 "Expat.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Expat.bs ../blib/arch/auto/XML/Parser/Expat/Expat.bs 644
+mv Expat.xsc Expat.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_FORTIFY_SOURCE=2 -O2   -DVERSION=\"2.46\" -DXS_VERSION=\"2.46\" -fPIC "-I/usr/lib/perl5/5.34/core_perl/CORE"   Expat.c
+rm -f ../blib/arch/auto/XML/Parser/Expat/Expat.so
+LD_RUN_PATH="/usr/lib" cc  -shared -O2 -L/usr/local/lib -fstack-protector-strong  Expat.o  -o ../blib/arch/auto/XML/Parser/Expat/Expat.so  \
+   -lexpat   \
+  
+chmod 755 ../blib/arch/auto/XML/Parser/Expat/Expat.so
+Manifying 1 pod document
+make[1]: Leaving directory '/sources/XML-Parser-2.46/Expat'
+Manifying 6 pod documents
+make[1]: Entering directory '/sources/XML-Parser-2.46/Expat'
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Expat.bs ../blib/arch/auto/XML/Parser/Expat/Expat.bs 644
+Manifying 1 pod document
+make[1]: Leaving directory '/sources/XML-Parser-2.46/Expat'
+Manifying 6 pod documents
+Appending installation info to /usr/lib/perl5/5.34/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /usr/lib/perl5/5.34/site_perl/auto/XML/Parser/Expat/Expat.so
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser.pm
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/LWPExternEnt.pl
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Expat.pm
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Style/Objects.pm
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Style/Subs.pm
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Style/Tree.pm
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Style/Stream.pm
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Style/Debug.pm
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/iso-8859-3.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/windows-1250.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/iso-8859-15.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/x-euc-jp-jisx0221.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/x-sjis-cp932.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/iso-8859-9.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/Japanese_Encodings.msg
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/windows-1251.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/iso-8859-7.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/big5.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/iso-8859-8.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/iso-8859-2.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/euc-kr.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/windows-1252.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/koi8-r.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/README
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/x-sjis-jdk117.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/windows-1255.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/ibm866.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/iso-8859-5.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/iso-8859-4.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/x-sjis-jisx0221.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/x-euc-jp-unicode.enc
+Installing /usr/lib/perl5/5.34/site_perl/XML/Parser/Encodings/x-sjis-unicode.enc
+Installing /usr/share/man/man3/XML::Parser::Style::Objects.3
+Installing /usr/share/man/man3/XML::Parser::Style::Debug.3
+Installing /usr/share/man/man3/XML::Parser::Style::Tree.3
+Installing /usr/share/man/man3/XML::Parser.3
+Installing /usr/share/man/man3/XML::Parser::Style::Subs.3
+Installing /usr/share/man/man3/XML::Parser::Expat.3
+Installing /usr/share/man/man3/XML::Parser::Style::Stream.3
+[lfs-scripts] Finishing build of XML-Parser-2.46 at Tue Sep 13 16:10:44 -03 2022
+(lfs chroot) root:/sources# # 8.43. Intltool-0.51.0
+begin intltool-0.51.0 tar.gz
+sed -i 's:\\\${:\\\$\\{:' intltool-update.in
+./configure --prefix=/usr
+make
+make install
+install -v -Dm644 doc/I18N-HOWTO /usr/share/doc/intltool-0.51.0/I18N-HOWTO
+finish
+[lfs-scripts] Starting build of intltool-0.51.0 at Tue Sep 13 16:10:51 -03 2022
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for perl... /usr/bin/perl
+checking for perl >= 5.8.1... 5.34.0
+checking for XML::Parser... ok
+checking for bzr... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating intltoolize
+config.status: creating tests/Makefile
+config.status: creating tests/cases/Makefile
+config.status: creating tests/results/Makefile
+config.status: creating tests/selftest.pl
+Making all in tests
+make[1]: Entering directory '/sources/intltool-0.51.0/tests'
+Making all in cases
+make[2]: Entering directory '/sources/intltool-0.51.0/tests/cases'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/intltool-0.51.0/tests/cases'
+Making all in results
+make[2]: Entering directory '/sources/intltool-0.51.0/tests/results'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/intltool-0.51.0/tests/results'
+make[2]: Entering directory '/sources/intltool-0.51.0/tests'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/sources/intltool-0.51.0/tests'
+make[1]: Leaving directory '/sources/intltool-0.51.0/tests'
+Making all in doc
+make[1]: Entering directory '/sources/intltool-0.51.0/doc'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/intltool-0.51.0/doc'
+make[1]: Entering directory '/sources/intltool-0.51.0'
+sed -e 's|[@]PACKAGE@|intltool|g' -e 's|[@]VERSION@|0.51.0|g' -e "s|[@]INTLTOOL_PERL@|/usr/bin/perl|g" -e "s|[@]INTLTOOL_LIBDIR@|/usr/lib|g" < intltool-extract.in > intltool-extract
+sed -e 's|[@]PACKAGE@|intltool|g' -e 's|[@]VERSION@|0.51.0|g' -e "s|[@]INTLTOOL_PERL@|/usr/bin/perl|g" -e "s|[@]INTLTOOL_LIBDIR@|/usr/lib|g" < intltool-merge.in > intltool-merge
+sed -e 's|[@]PACKAGE@|intltool|g' -e 's|[@]VERSION@|0.51.0|g' -e "s|[@]INTLTOOL_PERL@|/usr/bin/perl|g" -e "s|[@]INTLTOOL_LIBDIR@|/usr/lib|g" < intltool-update.in > intltool-update
+sed -e 's|[@]PACKAGE@|intltool|g' -e 's|[@]VERSION@|0.51.0|g' -e "s|[@]INTLTOOL_PERL@|/usr/bin/perl|g" -e "s|[@]INTLTOOL_LIBDIR@|/usr/lib|g" < intltool-prepare.in > intltool-prepare
+chmod +x intltool-prepare
+chmod +x intltool-extract
+chmod +x intltool-update
+chmod +x intltool-merge
+make[1]: Leaving directory '/sources/intltool-0.51.0'
+Making install in tests
+make[1]: Entering directory '/sources/intltool-0.51.0/tests'
+Making install in cases
+make[2]: Entering directory '/sources/intltool-0.51.0/tests/cases'
+make[3]: Entering directory '/sources/intltool-0.51.0/tests/cases'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/intltool-0.51.0/tests/cases'
+make[2]: Leaving directory '/sources/intltool-0.51.0/tests/cases'
+Making install in results
+make[2]: Entering directory '/sources/intltool-0.51.0/tests/results'
+make[3]: Entering directory '/sources/intltool-0.51.0/tests/results'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/intltool-0.51.0/tests/results'
+make[2]: Leaving directory '/sources/intltool-0.51.0/tests/results'
+make[2]: Entering directory '/sources/intltool-0.51.0/tests'
+make[3]: Entering directory '/sources/intltool-0.51.0/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/intltool-0.51.0/tests'
+make[2]: Leaving directory '/sources/intltool-0.51.0/tests'
+make[1]: Leaving directory '/sources/intltool-0.51.0/tests'
+Making install in doc
+make[1]: Entering directory '/sources/intltool-0.51.0/doc'
+make[2]: Entering directory '/sources/intltool-0.51.0/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man8'
+ /usr/bin/install -c -m 644 intltoolize.8 intltool-extract.8 intltool-merge.8 intltool-prepare.8 intltool-update.8 '/usr/share/man/man8'
+make[2]: Leaving directory '/sources/intltool-0.51.0/doc'
+make[1]: Leaving directory '/sources/intltool-0.51.0/doc'
+make[1]: Entering directory '/sources/intltool-0.51.0'
+make[2]: Entering directory '/sources/intltool-0.51.0'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/intltool'
+ /usr/bin/mkdir -p '/usr/share/aclocal'
+ /usr/bin/install -c -m 644 Makefile.in.in '/usr/share/intltool'
+ /usr/bin/install -c -m 644 intltool.m4 '/usr/share/aclocal'
+ /usr/bin/install -c intltool-extract intltool-merge intltool-update intltoolize intltool-prepare '/usr/bin'
+make[2]: Leaving directory '/sources/intltool-0.51.0'
+make[1]: Leaving directory '/sources/intltool-0.51.0'
+/usr/bin/install: creating directory '/usr/share/doc/intltool-0.51.0'
+'doc/I18N-HOWTO' -> '/usr/share/doc/intltool-0.51.0/I18N-HOWTO'
+[lfs-scripts] Finishing build of intltool-0.51.0 at Tue Sep 13 16:10:58 -03 2022
+(lfs chroot) root:/sources# # 8.44. Autoconf-2.71
+begin autoconf-2.71 tar.xz
+./configure --prefix=/usr
+make
+make install
+finish
+[lfs-scripts] Starting build of autoconf-2.71 at Tue Sep 13 16:11:04 -03 2022
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+configure: autobuild project... GNU Autoconf
+configure: autobuild revision... 2.71
+configure: autobuild hostname... server1
+configure: autobuild timestamp... 20220913T191107Z
+checking for a shell whose -n mode is known to work... /bin/sh
+checking for characters that cannot appear in file names... none
+checking whether directories can have trailing spaces... yes
+checking for expr... /usr/bin/expr
+checking for GNU M4 that supports accurate traces... /usr/bin/m4
+checking whether /usr/bin/m4 accepts --gnu... yes
+checking how m4 supports trace files... --debugfile
+checking for perl... /usr/bin/perl
+checking whether /usr/bin/perl Fcntl::flock is implemented... yes
+checking for emacs... no
+checking for xemacs... no
+checking for emacs... no
+checking where .elc files should go... ${datadir}/emacs/site-lisp
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether make is case sensitive... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating tests/atlocal
+config.status: creating Makefile
+config.status: executing tests/atconfig commands
+/usr/bin/make  all-am
+make[1]: Entering directory '/sources/autoconf-2.71'
+rm -f bin/autom4te bin/autom4te.tmp
+rm -f lib/autom4te.cfg lib/autom4te.cfg-t
+/usr/bin/mkdir -p bin
+/usr/bin/mkdir -p lib/m4sugar
+srcdir=''; \
+  test -f ./bin/autom4te.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2021|g' -e 's|@VERSION[@]|2.71|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autom4te.in; do not edit by hand.|g' ${srcdir}bin/autom4te.in >bin/autom4te.tmp
+/usr/bin/mkdir -p lib
+rm -f bin/autoheader bin/autoheader.tmp
+sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2021|g' -e 's|@VERSION[@]|2.71|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from lib/autom4te.cfg.in; do not edit by hand.|g' ./lib/autom4te.in >lib/autom4te.cfg-t
+:;{ \
+  echo '# This file is part of -*- Autoconf -*-.' && \
+  echo '# Version of Autoconf.' && \
+  echo '# Copyright (C) 1999, 2000, 2001, 2002, 2006, 2007, 2009' && \
+  echo '# Free Software Foundation, Inc.' && \
+  echo  &&\
+  echo 'm4_define([m4_PACKAGE_NAME],      [GNU Autoconf])' && \
+  echo 'm4_define([m4_PACKAGE_TARNAME],   [autoconf])' && \
+  echo 'm4_define([m4_PACKAGE_VERSION],   [2.71])' && \
+  echo 'm4_define([m4_PACKAGE_STRING],    [GNU Autoconf 2.71])' && \
+  echo 'm4_define([m4_PACKAGE_BUGREPORT], [bug-autoconf@gnu.org])' && \
+  echo 'm4_define([m4_PACKAGE_URL],       [https://www.gnu.org/software/autoconf/])' && \
+  echo 'm4_define([m4_PACKAGE_YEAR],      [2021])'; \
+} > lib/m4sugar/version.m4-t
+rm -f bin/autoreconf bin/autoreconf.tmp
+mv lib/m4sugar/version.m4-t lib/m4sugar/version.m4
+/usr/bin/mkdir -p bin
+rm -f bin/autoscan bin/autoscan.tmp
+srcdir=''; \
+  test -f ./bin/autoheader.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2021|g' -e 's|@VERSION[@]|2.71|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoheader.in; do not edit by hand.|g' ${srcdir}bin/autoheader.in >bin/autoheader.tmp
+/usr/bin/mkdir -p bin
+rm -f bin/autoupdate bin/autoupdate.tmp
+chmod +x bin/autom4te.tmp
+srcdir=''; \
+  test -f ./bin/autoreconf.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2021|g' -e 's|@VERSION[@]|2.71|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoreconf.in; do not edit by hand.|g' ${srcdir}bin/autoreconf.in >bin/autoreconf.tmp
+/usr/bin/mkdir -p bin
+srcdir=''; \
+  test -f ./bin/autoscan.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2021|g' -e 's|@VERSION[@]|2.71|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoscan.in; do not edit by hand.|g' ${srcdir}bin/autoscan.in >bin/autoscan.tmp
+chmod a-w bin/autom4te.tmp
+/usr/bin/mkdir -p bin
+srcdir=''; \
+  test -f ./bin/autoupdate.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2021|g' -e 's|@VERSION[@]|2.71|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoupdate.in; do not edit by hand.|g' ${srcdir}bin/autoupdate.in >bin/autoupdate.tmp
+mv bin/autom4te.tmp bin/autom4te
+chmod a-w lib/autom4te.cfg-t
+rm -f bin/ifnames bin/ifnames.tmp
+mv -f lib/autom4te.cfg-t lib/autom4te.cfg
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autoconf-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autoconf-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /usr/bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autoconf-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autoconf-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autoconf-mode.el'; \
+else :; fi
+chmod +x bin/autoheader.tmp
+/usr/bin/mkdir -p bin
+srcdir=''; \
+  test -f ./bin/ifnames.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2021|g' -e 's|@VERSION[@]|2.71|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/ifnames.in; do not edit by hand.|g' ${srcdir}bin/ifnames.in >bin/ifnames.tmp
+chmod a-w bin/autoheader.tmp
+chmod +x bin/autoreconf.tmp
+mv bin/autoheader.tmp bin/autoheader
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autotest-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autotest-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /usr/bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autotest-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autotest-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autotest-mode.el'; \
+else :; fi
+chmod +x bin/autoscan.tmp
+chmod +x bin/autoupdate.tmp
+chmod a-w bin/autoreconf.tmp
+/usr/bin/mkdir -p lib/autoconf
+chmod a-w bin/autoscan.tmp
+chmod a-w bin/autoupdate.tmp
+mv bin/autoreconf.tmp bin/autoreconf
+/usr/bin/mkdir -p lib/autoscan
+mv bin/autoscan.tmp bin/autoscan
+mv bin/autoupdate.tmp bin/autoupdate
+lang=`echo 'lib/autoconf/autoconf' | sed 's,.*/,,'` \
+  && if test $lang = autoconf; then \
+       lang=autoconf-without-aclocal-m4; \
+     else :; fi \
+  && autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         \
+	--language=$lang \
+	--freeze \
+	--output=lib/autoconf/autoconf.m4f
+/usr/bin/mkdir -p lib/autotest
+chmod +x bin/ifnames.tmp
+echo '# Automatically Generated: do not edit this file' >lib/autoscan/autoscan.list
+/usr/bin/mkdir -p lib/m4sugar
+chmod a-w bin/ifnames.tmp
+sed '/^[#]/!q' ./lib/autoscan/autoscan.pre >>lib/autoscan/autoscan.list
+lang=`echo 'lib/autotest/autotest' | sed 's,.*/,,'` \
+  && if test $lang = autoconf; then \
+       lang=autoconf-without-aclocal-m4; \
+     else :; fi \
+  && autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         \
+	--language=$lang \
+	--freeze \
+	--output=lib/autotest/autotest.m4f
+/usr/bin/mkdir -p lib/m4sugar
+mv bin/ifnames.tmp bin/ifnames
+lang=`echo 'lib/m4sugar/m4sugar' | sed 's,.*/,,'` \
+  && if test $lang = autoconf; then \
+       lang=autoconf-without-aclocal-m4; \
+     else :; fi \
+  && autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         \
+	--language=$lang \
+	--freeze \
+	--output=lib/m4sugar/m4sugar.m4f
+autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         --language M4sh --cache '' \
+  --melt ./bin/autoconf.as -o bin/autoconf.in
+( \
+  sed -n '/^[^#]/p' ./lib/autoscan/autoscan.pre; \
+  autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         --cache '' -M -l autoconf-without-aclocal-m4 \
+    -t'AN_OUTPUT:$1: $2		$3' \
+) | LC_ALL=C sort >>lib/autoscan/autoscan.list
+lang=`echo 'lib/m4sugar/m4sh' | sed 's,.*/,,'` \
+  && if test $lang = autoconf; then \
+       lang=autoconf-without-aclocal-m4; \
+     else :; fi \
+  && autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         \
+	--language=$lang \
+	--freeze \
+	--output=lib/m4sugar/m4sh.m4f
+autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         --language=M4sh ./tests/wrapper.as -o tests/wrapper.in
+rm -f bin/autoconf bin/autoconf.tmp
+/usr/bin/mkdir -p bin
+srcdir=''; \
+  test -f ./bin/autoconf.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2021|g' -e 's|@VERSION[@]|2.71|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoconf.in; do not edit by hand.|g' ${srcdir}bin/autoconf.in >bin/autoconf.tmp
+chmod +x bin/autoconf.tmp
+chmod a-w bin/autoconf.tmp
+mv bin/autoconf.tmp bin/autoconf
+rm -f tests/autoconf tests/autoconf.tmp
+rm -f tests/autoheader tests/autoheader.tmp
+input=tests/wrapper.in \
+  && sed -e 's|@wrap_program[@]|autoconf|g' -e 's|@abs_top_srcdir[@]|/sources/autoconf-2.71|g' -e 's|@abs_top_builddir[@]|/sources/autoconf-2.71|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in >tests/autoconf.tmp
+rm -f tests/autom4te tests/autom4te.tmp
+input=tests/wrapper.in \
+  && sed -e 's|@wrap_program[@]|autoheader|g' -e 's|@abs_top_srcdir[@]|/sources/autoconf-2.71|g' -e 's|@abs_top_builddir[@]|/sources/autoconf-2.71|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in >tests/autoheader.tmp
+rm -f tests/autoreconf tests/autoreconf.tmp
+chmod +x tests/autoconf.tmp
+input=tests/wrapper.in \
+  && sed -e 's|@wrap_program[@]|autom4te|g' -e 's|@abs_top_srcdir[@]|/sources/autoconf-2.71|g' -e 's|@abs_top_builddir[@]|/sources/autoconf-2.71|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in >tests/autom4te.tmp
+rm -f tests/autoscan tests/autoscan.tmp
+chmod +x tests/autoheader.tmp
+chmod a-w tests/autoconf.tmp
+input=tests/wrapper.in \
+  && sed -e 's|@wrap_program[@]|autoreconf|g' -e 's|@abs_top_srcdir[@]|/sources/autoconf-2.71|g' -e 's|@abs_top_builddir[@]|/sources/autoconf-2.71|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in >tests/autoreconf.tmp
+rm -f tests/autoupdate tests/autoupdate.tmp
+chmod a-w tests/autoheader.tmp
+mv -f tests/autoconf.tmp tests/autoconf
+input=tests/wrapper.in \
+  && sed -e 's|@wrap_program[@]|autoscan|g' -e 's|@abs_top_srcdir[@]|/sources/autoconf-2.71|g' -e 's|@abs_top_builddir[@]|/sources/autoconf-2.71|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in >tests/autoscan.tmp
+chmod +x tests/autom4te.tmp
+rm -f tests/ifnames tests/ifnames.tmp
+chmod +x tests/autoreconf.tmp
+mv -f tests/autoheader.tmp tests/autoheader
+input=tests/wrapper.in \
+  && sed -e 's|@wrap_program[@]|autoupdate|g' -e 's|@abs_top_srcdir[@]|/sources/autoconf-2.71|g' -e 's|@abs_top_builddir[@]|/sources/autoconf-2.71|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in >tests/autoupdate.tmp
+chmod a-w tests/autom4te.tmp
+chmod a-w tests/autoreconf.tmp
+input=tests/wrapper.in \
+  && sed -e 's|@wrap_program[@]|ifnames|g' -e 's|@abs_top_srcdir[@]|/sources/autoconf-2.71|g' -e 's|@abs_top_builddir[@]|/sources/autoconf-2.71|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in >tests/ifnames.tmp
+mv -f tests/autom4te.tmp tests/autom4te
+chmod +x tests/autoscan.tmp
+mv -f tests/autoreconf.tmp tests/autoreconf
+chmod a-w tests/autoscan.tmp
+mv -f tests/autoscan.tmp tests/autoscan
+chmod +x tests/autoupdate.tmp
+chmod +x tests/ifnames.tmp
+chmod a-w tests/autoupdate.tmp
+chmod a-w tests/ifnames.tmp
+mv -f tests/autoupdate.tmp tests/autoupdate
+mv -f tests/ifnames.tmp tests/ifnames
+make[1]: Leaving directory '/sources/autoconf-2.71'
+/usr/bin/make  install-am
+make[1]: Entering directory '/sources/autoconf-2.71'
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autoconf-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autoconf-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /usr/bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autoconf-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autoconf-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autoconf-mode.el'; \
+else :; fi
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autotest-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autotest-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /usr/bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autotest-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autotest-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autotest-mode.el'; \
+else :; fi
+make[2]: Entering directory '/sources/autoconf-2.71'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/autoconf/autoconf'
+ /usr/bin/install -c bin/autoconf bin/autoheader bin/autom4te bin/autoreconf bin/autoscan bin/autoupdate bin/ifnames '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/autoconf/autotest'
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autoconf-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autoconf-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /usr/bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autoconf-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autoconf-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autoconf-mode.el'; \
+else :; fi
+ /usr/bin/install -c -m 644 lib/autoconf/autoconf.m4 lib/autoconf/general.m4 lib/autoconf/status.m4 lib/autoconf/oldnames.m4 lib/autoconf/specific.m4 lib/autoconf/autoheader.m4 lib/autoconf/autoupdate.m4 lib/autoconf/autotest.m4 lib/autoconf/autoscan.m4 lib/autoconf/lang.m4 lib/autoconf/c.m4 lib/autoconf/erlang.m4 lib/autoconf/fortran.m4 lib/autoconf/functions.m4 lib/autoconf/go.m4 lib/autoconf/headers.m4 lib/autoconf/types.m4 lib/autoconf/libs.m4 lib/autoconf/programs.m4 lib/autoconf/trailer.m4 '/usr/share/autoconf/autoconf'
+ /usr/bin/mkdir -p '/usr/share/autoconf/build-aux'
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autotest-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autotest-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /usr/bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autotest-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autotest-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autotest-mode.el'; \
+else :; fi
+ /usr/bin/install -c -m 644 lib/autotest/autotest.m4 lib/autotest/general.m4 lib/autotest/specific.m4 '/usr/share/autoconf/autotest'
+ /usr/bin/install -c -m 644 build-aux/config.guess build-aux/config.sub build-aux/install-sh '/usr/share/autoconf/build-aux'
+ /usr/bin/mkdir -p '/usr/share/autoconf/m4sugar'
+ /usr/bin/mkdir -p '/usr/share/autoconf/Autom4te'
+ /usr/bin/install -c -m 644 lib/m4sugar/m4sugar.m4 lib/m4sugar/foreach.m4 lib/m4sugar/m4sh.m4 '/usr/share/autoconf/m4sugar'
+ /usr/bin/install -c -m 644 lib/Autom4te/C4che.pm lib/Autom4te/ChannelDefs.pm lib/Autom4te/Channels.pm lib/Autom4te/Config.pm lib/Autom4te/Configure_ac.pm lib/Autom4te/FileUtils.pm lib/Autom4te/General.pm lib/Autom4te/Getopt.pm lib/Autom4te/Request.pm lib/Autom4te/XFile.pm '/usr/share/autoconf/Autom4te'
+ /usr/bin/mkdir -p '/usr/share/info'
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/mkdir -p '/usr/share/autoconf/autoconf'
+ /usr/bin/mkdir -p '/usr/share/autoconf/autoscan'
+ /usr/bin/install -c -m 644 lib/autoconf/autoconf.m4f '/usr/share/autoconf/autoconf'
+ /usr/bin/install -c -m 644 man/autoconf.1 man/autoheader.1 man/autom4te.1 man/autoreconf.1 man/autoscan.1 man/autoupdate.1 man/ifnames.1 '/usr/share/man/man1'
+ /usr/bin/mkdir -p '/usr/share/autoconf/autotest'
+ /usr/bin/install -c -m 644 lib/autoscan/autoscan.list '/usr/share/autoconf/autoscan'
+ /usr/bin/install -c -m 644 ./doc/autoconf.info ./doc/standards.info '/usr/share/info'
+ /usr/bin/mkdir -p '/usr/share/autoconf/m4sugar'
+ /usr/bin/install -c -m 644 lib/autotest/autotest.m4f '/usr/share/autoconf/autotest'
+ /usr/bin/mkdir -p '/usr/share/autoconf'
+ /usr/bin/install -c -m 644 lib/m4sugar/version.m4 lib/m4sugar/m4sugar.m4f lib/m4sugar/m4sh.m4f '/usr/share/autoconf/m4sugar'
+ /usr/bin/mkdir -p '/usr/share/autoconf'
+ /usr/bin/install -c -m 644 lib/autom4te.cfg '/usr/share/autoconf'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/autoconf.info'
+ /usr/bin/install -c -m 644 ./INSTALL '/usr/share/autoconf'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/standards.info'
+/usr/bin/make  install-data-hook
+make[3]: Entering directory '/sources/autoconf-2.71'
+for s in build-aux/config.guess build-aux/config.sub build-aux/install-sh; do \
+  chmod +x "/usr/share/autoconf/$s"; \
+done
+make[3]: Leaving directory '/sources/autoconf-2.71'
+make[2]: Leaving directory '/sources/autoconf-2.71'
+make[1]: Leaving directory '/sources/autoconf-2.71'
+[lfs-scripts] Finishing build of autoconf-2.71 at Tue Sep 13 16:11:17 -03 2022
+(lfs chroot) root:/sources# # 8.45. Automake-1.16.4
+begin automake-1.16.4 tar.xz
+./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.16.4
+make
+make install
+finish
+[lfs-scripts] Starting build of automake-1.16.4 at Tue Sep 13 16:11:19 -03 2022
+checking whether make supports nested variables... yes
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether ln -s works... yes
+checking for perl... /usr/bin/perl
+checking for tex... no
+checking for yacc... yacc
+checking for lex... lex
+checking whether autoconf is installed... yes
+checking whether autoconf works... yes
+checking whether autoconf is recent enough... yes
+checking whether ln works... yes
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+configure: will now look for a sturdy POSIX shell, for our testsuite
+checking for sh... /usr/bin/sh
+checking for sh5... no
+checking for dash... no
+checking for ash... no
+checking for bash... /usr/bin/bash
+checking for zsh... no
+checking for ksh... no
+checking for pdksh... no
+checking whether /usr/bin/sh supports $(cmd)... yes
+checking whether /usr/bin/sh supports $((expr))... yes
+checking whether /usr/bin/sh supports ${#var}... yes
+checking whether /usr/bin/sh supports ${var#glob} and ${var%glob}... yes
+checking whether /usr/bin/sh preserves exit traps with "set -e"... yes
+checking whether /usr/bin/sh can define exit traps in a shell function... yes
+checking whether /usr/bin/sh corrupts stderr with "set -x"... no
+checking whether /usr/bin/sh can return early from "dot-sourced" files... yes
+checking whether /usr/bin/sh supports alias named like shell builtins... yes
+checking whether /usr/bin/sh supports "test -e"... yes
+configure: shell /usr/bin/sh is good enough, stop looking
+configure: will use /usr/bin/sh as the testsuite shell
+configure: will now look for generic compilers
+checking for cc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking for aCC... no
+checking for CC... no
+checking for FCC... no
+checking for KCC... no
+checking for RCC... no
+checking for xlC_r... no
+checking for xlC... no
+checking for c++... c++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether c++ accepts -g... yes
+checking for c++ option to enable C++11 features... none needed
+checking for xlf95... no
+checking for f95... no
+checking for fort... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgfortran... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking for nagfor... no
+checking for xlf90... no
+checking for f90... no
+checking for armflang... no
+checking for flang... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for g95... no
+checking for gfortran... no
+checking whether the Fortran compiler works... no
+configure: WARNING: Fortran compiler cannot create executables
+configure: tests requiring the Fortran compiler will be skipped
+checking for xlf... no
+checking for f77... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for g77... no
+checking for armflang... no
+checking for flang... no
+checking for gfortran... no
+checking whether the Fortran 77 compiler works... no
+configure: WARNING: Fortran 77 compiler cannot create executables
+configure: tests requiring the Fortran 77 compiler will be skipped
+configure: will now look for GNU compilers
+configure: cc is already a GNU C compiler
+configure: c++ is already a GNU C++ compiler
+checking for gfortran... no
+checking for g77... no
+checking for gfortran... no
+checking for gcj... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating pre-inst-env
+  GEN      bin/automake
+  GEN      bin/aclocal
+  GEN      doc/aclocal.1
+  GEN      t/ax/shell-no-trail-bslash
+  GEN      t/ax/cc-no-c-o
+  GEN      runtest
+  GEN      doc/automake.1
+  GEN      lib/Automake/Config.pm
+  GEN      t/ax/test-defs.sh
+  GEN      bin/aclocal-1.16
+  GEN      bin/automake-1.16
+  GEN      doc/aclocal-1.16.1
+  GEN      doc/automake-1.16.1
+make[1]: Entering directory '/sources/automake-1.16.4'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/automake-1.16/am'
+ /usr/bin/mkdir -p '/usr/share/aclocal-1.16'
+ /usr/bin/mkdir -p '/usr/share/aclocal-1.16/internal'
+ /usr/bin/mkdir -p '/usr/share/doc/automake-1.16.4'
+ /usr/bin/mkdir -p '/usr/share/automake-1.16/Automake'
+ /usr/bin/install -c bin/automake bin/aclocal '/usr/bin'
+ /usr/bin/install -c -m 644 m4/internal/ac-config-macro-dirs.m4 '/usr/share/aclocal-1.16/internal'
+ /usr/bin/install -c -m 644 lib/am/check.am lib/am/check2.am lib/am/clean-hdr.am lib/am/clean.am lib/am/compile.am lib/am/configure.am lib/am/data.am lib/am/dejagnu.am lib/am/depend.am lib/am/depend2.am lib/am/distdir.am lib/am/footer.am lib/am/header-vars.am lib/am/header.am lib/am/install.am lib/am/inst-vars.am lib/am/java.am lib/am/lang-compile.am lib/am/lex.am lib/am/library.am lib/am/libs.am lib/am/libtool.am lib/am/lisp.am lib/am/ltlib.am lib/am/ltlibrary.am lib/am/mans-vars.am lib/am/mans.am lib/am/program.am lib/am/progs.am lib/am/python.am lib/am/remake-hdr.am lib/am/scripts.am lib/am/subdirs.am lib/am/tags.am lib/am/texi-vers.am lib/am/texibuild.am lib/am/texinfos.am lib/am/vala.am lib/am/yacc.am '/usr/share/automake-1.16/am'
+ /usr/bin/install -c -m 644 ./doc/amhello-1.0.tar.gz '/usr/share/doc/automake-1.16.4'
+ /usr/bin/install -c -m 644 m4/amversion.m4 m4/ar-lib.m4 m4/as.m4 m4/auxdir.m4 m4/cond.m4 m4/cond-if.m4 m4/depend.m4 m4/depout.m4 m4/dmalloc.m4 m4/extra-recurs.m4 m4/gcj.m4 m4/init.m4 m4/install-sh.m4 m4/lead-dot.m4 m4/lex.m4 m4/lispdir.m4 m4/maintainer.m4 m4/make.m4 m4/missing.m4 m4/mkdirp.m4 m4/obsolete.m4 m4/options.m4 m4/python.m4 m4/prog-cc-c-o.m4 m4/runlog.m4 m4/sanity.m4 m4/silent.m4 m4/strip.m4 m4/substnot.m4 m4/tar.m4 m4/upc.m4 m4/vala.m4 '/usr/share/aclocal-1.16'
+ /usr/bin/install -c -m 644 lib/Automake/ChannelDefs.pm lib/Automake/Channels.pm lib/Automake/Condition.pm lib/Automake/Configure_ac.pm lib/Automake/DisjConditions.pm lib/Automake/FileUtils.pm lib/Automake/General.pm lib/Automake/Getopt.pm lib/Automake/Item.pm lib/Automake/ItemDef.pm lib/Automake/Language.pm lib/Automake/Location.pm lib/Automake/Options.pm lib/Automake/Rule.pm lib/Automake/RuleDef.pm lib/Automake/Variable.pm lib/Automake/VarDef.pm lib/Automake/Version.pm lib/Automake/XFile.pm lib/Automake/Wrap.pm '/usr/share/automake-1.16/Automake'
+ /usr/bin/mkdir -p '/usr/share/automake-1.16'
+ /usr/bin/mkdir -p '/usr/share/automake-1.16'
+ /usr/bin/mkdir -p '/usr/share/aclocal'
+ /usr/bin/mkdir -p '/usr/share/automake-1.16/Automake'
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/mkdir -p '/usr/share/info'
+ /usr/bin/install -c -m 644 m4/acdir/README '/usr/share/aclocal'
+ /usr/bin/install -c -m 644 lib/COPYING lib/INSTALL lib/texinfo.tex '/usr/share/automake-1.16'
+ /usr/bin/install -c -m 644 lib/config.guess lib/config.sub lib/install-sh lib/mdate-sh lib/missing lib/mkinstalldirs lib/ylwrap lib/depcomp lib/compile lib/py-compile lib/ar-lib lib/test-driver lib/tap-driver.sh '/usr/share/automake-1.16'
+ /usr/bin/install -c -m 644 lib/Automake/Config.pm '/usr/share/automake-1.16/Automake'
+/usr/bin/make  install-exec-hook
+ /usr/bin/install -c -m 644 doc/aclocal.1 doc/automake.1 doc/aclocal-1.16.1 doc/automake-1.16.1 '/usr/share/man/man1'
+make[2]: Entering directory '/sources/automake-1.16.4'
+ /usr/bin/install -c -m 644 ./doc/automake.info ./doc/automake.info-1 ./doc/automake.info-2 ./doc/automake-history.info '/usr/share/info'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/automake.info'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/automake-history.info'
+ ln '/usr/bin/automake' '/usr/bin/automake-1.16'
+/usr/bin/make  install-data-hook
+ ln '/usr/bin/aclocal' '/usr/bin/aclocal-1.16'
+make[2]: Leaving directory '/sources/automake-1.16.4'
+make[2]: Entering directory '/sources/automake-1.16.4'
+ chmod +x '/usr/share/automake-1.16/config.guess'
+ chmod +x '/usr/share/automake-1.16/config.sub'
+ chmod +x '/usr/share/automake-1.16/install-sh'
+ chmod +x '/usr/share/automake-1.16/mdate-sh'
+ chmod +x '/usr/share/automake-1.16/missing'
+ chmod +x '/usr/share/automake-1.16/mkinstalldirs'
+ chmod +x '/usr/share/automake-1.16/ylwrap'
+ chmod +x '/usr/share/automake-1.16/depcomp'
+ chmod +x '/usr/share/automake-1.16/compile'
+ chmod +x '/usr/share/automake-1.16/py-compile'
+ chmod +x '/usr/share/automake-1.16/ar-lib'
+ chmod +x '/usr/share/automake-1.16/test-driver'
+ chmod +x '/usr/share/automake-1.16/tap-driver.sh'
+make[2]: Leaving directory '/sources/automake-1.16.4'
+make[1]: Leaving directory '/sources/automake-1.16.4'
+[lfs-scripts] Finishing build of automake-1.16.4 at Tue Sep 13 16:11:44 -03 2022
+(lfs chroot) root:/sources# # 8.46. Kmod-29
+begin kmod-29 tar.xz
+./configure --prefix=/usr          \
+            --sysconfdir=/etc      \
+            --with-xz              \
+            --with-zstd            \
+            --with-zlib
+make
+make install
+for target in depmod insmod modinfo modprobe rmmod; do
+  ln -sfv ../bin/kmod /usr/sbin/$target
+done
+ln -sfv kmod /usr/bin/lsmod
+finish
+[lfs-scripts] Starting build of kmod-29 at Tue Sep 13 16:11:46 -03 2022
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for linux/module.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking whether ln -s works... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for xsltproc... no
+checking for mkosi... no
+checking for __xstat... yes
+checking for __secure_getenv... no
+checking for secure_getenv... yes
+checking for finit_module... no
+checking if compiler has __builtin_clz builtin function... yes
+checking if compiler has __builtin_types_compatible_p builtin function... yes
+checking if compiler has __builtin_uaddl_overflow builtin function... yes
+checking if compiler has __builtin_uaddll_overflow builtin function... yes
+checking for struct stat.st_mtim... yes
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether strndupa is declared... yes
+checking whether be32toh is declared... yes
+checking whether _Static_assert() is supported... yes
+checking whether _Noreturn is supported... yes
+checking for libzstd... yes
+checking for liblzma... yes
+checking for zlib... yes
+configure: openssl support not requested
+checking if gcc supports flag -pipe in envvar CFLAGS... yes
+checking if gcc supports flag -DANOTHER_BRICK_IN_THE in envvar CFLAGS... yes
+checking if gcc supports flag -Wall in envvar CFLAGS... yes
+checking if gcc supports flag -W in envvar CFLAGS... yes
+checking if gcc supports flag -Wextra in envvar CFLAGS... yes
+checking if gcc supports flag -Wno-inline in envvar CFLAGS... yes
+checking if gcc supports flag -Wvla in envvar CFLAGS... yes
+checking if gcc supports flag -Wundef in envvar CFLAGS... yes
+checking if gcc supports flag -Wformat=2 in envvar CFLAGS... yes
+checking if gcc supports flag -Wlogical-op in envvar CFLAGS... yes
+checking if gcc supports flag -Wsign-compare in envvar CFLAGS... yes
+checking if gcc supports flag -Wformat-security in envvar CFLAGS... no
+checking if gcc supports flag -Wmissing-include-dirs in envvar CFLAGS... yes
+checking if gcc supports flag -Wformat-nonliteral in envvar CFLAGS... no
+checking if gcc supports flag -Wold-style-definition in envvar CFLAGS... yes
+checking if gcc supports flag -Wpointer-arith in envvar CFLAGS... yes
+checking if gcc supports flag -Winit-self in envvar CFLAGS... yes
+checking if gcc supports flag -Wdeclaration-after-statement in envvar CFLAGS... yes
+checking if gcc supports flag -Wfloat-equal in envvar CFLAGS... yes
+checking if gcc supports flag -Wmissing-prototypes in envvar CFLAGS... yes
+checking if gcc supports flag -Wstrict-prototypes in envvar CFLAGS... yes
+checking if gcc supports flag -Wredundant-decls in envvar CFLAGS... yes
+checking if gcc supports flag -Wmissing-declarations in envvar CFLAGS... yes
+checking if gcc supports flag -Wmissing-noreturn in envvar CFLAGS... yes
+checking if gcc supports flag -Wshadow in envvar CFLAGS... yes
+checking if gcc supports flag -Wendif-labels in envvar CFLAGS... yes
+checking if gcc supports flag -Wstrict-aliasing=3 in envvar CFLAGS... yes
+checking if gcc supports flag -Wwrite-strings in envvar CFLAGS... yes
+checking if gcc supports flag -Wno-long-long in envvar CFLAGS... yes
+checking if gcc supports flag -Wno-overlength-strings in envvar CFLAGS... yes
+checking if gcc supports flag -Wno-unused-parameter in envvar CFLAGS... yes
+checking if gcc supports flag -Wno-missing-field-initializers in envvar CFLAGS... yes
+checking if gcc supports flag -Wno-unused-result in envvar CFLAGS... yes
+checking if gcc supports flag -Wnested-externs in envvar CFLAGS... yes
+checking if gcc supports flag -Wchar-subscripts in envvar CFLAGS... yes
+checking if gcc supports flag -Wtype-limits in envvar CFLAGS... yes
+checking if gcc supports flag -Wuninitialized in envvar CFLAGS... yes
+checking if gcc supports flag -fno-common in envvar CFLAGS... yes
+checking if gcc supports flag -fdiagnostics-show-option in envvar CFLAGS... yes
+checking if gcc supports flag -fvisibility=hidden in envvar CFLAGS... yes
+checking if gcc supports flag -ffunction-sections in envvar CFLAGS... yes
+checking if gcc supports flag -fdata-sections in envvar CFLAGS... yes
+checking if gcc supports flag -Wl,--as-needed in envvar LDFLAGS... yes
+checking if gcc supports flag -Wl,--no-undefined in envvar LDFLAGS... yes
+checking if gcc supports flag -Wl,--gc-sections in envvar LDFLAGS... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating man/Makefile
+config.status: creating libkmod/docs/Makefile
+config.status: creating libkmod/docs/version.xml
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+	kmod 29
+	=======
+
+	prefix:			/usr
+	sysconfdir:		/etc
+	libdir:			${exec_prefix}/lib
+	rootlibdir:		${exec_prefix}/lib
+	includedir:		${prefix}/include
+	bindir:			${exec_prefix}/bin
+	Bash completions dir:   ${datarootdir}/bash-completion/completions
+
+	compiler:		gcc
+	cflags:			 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wmissing-include-dirs -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -g -O2
+	ldflags:		 -Wl,--as-needed -Wl,--no-undefined -Wl,--gc-sections 
+
+	experimental features:  no
+	tools:			yes
+	python bindings:	no
+	logging:		yes
+	compression:		zstd=yes  xz=yes  zlib=yes
+	debug:			no
+	coverage:		no
+	doc:			
+	man:			yes
+	test-modules:           yes
+
+	features:               +ZSTD +XZ +ZLIB -LIBCRYPTO -EXPERIMENTAL
+
+/usr/bin/make --no-print-directory all-recursive
+Making all in .
+  GEN      libkmod/libkmod.pc
+  CC       tools/kmod.o
+  CC       tools/lsmod.o
+  CC       tools/rmmod.o
+  CC       tools/insmod.o
+  CC       tools/modinfo.o
+  CC       tools/modprobe.o
+  CC       tools/depmod.o
+  CC       tools/log.o
+  CC       tools/static-nodes.o
+  CC       shared/array.lo
+  CC       shared/hash.lo
+  CC       shared/scratchbuf.lo
+  CC       shared/strbuf.lo
+  CC       shared/util.lo
+  CC       libkmod/libkmod.lo
+  CC       libkmod/libkmod-builtin.lo
+  CC       libkmod/libkmod-list.lo
+  CC       libkmod/libkmod-config.lo
+  CC       libkmod/libkmod-index.lo
+  CC       libkmod/libkmod-module.lo
+  CC       libkmod/libkmod-file.lo
+  CC       libkmod/libkmod-elf.lo
+  CC       libkmod/libkmod-signature.lo
+  CCLD     shared/libshared.la
+  CCLD     libkmod/libkmod-internal.la
+  CCLD     libkmod/libkmod.la
+  CCLD     tools/kmod
+  GEN      tools/insmod
+  GEN      tools/lsmod
+  GEN      tools/modprobe
+  GEN      tools/depmod
+  GEN      tools/rmmod
+  GEN      tools/modinfo
+Making all in libkmod/docs
+make[2]: Nothing to be done for 'all'.
+Making all in man
+make[2]: Nothing to be done for 'all'.
+Making install in .
+ /usr/bin/mkdir -p '/usr/include'
+ /usr/bin/mkdir -p '/usr/share/bash-completion/completions'
+ /usr/bin/mkdir -p '/usr/lib/pkgconfig'
+ /usr/bin/mkdir -p '/usr/lib'
+ /usr/bin/install -c -m 644 shell-completion/bash/kmod '/usr/share/bash-completion/completions'
+ /usr/bin/install -c -m 644 libkmod/libkmod.pc '/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libkmod/libkmod.h '/usr/include'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libkmod/libkmod.la '/usr/lib'
+libtool: install: /usr/bin/install -c libkmod/.libs/libkmod.so.2.3.7 /usr/lib/libkmod.so.2.3.7
+libtool: install: (cd /usr/lib && { ln -s -f libkmod.so.2.3.7 libkmod.so.2 || { rm -f libkmod.so.2 && ln -s libkmod.so.2.3.7 libkmod.so.2; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libkmod.so.2.3.7 libkmod.so || { rm -f libkmod.so && ln -s libkmod.so.2.3.7 libkmod.so; }; })
+libtool: install: /usr/bin/install -c libkmod/.libs/libkmod.lai /usr/lib/libkmod.la
+libtool: finish: PATH="/usr/bin:/usr/sbin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/usr/bin'
+  /bin/sh ./libtool   --mode=install /usr/bin/install -c tools/kmod '/usr/bin'
+libtool: install: /usr/bin/install -c tools/kmod /usr/bin/kmod
+/usr/bin/make --no-print-directory install-exec-hook
+if test "/usr/lib" != "/usr/lib"; then \
+	/usr/bin/mkdir -p /usr/lib && \
+	so_img_name=$(readlink /usr/lib/libkmod.so) && \
+	so_img_rel_target_prefix=$(echo /usr/lib | sed 's,\(^/\|\)[^/][^/]*,..,g') && \
+	ln -sf $so_img_rel_target_prefix/usr/lib/$so_img_name /usr/lib/libkmod.so && \
+	mv /usr/lib/libkmod.so.* /usr/lib; \
+fi
+Making install in libkmod/docs
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in man
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man8'
+ /usr/bin/mkdir -p '/usr/share/man/man5'
+ /usr/bin/install -c -m 644 kmod.8 depmod.8 insmod.8 lsmod.8 rmmod.8 modprobe.8 modinfo.8 '/usr/share/man/man8'
+ /usr/bin/install -c -m 644 depmod.d.5 modprobe.d.5 modules.dep.5 modules.dep.bin.5 '/usr/share/man/man5'
+'/usr/sbin/depmod' -> '../bin/kmod'
+'/usr/sbin/insmod' -> '../bin/kmod'
+'/usr/sbin/modinfo' -> '../bin/kmod'
+'/usr/sbin/modprobe' -> '../bin/kmod'
+'/usr/sbin/rmmod' -> '../bin/kmod'
+'/usr/bin/lsmod' -> 'kmod'
+[lfs-scripts] Finishing build of kmod-29 at Tue Sep 13 16:13:21 -03 2022
+(lfs chroot) root:/sources# 

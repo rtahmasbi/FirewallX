@@ -1,0 +1,926 @@
+(lfs chroot) root:/sources# # 8.32. Bison-3.7.6
+begin bison-3.7.6 tar.xz
+./configure --prefix=/usr --docdir=/usr/share/doc/bison-3.7.6
+make
+make install
+finish
+[lfs-scripts] Starting build of bison-3.7.6 at Tue Sep 13 13:31:56 -03 2022
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether the compiler is clang... no
+checking for compiler option needed when checking for declarations... none
+checking dependency style of gcc... gcc3
+checking for g++... g++
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for locale.h... yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for stdio_ext.h... yes
+checking for features.h... yes
+checking for getopt.h... yes
+checking for sys/cdefs.h... yes
+checking for sys/time.h... yes
+checking for iconv.h... yes
+checking for limits.h... yes
+checking for wchar.h... yes
+checking for crtdefs.h... no
+checking for wctype.h... yes
+checking for threads.h... yes
+checking for math.h... yes
+checking for sys/mman.h... yes
+checking for spawn.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/resource.h... yes
+checking for sys/times.h... yes
+checking for sys/wait.h... yes
+checking for termios.h... yes
+checking for xlocale.h... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... no
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib,lib64
+checking for libtextstyle... yes
+checking how to link with libtextstyle... /usr/lib/libtextstyle.so /usr/lib/libm.so -lncurses
+checking for inline... inline
+checking for tcdrain... yes
+checking for canonicalize_file_name... yes
+checking for readlink... yes
+checking for realpath... yes
+checking for readlinkat... yes
+checking for _set_invalid_parameter_handler... no
+checking for fcntl... yes
+checking for symlink... yes
+checking for vasnprintf... no
+checking for snprintf... yes
+checking for fsync... yes
+checking for microuptime... no
+checking for nanouptime... no
+checking for getprogname... no
+checking for getexecname... no
+checking for getrusage... yes
+checking for gettimeofday... yes
+checking for iswcntrl... yes
+checking for iswblank... yes
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for isascii... yes
+checking for mprotect... yes
+checking for obstack_printf... yes
+checking for lstat... yes
+checking for strerror_r... yes
+checking for __xpg_strerror_r... yes
+checking for pipe2... yes
+checking for setenv... yes
+checking for link... yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for siginterrupt... yes
+checking for stpncpy... yes
+checking for strndup... yes
+checking for pipe... yes
+checking for wcwidth... yes
+checking for __fseterr... no
+checking for getdelim... yes
+checking for getdtablesize... yes
+checking for catgets... yes
+checking for setlocale... yes
+checking whether pragma GCC diagnostic push works... yes
+checking whether C++ compiler handles -Werror -Wunknown-warning-option... no
+checking whether C++ compiler handles -fno-exceptions... yes
+checking whether C++ compiler accepts -std=c++98... yes
+checking whether C++ compiler accepts -std=c++03... yes
+checking whether C++ compiler accepts -std=c++11... yes
+checking whether C++ compiler accepts -std=c++14... yes
+checking whether C++ compiler accepts -std=c++17... yes
+checking whether C++ compiler accepts -std=c++2a... yes
+checking whether gcc supports POSIXLY_CORRECT=1... yes
+checking whether g++ builds executables that work... yes
+checking whether g++ supports POSIXLY_CORRECT=1... yes
+checking for dmd... no
+checking for -g... no
+checking for Java compiler... no
+checking for Java virtual machine... no
+checking for flex... flex
+checking whether lex is flex... yes
+checking whether flex supports --header=FILE... yes
+checking lex output file root... lex.yy
+checking lex library... -lfl
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for ranlib... (cached) ranlib
+checking for GNU M4 that supports accurate traces... /usr/bin/m4
+checking whether /usr/bin/m4 accepts --gnu... yes
+checking how m4 supports trace files... --debugfile
+checking for perl... /usr/bin/perl
+checking for xsltproc... no
+checking for inline... (cached) inline
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether malloc, realloc, calloc are POSIX compliant... yes
+checking whether // is distinct from /... no
+checking whether realpath works... yes
+checking for getcwd... yes
+checking for C/C++ restrict keyword... __restrict
+checking if environ is properly declared... yes
+checking whether the preprocessor supports include_next... yes
+checking whether source code line length is unlimited... yes
+checking for complete errno.h... yes
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... yes
+checking for sig_atomic_t... yes
+checking for working fcntl.h... yes
+checking for pid_t... yes
+checking for mode_t... yes
+checking for stdint.h... yes
+checking for inttypes.h... yes
+checking whether printf supports size specifiers as in C99... yes
+checking whether printf supports 'long double' arguments... yes
+checking whether printf supports infinite 'double' arguments... yes
+checking whether byte ordering is bigendian... no
+checking whether long double and double are the same... no
+checking whether printf supports infinite 'long double' arguments... yes
+checking whether printf supports the 'a' and 'A' directives... yes
+checking whether printf supports the 'F' directive... yes
+checking whether printf supports the 'n' directive... yes
+checking whether printf supports the 'ls' directive... yes
+checking whether printf supports POSIX/XSI format strings with positions... yes
+checking whether printf supports the grouping flag... yes
+checking whether printf supports the left-adjust flag correctly... yes
+checking whether printf supports the zero flag correctly... yes
+checking whether printf supports large precisions... yes
+checking whether the compiler produces multi-arch binaries... no
+checking whether printf survives out-of-memory conditions... yes
+checking for wchar_t... yes
+checking for wint_t... yes
+checking whether wint_t is large enough... yes
+checking for intmax_t... yes
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking whether snprintf returns a byte count as in C99... yes
+checking whether snprintf truncates the result as in C99... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... (cached) yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking whether frexp() can be used without linking with libm... yes
+checking whether alarm is declared... yes
+checking for arithmetic hrtime_t... no
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... yes
+checking for working GNU getopt_long function... yes
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking for iconv... yes
+checking for working iconv... yes
+checking whether iconv is compatible with its POSIX signature... yes
+checking whether limits.h has LLONG_MAX, WORD_BIT, ULLONG_WIDTH etc.... yes
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h works without ISO C predefines... yes
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking where to find the exponent in a 'float'... word 0 bit 23
+checking whether isnan(float) can be used without linking with libm... yes
+checking whether isnan(float) works... yes
+checking whether isnan(double) can be used without linking with libm... yes
+checking whether isnan(long double) can be used without linking with libm... yes
+checking whether isnanl works... yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking for nl_langinfo and CODESET... yes
+checking for a traditional french locale... none
+checking for a traditional japanese locale... none
+checking for a french Unicode locale... none
+checking for a transitional chinese locale... none
+checking whether ldexp() can be used without linking with libm... yes
+checking whether imported symbols can be declared weak... yes
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking whether POSIX threads API is available... yes
+checking for multithread API to use... posix
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for mbstate_t... yes
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether <limits.h> defines MIN and MAX... no
+checking whether <sys/param.h> defines MIN and MAX... yes
+checking whether obstack_printf is declared... yes
+checking for O_CLOEXEC... yes
+checking for promoted mode_t type... mode_t
+checking whether strerror(0) succeeds... yes
+checking for strerror_r with POSIX signature... no
+checking whether __xpg_strerror_r works... yes
+checking for library containing posix_spawn... none required
+checking for posix_spawn... yes
+checking whether posix_spawn works... yes
+checking whether posix_spawnattr_setschedpolicy is supported... yes
+checking whether posix_spawnattr_setschedparam is supported... yes
+checking whether C symbols are prefixed with underscore at the linker level... no
+checking for sigset_t... yes
+checking for shared library path variable... LD_LIBRARY_PATH
+checking whether to activate relocatable installation... no
+checking for GNU libc compatible malloc... yes
+checking whether setenv is declared... yes
+checking for uid_t in sys/types.h... yes
+checking whether snprintf is declared... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking whether stpncpy is declared... yes
+checking whether strdup is declared... yes
+checking whether strndup is declared... yes
+checking for struct timespec in <time.h>... yes
+checking whether clearerr_unlocked is declared... yes
+checking whether feof_unlocked is declared... yes
+checking whether ferror_unlocked is declared... yes
+checking whether fflush_unlocked is declared... yes
+checking whether fgets_unlocked is declared... yes
+checking whether fputc_unlocked is declared... yes
+checking whether fputs_unlocked is declared... yes
+checking whether fread_unlocked is declared... yes
+checking whether fwrite_unlocked is declared... yes
+checking whether getc_unlocked is declared... yes
+checking whether getchar_unlocked is declared... yes
+checking whether putc_unlocked is declared... yes
+checking whether putchar_unlocked is declared... yes
+checking whether unsetenv is declared... yes
+checking whether vsnprintf is declared... yes
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking POSIX termios... yes
+checking whether use of TIOCGWINSZ requires termios.h... no
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking whether getdelim is declared... yes
+checking whether getdtablesize is declared... yes
+checking whether getline is declared... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... yes
+checking whether setlocale (category, NULL) is multithread-safe... yes
+checking whether locale.h defines locale_t... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether strnlen is declared... yes
+checking for alloca as a compiler built-in... yes
+checking whether to enable assertions... yes
+checking for __builtin_expect... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking whether // is distinct from /... (cached) no
+checking whether dup2 works... yes
+checking for error_at_line... yes
+checking whether fcntl handles F_DUPFD correctly... yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... needs runtime check
+checking whether conversion from 'int' to 'long double' works... yes
+checking whether fopen recognizes a trailing slash... yes
+checking whether fopen supports the mode character 'x'... yes
+checking whether fopen supports the mode character 'e'... yes
+checking for __fpending... yes
+checking whether __fpending is declared... yes
+checking whether frexp works... yes
+checking whether frexpl is declared... yes
+checking whether frexpl() can be used without linking with libm... yes
+checking whether frexpl works... yes
+checking whether gethrtime is declared... no
+checking whether CLOCK_MONOTONIC or CLOCK_REALTIME is defined... yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether __argv is declared... no
+checking for gettimeofday with POSIX signature... yes
+checking whether the compiler generally respects inline... yes
+checking whether INT32_MAX < INTMAX_MAX... yes
+checking whether INT64_MAX == LONG_MAX... yes
+checking whether UINT32_MAX < UINTMAX_MAX... yes
+checking whether UINT64_MAX == ULONG_MAX... yes
+checking whether isnan macro works... yes
+checking whether isnan(double) can be used without linking with libm... (cached) yes
+checking whether isnan(double) can be used without linking with libm... (cached) yes
+checking whether isnan(float) can be used without linking with libm... (cached) yes
+checking whether isnan(float) works... (cached) yes
+checking whether isnan(long double) can be used without linking with libm... (cached) yes
+checking whether isnanl works... (cached) yes
+checking whether isnan(long double) can be used without linking with libm... (cached) yes
+checking whether isnanl works... (cached) yes
+checking whether iswblank is declared... yes
+checking whether iswdigit is ISO C compliant... guessing yes
+checking whether iswxdigit is ISO C compliant... guessing yes
+checking whether ldexpl is declared... yes
+checking whether ldexpl() can be used without linking with libm... yes
+checking whether ldexpl works... yes
+checking for pthread_rwlock_t... yes
+checking whether pthread_rwlock_rdlock prefers a writer to a reader... no
+checking for GNU libc compatible malloc... (cached) yes
+checking whether NAN macro works... yes
+checking whether HUGE_VAL works... yes
+checking whether mbrtowc handles incomplete characters... guessing yes
+checking whether mbrtowc works as well as mbtowc... guessing yes
+checking whether mbrtowc handles a NULL pwc argument... guessing yes
+checking whether mbrtowc handles a NULL string argument... guessing yes
+checking whether mbrtowc has a correct return value... guessing yes
+checking whether mbrtowc returns 0 when parsing a NUL character... guessing yes
+checking whether mbrtowc stores incomplete characters... guessing no
+checking whether mbrtowc works on empty input... yes
+checking whether the C locale is free of encoding errors... no
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether mbswidth is declared in <wchar.h>... no
+checking for mbstate_t... (cached) yes
+checking for obstacks that work with any size object... no
+checking whether open recognizes a trailing slash... yes
+checking whether perror matches strerror... yes
+checking whether posix_spawn_file_actions_addclose works... yes
+checking whether posix_spawn_file_actions_adddup2 works... yes
+checking whether posix_spawn_file_actions_addopen works... yes
+checking whether frexp works... (cached) yes
+checking whether ldexp can be used without linking with libm... (cached) yes
+checking whether frexpl() can be used without linking with libm... (cached) yes
+checking whether frexpl works... (cached) yes
+checking whether frexpl is declared... (cached) yes
+checking whether ldexpl() can be used without linking with libm... (cached) yes
+checking whether ldexpl works... (cached) yes
+checking whether ldexpl is declared... (cached) yes
+checking whether program_invocation_name is declared... (cached) yes
+checking whether program_invocation_short_name is declared... (cached) yes
+checking for raise... yes
+checking for sigprocmask... yes
+checking for readline... yes
+checking how to link with libreadline... /usr/lib/libreadline.so
+checking for readline/readline.h... yes
+checking for readline/history.h... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking for getcwd... (cached) yes
+checking for search.h... yes
+checking for tsearch... yes
+checking whether rename honors trailing slash on destination... yes
+checking whether rename honors trailing slash on source... yes
+checking whether rename manages hard links correctly... yes
+checking whether rename manages existing destinations correctly... yes
+checking for sched.h... yes
+checking for struct sched_param... yes
+checking for struct sigaction.sa_sigaction... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking for signbit macro... yes
+checking for signbit compiler built-ins... yes
+checking for sigprocmask... (cached) yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for snprintf... (cached) yes
+checking whether snprintf respects a size of 1... yes
+checking whether printf supports POSIX/XSI format strings with positions... (cached) yes
+checking for snprintf... (cached) yes
+checking whether snprintf fully supports the 'n' directive... yes
+checking whether snprintf respects a size of 1... (cached) yes
+checking whether vsnprintf respects a zero size as in C99... yes
+checking for posix_spawnattr_t... yes
+checking for posix_spawn_file_actions_t... yes
+checking for ssize_t... yes
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking for stpcpy... yes
+checking for working stpncpy... yes
+checking for working strerror function... yes
+checking for working strndup... yes
+checking for strverscmp... yes
+checking whether <sys/ioctl.h> declares ioctl... yes
+checking for struct tms... yes
+checking for sys/single_threaded.h... yes
+checking whether unlink honors trailing slashes... yes
+checking whether unlink of a parent directory fails as it should... guessing yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... yes
+checking for ptrdiff_t... yes
+checking for vasprintf... yes
+checking for vasprintf... (cached) yes
+checking for vsnprintf... yes
+checking whether snprintf respects a size of 1... (cached) yes
+checking whether printf supports POSIX/XSI format strings with positions... (cached) yes
+checking for vsnprintf... (cached) yes
+checking whether snprintf fully supports the 'n' directive... (cached) yes
+checking whether snprintf respects a size of 1... (cached) yes
+checking whether vsnprintf respects a zero size as in C99... (cached) yes
+checking for waitid... yes
+checking whether iswcntrl works... (cached) yes
+checking for towlower... (cached) yes
+checking for wctype_t... (cached) yes
+checking for wctrans_t... (cached) yes
+checking whether wcwidth is declared... yes
+checking whether wcwidth works reasonably in UTF-8 locales... yes
+checking whether use of TIOCGWINSZ requires sys/ioctl.h... yes
+checking whether use of TIOCGWINSZ requires termios.h... (cached) no
+checking whether use of struct winsize requires sys/ptem.h... no
+checking for stdint.h... (cached) yes
+checking whether getdtablesize works... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... (cached) yes
+checking whether setlocale (category, NULL) is multithread-safe... (cached) yes
+checking whether locale.h conforms to POSIX:2001... yes
+checking whether struct lconv is properly defined... yes
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for valgrind... no
+checking Valgrind suppression file... 
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating src/yacc
+config.status: creating javacomp.sh
+config.status: creating javaexec.sh
+config.status: creating gnulib-po/Makefile.in
+config.status: creating runtime-po/Makefile.in
+config.status: creating etc/bench.pl
+config.status: creating tests/atlocal
+config.status: creating tests/bison
+config.status: creating Makefile
+config.status: creating po/Makefile.in
+config.status: creating doc/yacc.1
+config.status: creating lib/config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+config.status: creating gnulib-po/POTFILES
+config.status: creating gnulib-po/Makefile
+config.status: creating runtime-po/POTFILES
+config.status: creating runtime-po/Makefile
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing tests/atconfig commands
+  LEX      examples/c/reccalc/scan.stamp
+  GEN      lib/alloca.h
+  GEN      lib/configmake.h
+  GEN      lib/fcntl.h
+  GEN      lib/iconv.h
+  GEN      lib/inttypes.h
+  GEN      lib/limits.h
+  GEN      lib/locale.h
+  GEN      lib/sched.h
+  GEN      lib/math.h
+  GEN      lib/signal.h
+  GEN      lib/spawn.h
+  GEN      lib/stdio.h
+  GEN      lib/stdlib.h
+  GEN      lib/string.h
+  GEN      lib/sys/ioctl.h
+  GEN      lib/sys/resource.h
+  GEN      lib/sys/time.h
+  GEN      lib/termios.h
+  GEN      lib/sys/times.h
+  GEN      lib/sys/types.h
+  GEN      lib/sys/wait.h
+  GEN      lib/time.h
+  GEN      lib/unistd.h
+  GEN      lib/unistr.h
+  GEN      lib/unitypes.h
+  GEN      lib/uniwidth.h
+  GEN      lib/wchar.h
+  GEN      lib/wctype.h
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/sources/bison-3.7.6'
+Making all in po
+make[2]: Entering directory '/sources/bison-3.7.6/po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/bison-3.7.6/po'
+Making all in runtime-po
+make[2]: Entering directory '/sources/bison-3.7.6/runtime-po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/bison-3.7.6/runtime-po'
+Making all in gnulib-po
+make[2]: Entering directory '/sources/bison-3.7.6/gnulib-po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/bison-3.7.6/gnulib-po'
+Making all in .
+make[2]: Entering directory '/sources/bison-3.7.6'
+  CC       lib/libbison_a-wait-process.o
+  CC       lib/libbison_a-wctype-h.o
+  CC       lib/libbison_a-xmalloc.o
+  CC       lib/libbison_a-xalloc-die.o
+  CC       lib/libbison_a-xconcat-filename.o
+  CC       lib/libbison_a-xhash.o
+  CC       lib/libbison_a-gl_xlist.o
+  CC       lib/libbison_a-xmemdup0.o
+  CC       lib/libbison_a-xreadlink.o
+  CC       lib/libbison_a-xsize.o
+  CC       lib/libbison_a-xstrndup.o
+  CC       lib/libbison_a-get-errno.o
+  CC       lib/libbison_a-path-join.o
+  CC       lib/libbison_a-asnprintf.o
+  CC       lib/libbison_a-fcntl.o
+  CC       lib/libbison_a-mbrtowc.o
+  CC       lib/libbison_a-obstack.o
+  CC       lib/libbison_a-printf-args.o
+  CC       lib/libbison_a-printf-parse.o
+  CC       lib/libbison_a-vasnprintf.o
+  CC       lib/main.o
+  CC       lib/yyerror.o
+  CC       src/bison-AnnotationList.o
+  CC       src/bison-InadequacyList.o
+  CC       src/bison-Sbitset.o
+  CC       src/bison-assoc.o
+  CC       src/bison-closure.o
+  CC       src/bison-complain.o
+  CC       src/bison-conflicts.o
+  CC       src/bison-counterexample.o
+  CC       src/bison-derivation.o
+  CC       src/bison-derives.o
+  CC       src/bison-files.o
+  CC       src/bison-fixits.o
+  CC       src/bison-getargs.o
+  CC       src/bison-glyphs.o
+  CC       src/bison-gram.o
+  CC       src/bison-graphviz.o
+  CC       src/bison-ielr.o
+  CC       src/bison-lalr.o
+  CC       src/bison-location.o
+  CC       src/bison-lr0.o
+  CC       src/bison-lssi.o
+  CC       src/bison-main.o
+  CC       src/bison-muscle-tab.o
+  CC       src/bison-named-ref.o
+  CC       src/bison-nullable.o
+  CC       src/bison-output.o
+  CC       src/bison-parse-gram.o
+  CC       src/bison-parse-simulation.o
+  CC       src/bison-print-graph.o
+  CC       src/bison-print-xml.o
+  CC       src/bison-print.o
+  CC       src/bison-reader.o
+  CC       src/bison-reduce.o
+  CC       src/bison-relation.o
+  CC       src/bison-scan-code-c.o
+  CC       src/bison-scan-gram-c.o
+  CC       src/bison-scan-skel-c.o
+  CC       src/bison-state.o
+  CC       src/bison-state-item.o
+  CC       src/bison-strversion.o
+  CC       src/bison-symlist.o
+  CC       src/bison-symtab.o
+  CC       src/bison-tables.o
+  CC       src/bison-uniqstr.o
+  CC       lib/libbison_a-allocator.o
+  CC       lib/libbison_a-areadlink.o
+  CC       lib/libbison_a-argmatch.o
+  CC       lib/libbison_a-gl_array_list.o
+  CC       lib/libbison_a-basename-lgpl.o
+  CC       lib/libbison_a-binary-io.o
+  CC       lib/libbison_a-bitrotate.o
+  CC       lib/libbison_a-bitset.o
+  CC       lib/bitset/libbison_a-array.o
+  CC       lib/bitset/libbison_a-stats.o
+  CC       lib/bitset/libbison_a-table.o
+  CC       lib/bitset/libbison_a-list.o
+  CC       lib/bitset/libbison_a-vector.o
+  CC       lib/libbison_a-bitsetv.o
+  CC       lib/libbison_a-c-ctype.o
+  CC       lib/libbison_a-c-strcasecmp.o
+  CC       lib/libbison_a-c-strncasecmp.o
+  CC       lib/libbison_a-careadlinkat.o
+  CC       lib/libbison_a-cloexec.o
+lib/careadlinkat.c: In function 'careadlinkat':
+lib/careadlinkat.c:188:10: warning: function may return address of local variable [-Wreturn-local-addr]
+  188 |   return readlink_stk (fd, filename, buffer, buffer_size, alloc,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  189 |                        preadlinkat, stack_buf);
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~
+lib/careadlinkat.c:187:8: note: declared here
+  187 |   char stack_buf[STACK_BUF_SIZE];
+      |        ^~~~~~~~~
+  CC       lib/libbison_a-close-stream.o
+  CC       lib/libbison_a-closeout.o
+  CC       lib/libbison_a-concat-filename.o
+  CC       lib/libbison_a-dirname.o
+  CC       lib/libbison_a-basename.o
+  CC       lib/libbison_a-dirname-lgpl.o
+  CC       lib/libbison_a-stripslash.o
+  CC       lib/libbison_a-exitfail.o
+  CC       lib/libbison_a-fatal-signal.o
+  CC       lib/libbison_a-fd-safer-flag.o
+  CC       lib/libbison_a-dup-safer-flag.o
+  CC       lib/libbison_a-fopen-safer.o
+  CC       lib/libbison_a-fstrcmp.o
+  CC       lib/libbison_a-gethrxtime.o
+  CC       lib/libbison_a-xtime.o
+  CC       lib/libbison_a-getprogname.o
+  CC       lib/libbison_a-gettime.o
+  CC       lib/libbison_a-hard-locale.o
+  CC       lib/libbison_a-hash.o
+  CC       lib/libbison_a-gl_linked_list.o
+  CC       lib/libbison_a-gl_list.o
+  CC       lib/libbison_a-localcharset.o
+  CC       lib/glthread/libbison_a-lock.o
+  CC       lib/libbison_a-math.o
+  CC       lib/libbison_a-mbchar.o
+  CC       lib/libbison_a-mbfile.o
+  CC       lib/libbison_a-mbswidth.o
+  CC       lib/libbison_a-gl_oset.o
+  CC       lib/libbison_a-pipe2.o
+  CC       lib/libbison_a-pipe2-safer.o
+  CC       lib/libbison_a-printf-frexp.o
+  CC       lib/libbison_a-printf-frexpl.o
+  CC       lib/libbison_a-progname.o
+  CC       lib/libbison_a-quotearg.o
+  CC       lib/libbison_a-gl_rbtree_oset.o
+  CC       lib/libbison_a-gl_rbtreehash_list.o
+  CC       lib/libbison_a-setlocale_null.o
+  CC       lib/libbison_a-sig-handler.o
+  CC       lib/libbison_a-spawn-pipe.o
+  CC       lib/glthread/libbison_a-threadlib.o
+  CC       lib/libbison_a-timespec.o
+  CC       lib/libbison_a-timevar.o
+  CC       lib/glthread/libbison_a-tls.o
+  CC       lib/libbison_a-unicodeio.o
+  CC       lib/libbison_a-unistd.o
+  CC       lib/libbison_a-dup-safer.o
+  CC       lib/libbison_a-fd-safer.o
+  CC       lib/libbison_a-pipe-safer.o
+  CC       lib/unistr/libbison_a-u8-mbtoucr.o
+  CC       lib/unistr/libbison_a-u8-uctomb.o
+  CC       lib/unistr/libbison_a-u8-uctomb-aux.o
+  CC       lib/uniwidth/libbison_a-width.o
+  AR       lib/liby.a
+  AR       lib/libbison.a
+  CCLD     src/bison
+  GEN      doc/bison.help
+make[2]: Leaving directory '/sources/bison-3.7.6'
+make[1]: Leaving directory '/sources/bison-3.7.6'
+/usr/bin/make  install-recursive
+make[1]: Entering directory '/sources/bison-3.7.6'
+Making install in po
+make[2]: Entering directory '/sources/bison-3.7.6/po'
+installing bg.gmo as /usr/share/locale/bg/LC_MESSAGES/bison.mo
+installing ca.gmo as /usr/share/locale/ca/LC_MESSAGES/bison.mo
+installing da.gmo as /usr/share/locale/da/LC_MESSAGES/bison.mo
+installing de.gmo as /usr/share/locale/de/LC_MESSAGES/bison.mo
+installing el.gmo as /usr/share/locale/el/LC_MESSAGES/bison.mo
+installing eo.gmo as /usr/share/locale/eo/LC_MESSAGES/bison.mo
+installing es.gmo as /usr/share/locale/es/LC_MESSAGES/bison.mo
+installing et.gmo as /usr/share/locale/et/LC_MESSAGES/bison.mo
+installing fi.gmo as /usr/share/locale/fi/LC_MESSAGES/bison.mo
+installing fr.gmo as /usr/share/locale/fr/LC_MESSAGES/bison.mo
+installing ga.gmo as /usr/share/locale/ga/LC_MESSAGES/bison.mo
+installing hr.gmo as /usr/share/locale/hr/LC_MESSAGES/bison.mo
+installing id.gmo as /usr/share/locale/id/LC_MESSAGES/bison.mo
+installing it.gmo as /usr/share/locale/it/LC_MESSAGES/bison.mo
+installing ja.gmo as /usr/share/locale/ja/LC_MESSAGES/bison.mo
+installing ms.gmo as /usr/share/locale/ms/LC_MESSAGES/bison.mo
+installing nb.gmo as /usr/share/locale/nb/LC_MESSAGES/bison.mo
+installing nl.gmo as /usr/share/locale/nl/LC_MESSAGES/bison.mo
+installing pl.gmo as /usr/share/locale/pl/LC_MESSAGES/bison.mo
+installing pt.gmo as /usr/share/locale/pt/LC_MESSAGES/bison.mo
+installing pt_BR.gmo as /usr/share/locale/pt_BR/LC_MESSAGES/bison.mo
+installing ro.gmo as /usr/share/locale/ro/LC_MESSAGES/bison.mo
+installing ru.gmo as /usr/share/locale/ru/LC_MESSAGES/bison.mo
+installing sr.gmo as /usr/share/locale/sr/LC_MESSAGES/bison.mo
+installing sv.gmo as /usr/share/locale/sv/LC_MESSAGES/bison.mo
+installing tr.gmo as /usr/share/locale/tr/LC_MESSAGES/bison.mo
+installing uk.gmo as /usr/share/locale/uk/LC_MESSAGES/bison.mo
+installing vi.gmo as /usr/share/locale/vi/LC_MESSAGES/bison.mo
+installing zh_CN.gmo as /usr/share/locale/zh_CN/LC_MESSAGES/bison.mo
+installing zh_TW.gmo as /usr/share/locale/zh_TW/LC_MESSAGES/bison.mo
+if test "bison" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/sources/bison-3.7.6/po'
+Making install in runtime-po
+make[2]: Entering directory '/sources/bison-3.7.6/runtime-po'
+installing ast.gmo as /usr/share/locale/ast/LC_MESSAGES/bison-runtime.mo
+installing bg.gmo as /usr/share/locale/bg/LC_MESSAGES/bison-runtime.mo
+installing ca.gmo as /usr/share/locale/ca/LC_MESSAGES/bison-runtime.mo
+installing da.gmo as /usr/share/locale/da/LC_MESSAGES/bison-runtime.mo
+installing de.gmo as /usr/share/locale/de/LC_MESSAGES/bison-runtime.mo
+installing el.gmo as /usr/share/locale/el/LC_MESSAGES/bison-runtime.mo
+installing eo.gmo as /usr/share/locale/eo/LC_MESSAGES/bison-runtime.mo
+installing es.gmo as /usr/share/locale/es/LC_MESSAGES/bison-runtime.mo
+installing et.gmo as /usr/share/locale/et/LC_MESSAGES/bison-runtime.mo
+installing fi.gmo as /usr/share/locale/fi/LC_MESSAGES/bison-runtime.mo
+installing fr.gmo as /usr/share/locale/fr/LC_MESSAGES/bison-runtime.mo
+installing ga.gmo as /usr/share/locale/ga/LC_MESSAGES/bison-runtime.mo
+installing gl.gmo as /usr/share/locale/gl/LC_MESSAGES/bison-runtime.mo
+installing hr.gmo as /usr/share/locale/hr/LC_MESSAGES/bison-runtime.mo
+installing hu.gmo as /usr/share/locale/hu/LC_MESSAGES/bison-runtime.mo
+installing ia.gmo as /usr/share/locale/ia/LC_MESSAGES/bison-runtime.mo
+installing id.gmo as /usr/share/locale/id/LC_MESSAGES/bison-runtime.mo
+installing it.gmo as /usr/share/locale/it/LC_MESSAGES/bison-runtime.mo
+installing ja.gmo as /usr/share/locale/ja/LC_MESSAGES/bison-runtime.mo
+installing ky.gmo as /usr/share/locale/ky/LC_MESSAGES/bison-runtime.mo
+installing lt.gmo as /usr/share/locale/lt/LC_MESSAGES/bison-runtime.mo
+installing lv.gmo as /usr/share/locale/lv/LC_MESSAGES/bison-runtime.mo
+installing ms.gmo as /usr/share/locale/ms/LC_MESSAGES/bison-runtime.mo
+installing nb.gmo as /usr/share/locale/nb/LC_MESSAGES/bison-runtime.mo
+installing nl.gmo as /usr/share/locale/nl/LC_MESSAGES/bison-runtime.mo
+installing pl.gmo as /usr/share/locale/pl/LC_MESSAGES/bison-runtime.mo
+installing pt.gmo as /usr/share/locale/pt/LC_MESSAGES/bison-runtime.mo
+installing pt_BR.gmo as /usr/share/locale/pt_BR/LC_MESSAGES/bison-runtime.mo
+installing ro.gmo as /usr/share/locale/ro/LC_MESSAGES/bison-runtime.mo
+installing ru.gmo as /usr/share/locale/ru/LC_MESSAGES/bison-runtime.mo
+installing sl.gmo as /usr/share/locale/sl/LC_MESSAGES/bison-runtime.mo
+installing sq.gmo as /usr/share/locale/sq/LC_MESSAGES/bison-runtime.mo
+installing sr.gmo as /usr/share/locale/sr/LC_MESSAGES/bison-runtime.mo
+installing sv.gmo as /usr/share/locale/sv/LC_MESSAGES/bison-runtime.mo
+installing ta.gmo as /usr/share/locale/ta/LC_MESSAGES/bison-runtime.mo
+installing th.gmo as /usr/share/locale/th/LC_MESSAGES/bison-runtime.mo
+installing tr.gmo as /usr/share/locale/tr/LC_MESSAGES/bison-runtime.mo
+installing uk.gmo as /usr/share/locale/uk/LC_MESSAGES/bison-runtime.mo
+installing vi.gmo as /usr/share/locale/vi/LC_MESSAGES/bison-runtime.mo
+installing zh_CN.gmo as /usr/share/locale/zh_CN/LC_MESSAGES/bison-runtime.mo
+installing zh_TW.gmo as /usr/share/locale/zh_TW/LC_MESSAGES/bison-runtime.mo
+if test "bison" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/sources/bison-3.7.6/runtime-po'
+Making install in gnulib-po
+make[2]: Entering directory '/sources/bison-3.7.6/gnulib-po'
+installing af.gmo as /usr/share/locale/af/LC_MESSAGES/bison-gnulib.mo
+installing be.gmo as /usr/share/locale/be/LC_MESSAGES/bison-gnulib.mo
+installing bg.gmo as /usr/share/locale/bg/LC_MESSAGES/bison-gnulib.mo
+installing ca.gmo as /usr/share/locale/ca/LC_MESSAGES/bison-gnulib.mo
+installing cs.gmo as /usr/share/locale/cs/LC_MESSAGES/bison-gnulib.mo
+installing da.gmo as /usr/share/locale/da/LC_MESSAGES/bison-gnulib.mo
+installing de.gmo as /usr/share/locale/de/LC_MESSAGES/bison-gnulib.mo
+installing el.gmo as /usr/share/locale/el/LC_MESSAGES/bison-gnulib.mo
+installing eo.gmo as /usr/share/locale/eo/LC_MESSAGES/bison-gnulib.mo
+installing es.gmo as /usr/share/locale/es/LC_MESSAGES/bison-gnulib.mo
+installing et.gmo as /usr/share/locale/et/LC_MESSAGES/bison-gnulib.mo
+installing eu.gmo as /usr/share/locale/eu/LC_MESSAGES/bison-gnulib.mo
+installing fi.gmo as /usr/share/locale/fi/LC_MESSAGES/bison-gnulib.mo
+installing fr.gmo as /usr/share/locale/fr/LC_MESSAGES/bison-gnulib.mo
+installing ga.gmo as /usr/share/locale/ga/LC_MESSAGES/bison-gnulib.mo
+installing gl.gmo as /usr/share/locale/gl/LC_MESSAGES/bison-gnulib.mo
+installing hu.gmo as /usr/share/locale/hu/LC_MESSAGES/bison-gnulib.mo
+installing it.gmo as /usr/share/locale/it/LC_MESSAGES/bison-gnulib.mo
+installing ja.gmo as /usr/share/locale/ja/LC_MESSAGES/bison-gnulib.mo
+installing ko.gmo as /usr/share/locale/ko/LC_MESSAGES/bison-gnulib.mo
+installing ms.gmo as /usr/share/locale/ms/LC_MESSAGES/bison-gnulib.mo
+installing nb.gmo as /usr/share/locale/nb/LC_MESSAGES/bison-gnulib.mo
+installing nl.gmo as /usr/share/locale/nl/LC_MESSAGES/bison-gnulib.mo
+installing pl.gmo as /usr/share/locale/pl/LC_MESSAGES/bison-gnulib.mo
+installing pt.gmo as /usr/share/locale/pt/LC_MESSAGES/bison-gnulib.mo
+installing pt_BR.gmo as /usr/share/locale/pt_BR/LC_MESSAGES/bison-gnulib.mo
+installing ro.gmo as /usr/share/locale/ro/LC_MESSAGES/bison-gnulib.mo
+installing ru.gmo as /usr/share/locale/ru/LC_MESSAGES/bison-gnulib.mo
+installing rw.gmo as /usr/share/locale/rw/LC_MESSAGES/bison-gnulib.mo
+installing sk.gmo as /usr/share/locale/sk/LC_MESSAGES/bison-gnulib.mo
+installing sl.gmo as /usr/share/locale/sl/LC_MESSAGES/bison-gnulib.mo
+installing sr.gmo as /usr/share/locale/sr/LC_MESSAGES/bison-gnulib.mo
+installing sv.gmo as /usr/share/locale/sv/LC_MESSAGES/bison-gnulib.mo
+installing tr.gmo as /usr/share/locale/tr/LC_MESSAGES/bison-gnulib.mo
+installing uk.gmo as /usr/share/locale/uk/LC_MESSAGES/bison-gnulib.mo
+installing vi.gmo as /usr/share/locale/vi/LC_MESSAGES/bison-gnulib.mo
+installing zh_CN.gmo as /usr/share/locale/zh_CN/LC_MESSAGES/bison-gnulib.mo
+installing zh_TW.gmo as /usr/share/locale/zh_TW/LC_MESSAGES/bison-gnulib.mo
+if test "bison" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/sources/bison-3.7.6/gnulib-po'
+Making install in .
+make[2]: Entering directory '/sources/bison-3.7.6'
+  GEN      doc/bison.help
+make[3]: Entering directory '/sources/bison-3.7.6'
+ /usr/bin/mkdir -p '/usr/share/aclocal'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c++/calc++'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c++'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c/bistromathic'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c'
+ /usr/bin/install -c -m 644 m4/bison-i18n.m4 '/usr/share/aclocal'
+ /usr/bin/install -c -m 644 examples/c++/calc++/driver.cc examples/c++/calc++/driver.hh examples/c++/calc++/scanner.ll examples/c++/calc++/calc++.cc examples/c++/calc++/parser.yy '/usr/share/doc/bison-3.7.6/examples/c++/calc++'
+ /usr/bin/install -c -m 644 examples/c++/simple.yy '/usr/share/doc/bison-3.7.6/examples/c++'
+ /usr/bin/install -c -m 644 examples/c/bistromathic/parse.y examples/c/bistromathic/Makefile examples/c/bistromathic/README.md '/usr/share/doc/bison-3.7.6/examples/c/bistromathic'
+ /usr/bin/install -c src/yacc '/usr/bin'
+ /usr/bin/install -c -m 644 examples/c/README.md '/usr/share/doc/bison-3.7.6/examples/c'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c/calc'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c++/calc++'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c++'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/d'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples'
+ /usr/bin/install -c -m 644 examples/c/calc/calc.y examples/c/calc/Makefile examples/c/calc/README.md '/usr/share/doc/bison-3.7.6/examples/c/calc'
+ /usr/bin/install -c -m 644 examples/c++/calc++/README.md examples/c++/calc++/Makefile '/usr/share/doc/bison-3.7.6/examples/c++/calc++'
+ /usr/bin/install -c -m 644 examples/c++/README.md examples/c++/Makefile examples/c++/variant.yy examples/c++/variant-11.yy '/usr/share/doc/bison-3.7.6/examples/c++'
+ /usr/bin/install -c -m 644 examples/d/calc.y examples/d/Makefile examples/d/README.md '/usr/share/doc/bison-3.7.6/examples/d'
+ /usr/bin/install -c -m 644 AUTHORS COPYING NEWS README THANKS TODO '/usr/share/doc/bison-3.7.6'
+ /usr/bin/install -c -m 644 examples/README.md '/usr/share/doc/bison-3.7.6/examples'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/java'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/java/calc'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/java/simple'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c/lexcalc'
+ /usr/bin/mkdir -p '/usr/share/bison/m4sugar'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c/mfcalc'
+ /usr/bin/install -c -m 644 examples/java/calc/Calc.y examples/java/calc/Makefile '/usr/share/doc/bison-3.7.6/examples/java/calc'
+ /usr/bin/install -c -m 644 examples/java/README.md '/usr/share/doc/bison-3.7.6/examples/java'
+ /usr/bin/install -c -m 644 data/m4sugar/foreach.m4 data/m4sugar/m4sugar.m4 '/usr/share/bison/m4sugar'
+ /usr/bin/install -c -m 644 examples/java/simple/Calc.y examples/java/simple/Makefile '/usr/share/doc/bison-3.7.6/examples/java/simple'
+ /usr/bin/install -c -m 644 examples/c/lexcalc/parse.y examples/c/lexcalc/scan.l examples/c/lexcalc/Makefile examples/c/lexcalc/README.md '/usr/share/doc/bison-3.7.6/examples/c/lexcalc'
+ /usr/bin/install -c -m 644 examples/c/mfcalc/Makefile '/usr/share/doc/bison-3.7.6/examples/c/mfcalc'
+ /usr/bin/mkdir -p '/usr/share/bison'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c/pushcalc'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c/reccalc'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c/rpcalc'
+ /usr/bin/mkdir -p '/usr/share/bison/skeletons'
+ /usr/bin/mkdir -p '/usr/share/bison/xslt'
+ /usr/bin/install -c -m 644 data/README.md data/bison-default.css '/usr/share/bison'
+ /usr/bin/install -c -m 644 examples/c/pushcalc/calc.y examples/c/pushcalc/Makefile examples/c/pushcalc/README.md '/usr/share/doc/bison-3.7.6/examples/c/pushcalc'
+ /usr/bin/install -c -m 644 examples/c/reccalc/parse.y examples/c/reccalc/scan.l examples/c/reccalc/Makefile examples/c/reccalc/README.md '/usr/share/doc/bison-3.7.6/examples/c/reccalc'
+ /usr/bin/install -c -m 644 examples/c/rpcalc/Makefile '/usr/share/doc/bison-3.7.6/examples/c/rpcalc'
+ /usr/bin/install -c -m 644 data/skeletons/bison.m4 data/skeletons/c++-skel.m4 data/skeletons/c++.m4 data/skeletons/c-like.m4 data/skeletons/c-skel.m4 data/skeletons/c.m4 data/skeletons/glr.c data/skeletons/glr.cc data/skeletons/java-skel.m4 data/skeletons/java.m4 data/skeletons/lalr1.cc data/skeletons/lalr1.java data/skeletons/location.cc data/skeletons/stack.hh data/skeletons/traceon.m4 data/skeletons/variant.hh data/skeletons/yacc.c data/skeletons/README-D.txt data/skeletons/d-skel.m4 data/skeletons/d.m4 data/skeletons/lalr1.d '/usr/share/bison/skeletons'
+ /usr/bin/install -c -m 644 data/xslt/bison.xsl data/xslt/xml2dot.xsl data/xslt/xml2text.xsl data/xslt/xml2xhtml.xsl '/usr/share/bison/xslt'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c/mfcalc'
+ /usr/bin/mkdir -p '/usr/share/doc/bison-3.7.6/examples/c/rpcalc'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/lib'
+  GEN      doc/bison.help
+ /usr/bin/install -c -m 644  lib/liby.a '/usr/lib'
+ /usr/bin/install -c -m 644 examples/c/mfcalc/calc.h examples/c/mfcalc/mfcalc.y '/usr/share/doc/bison-3.7.6/examples/c/mfcalc'
+ /usr/bin/install -c -m 644 examples/c/rpcalc/rpcalc.y '/usr/share/doc/bison-3.7.6/examples/c/rpcalc'
+  /usr/bin/install -c src/bison '/usr/bin'
+ ( cd '/usr/lib' && ranlib liby.a )
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/mkdir -p '/usr/share/info'
+ /usr/bin/install -c -m 644 ./doc/bison.1 doc/yacc.1 '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 ./doc/bison.info '/usr/share/info'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/bison.info'
+make[3]: Leaving directory '/sources/bison-3.7.6'
+make[2]: Leaving directory '/sources/bison-3.7.6'
+make[1]: Leaving directory '/sources/bison-3.7.6'
+[lfs-scripts] Finishing build of bison-3.7.6 at Tue Sep 13 13:38:52 -03 2022
+(lfs chroot) root:/sources# 

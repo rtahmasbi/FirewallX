@@ -1,0 +1,566 @@
+(lfs chroot) root:/sources# begin mpc-1.2.1 tar.gz
+./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/mpc-1.2.1
+
+[lfs-scripts] Starting build of mpc-1.2.1 at Mon Sep 12 23:32:26 -03 2022
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for CC and CFLAGS in gmp.h... no
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/aarch64-lfs-linux-gnu/bin/ld
+checking if the linker (/usr/aarch64-lfs-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/aarch64-lfs-linux-gnu/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/aarch64-lfs-linux-gnu/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for gmp.h... yes
+checking for ANSI C header files... (cached) yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking for unistd.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking complex.h usability... yes
+checking complex.h presence... yes
+checking for complex.h... yes
+checking for library containing creal... -lm
+checking whether creal, cimag and I can be used... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for gettimeofday... yes
+checking for localeconv... yes
+checking for setlocale... yes
+checking for getrusage... yes
+checking for dup... yes
+checking for dup2... yes
+checking for __gmpz_init in -lgmp... yes
+checking for MPFR... yes
+checking for recent GMP... yes
+checking for recent MPFR... yes
+checking if gcc accepts -dumpversion option... yes
+checking gcc version... 11.2.0
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating tests/Makefile
+config.status: creating doc/Makefile
+config.status: creating tools/Makefile
+config.status: creating tools/bench/Makefile
+config.status: creating tools/mpcheck/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+(lfs chroot) root:/sources/mpc-1.2.1# make
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/sources/mpc-1.2.1'
+Making all in src
+make[2]: Entering directory '/sources/mpc-1.2.1/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT abs.lo -MD -MP -MF .deps/abs.Tpo -c -o abs.lo abs.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT acos.lo -MD -MP -MF .deps/acos.Tpo -c -o acos.lo acos.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT acosh.lo -MD -MP -MF .deps/acosh.Tpo -c -o acosh.lo acosh.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT add.lo -MD -MP -MF .deps/add.Tpo -c -o add.lo add.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT add_fr.lo -MD -MP -MF .deps/add_fr.Tpo -c -o add_fr.lo add_fr.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT add_si.lo -MD -MP -MF .deps/add_si.Tpo -c -o add_si.lo add_si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT add_si.lo -MD -MP -MF .deps/add_si.Tpo -c add_si.c  -fPIC -DPIC -o .libs/add_si.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT acosh.lo -MD -MP -MF .deps/acosh.Tpo -c acosh.c  -fPIC -DPIC -o .libs/acosh.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT acos.lo -MD -MP -MF .deps/acos.Tpo -c acos.c  -fPIC -DPIC -o .libs/acos.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT abs.lo -MD -MP -MF .deps/abs.Tpo -c abs.c  -fPIC -DPIC -o .libs/abs.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT add.lo -MD -MP -MF .deps/add.Tpo -c add.c  -fPIC -DPIC -o .libs/add.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT add_fr.lo -MD -MP -MF .deps/add_fr.Tpo -c add_fr.c  -fPIC -DPIC -o .libs/add_fr.o
+mv -f .deps/abs.Tpo .deps/abs.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT add_ui.lo -MD -MP -MF .deps/add_ui.Tpo -c -o add_ui.lo add_ui.c
+mv -f .deps/add.Tpo .deps/add.Plo
+mv -f .deps/add_si.Tpo .deps/add_si.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT arg.lo -MD -MP -MF .deps/arg.Tpo -c -o arg.lo arg.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT asin.lo -MD -MP -MF .deps/asin.Tpo -c -o asin.lo asin.c
+mv -f .deps/add_fr.Tpo .deps/add_fr.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT asinh.lo -MD -MP -MF .deps/asinh.Tpo -c -o asinh.lo asinh.c
+mv -f .deps/acosh.Tpo .deps/acosh.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT atan.lo -MD -MP -MF .deps/atan.Tpo -c -o atan.lo atan.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT add_ui.lo -MD -MP -MF .deps/add_ui.Tpo -c add_ui.c  -fPIC -DPIC -o .libs/add_ui.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT asin.lo -MD -MP -MF .deps/asin.Tpo -c asin.c  -fPIC -DPIC -o .libs/asin.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT asinh.lo -MD -MP -MF .deps/asinh.Tpo -c asinh.c  -fPIC -DPIC -o .libs/asinh.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT arg.lo -MD -MP -MF .deps/arg.Tpo -c arg.c  -fPIC -DPIC -o .libs/arg.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT atan.lo -MD -MP -MF .deps/atan.Tpo -c atan.c  -fPIC -DPIC -o .libs/atan.o
+mv -f .deps/acos.Tpo .deps/acos.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT atanh.lo -MD -MP -MF .deps/atanh.Tpo -c -o atanh.lo atanh.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT atanh.lo -MD -MP -MF .deps/atanh.Tpo -c atanh.c  -fPIC -DPIC -o .libs/atanh.o
+mv -f .deps/add_ui.Tpo .deps/add_ui.Plo
+mv -f .deps/arg.Tpo .deps/arg.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT clear.lo -MD -MP -MF .deps/clear.Tpo -c -o clear.lo clear.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT cmp.lo -MD -MP -MF .deps/cmp.Tpo -c -o cmp.lo cmp.c
+mv -f .deps/asinh.Tpo .deps/asinh.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT cmp_abs.lo -MD -MP -MF .deps/cmp_abs.Tpo -c -o cmp_abs.lo cmp_abs.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT cmp.lo -MD -MP -MF .deps/cmp.Tpo -c cmp.c  -fPIC -DPIC -o .libs/cmp.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT clear.lo -MD -MP -MF .deps/clear.Tpo -c clear.c  -fPIC -DPIC -o .libs/clear.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT cmp_abs.lo -MD -MP -MF .deps/cmp_abs.Tpo -c cmp_abs.c  -fPIC -DPIC -o .libs/cmp_abs.o
+mv -f .deps/atanh.Tpo .deps/atanh.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT cmp_si_si.lo -MD -MP -MF .deps/cmp_si_si.Tpo -c -o cmp_si_si.lo cmp_si_si.c
+mv -f .deps/atan.Tpo .deps/atan.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT conj.lo -MD -MP -MF .deps/conj.Tpo -c -o conj.lo conj.c
+mv -f .deps/clear.Tpo .deps/clear.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT cos.lo -MD -MP -MF .deps/cos.Tpo -c -o cos.lo cos.c
+mv -f .deps/asin.Tpo .deps/asin.Plo
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT cmp_si_si.lo -MD -MP -MF .deps/cmp_si_si.Tpo -c cmp_si_si.c  -fPIC -DPIC -o .libs/cmp_si_si.o
+mv -f .deps/cmp.Tpo .deps/cmp.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT cosh.lo -MD -MP -MF .deps/cosh.Tpo -c -o cosh.lo cosh.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT div_2si.lo -MD -MP -MF .deps/div_2si.Tpo -c -o div_2si.lo div_2si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT conj.lo -MD -MP -MF .deps/conj.Tpo -c conj.c  -fPIC -DPIC -o .libs/conj.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT cos.lo -MD -MP -MF .deps/cos.Tpo -c cos.c  -fPIC -DPIC -o .libs/cos.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT cosh.lo -MD -MP -MF .deps/cosh.Tpo -c cosh.c  -fPIC -DPIC -o .libs/cosh.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT div_2si.lo -MD -MP -MF .deps/div_2si.Tpo -c div_2si.c  -fPIC -DPIC -o .libs/div_2si.o
+mv -f .deps/cmp_abs.Tpo .deps/cmp_abs.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT div_2ui.lo -MD -MP -MF .deps/div_2ui.Tpo -c -o div_2ui.lo div_2ui.c
+mv -f .deps/cmp_si_si.Tpo .deps/cmp_si_si.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT div.lo -MD -MP -MF .deps/div.Tpo -c -o div.lo div.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT div_2ui.lo -MD -MP -MF .deps/div_2ui.Tpo -c div_2ui.c  -fPIC -DPIC -o .libs/div_2ui.o
+mv -f .deps/cos.Tpo .deps/cos.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT div_fr.lo -MD -MP -MF .deps/div_fr.Tpo -c -o div_fr.lo div_fr.c
+mv -f .deps/conj.Tpo .deps/conj.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT div_ui.lo -MD -MP -MF .deps/div_ui.Tpo -c -o div_ui.lo div_ui.c
+mv -f .deps/cosh.Tpo .deps/cosh.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT dot.lo -MD -MP -MF .deps/dot.Tpo -c -o dot.lo dot.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT div.lo -MD -MP -MF .deps/div.Tpo -c div.c  -fPIC -DPIC -o .libs/div.o
+mv -f .deps/div_2si.Tpo .deps/div_2si.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT exp.lo -MD -MP -MF .deps/exp.Tpo -c -o exp.lo exp.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT div_fr.lo -MD -MP -MF .deps/div_fr.Tpo -c div_fr.c  -fPIC -DPIC -o .libs/div_fr.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT div_ui.lo -MD -MP -MF .deps/div_ui.Tpo -c div_ui.c  -fPIC -DPIC -o .libs/div_ui.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT dot.lo -MD -MP -MF .deps/dot.Tpo -c dot.c  -fPIC -DPIC -o .libs/dot.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT exp.lo -MD -MP -MF .deps/exp.Tpo -c exp.c  -fPIC -DPIC -o .libs/exp.o
+mv -f .deps/div_2ui.Tpo .deps/div_2ui.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT fma.lo -MD -MP -MF .deps/fma.Tpo -c -o fma.lo fma.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT fma.lo -MD -MP -MF .deps/fma.Tpo -c fma.c  -fPIC -DPIC -o .libs/fma.o
+mv -f .deps/div_fr.Tpo .deps/div_fr.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT fr_div.lo -MD -MP -MF .deps/fr_div.Tpo -c -o fr_div.lo fr_div.c
+mv -f .deps/div_ui.Tpo .deps/div_ui.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT fr_sub.lo -MD -MP -MF .deps/fr_sub.Tpo -c -o fr_sub.lo fr_sub.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT fr_div.lo -MD -MP -MF .deps/fr_div.Tpo -c fr_div.c  -fPIC -DPIC -o .libs/fr_div.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT fr_sub.lo -MD -MP -MF .deps/fr_sub.Tpo -c fr_sub.c  -fPIC -DPIC -o .libs/fr_sub.o
+mv -f .deps/dot.Tpo .deps/dot.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT get_prec2.lo -MD -MP -MF .deps/get_prec2.Tpo -c -o get_prec2.lo get_prec2.c
+mv -f .deps/exp.Tpo .deps/exp.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT get_prec.lo -MD -MP -MF .deps/get_prec.Tpo -c -o get_prec.lo get_prec.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT get_prec2.lo -MD -MP -MF .deps/get_prec2.Tpo -c get_prec2.c  -fPIC -DPIC -o .libs/get_prec2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT get_prec.lo -MD -MP -MF .deps/get_prec.Tpo -c get_prec.c  -fPIC -DPIC -o .libs/get_prec.o
+mv -f .deps/div.Tpo .deps/div.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT get_version.lo -MD -MP -MF .deps/get_version.Tpo -c -o get_version.lo get_version.c
+mv -f .deps/fr_div.Tpo .deps/fr_div.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT get_x.lo -MD -MP -MF .deps/get_x.Tpo -c -o get_x.lo get_x.c
+mv -f .deps/fr_sub.Tpo .deps/fr_sub.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT imag.lo -MD -MP -MF .deps/imag.Tpo -c -o imag.lo imag.c
+mv -f .deps/fma.Tpo .deps/fma.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT init2.lo -MD -MP -MF .deps/init2.Tpo -c -o init2.lo init2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT get_version.lo -MD -MP -MF .deps/get_version.Tpo -c get_version.c  -fPIC -DPIC -o .libs/get_version.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT get_x.lo -MD -MP -MF .deps/get_x.Tpo -c get_x.c  -fPIC -DPIC -o .libs/get_x.o
+mv -f .deps/get_prec2.Tpo .deps/get_prec2.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT init3.lo -MD -MP -MF .deps/init3.Tpo -c -o init3.lo init3.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT imag.lo -MD -MP -MF .deps/imag.Tpo -c imag.c  -fPIC -DPIC -o .libs/imag.o
+mv -f .deps/get_prec.Tpo .deps/get_prec.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT inp_str.lo -MD -MP -MF .deps/inp_str.Tpo -c -o inp_str.lo inp_str.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT init2.lo -MD -MP -MF .deps/init2.Tpo -c init2.c  -fPIC -DPIC -o .libs/init2.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT init3.lo -MD -MP -MF .deps/init3.Tpo -c init3.c  -fPIC -DPIC -o .libs/init3.o
+mv -f .deps/get_version.Tpo .deps/get_version.Plo
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT inp_str.lo -MD -MP -MF .deps/inp_str.Tpo -c inp_str.c  -fPIC -DPIC -o .libs/inp_str.o
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT log.lo -MD -MP -MF .deps/log.Tpo -c -o log.lo log.c
+mv -f .deps/imag.Tpo .deps/imag.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT log10.lo -MD -MP -MF .deps/log10.Tpo -c -o log10.lo log10.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT log.lo -MD -MP -MF .deps/log.Tpo -c log.c  -fPIC -DPIC -o .libs/log.o
+mv -f .deps/init2.Tpo .deps/init2.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mem.lo -MD -MP -MF .deps/mem.Tpo -c -o mem.lo mem.c
+mv -f .deps/init3.Tpo .deps/init3.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mul_2si.lo -MD -MP -MF .deps/mul_2si.Tpo -c -o mul_2si.lo mul_2si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT log10.lo -MD -MP -MF .deps/log10.Tpo -c log10.c  -fPIC -DPIC -o .libs/log10.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT mem.lo -MD -MP -MF .deps/mem.Tpo -c mem.c  -fPIC -DPIC -o .libs/mem.o
+mv -f .deps/get_x.Tpo .deps/get_x.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mul_2ui.lo -MD -MP -MF .deps/mul_2ui.Tpo -c -o mul_2ui.lo mul_2ui.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT mul_2si.lo -MD -MP -MF .deps/mul_2si.Tpo -c mul_2si.c  -fPIC -DPIC -o .libs/mul_2si.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT mul_2ui.lo -MD -MP -MF .deps/mul_2ui.Tpo -c mul_2ui.c  -fPIC -DPIC -o .libs/mul_2ui.o
+mv -f .deps/inp_str.Tpo .deps/inp_str.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mul.lo -MD -MP -MF .deps/mul.Tpo -c -o mul.lo mul.c
+mv -f .deps/mem.Tpo .deps/mem.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mul_fr.lo -MD -MP -MF .deps/mul_fr.Tpo -c -o mul_fr.lo mul_fr.c
+mv -f .deps/log.Tpo .deps/log.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mul_i.lo -MD -MP -MF .deps/mul_i.Tpo -c -o mul_i.lo mul_i.c
+mv -f .deps/mul_2si.Tpo .deps/mul_2si.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mul_si.lo -MD -MP -MF .deps/mul_si.Tpo -c -o mul_si.lo mul_si.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT mul.lo -MD -MP -MF .deps/mul.Tpo -c mul.c  -fPIC -DPIC -o .libs/mul.o
+mv -f .deps/log10.Tpo .deps/log10.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mul_ui.lo -MD -MP -MF .deps/mul_ui.Tpo -c -o mul_ui.lo mul_ui.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT mul_fr.lo -MD -MP -MF .deps/mul_fr.Tpo -c mul_fr.c  -fPIC -DPIC -o .libs/mul_fr.o
+mv -f .deps/mul_2ui.Tpo .deps/mul_2ui.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT neg.lo -MD -MP -MF .deps/neg.Tpo -c -o neg.lo neg.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT mul_i.lo -MD -MP -MF .deps/mul_i.Tpo -c mul_i.c  -fPIC -DPIC -o .libs/mul_i.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT mul_si.lo -MD -MP -MF .deps/mul_si.Tpo -c mul_si.c  -fPIC -DPIC -o .libs/mul_si.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT mul_ui.lo -MD -MP -MF .deps/mul_ui.Tpo -c mul_ui.c  -fPIC -DPIC -o .libs/mul_ui.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT neg.lo -MD -MP -MF .deps/neg.Tpo -c neg.c  -fPIC -DPIC -o .libs/neg.o
+mv -f .deps/mul_fr.Tpo .deps/mul_fr.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT norm.lo -MD -MP -MF .deps/norm.Tpo -c -o norm.lo norm.c
+mv -f .deps/mul_si.Tpo .deps/mul_si.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT out_str.lo -MD -MP -MF .deps/out_str.Tpo -c -o out_str.lo out_str.c
+mv -f .deps/mul_i.Tpo .deps/mul_i.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT pow.lo -MD -MP -MF .deps/pow.Tpo -c -o pow.lo pow.c
+mv -f .deps/mul_ui.Tpo .deps/mul_ui.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT pow_fr.lo -MD -MP -MF .deps/pow_fr.Tpo -c -o pow_fr.lo pow_fr.c
+mv -f .deps/neg.Tpo .deps/neg.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT pow_ld.lo -MD -MP -MF .deps/pow_ld.Tpo -c -o pow_ld.lo pow_ld.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT norm.lo -MD -MP -MF .deps/norm.Tpo -c norm.c  -fPIC -DPIC -o .libs/norm.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT out_str.lo -MD -MP -MF .deps/out_str.Tpo -c out_str.c  -fPIC -DPIC -o .libs/out_str.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT pow.lo -MD -MP -MF .deps/pow.Tpo -c pow.c  -fPIC -DPIC -o .libs/pow.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT pow_fr.lo -MD -MP -MF .deps/pow_fr.Tpo -c pow_fr.c  -fPIC -DPIC -o .libs/pow_fr.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT pow_ld.lo -MD -MP -MF .deps/pow_ld.Tpo -c pow_ld.c  -fPIC -DPIC -o .libs/pow_ld.o
+mv -f .deps/mul.Tpo .deps/mul.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT pow_d.lo -MD -MP -MF .deps/pow_d.Tpo -c -o pow_d.lo pow_d.c
+mv -f .deps/out_str.Tpo .deps/out_str.Plo
+mv -f .deps/pow_fr.Tpo .deps/pow_fr.Plo
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT pow_d.lo -MD -MP -MF .deps/pow_d.Tpo -c pow_d.c  -fPIC -DPIC -o .libs/pow_d.o
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT pow_si.lo -MD -MP -MF .deps/pow_si.Tpo -c -o pow_si.lo pow_si.c
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT pow_ui.lo -MD -MP -MF .deps/pow_ui.Tpo -c -o pow_ui.lo pow_ui.c
+mv -f .deps/pow_ld.Tpo .deps/pow_ld.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT pow_z.lo -MD -MP -MF .deps/pow_z.Tpo -c -o pow_z.lo pow_z.c
+mv -f .deps/norm.Tpo .deps/norm.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT proj.lo -MD -MP -MF .deps/proj.Tpo -c -o proj.lo proj.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT pow_ui.lo -MD -MP -MF .deps/pow_ui.Tpo -c pow_ui.c  -fPIC -DPIC -o .libs/pow_ui.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT pow_si.lo -MD -MP -MF .deps/pow_si.Tpo -c pow_si.c  -fPIC -DPIC -o .libs/pow_si.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT pow_z.lo -MD -MP -MF .deps/pow_z.Tpo -c pow_z.c  -fPIC -DPIC -o .libs/pow_z.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT proj.lo -MD -MP -MF .deps/proj.Tpo -c proj.c  -fPIC -DPIC -o .libs/proj.o
+mv -f .deps/pow_d.Tpo .deps/pow_d.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT real.lo -MD -MP -MF .deps/real.Tpo -c -o real.lo real.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT real.lo -MD -MP -MF .deps/real.Tpo -c real.c  -fPIC -DPIC -o .libs/real.o
+mv -f .deps/pow_si.Tpo .deps/pow_si.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT rootofunity.lo -MD -MP -MF .deps/rootofunity.Tpo -c -o rootofunity.lo rootofunity.c
+mv -f .deps/pow_z.Tpo .deps/pow_z.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT urandom.lo -MD -MP -MF .deps/urandom.Tpo -c -o urandom.lo urandom.c
+mv -f .deps/proj.Tpo .deps/proj.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT set.lo -MD -MP -MF .deps/set.Tpo -c -o set.lo set.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT rootofunity.lo -MD -MP -MF .deps/rootofunity.Tpo -c rootofunity.c  -fPIC -DPIC -o .libs/rootofunity.o
+mv -f .deps/pow.Tpo .deps/pow.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT set_prec.lo -MD -MP -MF .deps/set_prec.Tpo -c -o set_prec.lo set_prec.c
+mv -f .deps/pow_ui.Tpo .deps/pow_ui.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT set_str.lo -MD -MP -MF .deps/set_str.Tpo -c -o set_str.lo set_str.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT urandom.lo -MD -MP -MF .deps/urandom.Tpo -c urandom.c  -fPIC -DPIC -o .libs/urandom.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT set.lo -MD -MP -MF .deps/set.Tpo -c set.c  -fPIC -DPIC -o .libs/set.o
+mv -f .deps/real.Tpo .deps/real.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT set_x.lo -MD -MP -MF .deps/set_x.Tpo -c -o set_x.lo set_x.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT set_prec.lo -MD -MP -MF .deps/set_prec.Tpo -c set_prec.c  -fPIC -DPIC -o .libs/set_prec.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT set_str.lo -MD -MP -MF .deps/set_str.Tpo -c set_str.c  -fPIC -DPIC -o .libs/set_str.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT set_x.lo -MD -MP -MF .deps/set_x.Tpo -c set_x.c  -fPIC -DPIC -o .libs/set_x.o
+mv -f .deps/urandom.Tpo .deps/urandom.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT set_x_x.lo -MD -MP -MF .deps/set_x_x.Tpo -c -o set_x_x.lo set_x_x.c
+mv -f .deps/set.Tpo .deps/set.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sin.lo -MD -MP -MF .deps/sin.Tpo -c -o sin.lo sin.c
+mv -f .deps/set_prec.Tpo .deps/set_prec.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sin_cos.lo -MD -MP -MF .deps/sin_cos.Tpo -c -o sin_cos.lo sin_cos.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT set_x_x.lo -MD -MP -MF .deps/set_x_x.Tpo -c set_x_x.c  -fPIC -DPIC -o .libs/set_x_x.o
+mv -f .deps/rootofunity.Tpo .deps/rootofunity.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sinh.lo -MD -MP -MF .deps/sinh.Tpo -c -o sinh.lo sinh.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT sin.lo -MD -MP -MF .deps/sin.Tpo -c sin.c  -fPIC -DPIC -o .libs/sin.o
+mv -f .deps/set_str.Tpo .deps/set_str.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sqr.lo -MD -MP -MF .deps/sqr.Tpo -c -o sqr.lo sqr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT sin_cos.lo -MD -MP -MF .deps/sin_cos.Tpo -c sin_cos.c  -fPIC -DPIC -o .libs/sin_cos.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT sinh.lo -MD -MP -MF .deps/sinh.Tpo -c sinh.c  -fPIC -DPIC -o .libs/sinh.o
+mv -f .deps/set_x.Tpo .deps/set_x.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sqrt.lo -MD -MP -MF .deps/sqrt.Tpo -c -o sqrt.lo sqrt.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT sqr.lo -MD -MP -MF .deps/sqr.Tpo -c sqr.c  -fPIC -DPIC -o .libs/sqr.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT sqrt.lo -MD -MP -MF .deps/sqrt.Tpo -c sqrt.c  -fPIC -DPIC -o .libs/sqrt.o
+mv -f .deps/sin.Tpo .deps/sin.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT strtoc.lo -MD -MP -MF .deps/strtoc.Tpo -c -o strtoc.lo strtoc.c
+mv -f .deps/set_x_x.Tpo .deps/set_x_x.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sub.lo -MD -MP -MF .deps/sub.Tpo -c -o sub.lo sub.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT strtoc.lo -MD -MP -MF .deps/strtoc.Tpo -c strtoc.c  -fPIC -DPIC -o .libs/strtoc.o
+mv -f .deps/sinh.Tpo .deps/sinh.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sub_fr.lo -MD -MP -MF .deps/sub_fr.Tpo -c -o sub_fr.lo sub_fr.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT sub.lo -MD -MP -MF .deps/sub.Tpo -c sub.c  -fPIC -DPIC -o .libs/sub.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT sub_fr.lo -MD -MP -MF .deps/sub_fr.Tpo -c sub_fr.c  -fPIC -DPIC -o .libs/sub_fr.o
+mv -f .deps/sqr.Tpo .deps/sqr.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sub_ui.lo -MD -MP -MF .deps/sub_ui.Tpo -c -o sub_ui.lo sub_ui.c
+mv -f .deps/sin_cos.Tpo .deps/sin_cos.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sum.lo -MD -MP -MF .deps/sum.Tpo -c -o sum.lo sum.c
+mv -f .deps/sub.Tpo .deps/sub.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT swap.lo -MD -MP -MF .deps/swap.Tpo -c -o swap.lo swap.c
+mv -f .deps/sqrt.Tpo .deps/sqrt.Plo
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT sub_ui.lo -MD -MP -MF .deps/sub_ui.Tpo -c sub_ui.c  -fPIC -DPIC -o .libs/sub_ui.o
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT tan.lo -MD -MP -MF .deps/tan.Tpo -c -o tan.lo tan.c
+mv -f .deps/strtoc.Tpo .deps/strtoc.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT tanh.lo -MD -MP -MF .deps/tanh.Tpo -c -o tanh.lo tanh.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT sum.lo -MD -MP -MF .deps/sum.Tpo -c sum.c  -fPIC -DPIC -o .libs/sum.o
+mv -f .deps/sub_fr.Tpo .deps/sub_fr.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT uceil_log2.lo -MD -MP -MF .deps/uceil_log2.Tpo -c -o uceil_log2.lo uceil_log2.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT swap.lo -MD -MP -MF .deps/swap.Tpo -c swap.c  -fPIC -DPIC -o .libs/swap.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT tan.lo -MD -MP -MF .deps/tan.Tpo -c tan.c  -fPIC -DPIC -o .libs/tan.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT tanh.lo -MD -MP -MF .deps/tanh.Tpo -c tanh.c  -fPIC -DPIC -o .libs/tanh.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT uceil_log2.lo -MD -MP -MF .deps/uceil_log2.Tpo -c uceil_log2.c  -fPIC -DPIC -o .libs/uceil_log2.o
+mv -f .deps/sub_ui.Tpo .deps/sub_ui.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT ui_div.lo -MD -MP -MF .deps/ui_div.Tpo -c -o ui_div.lo ui_div.c
+mv -f .deps/swap.Tpo .deps/swap.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT ui_ui_sub.lo -MD -MP -MF .deps/ui_ui_sub.Tpo -c -o ui_ui_sub.lo ui_ui_sub.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT ui_div.lo -MD -MP -MF .deps/ui_div.Tpo -c ui_div.c  -fPIC -DPIC -o .libs/ui_div.o
+mv -f .deps/sum.Tpo .deps/sum.Plo
+mv -f .deps/tanh.Tpo .deps/tanh.Plo
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I.. -g -O2 -MT ui_ui_sub.lo -MD -MP -MF .deps/ui_ui_sub.Tpo -c ui_ui_sub.c  -fPIC -DPIC -o .libs/ui_ui_sub.o
+mv -f .deps/uceil_log2.Tpo .deps/uceil_log2.Plo
+mv -f .deps/ui_div.Tpo .deps/ui_div.Plo
+mv -f .deps/tan.Tpo .deps/tan.Plo
+mv -f .deps/ui_ui_sub.Tpo .deps/ui_ui_sub.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -g -O2  -version-info 5:1:2  -o libmpc.la -rpath /usr/lib abs.lo acos.lo acosh.lo add.lo add_fr.lo add_si.lo add_ui.lo arg.lo asin.lo asinh.lo atan.lo atanh.lo clear.lo cmp.lo cmp_abs.lo cmp_si_si.lo conj.lo cos.lo cosh.lo div_2si.lo div_2ui.lo div.lo div_fr.lo div_ui.lo dot.lo exp.lo fma.lo fr_div.lo fr_sub.lo get_prec2.lo get_prec.lo get_version.lo get_x.lo imag.lo init2.lo init3.lo inp_str.lo log.lo log10.lo mem.lo mul_2si.lo mul_2ui.lo mul.lo mul_fr.lo mul_i.lo mul_si.lo mul_ui.lo neg.lo norm.lo out_str.lo pow.lo pow_fr.lo pow_ld.lo pow_d.lo pow_si.lo pow_ui.lo pow_z.lo proj.lo real.lo rootofunity.lo urandom.lo set.lo set_prec.lo set_str.lo set_x.lo set_x_x.lo sin.lo sin_cos.lo sinh.lo sqr.lo sqrt.lo strtoc.lo sub.lo sub_fr.lo sub_ui.lo sum.lo swap.lo tan.lo tanh.lo uceil_log2.lo ui_div.lo ui_ui_sub.lo  -lmpfr -lgmp -lm 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/abs.o .libs/acos.o .libs/acosh.o .libs/add.o .libs/add_fr.o .libs/add_si.o .libs/add_ui.o .libs/arg.o .libs/asin.o .libs/asinh.o .libs/atan.o .libs/atanh.o .libs/clear.o .libs/cmp.o .libs/cmp_abs.o .libs/cmp_si_si.o .libs/conj.o .libs/cos.o .libs/cosh.o .libs/div_2si.o .libs/div_2ui.o .libs/div.o .libs/div_fr.o .libs/div_ui.o .libs/dot.o .libs/exp.o .libs/fma.o .libs/fr_div.o .libs/fr_sub.o .libs/get_prec2.o .libs/get_prec.o .libs/get_version.o .libs/get_x.o .libs/imag.o .libs/init2.o .libs/init3.o .libs/inp_str.o .libs/log.o .libs/log10.o .libs/mem.o .libs/mul_2si.o .libs/mul_2ui.o .libs/mul.o .libs/mul_fr.o .libs/mul_i.o .libs/mul_si.o .libs/mul_ui.o .libs/neg.o .libs/norm.o .libs/out_str.o .libs/pow.o .libs/pow_fr.o .libs/pow_ld.o .libs/pow_d.o .libs/pow_si.o .libs/pow_ui.o .libs/pow_z.o .libs/proj.o .libs/real.o .libs/rootofunity.o .libs/urandom.o .libs/set.o .libs/set_prec.o .libs/set_str.o .libs/set_x.o .libs/set_x_x.o .libs/sin.o .libs/sin_cos.o .libs/sinh.o .libs/sqr.o .libs/sqrt.o .libs/strtoc.o .libs/sub.o .libs/sub_fr.o .libs/sub_ui.o .libs/sum.o .libs/swap.o .libs/tan.o .libs/tanh.o .libs/uceil_log2.o .libs/ui_div.o .libs/ui_ui_sub.o   /usr/lib/libmpfr.so -L/usr/lib /usr/lib/libgmp.so -lm  -g -O2   -Wl,-soname -Wl,libmpc.so.3 -o .libs/libmpc.so.3.2.1
+libtool: link: (cd ".libs" && rm -f "libmpc.so.3" && ln -s "libmpc.so.3.2.1" "libmpc.so.3")
+libtool: link: (cd ".libs" && rm -f "libmpc.so" && ln -s "libmpc.so.3.2.1" "libmpc.so")
+libtool: link: ( cd ".libs" && rm -f "libmpc.la" && ln -s "../libmpc.la" "libmpc.la" )
+make[2]: Leaving directory '/sources/mpc-1.2.1/src'
+Making all in tests
+make[2]: Entering directory '/sources/mpc-1.2.1/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/mpc-1.2.1/tests'
+Making all in doc
+make[2]: Entering directory '/sources/mpc-1.2.1/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/mpc-1.2.1/doc'
+Making all in tools
+make[2]: Entering directory '/sources/mpc-1.2.1/tools'
+Making all in bench
+make[3]: Entering directory '/sources/mpc-1.2.1/tools/bench'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/mpc-1.2.1/tools/bench'
+Making all in mpcheck
+make[3]: Entering directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[3]: Entering directory '/sources/mpc-1.2.1/tools'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/mpc-1.2.1/tools'
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools'
+make[2]: Entering directory '/sources/mpc-1.2.1'
+make[2]: Leaving directory '/sources/mpc-1.2.1'
+make[1]: Leaving directory '/sources/mpc-1.2.1'
+(lfs chroot) root:/sources/mpc-1.2.1# make html
+make install
+make install-html
+finish
+Making html in src
+make[1]: Entering directory '/sources/mpc-1.2.1/src'
+make[1]: Nothing to be done for 'html'.
+make[1]: Leaving directory '/sources/mpc-1.2.1/src'
+Making html in tests
+make[1]: Entering directory '/sources/mpc-1.2.1/tests'
+make[1]: Nothing to be done for 'html'.
+make[1]: Leaving directory '/sources/mpc-1.2.1/tests'
+Making html in doc
+make[1]: Entering directory '/sources/mpc-1.2.1/doc'
+rm -rf mpc.htp
+if /bin/sh /sources/mpc-1.2.1/build-aux/missing makeinfo --html   -I . \
+ -o mpc.htp mpc.texi; \
+then \
+  rm -rf mpc.html && mv mpc.htp mpc.html; \
+else \
+  rm -rf mpc.htp; exit 1; \
+fi
+make[1]: Leaving directory '/sources/mpc-1.2.1/doc'
+Making html in tools
+make[1]: Entering directory '/sources/mpc-1.2.1/tools'
+Making html in bench
+make[2]: Entering directory '/sources/mpc-1.2.1/tools/bench'
+make[2]: Nothing to be done for 'html'.
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools/bench'
+Making html in mpcheck
+make[2]: Entering directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[2]: Nothing to be done for 'html'.
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[2]: Entering directory '/sources/mpc-1.2.1/tools'
+make[2]: Nothing to be done for 'html-am'.
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools'
+make[1]: Leaving directory '/sources/mpc-1.2.1/tools'
+make[1]: Entering directory '/sources/mpc-1.2.1'
+make[1]: Nothing to be done for 'html-am'.
+make[1]: Leaving directory '/sources/mpc-1.2.1'
+Making install in src
+make[1]: Entering directory '/sources/mpc-1.2.1/src'
+make[2]: Entering directory '/sources/mpc-1.2.1/src'
+make[2]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/usr/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libmpc.la '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libmpc.so.3.2.1 /usr/lib/libmpc.so.3.2.1
+libtool: install: (cd /usr/lib && { ln -s -f libmpc.so.3.2.1 libmpc.so.3 || { rm -f libmpc.so.3 && ln -s libmpc.so.3.2.1 libmpc.so.3; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libmpc.so.3.2.1 libmpc.so || { rm -f libmpc.so && ln -s libmpc.so.3.2.1 libmpc.so; }; })
+libtool: install: /usr/bin/install -c .libs/libmpc.lai /usr/lib/libmpc.la
+libtool: finish: PATH="/usr/bin:/usr/sbin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Leaving directory '/sources/mpc-1.2.1/src'
+make[1]: Leaving directory '/sources/mpc-1.2.1/src'
+Making install in tests
+make[1]: Entering directory '/sources/mpc-1.2.1/tests'
+make[2]: Entering directory '/sources/mpc-1.2.1/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/mpc-1.2.1/tests'
+make[1]: Leaving directory '/sources/mpc-1.2.1/tests'
+Making install in doc
+make[1]: Entering directory '/sources/mpc-1.2.1/doc'
+make[2]: Entering directory '/sources/mpc-1.2.1/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/info'
+ /usr/bin/install -c -m 644 ./mpc.info '/usr/share/info'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/mpc.info'
+make[2]: Leaving directory '/sources/mpc-1.2.1/doc'
+make[1]: Leaving directory '/sources/mpc-1.2.1/doc'
+Making install in tools
+make[1]: Entering directory '/sources/mpc-1.2.1/tools'
+Making install in bench
+make[2]: Entering directory '/sources/mpc-1.2.1/tools/bench'
+make[3]: Entering directory '/sources/mpc-1.2.1/tools/bench'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/mpc-1.2.1/tools/bench'
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools/bench'
+Making install in mpcheck
+make[2]: Entering directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[3]: Entering directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[2]: Entering directory '/sources/mpc-1.2.1/tools'
+make[3]: Entering directory '/sources/mpc-1.2.1/tools'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/mpc-1.2.1/tools'
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools'
+make[1]: Leaving directory '/sources/mpc-1.2.1/tools'
+make[1]: Entering directory '/sources/mpc-1.2.1'
+make[2]: Entering directory '/sources/mpc-1.2.1'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/include'
+ /usr/bin/install -c -m 644 src/mpc.h '/usr/include'
+make[2]: Leaving directory '/sources/mpc-1.2.1'
+make[1]: Leaving directory '/sources/mpc-1.2.1'
+Making install-html in src
+make[1]: Entering directory '/sources/mpc-1.2.1/src'
+make[1]: Nothing to be done for 'install-html'.
+make[1]: Leaving directory '/sources/mpc-1.2.1/src'
+Making install-html in tests
+make[1]: Entering directory '/sources/mpc-1.2.1/tests'
+make[1]: Nothing to be done for 'install-html'.
+make[1]: Leaving directory '/sources/mpc-1.2.1/tests'
+Making install-html in doc
+make[1]: Entering directory '/sources/mpc-1.2.1/doc'
+ /usr/bin/mkdir -p '/usr/share/doc/mpc-1.2.1'
+ /usr/bin/mkdir -p '/usr/share/doc/mpc-1.2.1/mpc.html'
+ /usr/bin/install -c -m 644 'mpc.html'/* '/usr/share/doc/mpc-1.2.1/mpc.html'
+make[1]: Leaving directory '/sources/mpc-1.2.1/doc'
+Making install-html in tools
+make[1]: Entering directory '/sources/mpc-1.2.1/tools'
+Making install-html in bench
+make[2]: Entering directory '/sources/mpc-1.2.1/tools/bench'
+make[2]: Nothing to be done for 'install-html'.
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools/bench'
+Making install-html in mpcheck
+make[2]: Entering directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[2]: Nothing to be done for 'install-html'.
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools/mpcheck'
+make[2]: Entering directory '/sources/mpc-1.2.1/tools'
+make[2]: Nothing to be done for 'install-html-am'.
+make[2]: Leaving directory '/sources/mpc-1.2.1/tools'
+make[1]: Leaving directory '/sources/mpc-1.2.1/tools'
+make[1]: Entering directory '/sources/mpc-1.2.1'
+make[1]: Nothing to be done for 'install-html-am'.
+make[1]: Leaving directory '/sources/mpc-1.2.1'
+[lfs-scripts] Finishing build of mpc-1.2.1 at Mon Sep 12 23:36:06 -03 2022
+(lfs chroot) root:/sources# 

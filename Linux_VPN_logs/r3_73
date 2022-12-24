@@ -1,0 +1,112 @@
+(lfs chroot) root:/sources# # 8.75. Sysvinit-2.99
+begin sysvinit-2.99 tar.xz
+patch -Np1 -i ../sysvinit-2.99-consolidated-1.patch
+make
+make install
+finish
+
+
+# Approximate build time: less than 0.1 SBU
+[lfs-scripts] Starting build of sysvinit-2.99 at Wed Sep 14 02:19:14 -03 2022
+patching file src/Makefile
+Hunk #2 succeeded at 211 (offset 2 lines).
+Hunk #3 succeeded at 236 (offset 2 lines).
+/usr/bin/make VERSION=2.99 -C src all
+make[1]: Entering directory '/sources/sysvinit-2.99/src'
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o init.o init.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"  -DINIT_MAIN -c -o init_utmp.o utmp.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o runlevellog.o runlevellog.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o halt.o halt.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o ifdown.o ifdown.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o hddown.o hddown.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o utmp.o utmp.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o shutdown.o shutdown.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o dowall.o dowall.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o runlevel.o runlevel.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"     killall5.c   -o killall5
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o fstab-decode.o fstab-decode.c
+cc -O2 -ansi -fomit-frame-pointer -fstack-protector-strong -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2 -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"2.99\"    -c -o bootlogd.o bootlogd.c
+cc   halt.o ifdown.o hddown.o utmp.o runlevellog.o   -o halt
+In file included from /usr/include/string.h:519,
+                 from killall5.c:52:
+In function 'strncpy',
+    inlined from 'check4nfs' at killall5.c:447:12:
+/usr/include/bits/string_fortified.h:95:10: warning: '__builtin_strncpy' output may be truncated copying 4096 bytes from a string of length 4096 [-Wstringop-truncation]
+   95 |   return __builtin___strncpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   96 |                                   __glibc_objsize (__dest));
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+cc   runlevel.o runlevellog.o   -o runlevel
+In file included from /usr/include/string.h:519,
+                 from init.c:53:
+In function 'strncpy',
+    inlined from 'check_kernel_console' at init.c:1393:6,
+    inlined from 'read_inittab' at init.c:1701:3:
+/usr/include/bits/string_fortified.h:95:10: warning: '__builtin_strncpy' output may be truncated copying 8 bytes from a string of length 31 [-Wstringop-truncation]
+   95 |   return __builtin___strncpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   96 |                                   __glibc_objsize (__dest));
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+In function 'strncpy',
+    inlined from 'check_kernel_console' at init.c:1391:6,
+    inlined from 'read_inittab' at init.c:1701:3:
+/usr/include/bits/string_fortified.h:95:10: warning: '__builtin_strncpy' output may be truncated copying 8 bytes from a string of length 28 [-Wstringop-truncation]
+   95 |   return __builtin___strncpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   96 |                                   __glibc_objsize (__dest));
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+cc   fstab-decode.o   -o fstab-decode
+cc   shutdown.o dowall.o utmp.o   -o shutdown
+cc   bootlogd.o  -lutil  -o bootlogd
+cc   init.o init_utmp.o runlevellog.o    -o init
+make[1]: Leaving directory '/sources/sysvinit-2.99/src'
+/usr/bin/make VERSION=2.99 -C src install
+make[1]: Entering directory '/sources/sysvinit-2.99/src'
+install -m 755 -d /bin/ /sbin/
+install -m 755 -d /usr/bin/
+for i in ; do \
+		install -o root -g root -m 755 $i /bin/ ; \
+	done
+for i in init halt shutdown runlevel killall5 fstab-decode bootlogd; do \
+		install -o root -g root -m 755 $i /sbin/ ; \
+	done
+for i in ; do \
+		install -o root -g root -m 755 $i /usr/bin/ ; \
+	done
+# install -m 755 -d /etc/
+install -m 755 -d /etc/inittab.d
+# install -o root -g root -m 755 ../doc/initscript.sample /etc/
+ln -sf halt /sbin/reboot
+ln -sf halt /sbin/poweroff
+ln -sf init /sbin/telinit
+#ln -sf /sbin/killall5 /bin/pidof
+#if [ ! -f /usr/bin/lastb ]; then \
+	#	ln -sf last /usr/bin/lastb; \
+	#fi
+install -m 755 -d /usr/include/
+install -o root -g root -m 644 initreq.h /usr/include/
+install -m 755 -d /usr/share/man/man1/
+install -m 755 -d /usr/share/man/man5/
+install -m 755 -d /usr/share/man/man8/
+for man in ; do \
+		install -o root -g root -m 644 ../man/$man /usr/share/man/man1/; \
+		sed -i "1{ s@^\('\\\\\"\)[^\*-]*-\*- coding: [^[:blank:]]\+ -\*-@\1@; }" /usr/share/man/man1/$man ; \
+	done
+for man in initscript.5 inittab.5 initctl.5; do \
+		install -o root -g root -m 644 ../man/$man /usr/share/man/man5/; \
+		sed -i "1{ s@^\('\\\\\"\)[^\*-]*-\*- coding: [^[:blank:]]\+ -\*-@\1@; }" /usr/share/man/man5/$man ; \
+	done
+for man in halt.8 init.8 killall5.8         poweroff.8 reboot.8 runlevel.8 shutdown.8 telinit.8 fstab-decode.8  bootlogd.8; do \
+		install -o root -g root -m 644 ../man/$man /usr/share/man/man8/; \
+		sed -i "1{ s@^\('\\\\\"\)[^\*-]*-\*- coding: [^[:blank:]]\+ -\*-@\1@; }" /usr/share/man/man8/$man ; \
+	done
+#
+# This part is skipped on Debian systems, the
+# debian.preinst script takes care of it.
+#@if [ ! -p /run/initctl ]; then \
+	#echo "Creating /run/initctl"; \
+	#rm -f /run/initctl; \
+	#mknod -m 600 /run/initctl p; fi
+make[1]: Leaving directory '/sources/sysvinit-2.99/src'
+[lfs-scripts] Finishing build of sysvinit-2.99 at Wed Sep 14 02:19:22 -03 2022
+(lfs chroot) root:/sources# 

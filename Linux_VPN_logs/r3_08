@@ -1,0 +1,383 @@
+(lfs chroot) root:/sources# begin file-5.40 tar.gz
+./configure --prefix=/usr
+make
+[lfs-scripts] Starting build of file-5.40 at Mon Sep 12 22:03:58 -03 2022
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for builtin ELF support... yes
+checking for ELF core file support... yes
+checking for zlib support... 
+checking for bzlib support... 
+checking for xzlib support... 
+checking for libseccomp support... 
+checking for file formats in man section 5... no
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for gcc option to accept ISO C99... none needed
+checking for gcc option to accept ISO Standard C... (cached) none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether byte ordering is bigendian... no
+checking whether ln -s works... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/aarch64-lfs-linux-gnu/bin/ld
+checking if the linker (/usr/aarch64-lfs-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/aarch64-lfs-linux-gnu/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/aarch64-lfs-linux-gnu/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+checking for ANSI C header files... (cached) yes
+checking whether sys/types.h defines makedev... no
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for stdint.h... (cached) yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for inttypes.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking wctype.h usability... yes
+checking wctype.h presence... yes
+checking for wctype.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking err.h usability... yes
+checking err.h presence... yes
+checking for err.h... yes
+checking xlocale.h usability... no
+checking xlocale.h presence... no
+checking for xlocale.h... no
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking sys/utime.h usability... no
+checking sys/utime.h presence... no
+checking for sys/utime.h... no
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/sysmacros.h... (cached) yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking bzlib.h usability... yes
+checking bzlib.h presence... yes
+checking for bzlib.h... yes
+checking lzma.h usability... yes
+checking lzma.h presence... yes
+checking for lzma.h... yes
+checking for sig_t... yes
+checking for off_t... yes
+checking for size_t... yes
+checking for struct stat.st_rdev... yes
+checking for struct tm.tm_gmtoff... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for tm_zone in struct tm... yes
+checking whether tzname is declared... yes
+checking for tzname... yes
+checking for tm_isdst in struct tm... yes
+checking whether daylight is declared... yes
+checking for daylight... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for mbstate_t... yes
+checking for struct option in getopt... yes
+checking for pid_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for int32_t... yes
+checking for uint64_t... yes
+checking for int64_t... yes
+checking for intptr_t... yes
+checking for uintptr_t... yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for getpagesize... yes
+checking for working mmap... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking whether mbrtowc and mbstate_t are properly declared... yes
+checking for gcc compiler warnings... yes
+checking for strndup... yes
+checking for mkstemp... yes
+checking for mkostemp... yes
+checking for utimes... yes
+checking for utime... yes
+checking for wcwidth... yes
+checking for strtof... yes
+checking for newlocale... yes
+checking for uselocale... yes
+checking for freelocale... yes
+checking for memmem... yes
+checking for pipe2... yes
+checking for getopt_long... yes
+checking for asprintf... yes
+checking for vasprintf... yes
+checking for strlcpy... no
+checking for strlcat... no
+checking for getline... yes
+checking for ctime_r... yes
+checking for asctime_r... yes
+checking for localtime_r... yes
+checking for gmtime_r... yes
+checking for pread... yes
+checking for strcasestr... yes
+checking for fmtcheck... no
+checking for dprintf... yes
+checking for gzopen in -lz... yes
+checking for BZ2_bzCompressInit in -lbz2... yes
+checking for lzma_stream_decoder in -llzma... yes
+checking for seccomp_init in -lseccomp... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating magic/Makefile
+config.status: creating tests/Makefile
+config.status: creating doc/Makefile
+config.status: creating python/Makefile
+config.status: creating libmagic.pc
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/sources/file-5.40'
+Making all in src
+make[2]: Entering directory '/sources/file-5.40/src'
+sed -e "s/X.YY/$(echo 5.40 | tr -d .)/" < ../src/magic.h.in > magic.h
+/usr/bin/make  all-am
+make[3]: Entering directory '/sources/file-5.40/src'
+  CC       file.o
+  CC       seccomp.o
+  CC       magic.lo
+  CC       buffer.lo
+  CC       softmagic.lo
+  CC       apprentice.lo
+  CC       ascmagic.lo
+  CC       encoding.lo
+  CC       compress.lo
+  CC       is_csv.lo
+  CC       is_json.lo
+  CC       is_tar.lo
+  CC       readelf.lo
+  CC       print.lo
+  CC       fsmagic.lo
+  CC       funcs.lo
+  CC       apptype.lo
+  CC       der.lo
+  CC       cdf.lo
+  CC       cdf_time.lo
+  CC       readcdf.lo
+  CC       strlcpy.lo
+  CC       strlcat.lo
+  CC       fmtcheck.lo
+  CCLD     libmagic.la
+  CCLD     file
+make[3]: Leaving directory '/sources/file-5.40/src'
+make[2]: Leaving directory '/sources/file-5.40/src'
+Making all in magic
+make[2]: Entering directory '/sources/file-5.40/magic'
+../src/file -C -m magic
+magic/mail.news, 84: Warning: Unparsable number `xu			\b, dcrypt version %d'
+make[2]: Leaving directory '/sources/file-5.40/magic'
+Making all in tests
+make[2]: Entering directory '/sources/file-5.40/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/file-5.40/tests'
+Making all in doc
+make[2]: Entering directory '/sources/file-5.40/doc'
+sed -e s@__CSECTION__@1@g \
+    -e s@__FSECTION__@4@g \
+    -e s@__VERSION__@5.40@g \
+    -e s@__MAGIC__@/usr/share/misc/magic@g ./file.man > file.1
+sed -e s@__CSECTION__@1@g \
+    -e s@__FSECTION__@4@g \
+    -e s@__VERSION__@5.40@g \
+    -e s@__MAGIC__@/usr/share/misc/magic@g ./magic.man > magic.4
+sed -e s@__CSECTION__@1@g \
+    -e s@__FSECTION__@4@g \
+    -e s@__VERSION__@5.40@g \
+    -e s@__MAGIC__@/usr/share/misc/magic@g ./libmagic.man > libmagic.3
+make[2]: Leaving directory '/sources/file-5.40/doc'
+Making all in python
+make[2]: Entering directory '/sources/file-5.40/python'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/file-5.40/python'
+make[2]: Entering directory '/sources/file-5.40'
+make[2]: Leaving directory '/sources/file-5.40'
+make[1]: Leaving directory '/sources/file-5.40'
+(lfs chroot) root:/sources/file-5.40# make install
+finish
+Making install in src
+make[1]: Entering directory '/sources/file-5.40/src'
+/usr/bin/make  install-am
+make[2]: Entering directory '/sources/file-5.40/src'
+make[3]: Entering directory '/sources/file-5.40/src'
+ /usr/bin/mkdir -p '/usr/include'
+ /usr/bin/mkdir -p '/usr/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libmagic.la '/usr/lib'
+ /usr/bin/install -c -m 644 magic.h '/usr/include'
+libtool: install: /usr/bin/install -c .libs/libmagic.so.1.0.0 /usr/lib/libmagic.so.1.0.0
+libtool: install: (cd /usr/lib && { ln -s -f libmagic.so.1.0.0 libmagic.so.1 || { rm -f libmagic.so.1 && ln -s libmagic.so.1.0.0 libmagic.so.1; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libmagic.so.1.0.0 libmagic.so || { rm -f libmagic.so && ln -s libmagic.so.1.0.0 libmagic.so; }; })
+libtool: install: /usr/bin/install -c .libs/libmagic.lai /usr/lib/libmagic.la
+libtool: finish: PATH="/usr/bin:/usr/sbin:/sbin" ldconfig -n /usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/usr/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c file '/usr/bin'
+libtool: install: /usr/bin/install -c .libs/file /usr/bin/file
+make[3]: Leaving directory '/sources/file-5.40/src'
+make[2]: Leaving directory '/sources/file-5.40/src'
+make[1]: Leaving directory '/sources/file-5.40/src'
+Making install in magic
+make[1]: Entering directory '/sources/file-5.40/magic'
+make[2]: Entering directory '/sources/file-5.40/magic'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/misc'
+ /usr/bin/install -c -m 644 magic.mgc '/usr/share/misc'
+make[2]: Leaving directory '/sources/file-5.40/magic'
+make[1]: Leaving directory '/sources/file-5.40/magic'
+Making install in tests
+make[1]: Entering directory '/sources/file-5.40/tests'
+make[2]: Entering directory '/sources/file-5.40/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/file-5.40/tests'
+make[1]: Leaving directory '/sources/file-5.40/tests'
+Making install in doc
+make[1]: Entering directory '/sources/file-5.40/doc'
+make[2]: Entering directory '/sources/file-5.40/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/mkdir -p '/usr/share/man/man4'
+ /usr/bin/mkdir -p '/usr/share/man/man5'
+ /usr/bin/mkdir -p '/usr/share/man/man3'
+ /usr/bin/install -c -m 644 file.1 '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 magic.4 '/usr/share/man/man4'
+ /usr/bin/install -c -m 644 libmagic.3 '/usr/share/man/man3'
+make[2]: Leaving directory '/sources/file-5.40/doc'
+make[1]: Leaving directory '/sources/file-5.40/doc'
+Making install in python
+make[1]: Entering directory '/sources/file-5.40/python'
+make[2]: Entering directory '/sources/file-5.40/python'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/file-5.40/python'
+make[1]: Leaving directory '/sources/file-5.40/python'
+make[1]: Entering directory '/sources/file-5.40'
+make[2]: Entering directory '/sources/file-5.40'
+make[2]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libmagic.pc '/usr/lib/pkgconfig'
+make[2]: Leaving directory '/sources/file-5.40'
+make[1]: Leaving directory '/sources/file-5.40'
+[lfs-scripts] Finishing build of file-5.40 at Mon Sep 12 22:06:10 -03 2022
+(lfs chroot) root:/sources# 

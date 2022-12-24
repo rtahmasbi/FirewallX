@@ -1,0 +1,1395 @@
+(lfs chroot) root:/sources# # 8.58. Groff-1.22.4
+begin groff-1.22.4 tar.gz
+PAGE=A4 ./configure --prefix=/usr
+make -j1
+make install
+finish
+[lfs-scripts] Starting build of groff-1.22.4 at Wed Sep 14 00:07:03 -03 2022
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether the preprocessor supports include_next... yes
+checking whether system header files limit the line length... no
+checking for complete errno.h... yes
+checking for stdint.h... yes
+checking for inttypes.h... yes
+checking whether printf supports size specifiers as in C99... yes
+checking whether printf supports 'long double' arguments... yes
+checking whether printf supports infinite 'double' arguments... yes
+checking whether byte ordering is bigendian... no
+checking whether long double and double are the same... no
+checking whether printf supports infinite 'long double' arguments... yes
+checking whether printf supports the 'a' and 'A' directives... yes
+checking whether printf supports the 'F' directive... yes
+checking whether printf supports the 'n' directive... yes
+checking whether printf supports the 'ls' directive... yes
+checking whether printf supports POSIX/XSI format strings with positions... yes
+checking whether printf supports the grouping flag... yes
+checking whether printf supports the left-adjust flag correctly... yes
+checking whether printf supports the zero flag correctly... yes
+checking whether printf supports large precisions... yes
+checking whether printf survives out-of-memory conditions... yes
+checking for vasnprintf... no
+checking for snprintf... yes
+checking for __fseterr... no
+checking for symlink... yes
+checking for mprotect... yes
+checking for iswcntrl... yes
+checking for wcwidth... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking for wchar_t... yes
+checking for wint_t... yes
+checking whether wint_t is too small... no
+checking for features.h... yes
+checking for limits.h... yes
+checking for unistd.h... (cached) yes
+checking for math.h... yes
+checking for sys/mman.h... yes
+checking for wchar.h... yes
+checking for stdint.h... (cached) yes
+checking for crtdefs.h... no
+checking for wctype.h... yes
+checking for stdlib.h... (cached) yes
+checking for sys/param.h... yes
+checking for intmax_t... yes
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking whether snprintf returns a byte count as in C99... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking whether frexp() can be used without linking with libm... yes
+checking whether alarm is declared... yes
+checking host CPU and C ABI... arm64
+checking where to find the exponent in a 'float'... word 0 bit 23
+checking whether limits.h has LLONG_MAX, WORD_BIT, ULLONG_WIDTH etc.... yes
+checking for nl_langinfo and CODESET... yes
+checking for working fcntl.h... yes
+checking whether getc_unlocked is declared... yes
+checking whether we are using the GNU C Library >= 2.1 or uClibc... yes
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether snprintf is declared... yes
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h predates C++11... no
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking for C/C++ restrict keyword... __restrict
+checking for pid_t... yes
+checking for mode_t... yes
+checking whether vsnprintf is declared... yes
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking for inline... inline
+checking for alloca as a compiler built-in... yes
+checking whether conversion from 'int' to 'long double' works... yes
+checking whether frexp works... yes
+checking whether frexpl is declared... yes
+checking whether frexpl() can be used without linking with libm... yes
+checking whether frexpl works... yes
+checking whether isnan(double) can be used without linking with libm... yes
+checking whether isnan(float) can be used without linking with libm... yes
+checking whether isnan(float) works... yes
+checking whether isnan(long double) can be used without linking with libm... yes
+checking whether isnanl works... yes
+checking whether NAN macro works... yes
+checking whether HUGE_VAL works... yes
+checking whether frexp works... (cached) yes
+checking whether ldexp can be used without linking with libm... yes
+checking whether frexpl() can be used without linking with libm... (cached) yes
+checking whether frexpl works... (cached) yes
+checking whether frexpl is declared... (cached) yes
+checking whether ldexpl() can be used without linking with libm... yes
+checking whether ldexpl works... yes
+checking whether ldexpl is declared... yes
+checking for signbit macro... yes
+checking for signbit compiler built-ins... yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for snprintf... (cached) yes
+checking whether snprintf respects a size of 1... yes
+checking whether printf supports POSIX/XSI format strings with positions... (cached) yes
+checking for ssize_t... yes
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking for ptrdiff_t... yes
+checking for vsnprintf... yes
+checking whether snprintf respects a size of 1... (cached) yes
+checking whether printf supports POSIX/XSI format strings with positions... (cached) yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking whether wcwidth is declared... yes
+checking whether wcwidth works reasonably in UTF-8 locales... yes
+checking for stdint.h... (cached) yes
+checking that C++ compiler can compile simple program... yes
+checking that C++ static constructors and destructors are called... yes
+checking that header files support C++... yes
+checking whether character set is EBCDIC... no
+checking whether to install .cmd wrapper scripts for Windows... no
+checking for X... no
+configure: gxditview and xtotroff won't be built
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for perl... /usr/bin/perl
+checking for perl version... 5.34.0
+checking for lpr... no
+checking for lp... no
+checking for command to use for printing PostScript files... 
+checking for command to use for printing dvi files... 
+checking for egrep... (cached) /usr/bin/grep -E
+checking for byacc... no
+checking for bison... bison -y
+checking for makeinfo... makeinfo
+checking for makeinfo version... 6.8
+checking for texi2dvi... found
+checking for ranlib... (cached) ranlib
+checking for install-info... install-info
+checking whether ln -s works... yes
+checking for xpmtoppm... missing
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for UCHARDET... no
+configure: WARNING: uchardet library not found, preconv might not work properly
+checking for pdfinfo... missing
+checking for pdffonts... missing
+checking for pdfimages... missing
+checking for csh hash hack... no
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking for limits.h... (cached) yes
+checking sys/dir.h usability... yes
+checking sys/dir.h presence... yes
+checking for sys/dir.h... yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for math.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking direct.h usability... no
+checking direct.h presence... no
+checking for direct.h... no
+checking process.h usability... no
+checking process.h presence... no
+checking for process.h... no
+checking for ISC 3.x or 4.x... no
+checking whether -D_POSIX_SOURCE is necessary... no
+checking for return type of srand... void
+checking whether gettimeofday must be declared... no
+checking whether popen must be declared... no
+checking whether pclose must be declared... no
+checking whether putenv must be declared... no
+checking whether rand must be declared... no
+checking whether srand must be declared... no
+checking whether strcasecmp must be declared... no
+checking whether strncasecmp must be declared... no
+checking whether vfprintf must be declared... no
+checking for sys_nerr in <errno.h>, <stdio.h>, or <stdlib.h>... no
+checking for sys_errlist in <errno.h>, <stdio.h>, or <stdlib.h>... no
+checking C++ <osfcn.h>... no
+checking C++ <limits.h>... yes
+checking C++ <inttypes.h>... yes
+checking for unsigned long long... yes
+checking for declaration of time_t... yes
+checking for return type of signal handlers... void
+checking struct exception... no
+checking whether byte ordering is bigendian... (cached) no
+checking for main in -lc... yes
+checking for sin in -lm... yes
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking how to run the C++ preprocessor... g++ -E
+checking for iconv... yes
+checking for working iconv... yes
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking for getpagesize... yes
+checking for working mmap... yes
+checking for fmod... yes
+checking for getcwd... yes
+checking for putenv... yes
+checking for strcasecmp... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strtol... yes
+checking for gettimeofday... yes
+checking for isatty... yes
+checking for kill... yes
+checking for rename... yes
+checking for setlocale... yes
+checking for strsep... yes
+checking for mkstemp... yes
+checking whether sys_siglist is declared... no
+checking whether getc_unlocked is declared... (cached) yes
+checking for nl_langinfo and CODESET... (cached) yes
+checking whether ANSI array delete syntax is supported... yes
+checking traditional preprocessor... no
+checking w_coredump... no
+checking default value for grops -b option... 0
+checking default paper size... A4
+checking for existing troff installation... no
+checking for prefix of system macro packages... 
+checking which system macro packages should be made available... 
+checking separator character to use in groff search paths... :
+checking for gs... no
+checking for gswin32c... no
+checking for gsos2... no
+checking for pnmcut... missing
+checking for pnmcrop... missing
+checking for pnmtopng... missing
+checking for psselect... missing
+checking for pnmtops... missing
+configure: WARNING: missing programs:
+
+  The programs
+     'pnmcut', 'pnmcrop', 'pnmtopng', 'psselect', 'pnmtops' and 'gs'
+  cannot be found in the PATH.
+  Consequently, groff's HTML backend (grohtml) will not work properly;
+  therefore, it will neither be possible to prepare, nor to install,
+  documentation in HTML format.
+     
+configure: WARNING: missing program:
+
+  The program 'gs' cannot be found in the PATH.
+  Consequently, groff's PDF formatter (pdfroff) will not work properly;
+  therefore, it will neither be possible to prepare, nor to install,
+  documentation and most of the examples in PDF format.
+     
+checking whether pnmtops can handle the -nosetpage option... no
+checking whether make has builtin variable RM... yes
+checking for a diff program that supports option -D... yes
+checking whether test supports option -ef... yes
+checking for bash... /usr/bin/bash
+checking whether we are using the GNU C Library >= 2.1 or uClibc... (cached) yes
+checking whether URW fonts in pfb format are available... configure: WARNING: awk and gs are required, can't look for URW fonts
+no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating test-groff
+config.status: creating src/include/config.h
+config.status: executing depfiles commands
+
+GNU Troff version 1.22.4
+----------------------------------------------------------------------
+ Prefix                          : /usr
+ Compiler                        : gcc -g -O2 
+ X11 support                     : no
+ Doc build                       : yes 
+ URW fonts for pdf               : no
+ Use uchardet library for preconv: no
+ pdftools for distcheck          : no
+----------------------------------------------------------------------
+configure:
+  No URW fonts in .pfb format were found on your system, URW fonts
+  generation for 'devpdf' will not work properly.  These fonts can be
+  downloaded here:
+
+    http://downloads.ghostscript.com/public/fonts/urw-base35-v1.10.zip
+
+  By default groff will search these fonts in the paths given by `gs
+  -h' and in these 2 default directories:
+  '/usr/share/fonts/type1/gsfonts/' and
+  '/opt/local/share/fonts/urw-fonts/' (paths used by
+  font/devpdf/Foundry.in).  You can also pass the option
+  '--with-urw-fonts-dir=DIR' to 'configure' to set a custom path.  You
+  would need to re-run the 'configure' script after installing these
+  fonts.
+
+  
+configure: WARNING:
+  uchardet library was not found; preprocessor 'preconv', which uses it to detect
+  the input file encoding, might not work properly (to check how and in which
+  order 'preconv' tries to determine the file encoding, see its man page).
+  
+  GEN      lib/alloca.h
+  GEN      lib/limits.h
+  GEN      lib/math.h
+  GEN      lib/stdio.h
+  GEN      lib/string.h
+  GEN      lib/sys/types.h
+  GEN      lib/unitypes.h
+  GEN      lib/uniwidth.h
+  GEN      lib/wchar.h
+  GEN      lib/wctype.h
+  GEN      contrib/chem/README
+LANG=C \
+LC_ALL=C \
+makeinfo -o doc/groff.info --enable-encoding -I/sources/groff-1.22.4/doc /sources/groff-1.22.4/doc/groff.texi
+  GEN      afmtodit
+  GEN      font/devpdf/DESC
+cp -f ./font/devps/text.enc \
+  ./font/devpdf/enc
+  GEN      font/devpdf/Foundry
+/bin/sh ./arch/misc/shdeps.sh ":" ":" "/usr/bin" > shdeps.sed
+  GEN      font/devpdf/util/BuildFoundries
+  GEN      ./font/devpdf/download
+BuildFoundries: warning: line 28: Unable to locate font(s) URWGothic-Demi,URWGothicL-Demi,a010015l.pfb
+BuildFoundries: warning: line 29: Unable to locate font(s) URWGothic-DemiOblique,URWGothicL-DemiObli,a010035l.pfb
+BuildFoundries: warning: line 30: Unable to locate font(s) URWGothic-BookOblique,URWGothicL-BookObli,a010033l.pfb
+BuildFoundries: warning: line 31: Unable to locate font(s) URWGothic-Book,URWGothicL-Book,a010013l.pfb
+BuildFoundries: warning: line 32: Unable to locate font(s) URWBookman-Demi,URWBookmanL-DemiBold,b018015l.pfb
+BuildFoundries: warning: line 33: Unable to locate font(s) URWBookman-DemiItalic,URWBookmanL-DemiBoldItal,b018035l.pfb
+BuildFoundries: warning: line 34: Unable to locate font(s) URWBookman-Light,URWBookmanL-LighItal,b018032l.pfb
+BuildFoundries: warning: line 35: Unable to locate font(s) URWBookman-LightItalic,URWBookmanL-Ligh,b018012l.pfb
+BuildFoundries: notice: Copied grops font CB...
+BuildFoundries: notice: Copied grops font CBI...
+BuildFoundries: notice: Copied grops font CI...
+BuildFoundries: notice: Copied grops font CR...
+BuildFoundries: notice: Copied grops font EURO...
+BuildFoundries: notice: Copied grops font HB...
+BuildFoundries: notice: Copied grops font HBI...
+BuildFoundries: notice: Copied grops font HI...
+BuildFoundries: warning: line 44: Unable to locate font(s) NimbusSansNarrow-Bold,NimbusSanL-BoldCond,n019044l.pfb
+BuildFoundries: warning: line 45: Unable to locate font(s) NimbusSansNarrow-BoldOblique,NimbusSansNarrow-BdOblique,NimbusSanL-BoldCondItal,n019064l.pfb
+BuildFoundries: warning: line 46: Unable to locate font(s) NimbusSansNarrow-Oblique,NimbusSanL-ReguCondItal,n019063l.pfb
+BuildFoundries: warning: line 47: Unable to locate font(s) NimbusSansNarrow-Regular,NimbusSanL-ReguCond,n019043l.pfb
+BuildFoundries: notice: Copied grops font HR...
+BuildFoundries: warning: line 49: Unable to locate font(s) C059-Bold,CenturySchL-Bold,c059016l.pfb
+BuildFoundries: warning: line 50: Unable to locate font(s) C059-BdIta,CenturySchL-BoldItal,c059036l.pfb
+BuildFoundries: warning: line 51: Unable to locate font(s) C059-Italic,CenturySchL-Ital,c059033l.pfb
+BuildFoundries: warning: line 52: Unable to locate font(s) C059-Roman,CenturySchL-Roma,c059013l.pfb
+BuildFoundries: warning: line 53: Unable to locate font(s) P052-Bold,URWPalladioL-Bold,p052004l.pfb
+BuildFoundries: warning: line 54: Unable to locate font(s) P052-BoldItalic,URWPalladioL-BoldItal,p052024l.pfb
+BuildFoundries: warning: line 55: Unable to locate font(s) P052-Italic,URWPalladioL-Ital,p052023l.pfb
+BuildFoundries: warning: line 56: Unable to locate font(s) P052-Roman,URWPalladioL-Roma,p052003l.pfb
+BuildFoundries: notice: Copied grops font S...
+BuildFoundries: notice: Copied grops font TB...
+BuildFoundries: notice: Copied grops font TBI...
+BuildFoundries: notice: Copied grops font TI...
+BuildFoundries: notice: Copied grops font TR...
+BuildFoundries: warning: line 62: Unable to locate font(s) Z003-MediumItalic,URWChanceryL-MediItal,z003034l.pfb
+BuildFoundries: notice: Copied grops font ZD...
+BuildFoundries: warning: line 68: 
+The path(s) used for searching:
+  : /sources/groff-1.22.4/font/devps : /sources/groff-1.22.4/font/devps
+
+BuildFoundries: warning: line 77: Failed to create groff font 'U-AB' by running afmtodit
+BuildFoundries: warning: line 78: Failed to create groff font 'U-ABI' by running afmtodit
+BuildFoundries: warning: line 79: Failed to create groff font 'U-AI' by running afmtodit
+BuildFoundries: warning: line 80: Failed to create groff font 'U-AR' by running afmtodit
+BuildFoundries: warning: line 81: Failed to create groff font 'U-BMB' by running afmtodit
+BuildFoundries: warning: line 82: Failed to create groff font 'U-BMBI' by running afmtodit
+BuildFoundries: warning: line 83: Failed to create groff font 'U-BMI' by running afmtodit
+BuildFoundries: warning: line 84: Failed to create groff font 'U-BMR' by running afmtodit
+BuildFoundries: warning: line 85: Failed to create groff font 'U-CB' by running afmtodit
+BuildFoundries: warning: line 86: Failed to create groff font 'U-CBI' by running afmtodit
+BuildFoundries: warning: line 87: Failed to create groff font 'U-CI' by running afmtodit
+BuildFoundries: warning: line 88: Failed to create groff font 'U-CR' by running afmtodit
+BuildFoundries: warning: line 89: Failed to create groff font 'U-HB' by running afmtodit
+BuildFoundries: warning: line 90: Failed to create groff font 'U-HBI' by running afmtodit
+BuildFoundries: warning: line 91: Failed to create groff font 'U-HI' by running afmtodit
+BuildFoundries: warning: line 92: Failed to create groff font 'U-HNB' by running afmtodit
+BuildFoundries: warning: line 93: Failed to create groff font 'U-HNBI' by running afmtodit
+BuildFoundries: warning: line 94: Failed to create groff font 'U-HNI' by running afmtodit
+BuildFoundries: warning: line 95: Failed to create groff font 'U-HNR' by running afmtodit
+BuildFoundries: warning: line 96: Failed to create groff font 'U-HR' by running afmtodit
+BuildFoundries: warning: line 97: Failed to create groff font 'U-NB' by running afmtodit
+BuildFoundries: warning: line 98: Failed to create groff font 'U-NBI' by running afmtodit
+BuildFoundries: warning: line 99: Failed to create groff font 'U-NI' by running afmtodit
+BuildFoundries: warning: line 100: Failed to create groff font 'U-NR' by running afmtodit
+BuildFoundries: warning: line 101: Failed to create groff font 'U-PB' by running afmtodit
+BuildFoundries: warning: line 102: Failed to create groff font 'U-PBI' by running afmtodit
+BuildFoundries: warning: line 103: Failed to create groff font 'U-PI' by running afmtodit
+BuildFoundries: warning: line 104: Failed to create groff font 'U-PR' by running afmtodit
+BuildFoundries: warning: line 105: Failed to create groff font 'U-S' by running afmtodit
+BuildFoundries: warning: line 106: Failed to create groff font 'U-TB' by running afmtodit
+BuildFoundries: warning: line 107: Failed to create groff font 'U-TBI' by running afmtodit
+BuildFoundries: warning: line 108: Failed to create groff font 'U-TI' by running afmtodit
+BuildFoundries: warning: line 109: Failed to create groff font 'U-TR' by running afmtodit
+BuildFoundries: warning: line 110: Failed to create groff font 'U-ZCMI' by running afmtodit
+BuildFoundries: warning: line 111: Failed to create groff font 'U-ZD' by running afmtodit
+BuildFoundries: warning: line 113: 
+The path(s) used for searching:
+ : :/usr/share/fonts/type1/gsfonts :/opt/local/share/fonts/urw-fonts : /sources/groff-1.22.4/font/devps : /sources/groff-1.22.4/font/devps
+
+/bin/sh ./src/libs/libgroff/config.charset '' > t-charset.alias
+mv t-charset.alias charset.alias
+sed -e '/^#/d' \
+    -e 's/@''PACKAGE''@/groff/g' ./src/libs/libgroff/ref-add.sin > t-ref-add.sed
+mv t-ref-add.sed ref-add.sed
+sed -e '/^#/d' \
+    -e 's/@''PACKAGE''@/groff/g' ./src/libs/libgroff/ref-del.sin > t-ref-del.sed
+mv t-ref-del.sed ref-del.sed
+/usr/bin/mkdir -p ./tmac;
+if test -n ""; then \
+  for m in ""; do \
+    rm -f ./tmac/$m-wrap; \
+    if test "$m" = an; then \
+      echo .do mso andoc.tmac >>./tmac/$m-wrap; \
+    fi; \
+    echo .cp 1 >>./tmac/$m-wrap; \
+    echo .so $m >>./tmac/$m-wrap; \
+  done; \
+fi
+touch tmac/stamp-wrap
+/usr/bin/make  all-am
+make[1]: Entering directory '/sources/groff-1.22.4'
+  CXX      src/devices/grodvi/dvi.o
+  CXX      src/libs/libdriver/input.o
+  CXX      src/libs/libdriver/printer.o
+  AR       libdriver.a
+  CXX      src/libs/libgroff/libgroff_a-assert.o
+  CXX      src/libs/libgroff/libgroff_a-change_lf.o
+  CXX      src/libs/libgroff/libgroff_a-cmap.o
+  CXX      src/libs/libgroff/libgroff_a-color.o
+  CXX      src/libs/libgroff/libgroff_a-cset.o
+  CXX      src/libs/libgroff/libgroff_a-curtime.o
+  CXX      src/libs/libgroff/libgroff_a-device.o
+  CXX      src/libs/libgroff/libgroff_a-errarg.o
+  CXX      src/libs/libgroff/libgroff_a-error.o
+  CXX      src/libs/libgroff/libgroff_a-fatal.o
+  CXX      src/libs/libgroff/libgroff_a-filename.o
+  CXX      src/libs/libgroff/libgroff_a-font.o
+  CXX      src/libs/libgroff/libgroff_a-fontfile.o
+  CXX      src/libs/libgroff/libgroff_a-geometry.o
+  CC       src/libs/libgroff/libgroff_a-getopt.o
+  CC       src/libs/libgroff/libgroff_a-getopt1.o
+  CXX      src/libs/libgroff/libgroff_a-glyphuni.o
+  CXX      src/libs/libgroff/libgroff_a-htmlhint.o
+  CXX      src/libs/libgroff/libgroff_a-hypot.o
+  CC       src/libs/libgroff/libgroff_a-iftoa.o
+  CXX      src/libs/libgroff/libgroff_a-invalid.o
+  CC       src/libs/libgroff/libgroff_a-itoa.o
+  CXX      src/libs/libgroff/libgroff_a-lf.o
+  CXX      src/libs/libgroff/libgroff_a-lineno.o
+  CC       src/libs/libgroff/libgroff_a-localcharset.o
+  CXX      src/libs/libgroff/libgroff_a-macropath.o
+  CC       src/libs/libgroff/libgroff_a-matherr.o
+  CXX      src/libs/libgroff/libgroff_a-maxfilename.o
+  CXX      src/libs/libgroff/libgroff_a-maxpathname.o
+  CXX      src/libs/libgroff/libgroff_a-mksdir.o
+  CXX      src/libs/libgroff/libgroff_a-nametoindex.o
+  CXX      src/libs/libgroff/libgroff_a-new.o
+  CXX      src/libs/libgroff/libgroff_a-paper.o
+  CXX      src/libs/libgroff/libgroff_a-prime.o
+  CC       src/libs/libgroff/libgroff_a-progname.o
+  CXX      src/libs/libgroff/libgroff_a-ptable.o
+  CC       src/libs/libgroff/libgroff_a-quotearg.o
+  CXX      src/libs/libgroff/libgroff_a-relocate.o
+  CXX      src/libs/libgroff/libgroff_a-searchpath.o
+  CC       src/libs/libgroff/libgroff_a-spawnvp.o
+  CXX      src/libs/libgroff/libgroff_a-string.o
+  CXX      src/libs/libgroff/libgroff_a-strsave.o
+  CXX      src/libs/libgroff/libgroff_a-symbol.o
+  CXX      src/libs/libgroff/libgroff_a-tmpfile.o
+  CXX      src/libs/libgroff/libgroff_a-tmpname.o
+  CXX      src/libs/libgroff/libgroff_a-unicode.o
+  CXX      src/libs/libgroff/libgroff_a-uniglyph.o
+  CXX      src/libs/libgroff/libgroff_a-uniuni.o
+Making version.cpp
+  CXX      src/libs/libgroff/libgroff_a-version.o
+  AR       libgroff.a
+  CC       lib/localcharset.o
+  CC       lib/math.o
+  CC       lib/printf-frexp.o
+  CC       lib/printf-frexpl.o
+  CC       lib/uniwidth/width.o
+  CC       lib/wctype-h.o
+  CC       lib/xsize.o
+  CC       lib/asnprintf.o
+  CC       lib/fseterr.o
+  CC       lib/printf-args.o
+  CC       lib/printf-parse.o
+  CC       lib/vasnprintf.o
+  AR       lib/libgnu.a
+  CXXLD    grodvi
+  CXX      src/devices/grohtml/post-html.o
+  CXX      src/devices/grohtml/html-table.o
+  CXX      src/devices/grohtml/html-text.o
+  CXX      src/devices/grohtml/output.o
+  CXXLD    post-grohtml
+  CXX      src/devices/grolbp/lbp.o
+  CXXLD    grolbp
+  CXX      src/devices/grolj4/lj4.o
+  CXXLD    grolj4
+  CXX      src/devices/grops/ps.o
+  CXX      src/devices/grops/psrm.o
+  CXXLD    grops
+  CXX      src/devices/grotty/tty.o
+  CXXLD    grotty
+  CXX      src/preproc/html/pre-html.o
+  CXX      src/preproc/html/pushback.o
+  CXXLD    pre-grohtml
+  CXX      src/preproc/preconv/preconv-preconv.o
+  CXXLD    preconv
+  CXX      src/roff/groff/groff.o
+  CC       src/roff/groff/pipeline.o
+  CXXLD    groff
+  CXX      src/utils/addftinfo/addftinfo.o
+  CXX      src/utils/addftinfo/guess.o
+  CXXLD    addftinfo
+  CXX      src/utils/hpftodit/hpftodit.o
+  CXX      src/utils/hpftodit/hpuni.o
+  CXXLD    hpftodit
+  CXX      src/utils/lkbib/lkbib.o
+  CXX      src/libs/libbib/common.o
+  CXX      src/libs/libbib/index.o
+  CXX      src/libs/libbib/linear.o
+  CXX      src/libs/libbib/search.o
+  CC       src/libs/libbib/map.o
+  AR       libbib.a
+  CXXLD    lkbib
+  CC       src/utils/pfbtops/pfbtops.o
+  CXXLD    pfbtops
+  CXX      src/utils/tfmtodit/tfmtodit.o
+  CXXLD    tfmtodit
+  CXX      src/preproc/eqn/eqn-main.o
+  CXX      src/preproc/eqn/eqn-lex.o
+  CXX      src/preproc/eqn/eqn-box.o
+  CXX      src/preproc/eqn/eqn-limit.o
+  CXX      src/preproc/eqn/eqn-list.o
+  CXX      src/preproc/eqn/eqn-over.o
+  CXX      src/preproc/eqn/eqn-text.o
+  CXX      src/preproc/eqn/eqn-script.o
+  CXX      src/preproc/eqn/eqn-mark.o
+  CXX      src/preproc/eqn/eqn-other.o
+  CXX      src/preproc/eqn/eqn-delim.o
+  CXX      src/preproc/eqn/eqn-sqrt.o
+  CXX      src/preproc/eqn/eqn-pile.o
+  CXX      src/preproc/eqn/eqn-special.o
+  CXX      src/preproc/eqn/eqn-eqn.o
+  CXXLD    eqn
+  CXX      src/preproc/grn/hdb.o
+src/preproc/grn/hdb.cpp:38:30: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   38 | int DBGetType(register char *s);
+      |                              ^
+src/preproc/grn/hdb.cpp: In function 'ELT* DBCreateElt(int, POINT*, int, int, char*, ELT**)':
+src/preproc/grn/hdb.cpp:64:17: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   64 |   register ELT *temp;
+      |                 ^~~~
+src/preproc/grn/hdb.cpp: At global scope:
+src/preproc/grn/hdb.cpp:83:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   83 | DBRead(register FILE *file)
+      |                       ^~~~
+src/preproc/grn/hdb.cpp: In function 'ELT* DBRead(FILE*)':
+src/preproc/grn/hdb.cpp:85:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   85 |   register int i;
+      |                ^
+src/preproc/grn/hdb.cpp:86:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   86 |   register int done;            /* flag for input exhausted */
+      |                ^~~~
+src/preproc/grn/hdb.cpp:87:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   87 |   register double nx;           /* x holder so x is not set before orienting */
+      |                   ^~
+src/preproc/grn/hdb.cpp: At global scope:
+src/preproc/grn/hdb.cpp:212:26: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  212 | DBGetType(register char *s)
+      |                          ^
+  CXX      src/preproc/grn/hpoint.o
+src/preproc/grn/hpoint.cpp: In function 'POINT* PTMakePoint(double, double, POINT**)':
+src/preproc/grn/hpoint.cpp:35:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   35 |   register POINT *pt;
+      |                   ^~
+  CXX      src/preproc/grn/hgraph.o
+src/preproc/grn/hgraph.cpp:51:55: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   51 | void HGPutText(int justify, POINT pnt, register char *string);
+      |                                                       ^~~~~~
+src/preproc/grn/hgraph.cpp:61:25: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   61 | void HGArc(register int cx, register int cy, int px, int py, int angle);
+      |                         ^~
+src/preproc/grn/hgraph.cpp:61:42: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   61 | void HGArc(register int cx, register int cy, int px, int py, int angle);
+      |                                          ^~
+src/preproc/grn/hgraph.cpp:62:28: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   62 | void picurve(register int *x, register int *y, int npts);
+      |                            ^
+src/preproc/grn/hgraph.cpp:62:45: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   62 | void picurve(register int *x, register int *y, int npts);
+      |                                             ^
+src/preproc/grn/hgraph.cpp: In function 'void HGPrintElt(ELT*, int)':
+src/preproc/grn/hgraph.cpp:86:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   86 |   register POINT *p1;
+      |                   ^~
+src/preproc/grn/hgraph.cpp:87:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   87 |   register POINT *p2;
+      |                   ^~
+src/preproc/grn/hgraph.cpp:88:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   88 |   register int length;
+      |                ^~~~~~
+src/preproc/grn/hgraph.cpp:89:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   89 |   register int graylevel;
+      |                ^~~~~~~~~
+src/preproc/grn/hgraph.cpp: At global scope:
+src/preproc/grn/hgraph.cpp:281:26: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  281 |           register char *string)
+      |                          ^~~~~~
+src/preproc/grn/hgraph.cpp: In function 'void HGSetBrush(int)':
+src/preproc/grn/hgraph.cpp:390:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  390 |   register int printed = 0;
+      |                ^~~~~~~
+src/preproc/grn/hgraph.cpp: In function 'void deltax(double)':
+src/preproc/grn/hgraph.cpp:420:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  420 |   register int ix = (int) (x * troffscale);
+      |                ^~
+src/preproc/grn/hgraph.cpp: In function 'void deltay(double)':
+src/preproc/grn/hgraph.cpp:440:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  440 |   register int iy = (int) (y * troffscale);
+      |                ^~
+src/preproc/grn/hgraph.cpp: In function 'void tmove2(int, int)':
+src/preproc/grn/hgraph.cpp:460:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  460 |   register int dx;
+      |                ^~
+src/preproc/grn/hgraph.cpp:461:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  461 |   register int dy;
+      |                ^~
+src/preproc/grn/hgraph.cpp: In function 'void tmove(POINT*)':
+src/preproc/grn/hgraph.cpp:486:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  486 |   register int ix = (int) (ptr->x * troffscale);
+      |                ^~
+src/preproc/grn/hgraph.cpp:487:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  487 |   register int iy = (int) (ptr->y * troffscale);
+      |                ^~
+src/preproc/grn/hgraph.cpp:488:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  488 |   register int dx;
+      |                ^~
+src/preproc/grn/hgraph.cpp:489:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  489 |   register int dy;
+      |                ^~
+src/preproc/grn/hgraph.cpp: In function 'void drawwig(POINT*, int)':
+src/preproc/grn/hgraph.cpp:550:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  550 |   register int npts;                    /* point list index */
+      |                ^~~~
+src/preproc/grn/hgraph.cpp: At global scope:
+src/preproc/grn/hgraph.cpp:577:20: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  577 | HGArc(register int cx,
+      |                    ^~
+src/preproc/grn/hgraph.cpp:578:20: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  578 |       register int cy,
+      |                    ^~
+src/preproc/grn/hgraph.cpp: In function 'void HGArc(int, int, int, int, int)':
+src/preproc/grn/hgraph.cpp:585:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  585 |   register int mask;
+      |                ^~~~
+src/preproc/grn/hgraph.cpp:586:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  586 |   register int extent;
+      |                ^~~~~~
+src/preproc/grn/hgraph.cpp:587:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  587 |   register int nx;
+      |                ^~
+src/preproc/grn/hgraph.cpp:588:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  588 |   register int ny;
+      |                ^~
+src/preproc/grn/hgraph.cpp:589:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  589 |   register int length;
+      |                ^~~~~~
+src/preproc/grn/hgraph.cpp:590:19: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  590 |   register double epsilon;
+      |                   ^~~~~~~
+src/preproc/grn/hgraph.cpp: At global scope:
+src/preproc/grn/hgraph.cpp:636:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  636 | picurve(register int *x,
+      |                       ^
+src/preproc/grn/hgraph.cpp:637:23: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  637 |         register int *y,
+      |                       ^
+src/preproc/grn/hgraph.cpp: In function 'void picurve(int*, int*, int)':
+src/preproc/grn/hgraph.cpp:640:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  640 |   register int nseg;            /* effective resolution for each curve */
+      |                ^~~~
+src/preproc/grn/hgraph.cpp:641:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  641 |   register int xp;              /* current point (and temporary) */
+      |                ^~
+src/preproc/grn/hgraph.cpp:642:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  642 |   register int yp;
+      |                ^~
+src/preproc/grn/hgraph.cpp: In function 'void HGCurve(int*, int*, int)':
+src/preproc/grn/hgraph.cpp:713:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  713 |   register int j;
+      |                ^
+src/preproc/grn/hgraph.cpp:714:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  714 |   register int k;
+      |                ^
+src/preproc/grn/hgraph.cpp:715:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  715 |   register int nx;
+      |                ^~
+src/preproc/grn/hgraph.cpp:716:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  716 |   register int ny;
+      |                ^~
+src/preproc/grn/hgraph.cpp: In function 'void Paramaterize(int*, int*, double*, int)':
+src/preproc/grn/hgraph.cpp:779:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  779 |   register int dx;
+      |                ^~
+src/preproc/grn/hgraph.cpp:780:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  780 |   register int dy;
+      |                ^~
+src/preproc/grn/hgraph.cpp:781:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  781 |   register int i;
+      |                ^
+src/preproc/grn/hgraph.cpp:782:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  782 |   register int j;
+      |                ^
+src/preproc/grn/hgraph.cpp: At global scope:
+src/preproc/grn/hgraph.cpp:940:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  940 | change(register int x,
+      |                     ^
+src/preproc/grn/hgraph.cpp:941:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  941 |        register int y,
+      |                     ^
+src/preproc/grn/hgraph.cpp:942:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  942 |        register int vis)
+      |                     ^~~
+src/preproc/grn/hgraph.cpp: In function 'void HGtline(int, int)':
+src/preproc/grn/hgraph.cpp:970:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  970 |   register int x_0 = lastx;
+      |                ^~~
+src/preproc/grn/hgraph.cpp:971:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  971 |   register int y_0 = lasty;
+      |                ^~~
+src/preproc/grn/hgraph.cpp:972:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  972 |   register int dx;
+      |                ^~
+src/preproc/grn/hgraph.cpp:973:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  973 |   register int dy;
+      |                ^~
+src/preproc/grn/hgraph.cpp:974:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  974 |   register int oldcoord;
+      |                ^~~~~~~~
+src/preproc/grn/hgraph.cpp:975:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  975 |   register int res1;
+      |                ^~~~
+src/preproc/grn/hgraph.cpp:976:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  976 |   register int visible;
+      |                ^~~~~~~
+src/preproc/grn/hgraph.cpp:977:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  977 |   register int res2;
+      |                ^~~~
+src/preproc/grn/hgraph.cpp:978:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  978 |   register int xinc;
+      |                ^~~~
+src/preproc/grn/hgraph.cpp:979:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  979 |   register int yinc;
+      |                ^~~~
+src/preproc/grn/hgraph.cpp:980:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  980 |   register int dotcounter;
+      |                ^~~~~~~~~~
+  CXX      src/preproc/grn/main.o
+src/preproc/grn/main.cpp:91:35: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+   91 | extern ELT *DBRead(register FILE *file);
+      |                                   ^~~~
+src/preproc/grn/main.cpp:234:26: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  234 | void conv(register FILE *fp, int baseline);
+      |                          ^~
+src/preproc/grn/main.cpp:236:31: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  236 | int has_polygon(register ELT *elist);
+      |                               ^~~~~
+src/preproc/grn/main.cpp: In function 'int main(int, char**)':
+src/preproc/grn/main.cpp:286:18: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  286 |   register FILE *fp;
+      |                  ^~
+src/preproc/grn/main.cpp:287:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  287 |   register int k;
+      |                ^
+src/preproc/grn/main.cpp:288:17: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  288 |   register char c;
+      |                 ^
+src/preproc/grn/main.cpp: In function 'void initpic()':
+src/preproc/grn/main.cpp:469:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  469 |   register int i;
+      |                ^
+src/preproc/grn/main.cpp: At global scope:
+src/preproc/grn/main.cpp:514:21: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  514 | conv(register FILE *fp,
+      |                     ^~
+src/preproc/grn/main.cpp: In function 'void conv(FILE*, int)':
+src/preproc/grn/main.cpp:517:18: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  517 |   register FILE *gfp = NULL;    /* input file pointer */
+      |                  ^~~
+src/preproc/grn/main.cpp:518:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  518 |   register int done = 0;        /* flag to remember if finished */
+      |                ^~~~
+src/preproc/grn/main.cpp:519:17: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  519 |   register ELT *e;              /* current element pointer */
+      |                 ^
+src/preproc/grn/main.cpp:580:22: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  580 |         register int i;         /* do pointscaling here, when */
+      |                      ^
+src/preproc/grn/main.cpp: In function 'void savestate()':
+src/preproc/grn/main.cpp:703:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  703 |   register int i;
+      |                ^
+src/preproc/grn/main.cpp: In function 'void interpret(char*)':
+src/preproc/grn/main.cpp:764:18: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  764 |   register char *chr;
+      |                  ^~~
+src/preproc/grn/main.cpp:765:16: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  765 |   register int i;
+      |                ^
+src/preproc/grn/main.cpp: At global scope:
+src/preproc/grn/main.cpp:938:27: warning: ISO C++17 does not allow 'register' storage class specifier [-Wregister]
+  938 | has_polygon(register ELT *elist)
+      |                           ^~~~~
+  CXXLD    grn
+  CXX      src/preproc/pic/pic-pic.o
+  CXX      src/preproc/pic/pic-lex.o
+  CXX      src/preproc/pic/pic-main.o
+  CXX      src/preproc/pic/pic-object.o
+  CXX      src/preproc/pic/pic-common.o
+  CXX      src/preproc/pic/pic-troff.o
+  CXX      src/preproc/pic/pic-tex.o
+  CXXLD    pic
+  CXX      src/preproc/refer/refer-command.o
+  CXX      src/preproc/refer/refer-ref.o
+  CXX      src/preproc/refer/refer-refer.o
+  CXX      src/preproc/refer/refer-token.o
+  CXX      src/preproc/refer/refer-label.o
+  CXXLD    refer
+  CXX      src/preproc/soelim/soelim.o
+  CXXLD    soelim
+  CXX      src/preproc/tbl/main.o
+  CXX      src/preproc/tbl/table.o
+  CXXLD    tbl
+  CXX      src/roff/troff/dictionary.o
+  CXX      src/roff/troff/div.o
+  CXX      src/roff/troff/env.o
+  CXX      src/roff/troff/input.o
+  CXX      src/roff/troff/mtsm.o
+  CXX      src/roff/troff/node.o
+  CXX      src/roff/troff/number.o
+  CXX      src/roff/troff/reg.o
+Making src/roff/troff/majorminor.cpp
+  CXX      src/roff/troff/majorminor.o
+  CXXLD    troff
+  CXX      src/utils/indxbib/indxbib.o
+  CC       src/utils/indxbib/signal.o
+  CXXLD    indxbib
+  CXX      src/utils/lookbib/lookbib.o
+  CXXLD    lookbib
+  GEN      eqn2graph
+  GEN      gdiffmk
+  GEN      glilypond
+  GEN      gperl
+  GEN      gpinyin
+  GEN      grap2graph
+  GEN      groffer
+cp ./contrib/groffer/roff2.pl roff2dvi
+cp ./contrib/groffer/roff2.pl roff2html
+cp ./contrib/groffer/roff2.pl roff2pdf
+cp ./contrib/groffer/roff2.pl roff2ps
+cp ./contrib/groffer/roff2.pl roff2text
+cp ./contrib/groffer/roff2.pl roff2x
+  GEN      mmroff
+  GEN      pdfroff
+  GEN      pic2graph
+  GEN      gropdf
+  GEN      pdfmom
+  GEN      grog
+  GEN      chem
+  GEN      neqn
+  GEN      nroff
+  GEN      contrib/chem/chem.1
+  GEN      contrib/eqn2graph/eqn2graph.1
+  GEN      contrib/gdiffmk/gdiffmk.1
+  GEN      contrib/glilypond/glilypond.1
+  GEN      contrib/gperl/gperl.1
+  GEN      contrib/gpinyin/gpinyin.1
+  GEN      contrib/grap2graph/grap2graph.1
+  GEN      contrib/groffer/groffer.1
+  GEN      contrib/groffer/roff2dvi.1.man
+  GEN      contrib/groffer/roff2dvi.1
+  GEN      contrib/groffer/roff2html.1.man
+  GEN      contrib/groffer/roff2html.1
+  GEN      contrib/groffer/roff2pdf.1.man
+  GEN      contrib/groffer/roff2pdf.1
+  GEN      contrib/groffer/roff2ps.1.man
+  GEN      contrib/groffer/roff2ps.1
+  GEN      contrib/groffer/roff2text.1.man
+  GEN      contrib/groffer/roff2text.1
+  GEN      contrib/groffer/roff2x.1.man
+  GEN      contrib/groffer/roff2x.1
+  GEN      contrib/mm/mmroff.1
+  GEN      contrib/pdfmark/pdfroff.1
+  GEN      contrib/pic2graph/pic2graph.1
+  GEN      src/devices/grodvi/grodvi.1
+  GEN      src/devices/grohtml/grohtml.1
+  GEN      src/devices/grolbp/grolbp.1
+  GEN      src/devices/grolj4/grolj4.1
+  GEN      src/devices/gropdf/gropdf.1
+  GEN      src/devices/gropdf/pdfmom.1
+  GEN      src/devices/grops/grops.1
+  GEN      src/devices/grotty/grotty.1
+  GEN      src/preproc/preconv/preconv.1
+  GEN      src/roff/groff/groff.1
+  GEN      src/roff/grog/grog.1
+  GEN      src/utils/addftinfo/addftinfo.1
+  GEN      src/utils/afmtodit/afmtodit.1
+  GEN      src/utils/hpftodit/hpftodit.1
+  GEN      src/utils/lkbib/lkbib.1
+  GEN      src/utils/pfbtops/pfbtops.1
+  GEN      src/utils/tfmtodit/tfmtodit.1
+  GEN      src/preproc/eqn/eqn.1
+  GEN      src/preproc/eqn/neqn.1
+  GEN      src/preproc/grn/grn.1
+  GEN      src/preproc/pic/pic.1
+  GEN      src/preproc/refer/refer.1
+  GEN      src/preproc/soelim/soelim.1
+  GEN      src/preproc/tbl/tbl.1
+  GEN      src/roff/nroff/nroff.1
+  GEN      src/roff/troff/troff.1
+  GEN      src/utils/indxbib/indxbib.1
+  GEN      src/utils/lookbib/lookbib.1
+  GEN      contrib/groff_filenames/groff_filenames.5
+  GEN      man/groff_font.5
+  GEN      man/groff_out.5
+  GEN      man/groff_tmac.5
+  GEN      src/devices/grolj4/lj4_font.5
+  GEN      contrib/hdtbl/groff_hdtbl.7
+  GEN      contrib/mm/groff_mm.7
+  GEN      contrib/mm/groff_mmse.7
+  GEN      contrib/mom/groff_mom.7
+  GEN      man/ditroff.7
+  GEN      man/groff_char.7
+  GEN      man/groff_diff.7
+  GEN      man/groff.7
+  GEN      man/roff.7
+  GEN      tmac/groff_ms.7
+  GEN      tmac/groff_man.7
+  GEN      tmac/groff_me.7
+  GEN      tmac/groff_mdoc.7
+  GEN      tmac/groff_trace.7
+  GEN      tmac/groff_www.7
+  GEN      font/devascii/R
+  GEN      font/devascii/I
+  GEN      font/devascii/B
+  GEN      font/devascii/BI
+  GEN      font/devascii/DESC
+  GEN      font/devcp1047/R
+  GEN      font/devcp1047/I
+  GEN      font/devcp1047/B
+  GEN      font/devcp1047/BI
+  GEN      font/devcp1047/DESC
+  GEN      font/devdvi/DESC
+  GEN      font/devhtml/R
+  GEN      font/devhtml/I
+  GEN      font/devhtml/B
+  GEN      font/devhtml/BI
+  GEN      font/devhtml/CR
+  GEN      font/devhtml/CI
+  GEN      font/devhtml/CB
+  GEN      font/devhtml/CBI
+  GEN      font/devhtml/S
+  GEN      font/devhtml/DESC
+  GEN      font/devlatin1/R
+  GEN      font/devlatin1/I
+  GEN      font/devlatin1/B
+  GEN      font/devlatin1/BI
+  GEN      font/devlatin1/DESC
+  GEN      font/devlbp/DESC
+  GEN      font/devutf8/R
+  GEN      font/devutf8/I
+  GEN      font/devutf8/B
+  GEN      font/devutf8/BI
+  GEN      font/devutf8/DESC
+groff options: abcCd:D:eEf:F:gGhiI:jJkK:lL:m:M:n:No:pP:r:RsStT:UvVw:W:XzZ
+no arg: abcCeEgGhijJklNpRsStUvVXzZ
+with arg: dDfFIKLmMnoPrTwW
+sed -f ./tmac/strip.sed ./contrib/hdtbl/`basename contrib/hdtbl/hdtbl.tmac`-u > contrib/hdtbl/hdtbl.tmac;
+sed -f ./tmac/strip.sed ./contrib/hdtbl/`basename contrib/hdtbl/hdmisc.tmac`-u > contrib/hdtbl/hdmisc.tmac;
+  GEN      contrib/chem/examples/README
+  GEN      contrib/chem/examples/122/README
+  GEN      font/devlj4/DESC
+  GEN      font/devps/DESC
+  GEN      font/devps/prologue
+  GEN      font/devps/zapfdr.pfa
+  GEN      font/devps/symbolsl.pfa
+echo missing
+missing
+if test -f ./doc/gnu.eps; then \
+  cp ./doc/gnu.eps . ; \
+elif test -f ./doc/gnu.eps; then \
+  cp ./doc/gnu.eps . ; \
+else \
+  if test ""missing != "found"; then \
+    echo "Program xpmtoppm is missing, can't generate gnu.eps" ; \
+    exit 1; \
+  fi; \
+  if test ""missing != "found"; then \
+    echo "Program pnmtops is missing, can't generate gnu.eps" ; \
+    exit 1; \
+  fi; \
+  if test "pnmtops" != "pnmtops -nosetpage"; then \
+    echo "Program pnmtops can't handle -nosetpage, can't generate gnu.eps" ; \
+    exit 1; \
+  fi; \
+  xpmtoppm ./doc/gnu.xpm | pnmdepth 15 \
+    | pnmtops -noturn -rle >gnu.eps ; \
+fi
+/usr/bin/mkdir -p ./tmac
+for f in tmac/doc-common tmac/doc-ditroff tmac/doc-nroff tmac/doc-syms tmac/e.tmac tmac/doc.tmac tmac/doc-old.tmac; do \
+   sed -f ./tmac/strip.sed ./$f-u > ./$f; \
+done
+/usr/bin/mkdir -p ./tmac
+sed -e "s;[@]PNMTOPS_NOSETPAGE[@];pnmtops;g" \
+  ./tmac/www.tmac.in > ./tmac/www.tmac
+  GROFF    doc/webpage.ps
+  GROFF    doc/grnexmpl.ps
+  GEN      contrib/hdtbl/examples/fonts_n.roff
+  GEN      contrib/hdtbl/examples/fonts_x.roff
+  GROFF    contrib/hdtbl/examples/chess_board.ps
+  GROFF    contrib/hdtbl/examples/color_boxes.ps
+  GROFF    contrib/hdtbl/examples/color_nested_tables.ps
+  GROFF    contrib/hdtbl/examples/color_table_cells.ps
+  GROFF    contrib/hdtbl/examples/color_transitions.ps
+  GROFF    contrib/hdtbl/examples/col_rowspan_colors.ps
+  GROFF    contrib/hdtbl/examples/fonts_n.ps
+fonts_n.roff: listing fonts in ./font/devps
+fonts_n.roff: listing font 'AB'...
+fonts_n.roff: listing font 'ABI'...
+fonts_n.roff: listing font 'AI'...
+fonts_n.roff: listing font 'AR'...
+fonts_n.roff: listing font 'BMB'...
+fonts_n.roff: listing font 'BMBI'...
+fonts_n.roff: listing font 'BMI'...
+fonts_n.roff: listing font 'BMR'...
+fonts_n.roff: listing font 'CB'...
+fonts_n.roff: listing font 'CBI'...
+fonts_n.roff: listing font 'CI'...
+fonts_n.roff: listing font 'CR'...
+fonts_n.roff: listing font 'EURO'...
+fonts_n.roff: listing font 'HB'...
+fonts_n.roff: listing font 'HBI'...
+fonts_n.roff: listing font 'HI'...
+fonts_n.roff: listing font 'HNB'...
+fonts_n.roff: listing font 'HNBI'...
+fonts_n.roff: listing font 'HNI'...
+fonts_n.roff: listing font 'HNR'...
+fonts_n.roff: listing font 'HR'...
+fonts_n.roff: listing font 'NB'...
+fonts_n.roff: listing font 'NBI'...
+fonts_n.roff: listing font 'NI'...
+fonts_n.roff: listing font 'NR'...
+fonts_n.roff: listing font 'PB'...
+fonts_n.roff: listing font 'PBI'...
+fonts_n.roff: listing font 'PI'...
+fonts_n.roff: listing font 'PR'...
+fonts_n.roff: listing font 'S'...
+fonts_n.roff: listing font 'SS'...
+fonts_n.roff: listing font 'TB'...
+fonts_n.roff: listing font 'TBI'...
+fonts_n.roff: listing font 'TI'...
+fonts_n.roff: listing font 'TR'...
+fonts_n.roff: listing font 'ZCMI'...
+fonts_n.roff: listing font 'ZD'...
+fonts_n.roff: listing font 'ZDR'...
+  GROFF    contrib/hdtbl/examples/fonts_x.ps
+fonts_x.roff: listing fonts in ./font/devps
+fonts_x.roff: listing font 'AB'...
+fonts_x.roff: listing font 'ABI'...
+fonts_x.roff: listing font 'AI'...
+fonts_x.roff: listing font 'AR'...
+fonts_x.roff: listing font 'BMB'...
+fonts_x.roff: listing font 'BMBI'...
+fonts_x.roff: listing font 'BMI'...
+fonts_x.roff: listing font 'BMR'...
+fonts_x.roff: listing font 'CB'...
+fonts_x.roff: listing font 'CBI'...
+fonts_x.roff: listing font 'CI'...
+fonts_x.roff: listing font 'CR'...
+fonts_x.roff: listing font 'EURO'...
+fonts_x.roff: listing font 'HB'...
+fonts_x.roff: listing font 'HBI'...
+fonts_x.roff: listing font 'HI'...
+fonts_x.roff: listing font 'HNB'...
+fonts_x.roff: listing font 'HNBI'...
+fonts_x.roff: listing font 'HNI'...
+fonts_x.roff: listing font 'HNR'...
+fonts_x.roff: listing font 'HR'...
+fonts_x.roff: listing font 'NB'...
+fonts_x.roff: listing font 'NBI'...
+fonts_x.roff: listing font 'NI'...
+fonts_x.roff: listing font 'NR'...
+fonts_x.roff: listing font 'PB'...
+fonts_x.roff: listing font 'PBI'...
+fonts_x.roff: listing font 'PI'...
+fonts_x.roff: listing font 'PR'...
+fonts_x.roff: listing font 'S'...
+fonts_x.roff: listing font 'SS'...
+fonts_x.roff: listing font 'TB'...
+fonts_x.roff: listing font 'TBI'...
+fonts_x.roff: listing font 'TI'...
+fonts_x.roff: listing font 'TR'...
+fonts_x.roff: listing font 'ZCMI'...
+fonts_x.roff: listing font 'ZD'...
+fonts_x.roff: listing font 'ZDR'...
+  GROFF    contrib/hdtbl/examples/mixed_pickles.ps
+  GROFF    contrib/hdtbl/examples/rainbow.ps
+  GROFF    contrib/hdtbl/examples/short_reference.ps
+  GROFF    doc/meref.ps
+  GROFF    doc/meintro.ps
+  GROFF    doc/meintro_fr.ps
+  GROFF    doc/pic.ps
+make[1]: Leaving directory '/sources/groff-1.22.4'
+/usr/bin/make  install-am
+make[1]: Entering directory '/sources/groff-1.22.4'
+make[2]: Entering directory '/sources/groff-1.22.4'
+test -d /usr/share/doc/groff-1.22.4/examples/chem/122 \
+          || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/share/doc/groff-1.22.4/examples/chem/122;
+test -d /usr/share/groff/1.22.4/tmac || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/share/groff/1.22.4/tmac
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/bin'
+test -d /usr/share/info || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/share/info
+ /usr/bin/install -c eqn2graph gdiffmk glilypond gperl gpinyin grap2graph groffer roff2dvi roff2html roff2pdf roff2ps roff2text roff2x mmroff pdfroff pic2graph gropdf pdfmom grog afmtodit '/usr/bin'
+Installing devpdf files
+for p in doc/groff.info `ls doc/groff.info*`; do \
+    f=`basename $p`; \
+    rm -f /usr/share/info/$f; \
+    /usr/bin/install -c -m 644 $p /usr/share/info/$f; \
+  done
+test yes != no || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/lib
+ /usr/bin/install -c chem neqn nroff '/usr/bin'
+if test -f /usr/lib/charset.alias; then \
+  sed -f ref-add.sed /usr/lib/charset.alias \
+    > /usr/lib/t-charset.alias; \
+  /usr/bin/install -c -m 644 /usr/lib/t-charset.alias \
+    /usr/lib/charset.alias; \
+  rm -f /usr/lib/t-charset.alias; \
+else \
+  if test yes = no; then \
+    sed -f ref-add.sed charset.alias \
+      > /usr/lib/t-charset.alias; \
+    /usr/bin/install -c -m 644 /usr/lib/t-charset.alias \
+      /usr/lib/charset.alias; \
+    rm -f /usr/lib/t-charset.alias; \
+  fi; \
+fi
+test -d /usr/share \
+  || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/share
+/usr/bin/mkdir -p /usr/lib/groff/site-tmac;
+test -d /usr/share/groff \
+  || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/share/groff
+if test "no" != "no"; then \
+  if test -n ""; then \
+    for m in ""; do \
+      /usr/bin/install -c -m 644 ./tmac/$m-wrap \
+                /usr/lib/groff/site-tmac/$m`if test no = manual; then echo "-os"; fi`.tmac; \
+    done; \
+  fi; \
+fi
+test -d /usr/share/groff/1.22.4/tmac/mm || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/share/groff/1.22.4/tmac/mm
+for i in ./contrib/chem/examples/122/*.chem; do \
+  n=`echo $i | sed 's|./contrib/chem/examples/122/||g'`; \
+  /usr/bin/install -c -m 644 $i /usr/share/doc/groff-1.22.4/examples/chem/122/$n; \
+done
+test -d /usr/share/groff/1.22.4 \
+  || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/share/groff/1.22.4
+if test -f /usr/lib/eign; then \
+  rm -f /usr/share/groff/1.22.4/eign; \
+  ln -s /usr/lib/eign /usr/share/groff/1.22.4/eign 2>/dev/null \
+    || ln /usr/lib/eign /usr/share/groff/1.22.4/eign 2>/dev/null \
+    || cp /usr/lib/eign /usr/share/groff/1.22.4/eign; \
+else \
+  rm -f /usr/share/groff/1.22.4/eign; \
+  /usr/bin/install -c -m 644 ./src/utils/indxbib/eign /usr/share/groff/1.22.4/eign; \
+fi
+install-info --info-dir=/usr/share/info \
+  /usr/share/info/groff.info
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devascii'
+ /usr/bin/install -c -m 644 font/devascii/R font/devascii/I font/devascii/B font/devascii/BI font/devascii/DESC '/usr/share/groff/1.22.4/font/devascii'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devcp1047'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devdvi'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devdvi/generate'
+ /usr/bin/install -c -m 644 font/devcp1047/R font/devcp1047/I font/devcp1047/B font/devcp1047/BI font/devcp1047/DESC '/usr/share/groff/1.22.4/font/devcp1047'
+rm -f /usr/share/groff/1.22.4/tmac/tmac.`if test no = yes; then for i in  ""; do case "$i" in m) echo g;; esac; done; fi`m
+ /usr/bin/install -c -m 644 font/devdvi/TR font/devdvi/TI font/devdvi/TB font/devdvi/TBI font/devdvi/CW font/devdvi/CWI font/devdvi/HR font/devdvi/HI font/devdvi/HB font/devdvi/HBI font/devdvi/TREC font/devdvi/TIEC font/devdvi/TBEC font/devdvi/TBIEC font/devdvi/CWEC font/devdvi/CWIEC font/devdvi/HREC font/devdvi/HIEC font/devdvi/HBEC font/devdvi/HBIEC font/devdvi/TRTC font/devdvi/TITC font/devdvi/TBTC font/devdvi/TBITC font/devdvi/CWTC font/devdvi/CWITC font/devdvi/HRTC font/devdvi/HITC font/devdvi/HBTC font/devdvi/HBITC font/devdvi/MI font/devdvi/S font/devdvi/EX font/devdvi/SA font/devdvi/SB font/devdvi/SC font/devdvi/DESC '/usr/share/groff/1.22.4/font/devdvi'
+ /usr/bin/install -c -m 644 font/devdvi/generate/Makefile font/devdvi/generate/msam.map font/devdvi/generate/msbm.map font/devdvi/generate/texb.map font/devdvi/generate/texex.map font/devdvi/generate/texi.map font/devdvi/generate/texmi.map font/devdvi/generate/texr.map font/devdvi/generate/texsy.map font/devdvi/generate/textt.map font/devdvi/generate/textex.map font/devdvi/generate/ec.map font/devdvi/generate/tc.map font/devdvi/generate/CompileFonts '/usr/share/groff/1.22.4/font/devdvi/generate'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devhtml'
+rm -f /usr/share/groff/1.22.4/tmac/`if test no = yes; then for i in  ""; do case "$i" in m) echo g;; esac; done; fi`m.tmac
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devlatin1'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devlbp'
+ /usr/bin/install -c -m 644 font/devhtml/R font/devhtml/I font/devhtml/B font/devhtml/BI font/devhtml/CR font/devhtml/CI font/devhtml/CB font/devhtml/CBI font/devhtml/S font/devhtml/DESC '/usr/share/groff/1.22.4/font/devhtml'
+/usr/bin/install -c -m 644 ./contrib/mm/m.tmac \
+  /usr/share/groff/1.22.4/tmac/`if test no = yes; then for i in  ""; do case "$i" in m) echo g;; esac; done; fi`m.tmac
+ /usr/bin/install -c -m 644 font/devlatin1/R font/devlatin1/I font/devlatin1/B font/devlatin1/BI font/devlatin1/DESC '/usr/share/groff/1.22.4/font/devlatin1'
+ /usr/bin/install -c -m 644 font/devlbp/HB font/devlbp/HBI font/devlbp/HI font/devlbp/HR font/devlbp/HNB font/devlbp/HNBI font/devlbp/HNI font/devlbp/HNR font/devlbp/TB font/devlbp/TBI font/devlbp/TI font/devlbp/TR font/devlbp/CR font/devlbp/CB font/devlbp/CI font/devlbp/ER font/devlbp/EB font/devlbp/EI font/devlbp/DESC '/usr/share/groff/1.22.4/font/devlbp'
+LANG=C LC_ALL=C sed -e "s;^.mso m.tmac;.mso `if test no = yes; then for i in  ""; do case "$i" in m) echo g;; esac; done; fi`m.tmac;g" \
+  ./contrib/mm/mse.tmac > /usr/share/groff/1.22.4/tmac/`if test no = yes; then for i in  ""; do case "$i" in m) echo g;; esac; done; fi`mse.tmac
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devpdf'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devpdf/enc'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devpdf/map'
+ /usr/bin/install -c -m 644 font/devpdf/DESC font/devpdf/Foundry '/usr/share/groff/1.22.4/font/devpdf'
+ /usr/bin/install -c -m 644 font/devpdf/enc/text.enc '/usr/share/groff/1.22.4/font/devpdf/enc'
+ /usr/bin/install -c -m 644 font/devpdf/map/dingbats.map font/devpdf/map/symbolchars font/devpdf/map/textmap font/devpdf/map/symbolmap '/usr/share/groff/1.22.4/font/devpdf/map'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devutf8'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/examples/chem'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/pic'
+ /usr/bin/install -c -m 644 font/devutf8/R font/devutf8/I font/devutf8/B font/devutf8/BI font/devutf8/DESC '/usr/share/groff/1.22.4/font/devutf8'
+ /usr/bin/install -c -m 644 contrib/chem/examples/atp.chem contrib/chem/examples/cholesterin.chem contrib/chem/examples/ethamivan.chem contrib/chem/examples/lsd.chem contrib/chem/examples/morphine.chem contrib/chem/examples/penicillin.chem contrib/chem/examples/reserpine.chem '/usr/share/doc/groff-1.22.4/examples/chem'
+/usr/bin/install -c -m 644 ./font/devpdf/download \
+  /usr/share/groff/1.22.4/font/devpdf/
+ /usr/bin/install -c -m 644 contrib/chem/chem.pic '/usr/share/groff/1.22.4/pic'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devlj4'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devlj4/generate'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devps'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devps/generate'
+ /usr/bin/install -c -m 644 font/devlj4/AB font/devlj4/ABI font/devlj4/AI font/devlj4/AR font/devlj4/ALBB font/devlj4/ALBR font/devlj4/AOB font/devlj4/AOI font/devlj4/AOR font/devlj4/CB font/devlj4/CBI font/devlj4/CI font/devlj4/CR font/devlj4/GB font/devlj4/GBI font/devlj4/GI font/devlj4/GR font/devlj4/LGB font/devlj4/LGI font/devlj4/LGR font/devlj4/OB font/devlj4/OBI font/devlj4/OI font/devlj4/OR font/devlj4/TB font/devlj4/TBI font/devlj4/TI font/devlj4/TR font/devlj4/TNRB font/devlj4/TNRBI font/devlj4/TNRI font/devlj4/TNRR font/devlj4/UB font/devlj4/UBI font/devlj4/UI font/devlj4/UR font/devlj4/UCB font/devlj4/UCBI font/devlj4/UCI font/devlj4/UCR '/usr/share/groff/1.22.4/font/devlj4'
+ /usr/bin/install -c -m 644 font/devlj4/generate/Makefile font/devlj4/generate/special.map font/devlj4/generate/symbol.map font/devlj4/generate/text.map font/devlj4/generate/wingdings.map font/devlj4/generate/special.awk '/usr/share/groff/1.22.4/font/devlj4/generate'
+ /usr/bin/install -c -m 644 font/devlj4/CLARENDON font/devlj4/CORONET font/devlj4/MARIGOLD font/devlj4/S font/devlj4/SYMBOL font/devlj4/WINGDINGS '/usr/share/groff/1.22.4/font/devlj4'
+ /usr/bin/install -c -m 644 font/devps/S font/devps/SS font/devps/ZD font/devps/ZDR font/devps/ZCMI font/devps/AB font/devps/ABI font/devps/AI font/devps/AR font/devps/BMB font/devps/BMBI font/devps/BMI font/devps/BMR font/devps/CB font/devps/CBI font/devps/CI font/devps/CR font/devps/HB font/devps/HBI font/devps/HI font/devps/HR font/devps/HNB font/devps/HNBI font/devps/HNI font/devps/HNR font/devps/NB font/devps/NBI font/devps/NI font/devps/NR font/devps/PB font/devps/PBI font/devps/PI font/devps/PR font/devps/TB font/devps/TBI font/devps/TI font/devps/TR font/devps/EURO font/devps/freeeuro.pfa font/devps/freeeuro.afm '/usr/share/groff/1.22.4/font/devps'
+ /usr/bin/install -c -m 644 font/devps/generate/Makefile font/devps/generate/dingbats.map font/devps/generate/dingbats.rmap font/devps/generate/lgreekmap font/devps/generate/symbolchars font/devps/generate/symbolsl.afm font/devps/generate/textmap font/devps/generate/afmname font/devps/generate/symbol.sed '/usr/share/groff/1.22.4/font/devps/generate'
+ /usr/bin/install -c -m 644 font/devps/text.enc font/devps/download '/usr/share/groff/1.22.4/font/devps'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/examples'
+ /usr/bin/mkdir -p '/usr/lib/groff/glilypond'
+ /usr/bin/mkdir -p '/usr/lib/groff/gpinyin'
+ /usr/bin/mkdir -p '/usr/lib/groff/grog'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/examples/hdtbl'
+ /usr/bin/install -c -m 644 doc/webpage.ms doc/groff.css doc/grnexmpl.g doc/grnexmpl.me '/usr/share/doc/groff-1.22.4/examples'
+ /usr/bin/install -c -m 644 contrib/glilypond/subs.pl contrib/glilypond/oop_fh.pl contrib/glilypond/args.pl '/usr/lib/groff/glilypond'
+ /usr/bin/install -c -m 644 contrib/gpinyin/subs.pl '/usr/lib/groff/gpinyin'
+ /usr/bin/install -c -m 644 src/roff/grog/subs.pl '/usr/lib/groff/grog'
+ /usr/bin/install -c -m 644 contrib/hdtbl/examples/common.roff contrib/hdtbl/examples/chess_board.roff contrib/hdtbl/examples/color_boxes.roff contrib/hdtbl/examples/color_nested_tables.roff contrib/hdtbl/examples/color_table_cells.roff contrib/hdtbl/examples/color_transitions.roff contrib/hdtbl/examples/col_rowspan_colors.roff contrib/hdtbl/examples/mixed_pickles.roff contrib/hdtbl/examples/rainbow.roff contrib/hdtbl/examples/short_reference.roff '/usr/share/doc/groff-1.22.4/examples/hdtbl'
+ /usr/bin/mkdir -p '/usr/share/groff/site-tmac'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/tmac/mm'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/examples/mm'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/examples/mom'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/install -c -m 644 tmac/man.local tmac/mdoc.local '/usr/share/groff/site-tmac'
+ /usr/bin/install -c -m 644 contrib/mm/mm/0.MT contrib/mm/mm/5.MT contrib/mm/mm/4.MT contrib/mm/mm/ms.cov contrib/mm/mm/se_ms.cov '/usr/share/groff/1.22.4/tmac/mm'
+ /usr/bin/install -c -m 644 contrib/mm/examples/letter.mm '/usr/share/doc/groff-1.22.4/examples/mm'
+ /usr/bin/install -c -m 644 contrib/mom/examples/letter.mom contrib/mom/examples/mom-pdf.mom contrib/mom/examples/mon_premier_doc.mom contrib/mom/examples/sample_docs.mom contrib/mom/examples/typesetting.mom contrib/mom/examples/README.txt contrib/mom/examples/README-fr.txt contrib/mom/examples/elvis_syntax contrib/mom/examples/elvis_syntax.new contrib/mom/examples/penguin.ps contrib/mom/examples/penguin.pdf contrib/mom/examples/mom.vim contrib/mom/examples/slide-demo.mom '/usr/share/doc/groff-1.22.4/examples/mom'
+ /usr/bin/install -c -m 644 contrib/mom/mom.tmac contrib/mom/om.tmac '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/oldfont/devps'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/install -c -m 644 doc/meref.me doc/meintro.me doc/meintro_fr.me doc/pic.ms '/usr/share/doc/groff-1.22.4'
+ /usr/bin/install -c -m 644 font/devps/old/S font/devps/old/SS font/devps/old/CB font/devps/old/CBI font/devps/old/CI font/devps/old/CR font/devps/old/HB font/devps/old/HBI font/devps/old/HI font/devps/old/HR font/devps/old/HNB font/devps/old/HNBI font/devps/old/HNI font/devps/old/HNR font/devps/old/NB font/devps/old/NBI font/devps/old/NI font/devps/old/NR font/devps/old/PB font/devps/old/PBI font/devps/old/PI font/devps/old/PR font/devps/old/TB font/devps/old/TBI font/devps/old/TI font/devps/old/TR font/devps/old/symbol.afm font/devps/old/symbolsl.afm font/devps/old/zapfdr.afm font/devps/old/zapfdr.ps '/usr/share/groff/1.22.4/oldfont/devps'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/install -c -m 644 contrib/pdfmark/pdfmark.tmac contrib/pdfmark/spdf.tmac '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/install -c -m 644 tmac/man.tmac tmac/mandoc.tmac tmac/andoc.tmac tmac/an-old.tmac tmac/an-ext.tmac tmac/ms.tmac tmac/me.tmac tmac/mdoc.tmac tmac/pic.tmac tmac/a4.tmac tmac/papersize.tmac tmac/62bit.tmac tmac/ec.tmac tmac/safer.tmac tmac/trace.tmac tmac/ps.tmac tmac/psold.tmac tmac/pdfpic.tmac tmac/pspic.tmac tmac/psatk.tmac tmac/pdf.tmac tmac/dvi.tmac tmac/tty.tmac tmac/tty-char.tmac tmac/latin1.tmac tmac/latin2.tmac tmac/latin5.tmac tmac/latin9.tmac tmac/cp1047.tmac tmac/unicode.tmac tmac/X.tmac tmac/Xps.tmac tmac/lj4.tmac tmac/lbp.tmac tmac/html.tmac tmac/html-end.tmac tmac/devtag.tmac tmac/europs.tmac tmac/composite.tmac tmac/fallbacks.tmac '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/install -c -m 644 contrib/mm/refer-mm.tmac '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/mkdir -p '/usr/lib/groff/groffer'
+ /usr/bin/mkdir -p '/usr/lib/groff'
+ /usr/bin/install -c -m 644 tmac/eqnrc tmac/refer.tmac tmac/refer-me.tmac tmac/refer-ms.tmac tmac/troffrc tmac/troffrc-end tmac/trans.tmac tmac/hyphen.us tmac/hyphenex.us tmac/fr.tmac tmac/hyphen.fr tmac/sv.tmac tmac/hyphen.sv tmac/de.tmac tmac/den.tmac tmac/hyphen.det tmac/hyphen.den tmac/cs.tmac tmac/hyphen.cs tmac/hyphenex.cs tmac/ja.tmac tmac/zh.tmac tmac/an.tmac tmac/s.tmac '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/install -c -m 644 contrib/groffer/main_subs.pl contrib/groffer/man.pl contrib/groffer/split_env.sh contrib/groffer/subs.pl contrib/groffer/version.sh '/usr/lib/groff/groffer'
+ /usr/bin/install -c -m 644 groff_opts_no_arg.txt groff_opts_with_arg.txt '/usr/lib/groff'
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 contrib/hdtbl/hdtbl.tmac contrib/hdtbl/hdmisc.tmac '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/mkdir -p '/usr/share/man/man5'
+ /usr/bin/mkdir -p '/usr/share/man/man7'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/html/mom'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/examples/chem/122'
+ /usr/bin/install -c -m 644 contrib/chem/chem.1 contrib/eqn2graph/eqn2graph.1 contrib/gdiffmk/gdiffmk.1 contrib/glilypond/glilypond.1 contrib/gperl/gperl.1 contrib/gpinyin/gpinyin.1 contrib/grap2graph/grap2graph.1 contrib/groffer/groffer.1 contrib/groffer/roff2dvi.1 contrib/groffer/roff2html.1 contrib/groffer/roff2pdf.1 contrib/groffer/roff2ps.1 contrib/groffer/roff2text.1 contrib/groffer/roff2x.1 contrib/mm/mmroff.1 contrib/pdfmark/pdfroff.1 contrib/pic2graph/pic2graph.1 src/devices/grodvi/grodvi.1 src/devices/grohtml/grohtml.1 src/devices/grolbp/grolbp.1 src/devices/grolj4/grolj4.1 src/devices/gropdf/gropdf.1 src/devices/gropdf/pdfmom.1 src/devices/grops/grops.1 src/devices/grotty/grotty.1 src/preproc/preconv/preconv.1 src/roff/groff/groff.1 src/roff/grog/grog.1 src/utils/addftinfo/addftinfo.1 src/utils/afmtodit/afmtodit.1 src/utils/hpftodit/hpftodit.1 src/utils/lkbib/lkbib.1 src/utils/pfbtops/pfbtops.1 src/utils/tfmtodit/tfmtodit.1 src/preproc/eqn/eqn.1 src/preproc/eqn/neqn.1 src/preproc/grn/grn.1 src/preproc/pic/pic.1 src/preproc/refer/refer.1 src/preproc/soelim/soelim.1 '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 contrib/chem/examples/122/README '/usr/share/doc/groff-1.22.4/examples/chem/122'
+ /usr/bin/install -c -m 644 src/preproc/tbl/tbl.1 src/roff/nroff/nroff.1 src/roff/troff/troff.1 src/utils/indxbib/indxbib.1 src/utils/lookbib/lookbib.1 '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 contrib/mom/momdoc/stylesheet.css contrib/mom/momdoc/appendices.html contrib/mom/momdoc/color.html contrib/mom/momdoc/cover.html contrib/mom/momdoc/definitions.html contrib/mom/momdoc/docelement.html contrib/mom/momdoc/docprocessing.html contrib/mom/momdoc/goodies.html contrib/mom/momdoc/graphical.html contrib/mom/momdoc/headfootpage.html contrib/mom/momdoc/images.html contrib/mom/momdoc/inlines.html contrib/mom/momdoc/intro.html contrib/mom/momdoc/letters.html contrib/mom/momdoc/macrolist.html contrib/mom/momdoc/rectoverso.html contrib/mom/momdoc/refer.html contrib/mom/momdoc/reserved.html contrib/mom/momdoc/tables-of-contents.html contrib/mom/momdoc/toc.html contrib/mom/momdoc/typesetting.html contrib/mom/momdoc/using.html contrib/mom/momdoc/version-2.html '/usr/share/doc/groff-1.22.4/html/mom'
+ /usr/bin/install -c -m 644 contrib/groff_filenames/groff_filenames.5 man/groff_font.5 man/groff_out.5 man/groff_tmac.5 src/devices/grolj4/lj4_font.5 '/usr/share/man/man5'
+ /usr/bin/install -c -m 644 contrib/hdtbl/groff_hdtbl.7 contrib/mm/groff_mm.7 contrib/mm/groff_mmse.7 contrib/mom/groff_mom.7 man/ditroff.7 man/groff_char.7 man/groff_diff.7 man/groff.7 man/roff.7 tmac/groff_ms.7 tmac/groff_man.7 tmac/groff_me.7 tmac/groff_mdoc.7 tmac/groff_trace.7 tmac/groff_www.7 '/usr/share/man/man7'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/examples/chem'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devlj4'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/font/devps'
+ /usr/bin/install -c -m 644 font/devlj4/DESC '/usr/share/groff/1.22.4/font/devlj4'
+ /usr/bin/install -c -m 644 contrib/chem/examples/README '/usr/share/doc/groff-1.22.4/examples/chem'
+ /usr/bin/install -c -m 644 font/devps/DESC font/devps/prologue font/devps/zapfdr.pfa font/devps/symbolsl.pfa '/usr/share/groff/1.22.4/font/devps'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/tmac/mdoc'
+ /usr/bin/mkdir -p '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/install -c -m 644 tmac/doc-common tmac/doc-ditroff tmac/doc-nroff tmac/doc-syms '/usr/share/groff/1.22.4/tmac/mdoc'
+ /usr/bin/install -c -m 644 tmac/e.tmac tmac/doc.tmac tmac/doc-old.tmac tmac/www.tmac '/usr/share/groff/1.22.4/tmac'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/examples'
+  /usr/bin/install -c grodvi post-grohtml grolbp grolj4 grops grotty pre-grohtml preconv groff addftinfo hpftodit lkbib pfbtops tfmtodit '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4/examples/hdtbl'
+ /usr/bin/mkdir -p '/usr/share/doc/groff-1.22.4'
+  /usr/bin/install -c eqn grn pic refer soelim tbl troff indxbib lookbib '/usr/bin'
+ /usr/bin/install -c -m 644 doc/webpage.ps doc/grnexmpl.ps '/usr/share/doc/groff-1.22.4/examples'
+ /usr/bin/install -c -m 644 contrib/hdtbl/examples/fonts_n.roff contrib/hdtbl/examples/fonts_x.roff contrib/hdtbl/examples/chess_board.ps contrib/hdtbl/examples/color_boxes.ps contrib/hdtbl/examples/color_nested_tables.ps contrib/hdtbl/examples/color_table_cells.ps contrib/hdtbl/examples/color_transitions.ps contrib/hdtbl/examples/col_rowspan_colors.ps contrib/hdtbl/examples/fonts_n.ps contrib/hdtbl/examples/fonts_x.ps contrib/hdtbl/examples/mixed_pickles.ps contrib/hdtbl/examples/rainbow.ps contrib/hdtbl/examples/short_reference.ps gnu.eps '/usr/share/doc/groff-1.22.4/examples/hdtbl'
+/usr/bin/make  install-exec-hook
+ /usr/bin/install -c -m 644 doc/meref.ps doc/meintro.ps doc/meintro_fr.ps doc/pic.ps '/usr/share/doc/groff-1.22.4'
+make[3]: Entering directory '/sources/groff-1.22.4'
+make[3]: Nothing to be done for 'install-exec-hook'.
+make[3]: Leaving directory '/sources/groff-1.22.4'
+/usr/bin/make  install-data-hook
+make[3]: Entering directory '/sources/groff-1.22.4'
+d=.; test -f "gnu.eps" || d=/sources/groff-1.22.4/doc; \
+  rm -f /usr/share/doc/groff-1.22.4/examples/gnu.eps; \
+  /usr/bin/install -c -m 644 $d/gnu.eps /usr/share/doc/groff-1.22.4/examples/gnu.eps
+if test "no" = "yes"; then \
+  if test -n ""; then \
+    if test -f /usr/share/groff/1.22.4/tmac/s.tmac -a -n "`if test no = yes; then for i in  ""; do case "$i" in s) echo g;; esac; done; fi`"; \
+    then \
+      mv /usr/share/groff/1.22.4/tmac/s.tmac \
+         /usr/share/groff/1.22.4/tmac/`if test no = yes; then for i in  ""; do case "$i" in s) echo g;; esac; done; fi`s.tmac; \
+    fi; \
+    if test -f /usr/share/groff/1.22.4/tmac/an.tmac -a -n "`if test no = yes; then for i in  ""; do case "$i" in an) echo g;; esac; done; fi`"; \
+    then \
+      mv /usr/share/groff/1.22.4/tmac/an.tmac \
+         /usr/share/groff/1.22.4/tmac/`if test no = yes; then for i in  ""; do case "$i" in an) echo g;; esac; done; fi`an.tmac; \
+    fi; \
+  fi; \
+fi
+cd /usr/share/groff; \
+  rm -f current; \
+  ln -s 1.22.4 current
+test -d /usr/share/groff/site-font \
+  || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/share/groff/site-font
+test -d /usr/lib/groff/site-tmac \
+  || /bin/sh /sources/groff-1.22.4/build-aux/install-sh -d /usr/lib/groff/site-tmac
+make[3]: Leaving directory '/sources/groff-1.22.4'
+make[2]: Leaving directory '/sources/groff-1.22.4'
+make[1]: Leaving directory '/sources/groff-1.22.4'
+[lfs-scripts] Finishing build of groff-1.22.4 at Wed Sep 14 00:19:34 -03 2022
+(lfs chroot) root:/sources# 

@@ -1,0 +1,172 @@
+(lfs chroot) root:/sources# l
+total 160M
+-rw-r--r--  1 root root  725K Oct  1 20:19 057.zip
+-rw-r--r--  1 root root  2.2M Jul 30  2021 btrfs-progs-v5.13.1.tar.xz
+drwxr-xr-x  3 root root  4.0K Oct  1 19:18 ca-certificates
+-rw-r--r--  1 root root  2.9K Oct 26  2006 ChangeLog
+-rw-r--r--  1 root root  1.3M Nov  6  2019 cpio-2.13.tar.bz2
+-rw-r--r--  1 root root   97K Oct  2 00:16 docbook-xml-4.5.zip
+-rw-r--r--  1 root root  1.8K Aug 31 17:51 docbook-xsl-nons-1.79.2-stack_fix-1.patch
+-rw-r--r--  1 root root   23M Dec  7  2021 docbook-xsl-nons-1.79.2.tar.bz2
+-rw-r--r--  1 root root  314K Dec  7  2021 dosfstools-4.2.tar.gz
+-rw-r--r--  1 root root  471K Jun 24 13:10 dracut-057.tar.gz
+-rw-r--r--  1 root root  313K Jan 18  2022 ethtool-5.16.tar.xz
+-rw-r--r--  1 root root  2.7M Dec  8  2021 fuse-3.10.4.tar.xz
+-rw-r--r--  1 root root  527K Mar  4  2011 jfsutils-1.1.15.tar.gz
+-rw-r--r--  1 root root  1.7M Nov  9  2021 libtasn1-4.18.0.tar.gz
+-rw-r--r--  1 root root  2.6M Aug 29 11:56 libxml2-2.10.2.tar.xz
+-rw-r--r--  1 root root  1.6M Aug 17 10:42 libxslt-1.1.36.tar.xz
+drwxrwxr-x 24 root root  4.0K Sep 30 19:36 linux-5.13.12
+-rw-r--r--  1 root root  114M Sep 30 15:05 linux-5.13.12.tar.xz
+drwxrwxr-x 19 root wheel 4.0K Oct  1 17:25 LVM2.2.03.13
+-rw-r--r--  1 root root  2.5M Aug 11  2021 LVM2.2.03.13.tgz
+-rw-r--r--  1 root root   31K Jan 10  2022 make-ca-1.10.tar.xz
+-rw-r--r--  1 root root  431K Oct 26  2018 mdadm-4.1.tar.xz
+-rw-r--r--  1 root root  1.4M Jun 15  2021 nano-5.8.tar.xz
+-rw-r--r--  1 root root  1.3M Aug 22  2021 ntfs-3g_ntfsprogs-2021.8.22.tgz
+-rw-r--r--  1 root root  819K Jan 17  2022 p11-kit-0.24.1.tar.xz
+-rw-r--r--  1 root root   601 Aug 31 17:51 sgml-common-0.6.3-manpage-1.patch
+-rw-r--r--  1 root root   75K May 25  2001 sgml-common-0.6.3.tgz
+-rw-r--r--  1 root root  969K Dec 30  2020 smartmontools-7.2.tar.gz
+-rw-r--r--  1 root root  597K Mar  1  2022 unzip-6.0-consolidated_fixes-1.patch
+-rw-r--r--  1 root root  1.4M Apr 30  2009 unzip60.tar.gz
+(lfs chroot) root:/sources# begin dracut-057 tar.gz
+[lfs-scripts] Starting build of dracut-057 at Sun Oct  2 12:28:21 AM -03 2022
+(lfs chroot) root:/sources/dracut-057# ./configure --prefix=/usr --sbindir=/sbin --sysconfdir=/etc
+make -j8
+cc -c -O2 -g -Wall -std=gnu99 -D_FILE_OFFSET_BITS=64 -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2   src/install/dracut-install.c -o src/install/dracut-install.o
+cc -c -O2 -g -Wall -std=gnu99 -D_FILE_OFFSET_BITS=64 -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2   src/install/hashmap.c -o src/install/hashmap.o
+cc -c -O2 -g -Wall -std=gnu99 -D_FILE_OFFSET_BITS=64 -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2   src/install/log.c -o src/install/log.o
+cc -c -O2 -g -Wall -std=gnu99 -D_FILE_OFFSET_BITS=64 -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2   src/install/strv.c -o src/install/strv.o
+cc -c -O2 -g -Wall -std=gnu99 -D_FILE_OFFSET_BITS=64 -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2   src/install/util.c -o src/install/util.o
+cc -c -O2 -g -Wall -std=gnu99 -D_FILE_OFFSET_BITS=64 -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2   src/skipcpio/skipcpio.c -o src/skipcpio/skipcpio.o
+cc -c -O2 -g -Wall -std=gnu99 -D_FILE_OFFSET_BITS=64 -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2   src/util/util.c -o src/util/util.o
+asciidoc -a "version=" -d manpage -b docbook -o "man/lsinitrd.1.xml" man/lsinitrd.1.asc
+asciidoc -a "version=" -d manpage -b docbook -o "man/dracut.conf.5.xml" man/dracut.conf.5.asc
+asciidoc -a "version=" -d manpage -b docbook -o "man/dracut.cmdline.7.xml" man/dracut.cmdline.7.asc
+asciidoc -a "version=" -d manpage -b docbook -o "man/dracut.bootup.7.xml" man/dracut.bootup.7.asc
+asciidoc -a "version=" -d manpage -b docbook -o "man/dracut.modules.7.xml" man/dracut.modules.7.asc
+asciidoc -a "version=" -d manpage -b docbook -o "man/dracut.8.xml" man/dracut.8.asc
+asciidoc -a "version=" -d manpage -b docbook -o "man/dracut-catimages.8.xml" man/dracut-catimages.8.asc
+asciidoc -a "version=" -d manpage -b docbook -o "modules.d/98dracut-systemd/dracut-cmdline.service.8.xml" modules.d/98dracut-systemd/dracut-cmdline.service.8.asc
+asciidoc -a "version=" -d manpage -b docbook -o "modules.d/98dracut-systemd/dracut-initqueue.service.8.xml" modules.d/98dracut-systemd/dracut-initqueue.service.8.asc
+asciidoc -a "version=" -d manpage -b docbook -o "modules.d/98dracut-systemd/dracut-mount.service.8.xml" modules.d/98dracut-systemd/dracut-mount.service.8.asc
+asciidoc -a "version=" -d manpage -b docbook -o "modules.d/98dracut-systemd/dracut-shutdown.service.8.xml" modules.d/98dracut-systemd/dracut-shutdown.service.8.asc
+asciidoc -a "version=" -d manpage -b docbook -o "modules.d/98dracut-systemd/dracut-pre-mount.service.8.xml" modules.d/98dracut-systemd/dracut-pre-mount.service.8.asc
+asciidoc -a "version=" -d manpage -b docbook -o "modules.d/98dracut-systemd/dracut-pre-pivot.service.8.xml" modules.d/98dracut-systemd/dracut-pre-pivot.service.8.asc
+asciidoc -a "version=" -d manpage -b docbook -o "modules.d/98dracut-systemd/dracut-pre-trigger.service.8.xml" modules.d/98dracut-systemd/dracut-pre-trigger.service.8.asc
+asciidoc -a "version=" -d manpage -b docbook -o "modules.d/98dracut-systemd/dracut-pre-udev.service.8.xml" modules.d/98dracut-systemd/dracut-pre-udev.service.8.asc
+cc   src/skipcpio/skipcpio.o   -o src/skipcpio/skipcpio
+cc   src/util/util.o   -o src/util/util
+xsltproc -o "man/lsinitrd.1" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl man/lsinitrd.1.xml
+xsltproc -o "man/dracut.conf.5" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl man/dracut.conf.5.xml
+xsltproc -o "man/dracut.bootup.7" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl man/dracut.bootup.7.xml
+xsltproc -o "man/dracut.modules.7" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl man/dracut.modules.7.xml
+xsltproc -o "man/dracut-catimages.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl man/dracut-catimages.8.xml
+xsltproc -o "modules.d/98dracut-systemd/dracut-cmdline.service.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl modules.d/98dracut-systemd/dracut-cmdline.service.8.xml
+Note: Writing lsinitrd.1
+Note: Writing dracut.bootup.7
+Note: Writing dracut-catimages.8
+Note: Writing dracut.modules.7
+xsltproc -o "modules.d/98dracut-systemd/dracut-initqueue.service.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl modules.d/98dracut-systemd/dracut-initqueue.service.8.xml
+Note: Writing dracut.conf.5
+xsltproc -o "modules.d/98dracut-systemd/dracut-mount.service.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl modules.d/98dracut-systemd/dracut-mount.service.8.xml
+xsltproc -o "modules.d/98dracut-systemd/dracut-shutdown.service.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl modules.d/98dracut-systemd/dracut-shutdown.service.8.xml
+xsltproc -o "modules.d/98dracut-systemd/dracut-pre-mount.service.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl modules.d/98dracut-systemd/dracut-pre-mount.service.8.xml
+xsltproc -o "modules.d/98dracut-systemd/dracut-pre-pivot.service.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl modules.d/98dracut-systemd/dracut-pre-pivot.service.8.xml
+Note: Writing dracut-cmdline.service.8
+xsltproc -o "modules.d/98dracut-systemd/dracut-pre-trigger.service.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl modules.d/98dracut-systemd/dracut-pre-trigger.service.8.xml
+Note: Writing dracut-initqueue.service.8
+Note: Writing dracut-mount.service.8
+Note: Writing dracut-shutdown.service.8
+cc  -o src/install/dracut-install src/install/dracut-install.o src/install/hashmap.o src/install/log.o src/install/strv.o src/install/util.o  -lc -lkmod
+Note: Writing dracut-pre-mount.service.8
+xsltproc -o "modules.d/98dracut-systemd/dracut-pre-udev.service.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl modules.d/98dracut-systemd/dracut-pre-udev.service.8.xml
+Note: Writing dracut-pre-pivot.service.8
+cp -a src/util/util dracut-util
+ln -fs src/install/dracut-install dracut-install
+Note: Writing dracut-pre-trigger.service.8
+Note: Writing dracut-pre-udev.service.8
+xsltproc -o "man/dracut.8" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl man/dracut.8.xml
+xsltproc -o "man/dracut.cmdline.7" -nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl man/dracut.cmdline.7.xml
+Note: Writing dracut.8
+Note: Writing dracut.cmdline.7
+asciidoc -a "mainversion=" \
+	-a "version=" \
+	-a numbered \
+	-d book -b docbook -o dracut.xml man/dracut.asc
+xsltproc -o dracut.html --xinclude -nonet \
+	--stringparam custom.css.source docs/dracut.css \
+	--stringparam generate.css.header 1 \
+	http://docbook.sourceforge.net/release/xsl/current/xhtml/docbook.xsl dracut.xml
+rm man/dracut.modules.7.xml man/dracut-catimages.8.xml man/dracut.conf.5.xml modules.d/98dracut-systemd/dracut-mount.service.8.xml man/dracut.cmdline.7.xml modules.d/98dracut-systemd/dracut-cmdline.service.8.xml man/dracut.8.xml man/dracut.bootup.7.xml modules.d/98dracut-systemd/dracut-pre-mount.service.8.xml modules.d/98dracut-systemd/dracut-shutdown.service.8.xml modules.d/98dracut-systemd/dracut-pre-trigger.service.8.xml modules.d/98dracut-systemd/dracut-initqueue.service.8.xml modules.d/98dracut-systemd/dracut-pre-pivot.service.8.xml modules.d/98dracut-systemd/dracut-pre-udev.service.8.xml man/lsinitrd.1.xml
+(lfs chroot) root:/sources/dracut-057# make install sbindir=/sbin sysconfdir=/etc
+mkdir -p /usr/lib/dracut
+mkdir -p /usr/bin
+mkdir -p /etc
+mkdir -p /usr/lib/dracut/modules.d
+mkdir -p /usr/share/man/man1 /usr/share/man/man5 /usr/share/man/man7 /usr/share/man/man8
+install -m 0755 dracut.sh /usr/bin/dracut
+install -m 0755 dracut-catimages.sh /usr/bin/dracut-catimages
+install -m 0755 lsinitrd.sh /usr/bin/lsinitrd
+install -m 0644 dracut.conf /etc/dracut.conf
+mkdir -p /etc/dracut.conf.d
+mkdir -p /usr/lib/dracut/dracut.conf.d
+install -m 0755 dracut-init.sh /usr/lib/dracut/dracut-init.sh
+install -m 0755 dracut-functions.sh /usr/lib/dracut/dracut-functions.sh
+install -m 0755 dracut-version.sh /usr/lib/dracut/dracut-version.sh
+ln -fs dracut-functions.sh /usr/lib/dracut/dracut-functions
+install -m 0755 dracut-logger.sh /usr/lib/dracut/dracut-logger.sh
+install -m 0755 dracut-initramfs-restore.sh /usr/lib/dracut/dracut-initramfs-restore
+cp -arx modules.d /usr/lib/dracut
+for i in man/lsinitrd.1; do install -m 0644 $i /usr/share/man/man1/${i##*/}; done
+for i in man/dracut.conf.5; do install -m 0644 $i /usr/share/man/man5/${i##*/}; done
+for i in man/dracut.cmdline.7 man/dracut.bootup.7 man/dracut.modules.7; do install -m 0644 $i /usr/share/man/man7/${i##*/}; done
+for i in man/dracut.8 man/dracut-catimages.8 modules.d/98dracut-systemd/dracut-cmdline.service.8 modules.d/98dracut-systemd/dracut-initqueue.service.8 modules.d/98dracut-systemd/dracut-mount.service.8 modules.d/98dracut-systemd/dracut-shutdown.service.8 modules.d/98dracut-systemd/dracut-pre-mount.service.8 modules.d/98dracut-systemd/dracut-pre-pivot.service.8 modules.d/98dracut-systemd/dracut-pre-trigger.service.8 modules.d/98dracut-systemd/dracut-pre-udev.service.8; do install -m 0644 $i /usr/share/man/man8/${i##*/}; done
+ln -fs dracut.cmdline.7 /usr/share/man/man7/dracut.kernel.7
+if [ -n "" ]; then \
+	mkdir -p ; \
+	ln -srf /usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown-onfailure.service /dracut-shutdown-onfailure.service; \
+	ln -srf /usr/lib/dracut/modules.d/98dracut-systemd/dracut-shutdown.service /dracut-shutdown.service; \
+	mkdir -p /sysinit.target.wants; \
+	ln -s ../dracut-shutdown.service \
+	/sysinit.target.wants/dracut-shutdown.service; \
+	mkdir -p /initrd.target.wants; \
+	for i in \
+	    dracut-cmdline.service \
+	    dracut-initqueue.service \
+	    dracut-mount.service \
+	    dracut-pre-mount.service \
+	    dracut-pre-pivot.service \
+	    dracut-pre-trigger.service \
+	    dracut-pre-udev.service \
+	    ; do \
+		ln -srf /usr/lib/dracut/modules.d/98dracut-systemd/$i ; \
+		ln -s ../$i \
+		/initrd.target.wants/$i; \
+	done \
+fi
+if [ -f src/install/dracut-install ]; then \
+	install -m 0755 src/install/dracut-install /usr/lib/dracut/dracut-install; \
+fi
+if [ -f src/skipcpio/skipcpio ]; then \
+	install -m 0755 src/skipcpio/skipcpio /usr/lib/dracut/skipcpio; \
+fi
+if [ -f dracut-util ]; then \
+	install -m 0755 dracut-util /usr/lib/dracut/dracut-util; \
+fi
+mkdir -p /usr/lib/kernel/install.d
+install -m 0755 install.d/50-dracut.install /usr/lib/kernel/install.d/50-dracut.install
+install -m 0755 install.d/51-dracut-rescue.install /usr/lib/kernel/install.d/51-dracut-rescue.install
+mkdir -p /usr/share/bash-completion/completions
+install -m 0644 shell-completion/bash/dracut /usr/share/bash-completion/completions/dracut
+install -m 0644 shell-completion/bash/lsinitrd /usr/share/bash-completion/completions/lsinitrd
+mkdir -p /usr/share/pkgconfig
+install -m 0644 dracut.pc /usr/share/pkgconfig/dracut.pc
+(lfs chroot) root:/sources/dracut-057# which dracut
+/usr/bin/dracut
+(lfs chroot) root:/sources/dracut-057# l /usr/lib/dracut/dracut.conf.d/ipfire.conf 
+-rw-r--r-- 1 root root 103 Oct  1 18:14 /usr/lib/dracut/dracut.conf.d/ipfire.conf
+(lfs chroot) root:/sources/dracut-057# finish
+[lfs-scripts] Finishing build of dracut-057 at Sun Oct  2 12:34:11 AM -03 2022
+(lfs chroot) root:/sources# 

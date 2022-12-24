@@ -1,0 +1,140 @@
+(lfs chroot) root:/sources# begin zstd-1.5.0 tar.gz
+make
+[lfs-scripts] Starting build of zstd-1.5.0 at Mon Sep 12 22:00:36 -03 2022
+make[1]: Entering directory '/sources/zstd-1.5.0/lib'
+make[1]: Entering directory '/sources/zstd-1.5.0/programs'
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/debug.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/entropy_common.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/error_private.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/fse_decompress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/debug.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/entropy_common.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/pool.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/error_private.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/threading.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/fse_decompress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/pool.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/xxhash.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/threading.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_common.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/xxhash.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/fse_compress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_common.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/hist.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/fse_compress.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/debug.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/entropy_common.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/huf_compress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/hist.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/error_private.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/huf_compress.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/fse_decompress.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/pool.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/threading.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_compress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_compress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_compress_literals.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/xxhash.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_common.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/fse_compress.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/hist.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_compress_sequences.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_compress_superblock.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_double_fast.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/huf_compress.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_compress.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_compress_literals.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_fast.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_lazy.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_compress_literals.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_compress_sequences.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_compress_sequences.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_compress_superblock.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_double_fast.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_compress_superblock.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_fast.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_double_fast.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_ldm.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_lazy.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_ldm.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_fast.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_opt.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstdmt_compress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/huf_decompress.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_opt.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_lazy.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_ddict.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_ldm.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_decompress.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_opt.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstdmt_compress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_decompress_block.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/cover.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/huf_decompress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/divsufsort.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_ddict.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstdmt_compress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/fastcover.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/huf_decompress.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_decompress.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zdict.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_ddict.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_v05.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_decompress.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_decompress_block.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_v06.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_decompress_block.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/cover.o
+CC obj/conf_21daecdb28eda88c4cc2d863896a5905/dynamic/zstd_v07.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/cover.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/divsufsort.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/divsufsort.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/fastcover.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/fastcover.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zdict.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_v05.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zdict.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_v05.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_v06.o
+compiling multi-threaded dynamic library 1.5.0
+creating versioned links
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd_v07.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_v06.o
+CC obj/conf_24d28f9076fd3b8f17cf2bf90a3aaa24/static/zstd_v07.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/benchfn.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/benchzstd.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/datagen.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/dibio.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/fileio.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/timefn.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/util.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstdcli.o
+CC obj/conf_d2bcb34c2fa18701060a48081162c40b/zstdcli_trace.o
+compiling single-threaded static library 1.5.0
+release build completed
+make[1]: Leaving directory '/sources/zstd-1.5.0/lib'
+==> building with threading support
+==> building zstd with .gz compression support
+==> building zstd with .xz/.lzma compression support
+==> no liblz4, building zstd without .lz4 support
+LINK obj/conf_d2bcb34c2fa18701060a48081162c40b/zstd
+zstd build completed
+make[1]: Leaving directory '/sources/zstd-1.5.0/programs'
+(lfs chroot) root:/sources/zstd-1.5.0# make prefix=/usr install
+rm -v /usr/lib/libzstd.a
+finish
+make[1]: Entering directory '/sources/zstd-1.5.0/lib'
+creating pkgconfig
+Installing includes
+Installing shared library
+Installing static library
+zstd static and shared library installed
+make[1]: Leaving directory '/sources/zstd-1.5.0/lib'
+make[1]: Entering directory '/sources/zstd-1.5.0/programs'
+Installing binaries
+Installing man pages
+zstd installation completed
+make[1]: Leaving directory '/sources/zstd-1.5.0/programs'
+removed '/usr/lib/libzstd.a'
+[lfs-scripts] Finishing build of zstd-1.5.0 at Mon Sep 12 22:03:29 -03 2022
+(lfs chroot) root:/sources# 

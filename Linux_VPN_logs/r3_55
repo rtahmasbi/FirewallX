@@ -1,0 +1,1321 @@
+(lfs chroot) root:/sources# # 8.57. Findutils-4.8.0
+begin findutils-4.8.0 tar.xz
+./configure --prefix=/usr --localstatedir=/var/lib/locate
+make
+make install
+finish
+[lfs-scripts] Starting build of findutils-4.8.0 at Tue Sep 13 23:56:13 -03 2022
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for leaf optimisation... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether the compiler is clang... no
+checking for compiler option needed when checking for declarations... none
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for dirent.h... yes
+checking for fnmatch.h... yes
+checking for stdio_ext.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/vfs.h... yes
+checking for netdb.h... yes
+checking for getopt.h... yes
+checking for sys/cdefs.h... yes
+checking for sys/time.h... yes
+checking for threads.h... yes
+checking for limits.h... yes
+checking for inttypes.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for crtdefs.h... no
+checking for wctype.h... yes
+checking for langinfo.h... yes
+checking for xlocale.h... no
+checking for math.h... yes
+checking for sys/mman.h... yes
+checking for sys/statvfs.h... yes
+checking for malloc.h... yes
+checking for selinux/selinux.h... no
+checking for strings.h... (cached) yes
+checking for sys/uio.h... yes
+checking for sys/utsname.h... yes
+checking for sys/wait.h... yes
+checking for features.h... yes
+checking for arpa/inet.h... yes
+checking for netinet/in.h... yes
+checking for semaphore.h... yes
+checking for sys/select.h... yes
+checking for priv.h... no
+checking for pthread.h... yes
+checking for sys/ioctl.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for special C compiler options needed for large files... (cached) no
+checking for _FILE_OFFSET_BITS value needed for large files... (cached) no
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking for btowc... yes
+checking for canonicalize_file_name... yes
+checking for faccessat... yes
+checking for realpath... yes
+checking for readlinkat... yes
+checking for _set_invalid_parameter_handler... no
+checking for fchdir... yes
+checking for fdopendir... yes
+checking for fcntl... yes
+checking for symlink... yes
+checking for mempcpy... yes
+checking for fnmatch... yes
+checking for mbsrtowcs... yes
+checking for fpurge... no
+checking for __fpurge... yes
+checking for __freadahead... no
+checking for __freading... yes
+checking for fstatat... yes
+checking for openat... yes
+checking for fstatfs... yes
+checking for getdelim... yes
+checking for getdtablesize... yes
+checking for getprogname... no
+checking for getexecname... no
+checking for gettimeofday... yes
+checking for isblank... yes
+checking for iswcntrl... yes
+checking for iswblank... yes
+checking for lstat... yes
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for mbslen... no
+checking for isascii... yes
+checking for mprotect... yes
+checking for nl_langinfo... yes
+checking for strerror_r... yes
+checking for __xpg_strerror_r... yes
+checking for pipe... yes
+checking for readlink... yes
+checking for iswctype... yes
+checking for setenv... yes
+checking for snprintf... yes
+checking for catgets... yes
+checking for strndup... yes
+checking for strtoumax... yes
+checking for localtime_r... yes
+checking for timegm... yes
+checking for unlinkat... yes
+checking for vasnprintf... no
+checking for wcrtomb... yes
+checking for wcwidth... yes
+checking for wmempcpy... yes
+checking for ftruncate... yes
+checking for duplocale... yes
+checking for newlocale... yes
+checking for uselocale... yes
+checking for freelocale... yes
+checking for pthread_sigmask... yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for siginterrupt... yes
+checking for sleep... yes
+checking for symlinkat... yes
+checking for shutdown... yes
+checking for usleep... yes
+checking for wctob... yes
+checking for nl_langinfo and CODESET... yes
+checking for a traditional french locale... none
+checking whether lstat correctly handles trailing slash... yes
+checking whether // is distinct from /... no
+checking whether realpath works... yes
+checking for C/C++ restrict keyword... __restrict__
+checking whether the preprocessor supports include_next... yes
+checking whether source code line length is unlimited... yes
+checking if environ is properly declared... yes
+checking for complete errno.h... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... (cached) yes
+checking whether strerror_r returns char *... yes
+checking for uid_t in sys/types.h... yes
+checking type of array argument to getgroups... gid_t
+checking whether fchdir is declared... yes
+checking for working fcntl.h... yes
+checking for pid_t... yes
+checking for mode_t... yes
+checking for promoted mode_t type... mode_t
+checking whether strmode is declared... no
+checking for mbstate_t... yes
+checking whether stdin defaults to large file offsets... yes
+checking whether fseeko is declared... yes
+checking for fseeko... yes
+checking whether fflush works on input streams... no
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking whether ftello is declared... yes
+checking for ftello... yes
+checking whether ftello works... yes
+checking for O_CLOEXEC... yes
+checking whether getcwd (NULL, 0) allocates memory for result... yes
+checking for getcwd with POSIX signature... yes
+checking whether getcwd is declared... yes
+checking whether getdelim is declared... yes
+checking whether getdtablesize is declared... yes
+checking whether getline is declared... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... yes
+checking for working GNU getopt_long function... yes
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking for pthread.h... (cached) yes
+checking for pthread_kill in -lpthread... yes
+checking whether POSIX threads API is available... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... yes
+checking whether setlocale (category, NULL) is multithread-safe... yes
+checking for inline... inline
+checking whether limits.h has LLONG_MAX, WORD_BIT, ULLONG_WIDTH etc.... yes
+checking for wint_t... yes
+checking whether wint_t is large enough... yes
+checking whether the compiler produces multi-arch binaries... no
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h works without ISO C predefines... yes
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking whether byte ordering is bigendian... no
+checking whether long double and double are the same... no
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking where to find the exponent in a 'float'... word 0 bit 23
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking for a traditional japanese locale... none
+checking for a french Unicode locale... none
+checking for a transitional chinese locale... none
+checking for wchar_t... yes
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether locale.h defines locale_t... yes
+checking whether imported symbols can be declared weak... yes
+checking for multithread API to use... posix
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether malloc, realloc, calloc are POSIX compliant... yes
+checking for GNU libc compatible malloc... yes
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether memrchr is declared... yes
+checking whether <limits.h> defines MIN and MAX... no
+checking whether <sys/param.h> defines MIN and MAX... yes
+checking whether time_t is signed... yes
+checking whether alarm is declared... yes
+checking for working mktime... yes
+checking whether trunc is declared... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for struct tm.tm_gmtoff... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for compound literals... yes
+checking whether strerror(0) succeeds... yes
+checking for strerror_r with POSIX signature... no
+checking whether __xpg_strerror_r works... yes
+checking whether strerror_r is declared... (cached) yes
+checking for ssize_t... yes
+checking for library containing setfilecon... no
+checking whether setenv is declared... yes
+checking search.h usability... yes
+checking search.h presence... yes
+checking for search.h... yes
+checking for tsearch... yes
+checking whether snprintf returns a byte count as in C99... yes
+checking whether snprintf is declared... yes
+checking for library containing setsockopt... none needed
+checking whether fcloseall is declared... yes
+checking whether ecvt is declared... yes
+checking whether fcvt is declared... yes
+checking whether gcvt is declared... yes
+checking for strcasestr... yes
+checking whether strcasestr works... yes
+checking whether strdup is declared... yes
+checking whether strndup is declared... yes
+checking whether strnlen is declared... yes
+checking whether strstr works... yes
+checking whether strtoumax is declared... yes
+checking whether <sys/socket.h> is self-contained... yes
+checking for shutdown... (cached) yes
+checking whether <sys/socket.h> defines the SHUT_* macros... yes
+checking for struct sockaddr_storage... yes
+checking for sa_family_t... yes
+checking for struct sockaddr_storage.ss_family... yes
+checking for struct timespec in <time.h>... yes
+checking for TIME_UTC in <time.h>... yes
+checking whether execvpe is declared... yes
+checking whether unsetenv is declared... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for intmax_t... yes
+checking whether snprintf truncates the result as in C99... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... (cached) yes
+checking for wcrtomb... (cached) yes
+checking whether _snprintf is declared... no
+checking for 64-bit time_t... yes
+checking whether ungetc works on arbitrary bytes... yes
+checking for IPv4 sockets... yes
+checking for IPv6 sockets... yes
+checking for off_t... yes
+checking for LC_MESSAGES... yes
+checking whether uselocale works... yes
+checking for fake locale system (OpenBSD)... no
+checking for Solaris 11.4 locale system... no
+checking for getlocalename_l... no
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking for library needed for semaphore functions... none
+checking whether <sys/select.h> is self-contained... yes
+checking whether select supports a 0 argument... yes
+checking whether select detects invalid fds... yes
+checking for sigset_t... yes
+checking for alloca as a compiler built-in... yes
+checking whether to enable assertions... yes
+checking whether btowc(0) is correct... yes
+checking whether btowc(EOF) is correct... guessing yes
+checking for __builtin_expect... yes
+checking byteswap.h usability... yes
+checking byteswap.h presence... yes
+checking for byteswap.h... yes
+checking whether this system supports file names of any length... no
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking for closedir... yes
+checking for d_ino member in directory struct... yes
+checking for d_type member in directory struct... yes
+checking for dirfd... yes
+checking whether dirfd is declared... yes
+checking whether dirfd is a macro... no
+checking whether // is distinct from /... (cached) no
+checking whether dup works... yes
+checking whether dup2 works... yes
+checking for error_at_line... yes
+checking for euidaccess... yes
+checking whether fcntl handles F_DUPFD correctly... yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... needs runtime check
+checking whether fdopendir is declared... yes
+checking whether fdopendir works... yes
+checking whether fflush works on input streams... (cached) no
+checking for struct stat.st_blocks... yes
+checking for flexible array member... yes
+checking whether conversion from 'int' to 'long double' works... yes
+checking for working GNU fnmatch... yes
+checking whether fopen recognizes a trailing slash... yes
+checking whether fopen supports the mode character 'x'... yes
+checking whether fopen supports the mode character 'e'... yes
+checking for __fpending... yes
+checking whether __fpending is declared... yes
+checking whether fpurge is declared... no
+checking whether free is known to preserve errno... yes
+checking for fseeko... (cached) yes
+checking whether fflush works on input streams... (cached) no
+checking for _fseeki64... no
+checking whether fstatat (..., 0) works... yes
+checking for ftello... (cached) yes
+checking whether ftello works... (cached) yes
+checking for struct statfs.f_type... yes
+checking for __fsword_t... yes
+checking for fts_open... yes
+checking whether getcwd handles long file names properly... yes
+checking for getpagesize... yes
+checking whether getcwd succeeds when 4k < cwd_length < 16k... yes
+checking for working getdelim function... yes
+checking whether getdtablesize works... yes
+checking for getgroups... yes
+checking for working getgroups... yes
+checking whether getgroups handles negative values... yes
+checking for gethostname... yes
+checking for HOST_NAME_MAX... yes
+checking for getline... yes
+checking for working getline function... yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether __argv is declared... no
+checking for gettimeofday with POSIX signature... yes
+checking for group_member... yes
+checking whether the compiler generally respects inline... yes
+checking whether INT32_MAX < INTMAX_MAX... yes
+checking whether INT64_MAX == LONG_MAX... yes
+checking whether UINT32_MAX < UINTMAX_MAX... yes
+checking whether UINT64_MAX == ULONG_MAX... yes
+checking whether isfinite is declared... yes
+checking whether isfinite(long double) works... yes
+checking whether isinf is declared... yes
+checking whether isinf(long double) works... yes
+checking whether isnan(double) can be used without linking with libm... yes
+checking whether isnan(float) can be used without linking with libm... yes
+checking whether isnan(float) works... yes
+checking whether isnan(long double) can be used without linking with libm... yes
+checking whether isnanl works... yes
+checking whether iswblank is declared... yes
+checking whether iswdigit is ISO C compliant... guessing yes
+checking whether iswxdigit is ISO C compliant... guessing yes
+checking whether langinfo.h defines CODESET... yes
+checking whether langinfo.h defines T_FMT_AMPM... yes
+checking whether langinfo.h defines ALTMON_1... yes
+checking whether langinfo.h defines ERA... yes
+checking whether langinfo.h defines YESEXPR... yes
+checking whether the compiler supports the __inline keyword... yes
+checking whether locale.h conforms to POSIX:2001... yes
+checking whether struct lconv is properly defined... yes
+checking for pthread_rwlock_t... yes
+checking whether pthread_rwlock_rdlock prefers a writer to a reader... no
+checking whether lseek detects pipes... yes
+checking for GNU libc compatible malloc... (cached) yes
+checking whether NAN macro works... yes
+checking whether HUGE_VAL works... yes
+checking whether mbrtowc handles incomplete characters... guessing yes
+checking whether mbrtowc works as well as mbtowc... guessing yes
+checking whether mbrtowc handles a NULL pwc argument... guessing yes
+checking whether mbrtowc handles a NULL string argument... guessing yes
+checking whether mbrtowc has a correct return value... guessing yes
+checking whether mbrtowc returns 0 when parsing a NUL character... guessing yes
+checking whether mbrtowc stores incomplete characters... guessing no
+checking whether mbrtowc works on empty input... yes
+checking whether the C locale is free of encoding errors... no
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether mbsrtowcs works... guessing yes
+checking whether mbswidth is declared in <wchar.h>... no
+checking for mbstate_t... (cached) yes
+checking for mbtowc... yes
+checking for mempcpy... (cached) yes
+checking for memrchr... yes
+checking for __mktime_internal... no
+checking whether modf can be used without linking with libm... yes
+checking for listmntent... no
+checking for sys/ucred.h... no
+checking for sys/mount.h... yes
+checking mntent.h usability... yes
+checking mntent.h presence... yes
+checking for mntent.h... yes
+checking sys/fs_types.h usability... no
+checking sys/fs_types.h presence... no
+checking for sys/fs_types.h... no
+checking for struct fsstat.f_fstypename... no
+checking for library containing getmntent... none required
+checking for getmntent... yes
+checking for mntctl function and struct vmount... no
+checking for one-argument getmntent function... yes
+checking for setmntent... yes
+checking for endmntent... yes
+checking for hasmntopt... yes
+checking sys/mntent.h usability... no
+checking sys/mntent.h presence... no
+checking for sys/mntent.h... no
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking for struct statfs.f_fstypename... no
+checking whether YESEXPR works... yes
+checking whether open recognizes a trailing slash... yes
+checking for opendir... yes
+checking for bison... bison
+checking for bison 2.4 or newer... 3.7.6, ok
+checking for struct tm.tm_zone... (cached) yes
+checking whether perror matches strerror... yes
+checking whether program_invocation_name is declared... (cached) yes
+checking whether program_invocation_short_name is declared... (cached) yes
+checking for rawmemchr... yes
+checking for readdir... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking whether readlink truncates results correctly... yes
+checking whether readlinkat signature is correct... yes
+checking for GNU libc compatible realloc... yes
+checking for working re_compile_pattern... no
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking whether isblank is declared... yes
+checking for rewinddir... yes
+checking whether rmdir works... yes
+checking for rpmatch... yes
+checking selinux/flask.h usability... no
+checking selinux/flask.h presence... no
+checking for selinux/flask.h... no
+checking whether setenv validates arguments... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... (cached) yes
+checking whether setlocale (category, NULL) is multithread-safe... (cached) yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for snprintf... (cached) yes
+checking whether snprintf respects a size of 1... yes
+checking whether printf supports POSIX/XSI format strings with positions... yes
+checking for socklen_t... yes
+checking for ssize_t... (cached) yes
+checking whether stat handles trailing slashes on files... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for working stdalign.h... yes
+checking for va_copy... yes
+checking for good max_align_t... (cached) yes
+checking whether NULL can be used in arbitrary expressions... (cached) yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking for stpcpy... yes
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking whether strncasecmp is declared... yes
+checking whether strcasestr works in linear time... yes
+checking for strcasestr... (cached) yes
+checking whether strcasestr works... (cached) yes
+checking for working strerror function... yes
+checking for working strndup... yes
+checking for working strnlen... yes
+checking whether strstr works in linear time... yes
+checking whether strstr works... (cached) yes
+checking for strtoull... yes
+checking for nlink_t... (cached) yes
+checking for struct utsname... yes
+checking whether localtime_r is declared... yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+checking whether localtime works even near extrema... yes
+checking for timezone_t... no
+checking whether trunc is declared... (cached) yes
+checking for uname... yes
+checking whether unlink honors trailing slashes... yes
+checking whether unlink of a parent directory fails as it should... guessing yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... yes
+checking for ptrdiff_t... yes
+checking whether wcsdup is declared... yes
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether wcrtomb works in the C locale... yes
+checking whether wcrtomb return value is correct... guessing yes
+checking whether iswcntrl works... (cached) yes
+checking for towlower... (cached) yes
+checking for wctype_t... (cached) yes
+checking for wctrans_t... (cached) yes
+checking whether wcwidth is declared... yes
+checking whether wcwidth works reasonably in UTF-8 locales... yes
+checking for wmemchr... yes
+checking for stdint.h... (cached) yes
+checking for atoll... yes
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional french locale... (cached) none
+checking for a turkish Unicode locale... none
+checking whether fdopen sets errno... yes
+checking for getpagesize... (cached) yes
+checking whether getpagesize is declared... yes
+checking for library containing inet_pton... none required
+checking whether inet_pton is declared... yes
+checking whether byte ordering is bigendian... (cached) no
+checking for ioctl... yes
+checking for ioctl with POSIX signature... no
+checking where to find the exponent in a 'float'... (cached) word 0 bit 23
+checking where to find the exponent in a 'double'... (cached) word 1 bit 20
+checking where to find the exponent in a 'long double'... word 3 bit 16
+checking where to find the exponent in a 'float'... (cached) word 0 bit 23
+checking where to find the exponent in a 'double'... (cached) word 1 bit 20
+checking where to find the exponent in a 'long double'... (cached) word 3 bit 16
+checking where to find the exponent in a 'double'... (cached) word 1 bit 20
+checking where to find the exponent in a 'float'... (cached) word 0 bit 23
+checking where to find the exponent in a 'long double'... (cached) word 3 bit 16
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a turkish Unicode locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for mmap... (cached) yes
+checking for MAP_ANONYMOUS... yes
+checking for mmap... (cached) yes
+checking for MAP_ANONYMOUS... yes
+checking for library containing nanosleep... none required
+checking for working nanosleep... no (mishandles large arguments)
+checking whether <netinet/in.h> is self-contained... yes
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for getppriv... no
+checking for pthread_t... yes
+checking for pthread_spinlock_t... yes
+checking for PTHREAD_CREATE_DETACHED... yes
+checking for PTHREAD_MUTEX_RECURSIVE... yes
+checking for PTHREAD_MUTEX_ROBUST... yes
+checking for PTHREAD_PROCESS_SHARED... yes
+checking whether pthread_create exists as a global function... yes
+checking whether pthread_sigmask is a macro... no
+checking whether pthread_sigmask works without -lpthread... yes
+checking whether pthread_sigmask returns error numbers... yes
+checking whether pthread_sigmask unblocks signals correctly... guessing yes
+checking for putenv compatible with GNU and SVID... yes
+checking for mmap... (cached) yes
+checking for MAP_ANONYMOUS... yes
+checking for raise... yes
+checking for sigprocmask... yes
+checking for mmap... (cached) yes
+checking for MAP_ANONYMOUS... yes
+checking for sched.h... yes
+checking for struct sched_param... yes
+checking whether select supports a 0 argument... (cached) yes
+checking whether select detects invalid fds... (cached) yes
+checking whether setlocale supports the C locale... yes
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for struct sigaction.sa_sigaction... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking for sigprocmask... (cached) yes
+checking whether sleep is declared... yes
+checking for working sleep... yes
+checking for mmap... (cached) yes
+checking for MAP_ANONYMOUS... yes
+checking for mmap... (cached) yes
+checking for MAP_ANONYMOUS... yes
+checking for strtoll... yes
+checking whether symlink handles trailing slash correctly... yes
+checking whether symlinkat handles trailing slash correctly... yes
+checking whether <sys/ioctl.h> declares ioctl... yes
+checking for pthread_atfork... yes
+checking sys/single_threaded.h usability... yes
+checking sys/single_threaded.h presence... yes
+checking for sys/single_threaded.h... yes
+checking for useconds_t... yes
+checking whether usleep allows large arguments... yes
+checking for a traditional french locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking whether wctob works... guessing yes
+checking whether wctob is declared... yes
+checking whether C compiler handles -Werror -Wunknown-warning-option... no
+checking for getpwnam... yes
+checking for modf in -lm... yes
+checking for fabs in -lm... yes
+checking for ANSI C header files... (cached) yes
+checking for sys/param.h... (cached) yes
+checking for mntent.h... (cached) yes
+checking sys/mnttab.h usability... no
+checking sys/mnttab.h presence... no
+checking for sys/mnttab.h... no
+checking sys/mntio.h usability... no
+checking sys/mntio.h presence... no
+checking for sys/mntio.h... no
+checking for sys/mkdev.h... (cached) no
+checking for getrlimit... yes
+checking for sys/mkdev.h... (cached) no
+checking for sys/sysmacros.h... (cached) yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking whether stat file-mode macros are broken... (cached) no
+checking for sys/wait.h that is POSIX.1 compatible... (cached) yes
+checking for uid_t in sys/types.h... (cached) yes
+checking for size_t... (cached) yes
+checking for ssize_t... yes
+checking for pid_t... (cached) yes
+checking for ino_t... yes
+checking for dev_t... yes
+checking for mode_t... (cached) yes
+checking for struct stat.st_blocks... (cached) yes
+checking for struct stat.st_rdev... yes
+checking for promoted mode_t type... (cached) mode_t
+checking whether struct tm is in sys/time.h or time.h... (cached) time.h
+checking for struct tm.tm_zone... (cached) yes
+checking for strftime... yes
+checking for memcmp... yes
+checking for memset... yes
+checking for stpcpy... (cached) yes
+checking for strdup... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for fchdir... (cached) yes
+checking for getcwd... yes
+checking for strerror... yes
+checking for endgrent... yes
+checking for endpwent... yes
+checking for setlocale... yes
+checking for getrusage... yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking for working alloca.h... (cached) yes
+checking for alloca... (cached) yes
+checking whether closedir returns void... no
+checking for getmntent... (cached) yes
+checking for getmntent... (cached) yes
+checking for setmntent... (cached) yes
+checking for endmntent... (cached) yes
+checking for setgroups... yes
+checking for alloca as a compiler built-in... (cached) yes
+checking for working re_compile_pattern... (cached) no
+checking for sort... /usr/bin/sort
+checking if /usr/bin/sort supports the -z option... yes
+checking for struct dirent.d_type... yes
+checking for __attribute__ ((__noreturn__)) support... yes
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking for CFPreferencesCopyAppValue... (cached) no
+checking for CFLocaleCopyPreferredLanguages... (cached) no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for python... no
+checking for python2... no
+checking for python3... /usr/bin/python3
+checking for python version... 3.9
+checking for python platform... linux
+checking for python script directory... ${prefix}/lib/python3.9/site-packages
+checking for python extension module directory... ${exec_prefix}/lib/python3.9/site-packages
+checking for faketime... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating build-aux/Makefile
+config.status: creating doc/Makefile
+config.status: creating find/Makefile
+config.status: creating find/testsuite/Makefile
+config.status: creating gl/Makefile
+config.status: creating gl/lib/Makefile
+config.status: creating lib/Makefile
+config.status: creating locate/Makefile
+config.status: creating locate/testsuite/Makefile
+config.status: creating m4/Makefile
+config.status: creating po/Makefile.in
+config.status: creating po/Makefile
+config.status: creating gnulib-tests/Makefile
+config.status: creating xargs/Makefile
+config.status: creating xargs/testsuite/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/sources/findutils-4.8.0'
+Making all in gl
+make[2]: Entering directory '/sources/findutils-4.8.0/gl'
+Making all in lib
+make[3]: Entering directory '/sources/findutils-4.8.0/gl/lib'
+  GEN      alloca.h
+  GEN      ctype.h
+  GEN      dirent.h
+  GEN      inttypes.h
+  GEN      fcntl.h
+  GEN      langinfo.h
+  GEN      limits.h
+  GEN      locale.h
+  GEN      math.h
+  GEN      selinux/selinux.h
+  GEN      selinux/context.h
+  GEN      selinux/label.h
+  GEN      stdio.h
+  GEN      stdlib.h
+  GEN      string.h
+  GEN      strings.h
+  GEN      sys/socket.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      sys/types.h
+  GEN      sys/uio.h
+  GEN      sys/utsname.h
+  GEN      sys/wait.h
+  GEN      time.h
+  GEN      unistd.h
+  GEN      unitypes.h
+  GEN      uniwidth.h
+  GEN      wchar.h
+  GEN      wctype.h
+/usr/bin/make  all-recursive
+make[4]: Entering directory '/sources/findutils-4.8.0/gl/lib'
+make[5]: Entering directory '/sources/findutils-4.8.0/gl/lib'
+  CC       allocator.o
+  CC       areadlink.o
+  CC       argmatch.o
+  CC       areadlinkat.o
+  CC       openat-proc.o
+  CC       basename-lgpl.o
+  CC       bitrotate.o
+  CC       c-ctype.o
+  CC       c-strcasecmp.o
+  CC       c-strncasecmp.o
+  CC       c-strcasestr.o
+  CC       c-strstr.o
+  CC       canonicalize.o
+  CC       careadlinkat.o
+  CC       cloexec.o
+canonicalize.c: In function 'canonicalize_filename_mode':
+canonicalize.c:484:5: warning: #warning "GCC might issue a bogus -Wreturn-local-addr warning here." [-Wcpp]
+  484 |    #warning "GCC might issue a bogus -Wreturn-local-addr warning here."
+      |     ^~~~~~~
+canonicalize.c:485:5: warning: #warning "See <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=93644>." [-Wcpp]
+  485 |    #warning "See <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=93644>."
+      |     ^~~~~~~
+  CC       close-stream.o
+  CC       closein.o
+careadlinkat.c: In function 'careadlinkat':
+careadlinkat.c:184:5: warning: #warning "GCC might issue a bogus -Wreturn-local-addr warning here." [-Wcpp]
+  184 |    #warning "GCC might issue a bogus -Wreturn-local-addr warning here."
+      |     ^~~~~~~
+careadlinkat.c:185:5: warning: #warning "See <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=93644>." [-Wcpp]
+  185 |    #warning "See <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=93644>."
+      |     ^~~~~~~
+careadlinkat.c:188:10: warning: function may return address of local variable [-Wreturn-local-addr]
+  188 |   return readlink_stk (fd, filename, buffer, buffer_size, alloc,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  189 |                        preadlinkat, stack_buf);
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~
+careadlinkat.c:187:8: note: declared here
+  187 |   char stack_buf[STACK_BUF_SIZE];
+      |        ^~~~~~~~~
+  CC       closeout.o
+  CC       cycle-check.o
+  CC       opendir-safer.o
+  CC       dirname.o
+  CC       basename.o
+  CC       dirname-lgpl.o
+  CC       stripslash.o
+  CC       exitfail.o
+  CC       creat-safer.o
+  CC       open-safer.o
+  CC       fd-hook.o
+  CC       fd-safer-flag.o
+  CC       dup-safer-flag.o
+  CC       file-set.o
+  CC       filemode.o
+  CC       filenamecat-lgpl.o
+  CC       fopen-safer.o
+  CC       freading.o
+  CC       getprogname.o
+  CC       gettime.o
+  CC       hard-locale.o
+  CC       hash.o
+  CC       hash-pjw.o
+  CC       hash-triple-simple.o
+  CC       human.o
+  CC       i-ring.o
+  CC       idcache.o
+  CC       localcharset.o
+  CC       malloca.o
+  CC       math.o
+  CC       mbchar.o
+  CC       mbscasestr.o
+  CC       mbslen.o
+  CC       mbsstr.o
+  CC       mbswidth.o
+  CC       mbuiter.o
+  CC       modechange.o
+  CC       nstrftime.o
+  CC       openat-die.o
+  CC       openat-safer.o
+  CC       opendirat.o
+  CC       parse-datetime.o
+  CC       progname.o
+  CC       quotearg.o
+  CC       safe-read.o
+  CC       save-cwd.o
+  CC       savedir.o
+  CC       malloc/scratch_buffer_dupfree.o
+  CC       malloc/scratch_buffer_grow.o
+  CC       malloc/scratch_buffer_grow_preserve.o
+  CC       malloc/scratch_buffer_set_array_size.o
+  CC       selinux-at.o
+  CC       se-context.o
+  CC       se-label.o
+  CC       se-selinux.o
+  CC       setlocale_null.o
+  CC       sockets.o
+  CC       stat-time.o
+  CC       statat.o
+  CC       strnlen1.o
+  CC       sys_socket.o
+  CC       glthread/threadlib.o
+  CC       timespec.o
+  CC       unistd.o
+  CC       dup-safer.o
+  CC       fd-safer.o
+  CC       pipe-safer.o
+  CC       version-etc.o
+  CC       version-etc-fsf.o
+  CC       wctype-h.o
+  CC       xmalloc.o
+  CC       xalloc-die.o
+  CC       xgetcwd.o
+  CC       xsize.o
+  CC       xstrndup.o
+  CC       xstrtod.o
+  CC       xstrtol.o
+  CC       xstrtoul.o
+  CC       xstrtol-error.o
+  CC       xstrtoumax.o
+  CC       yesno.o
+  CC       asnprintf.o
+  CC       chdir-long.o
+  CC       fcntl.o
+  CC       fflush.o
+  CC       fpurge.o
+  CC       freadahead.o
+  CC       fseek.o
+  CC       fseeko.o
+  CC       fts.o
+  CC       mbrtowc.o
+  CC       mktime.o
+  CC       mountlist.o
+  CC       printf-args.o
+  CC       printf-parse.o
+  CC       regex.o
+  CC       strerror_r.o
+  CC       time_rz.o
+  CC       vasnprintf.o
+  CC       malloc/dynarray_at_failure.o
+  CC       malloc/dynarray_emplace_enlarge.o
+  CC       malloc/dynarray_finalize.o
+  CC       malloc/dynarray_resize.o
+  CC       malloc/dynarray_resize_clear.o
+  CC       glthread/lock.o
+  CC       uniwidth/width.o
+  AR       libgnulib.a
+make[5]: Leaving directory '/sources/findutils-4.8.0/gl/lib'
+make[4]: Leaving directory '/sources/findutils-4.8.0/gl/lib'
+make[3]: Leaving directory '/sources/findutils-4.8.0/gl/lib'
+make[3]: Entering directory '/sources/findutils-4.8.0/gl'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/findutils-4.8.0/gl'
+make[2]: Leaving directory '/sources/findutils-4.8.0/gl'
+Making all in build-aux
+make[2]: Entering directory '/sources/findutils-4.8.0/build-aux'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/findutils-4.8.0/build-aux'
+Making all in lib
+make[2]: Entering directory '/sources/findutils-4.8.0/lib'
+  CC       buildcmd.o
+  CC       extendbuf.o
+  CC       findutils-version.o
+  CC       fdleak.o
+  CC       dircallback.o
+  CC       listfile.o
+  CC       printquoted.o
+  CC       qmark.o
+  CC       regextype.o
+  CC       safe-atoi.o
+  CC       splitstring.o
+  CC       bugreports.o
+  AR       libfind.a
+make[2]: Leaving directory '/sources/findutils-4.8.0/lib'
+Making all in find
+make[2]: Entering directory '/sources/findutils-4.8.0/find'
+Making all in .
+make[3]: Entering directory '/sources/findutils-4.8.0/find'
+  CC       ftsfind.o
+  CC       fstype.o
+  CC       pred.o
+  CC       exec.o
+  CC       finddata.o
+  CC       parser.o
+  CC       tree.o
+  CC       util.o
+  CC       sharefile.o
+  CC       print.o
+  AR       libfindtools.a
+  CCLD     find
+make[3]: Leaving directory '/sources/findutils-4.8.0/find'
+Making all in testsuite
+make[3]: Entering directory '/sources/findutils-4.8.0/find/testsuite'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/findutils-4.8.0/find/testsuite'
+make[2]: Leaving directory '/sources/findutils-4.8.0/find'
+Making all in xargs
+make[2]: Entering directory '/sources/findutils-4.8.0/xargs'
+Making all in .
+make[3]: Entering directory '/sources/findutils-4.8.0/xargs'
+  CC       xargs.o
+  CCLD     xargs
+make[3]: Leaving directory '/sources/findutils-4.8.0/xargs'
+Making all in testsuite
+make[3]: Entering directory '/sources/findutils-4.8.0/xargs/testsuite'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/findutils-4.8.0/xargs/testsuite'
+make[2]: Leaving directory '/sources/findutils-4.8.0/xargs'
+Making all in locate
+make[2]: Entering directory '/sources/findutils-4.8.0/locate'
+echo '@set LOCATE_DB /var/lib/locate/locatedb' > dblocation.texi.tmp
+if test -f dblocation.texi && cmp dblocation.texi.tmp dblocation.texi >/dev/null ; then \
+    rm dblocation.texi.tmp ; \
+else \
+    mv dblocation.texi.tmp dblocation.texi ; \
+fi
+/usr/bin/make  all-recursive
+make[3]: Entering directory '/sources/findutils-4.8.0/locate'
+Making all in .
+make[4]: Entering directory '/sources/findutils-4.8.0/locate'
+rm -f updatedb
+find=`echo find|sed 's,x,x,'`; \
+frcode=`echo frcode|sed 's,x,x,'`; \
+copyright=`sed -n '/^# Copyright /{s/^..//;p;q;}' ./updatedb.sh \
+  grep .` || exit 1; \
+sed \
+-e "s,@""bindir""@,/usr/bin," \
+-e "s,@""libexecdir""@,/usr/libexec," \
+-e "s,@""LOCATE_DB""@,/var/lib/locate/locatedb," \
+-e "s,@""VERSION""@,4.8.0," \
+-e "s,@""PACKAGE_NAME""@,GNU findutils," \
+-e "s,@""PACKAGE_BUGREPORT""@,bug-findutils@gnu.org," \
+-e "s,@""PACKAGE_BUGREPORT_URL""@,https://savannah.gnu.org/bugs/?group=findutils," \
+-e "s,@""PACKAGE_URL""@,http://www.gnu.org/software/findutils/," \
+-e "s,@""find""@,${find}," \
+-e "s,@""frcode""@,${frcode}," \
+-e "s,@""SORT""@,/usr/bin/sort," \
+-e "s,@""SORT_SUPPORTS_Z""@,true," \
+-e "s/@""COPYRIGHT""@/${copyright}/" \
+./updatedb.sh > updatedb
+  CC       locate.o
+  CC       word_io.o
+  CC       frcode.o
+chmod +x updatedb
+  CCLD     frcode
+  CCLD     locate
+make[4]: Leaving directory '/sources/findutils-4.8.0/locate'
+Making all in testsuite
+make[4]: Entering directory '/sources/findutils-4.8.0/locate/testsuite'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/sources/findutils-4.8.0/locate/testsuite'
+make[3]: Leaving directory '/sources/findutils-4.8.0/locate'
+make[2]: Leaving directory '/sources/findutils-4.8.0/locate'
+Making all in doc
+make[2]: Entering directory '/sources/findutils-4.8.0/doc'
+ln -s ../locate/dblocation.texi dblocation.texi
+/usr/bin/make  all-am
+make[3]: Entering directory '/sources/findutils-4.8.0/doc'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/findutils-4.8.0/doc'
+make[2]: Leaving directory '/sources/findutils-4.8.0/doc'
+Making all in po
+make[2]: Entering directory '/sources/findutils-4.8.0/po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/findutils-4.8.0/po'
+Making all in m4
+make[2]: Entering directory '/sources/findutils-4.8.0/m4'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/findutils-4.8.0/m4'
+Making all in gnulib-tests
+make[2]: Entering directory '/sources/findutils-4.8.0/gnulib-tests'
+  GEN      sched.h
+  GEN      pthread.h
+  GEN      signal.h
+  GEN      arpa/inet.h
+  GEN      sys/ioctl.h
+  GEN      sys/select.h
+/usr/bin/make  all-recursive
+make[3]: Entering directory '/sources/findutils-4.8.0/gnulib-tests'
+Making all in .
+make[4]: Entering directory '/sources/findutils-4.8.0/gnulib-tests'
+  CC       locale.o
+  CC       dtotimespec.o
+  CC       imaxtostr.o
+  CC       binary-io.o
+  CC       inttostr.o
+  CC       offtostr.o
+  CC       uinttostr.o
+  CC       umaxtostr.o
+  CC       localename.o
+  CC       localename-table.o
+  CC       priv-set.o
+  CC       sig-handler.o
+  CC       timespec-add.o
+  CC       timespec-sub.o
+  CC       unlinkdir.o
+  CC       ioctl.o
+  CC       nanosleep.o
+  CC       test-localcharset.o
+  CC       glthread/thread.o
+  AR       libtests.a
+  CCLD     current-locale
+  CCLD     test-localcharset
+make[4]: Leaving directory '/sources/findutils-4.8.0/gnulib-tests'
+make[3]: Leaving directory '/sources/findutils-4.8.0/gnulib-tests'
+make[2]: Leaving directory '/sources/findutils-4.8.0/gnulib-tests'
+make[2]: Entering directory '/sources/findutils-4.8.0'
+make[2]: Leaving directory '/sources/findutils-4.8.0'
+make[1]: Leaving directory '/sources/findutils-4.8.0'
+Making install in gl
+make[1]: Entering directory '/sources/findutils-4.8.0/gl'
+Making install in lib
+make[2]: Entering directory '/sources/findutils-4.8.0/gl/lib'
+/usr/bin/make  install-recursive
+make[3]: Entering directory '/sources/findutils-4.8.0/gl/lib'
+make[4]: Entering directory '/sources/findutils-4.8.0/gl/lib'
+make[5]: Entering directory '/sources/findutils-4.8.0/gl/lib'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/sources/findutils-4.8.0/gl/lib'
+make[4]: Leaving directory '/sources/findutils-4.8.0/gl/lib'
+make[3]: Leaving directory '/sources/findutils-4.8.0/gl/lib'
+make[2]: Leaving directory '/sources/findutils-4.8.0/gl/lib'
+make[2]: Entering directory '/sources/findutils-4.8.0/gl'
+make[3]: Entering directory '/sources/findutils-4.8.0/gl'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/findutils-4.8.0/gl'
+make[2]: Leaving directory '/sources/findutils-4.8.0/gl'
+make[1]: Leaving directory '/sources/findutils-4.8.0/gl'
+Making install in build-aux
+make[1]: Entering directory '/sources/findutils-4.8.0/build-aux'
+make[2]: Entering directory '/sources/findutils-4.8.0/build-aux'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/findutils-4.8.0/build-aux'
+make[1]: Leaving directory '/sources/findutils-4.8.0/build-aux'
+Making install in lib
+make[1]: Entering directory '/sources/findutils-4.8.0/lib'
+make[2]: Entering directory '/sources/findutils-4.8.0/lib'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/findutils-4.8.0/lib'
+make[1]: Leaving directory '/sources/findutils-4.8.0/lib'
+Making install in find
+make[1]: Entering directory '/sources/findutils-4.8.0/find'
+Making install in .
+make[2]: Entering directory '/sources/findutils-4.8.0/find'
+make[3]: Entering directory '/sources/findutils-4.8.0/find'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+  /usr/bin/install -c find '/usr/bin'
+ /usr/bin/install -c -m 644 find.1 '/usr/share/man/man1'
+make[3]: Leaving directory '/sources/findutils-4.8.0/find'
+make[2]: Leaving directory '/sources/findutils-4.8.0/find'
+Making install in testsuite
+make[2]: Entering directory '/sources/findutils-4.8.0/find/testsuite'
+make[3]: Entering directory '/sources/findutils-4.8.0/find/testsuite'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/findutils-4.8.0/find/testsuite'
+make[2]: Leaving directory '/sources/findutils-4.8.0/find/testsuite'
+make[1]: Leaving directory '/sources/findutils-4.8.0/find'
+Making install in xargs
+make[1]: Entering directory '/sources/findutils-4.8.0/xargs'
+Making install in .
+make[2]: Entering directory '/sources/findutils-4.8.0/xargs'
+make[3]: Entering directory '/sources/findutils-4.8.0/xargs'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+  /usr/bin/install -c xargs '/usr/bin'
+ /usr/bin/install -c -m 644 xargs.1 '/usr/share/man/man1'
+make[3]: Leaving directory '/sources/findutils-4.8.0/xargs'
+make[2]: Leaving directory '/sources/findutils-4.8.0/xargs'
+Making install in testsuite
+make[2]: Entering directory '/sources/findutils-4.8.0/xargs/testsuite'
+make[3]: Entering directory '/sources/findutils-4.8.0/xargs/testsuite'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/findutils-4.8.0/xargs/testsuite'
+make[2]: Leaving directory '/sources/findutils-4.8.0/xargs/testsuite'
+make[1]: Leaving directory '/sources/findutils-4.8.0/xargs'
+Making install in locate
+make[1]: Entering directory '/sources/findutils-4.8.0/locate'
+echo '@set LOCATE_DB /var/lib/locate/locatedb' > dblocation.texi.tmp
+if test -f dblocation.texi && cmp dblocation.texi.tmp dblocation.texi >/dev/null ; then \
+    rm dblocation.texi.tmp ; \
+else \
+    mv dblocation.texi.tmp dblocation.texi ; \
+fi
+/usr/bin/make  install-recursive
+make[2]: Entering directory '/sources/findutils-4.8.0/locate'
+Making install in .
+make[3]: Entering directory '/sources/findutils-4.8.0/locate'
+make[4]: Entering directory '/sources/findutils-4.8.0/locate'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/bin'
+ /usr/bin/mkdir -p '/usr/libexec'
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/mkdir -p '/usr/share/man/man5'
+ /usr/bin/install -c updatedb '/usr/bin'
+  /usr/bin/install -c locate '/usr/bin'
+  /usr/bin/install -c frcode '/usr/libexec'
+ /usr/bin/install -c -m 644 locate.1 updatedb.1 '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 locatedb.5 '/usr/share/man/man5'
+/usr/bin/make  install-data-hook
+make[5]: Entering directory '/sources/findutils-4.8.0/locate'
+../build-aux/mkinstalldirs /var/lib/locate
+make[5]: Leaving directory '/sources/findutils-4.8.0/locate'
+make[4]: Leaving directory '/sources/findutils-4.8.0/locate'
+make[3]: Leaving directory '/sources/findutils-4.8.0/locate'
+Making install in testsuite
+make[3]: Entering directory '/sources/findutils-4.8.0/locate/testsuite'
+make[4]: Entering directory '/sources/findutils-4.8.0/locate/testsuite'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/findutils-4.8.0/locate/testsuite'
+make[3]: Leaving directory '/sources/findutils-4.8.0/locate/testsuite'
+make[2]: Leaving directory '/sources/findutils-4.8.0/locate'
+make[1]: Leaving directory '/sources/findutils-4.8.0/locate'
+Making install in doc
+make[1]: Entering directory '/sources/findutils-4.8.0/doc'
+/usr/bin/make  install-am
+make[2]: Entering directory '/sources/findutils-4.8.0/doc'
+make[3]: Entering directory '/sources/findutils-4.8.0/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/info'
+ /usr/bin/install -c -m 644 ./find.info ./find.info-1 ./find.info-2 ./find-maint.info '/usr/share/info'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/find.info'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/find-maint.info'
+make[3]: Leaving directory '/sources/findutils-4.8.0/doc'
+make[2]: Leaving directory '/sources/findutils-4.8.0/doc'
+make[1]: Leaving directory '/sources/findutils-4.8.0/doc'
+Making install in po
+make[1]: Entering directory '/sources/findutils-4.8.0/po'
+installing be.gmo as /usr/share/locale/be/LC_MESSAGES/findutils.mo
+installing bg.gmo as /usr/share/locale/bg/LC_MESSAGES/findutils.mo
+installing ca.gmo as /usr/share/locale/ca/LC_MESSAGES/findutils.mo
+installing cs.gmo as /usr/share/locale/cs/LC_MESSAGES/findutils.mo
+installing da.gmo as /usr/share/locale/da/LC_MESSAGES/findutils.mo
+installing de.gmo as /usr/share/locale/de/LC_MESSAGES/findutils.mo
+installing el.gmo as /usr/share/locale/el/LC_MESSAGES/findutils.mo
+installing eo.gmo as /usr/share/locale/eo/LC_MESSAGES/findutils.mo
+installing es.gmo as /usr/share/locale/es/LC_MESSAGES/findutils.mo
+installing et.gmo as /usr/share/locale/et/LC_MESSAGES/findutils.mo
+installing fi.gmo as /usr/share/locale/fi/LC_MESSAGES/findutils.mo
+installing fr.gmo as /usr/share/locale/fr/LC_MESSAGES/findutils.mo
+installing ga.gmo as /usr/share/locale/ga/LC_MESSAGES/findutils.mo
+installing gl.gmo as /usr/share/locale/gl/LC_MESSAGES/findutils.mo
+installing hr.gmo as /usr/share/locale/hr/LC_MESSAGES/findutils.mo
+installing hu.gmo as /usr/share/locale/hu/LC_MESSAGES/findutils.mo
+installing id.gmo as /usr/share/locale/id/LC_MESSAGES/findutils.mo
+installing it.gmo as /usr/share/locale/it/LC_MESSAGES/findutils.mo
+installing ja.gmo as /usr/share/locale/ja/LC_MESSAGES/findutils.mo
+installing ko.gmo as /usr/share/locale/ko/LC_MESSAGES/findutils.mo
+installing lg.gmo as /usr/share/locale/lg/LC_MESSAGES/findutils.mo
+installing lt.gmo as /usr/share/locale/lt/LC_MESSAGES/findutils.mo
+installing ms.gmo as /usr/share/locale/ms/LC_MESSAGES/findutils.mo
+installing nb.gmo as /usr/share/locale/nb/LC_MESSAGES/findutils.mo
+installing nl.gmo as /usr/share/locale/nl/LC_MESSAGES/findutils.mo
+installing pl.gmo as /usr/share/locale/pl/LC_MESSAGES/findutils.mo
+installing pt.gmo as /usr/share/locale/pt/LC_MESSAGES/findutils.mo
+installing pt_BR.gmo as /usr/share/locale/pt_BR/LC_MESSAGES/findutils.mo
+installing ro.gmo as /usr/share/locale/ro/LC_MESSAGES/findutils.mo
+installing ru.gmo as /usr/share/locale/ru/LC_MESSAGES/findutils.mo
+installing sk.gmo as /usr/share/locale/sk/LC_MESSAGES/findutils.mo
+installing sl.gmo as /usr/share/locale/sl/LC_MESSAGES/findutils.mo
+installing sr.gmo as /usr/share/locale/sr/LC_MESSAGES/findutils.mo
+installing sv.gmo as /usr/share/locale/sv/LC_MESSAGES/findutils.mo
+installing tr.gmo as /usr/share/locale/tr/LC_MESSAGES/findutils.mo
+installing uk.gmo as /usr/share/locale/uk/LC_MESSAGES/findutils.mo
+installing vi.gmo as /usr/share/locale/vi/LC_MESSAGES/findutils.mo
+installing zh_CN.gmo as /usr/share/locale/zh_CN/LC_MESSAGES/findutils.mo
+installing zh_TW.gmo as /usr/share/locale/zh_TW/LC_MESSAGES/findutils.mo
+if test "findutils" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/sources/findutils-4.8.0/po'
+Making install in m4
+make[1]: Entering directory '/sources/findutils-4.8.0/m4'
+make[2]: Entering directory '/sources/findutils-4.8.0/m4'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/findutils-4.8.0/m4'
+make[1]: Leaving directory '/sources/findutils-4.8.0/m4'
+Making install in gnulib-tests
+make[1]: Entering directory '/sources/findutils-4.8.0/gnulib-tests'
+/usr/bin/make  install-recursive
+make[2]: Entering directory '/sources/findutils-4.8.0/gnulib-tests'
+Making install in .
+make[3]: Entering directory '/sources/findutils-4.8.0/gnulib-tests'
+make[4]: Entering directory '/sources/findutils-4.8.0/gnulib-tests'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/findutils-4.8.0/gnulib-tests'
+make[3]: Leaving directory '/sources/findutils-4.8.0/gnulib-tests'
+make[2]: Leaving directory '/sources/findutils-4.8.0/gnulib-tests'
+make[1]: Leaving directory '/sources/findutils-4.8.0/gnulib-tests'
+make[1]: Entering directory '/sources/findutils-4.8.0'
+make[2]: Entering directory '/sources/findutils-4.8.0'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/findutils-4.8.0'
+make[1]: Leaving directory '/sources/findutils-4.8.0'
+[lfs-scripts] Finishing build of findutils-4.8.0 at Wed Sep 14 00:04:59 -03 2022
+(lfs chroot) root:/sources# 

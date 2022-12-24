@@ -1,0 +1,994 @@
+[root@0] [/sources/openvpn-2.5.7] ./configure --bindir=/usr/bin/  --sbindir=/usr/sbin/ --disable-plugin-auth-pam
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... armv7l-unknown-linux-gnueabihf
+checking host system type... armv7l-unknown-linux-gnueabihf
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking how to run the C preprocessor... gcc -E
+checking whether ln -s works... yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether make sets $(MAKE)... (cached) yes
+checking for ifconfig... /usr/sbin/ifconfig
+checking for route... no
+checking for ip... /usr/sbin/ip
+checking for systemd-ask-password... no
+checking for netstat... no
+checking for git... git
+checking for rst2man... no
+checking for rst2man.py... no
+checking for rst2html... no
+checking for rst2html.py... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert armv7l-unknown-linux-gnueabihf file names to armv7l-unknown-linux-gnueabihf format... func_convert_file_noop
+checking how to convert armv7l-unknown-linux-gnueabihf file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for windres... no
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for working volatile... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... yes
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking return type of signal handlers... void
+checking for ISO C 1999 vararg macro support... yes
+checking for GNU GCC vararg macro support... yes
+checking for socklen_t... yes
+checking for C compiler empty array size... 0
+checking size of unsigned int... 4
+checking size of unsigned long... 4
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking io.h usability... no
+checking io.h presence... no
+checking for io.h... no
+checking direct.h usability... no
+checking direct.h presence... no
+checking for direct.h... no
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for unistd.h... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking netinet/in_systm.h usability... yes
+checking netinet/in_systm.h presence... yes
+checking for netinet/in_systm.h... yes
+checking netinet/tcp.h usability... yes
+checking netinet/tcp.h presence... yes
+checking for netinet/tcp.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking windows.h usability... no
+checking windows.h presence... no
+checking for windows.h... no
+checking winsock2.h usability... no
+checking winsock2.h presence... no
+checking for winsock2.h... no
+checking ws2tcpip.h usability... no
+checking ws2tcpip.h presence... no
+checking for ws2tcpip.h... no
+checking versionhelpers.h usability... no
+checking versionhelpers.h presence... no
+checking for versionhelpers.h... no
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking for sys/stat.h... (cached) yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking sys/wait.h usability... yes
+checking sys/wait.h presence... yes
+checking for sys/wait.h... yes
+checking for unistd.h... (cached) yes
+checking for signal.h... (cached) yes
+checking libgen.h usability... yes
+checking libgen.h presence... yes
+checking for libgen.h... yes
+checking stropts.h usability... no
+checking stropts.h presence... no
+checking for stropts.h... no
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking linux/sockios.h usability... yes
+checking linux/sockios.h presence... yes
+checking for linux/sockios.h... yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking linux/errqueue.h usability... yes
+checking linux/errqueue.h presence... yes
+checking for linux/errqueue.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking sys/epoll.h usability... yes
+checking sys/epoll.h presence... yes
+checking for sys/epoll.h... yes
+checking err.h usability... yes
+checking err.h presence... yes
+checking for err.h... yes
+checking for net/if.h... yes
+checking for netinet/ip.h... yes
+checking for resolv.h... yes
+checking for sys/un.h... yes
+checking for net/if_utun.h... no
+checking for sys/kern_control.h... no
+checking for in_addr_t... yes
+checking for in_port_t... yes
+checking for struct iphdr... yes
+checking for struct msghdr... yes
+checking for struct cmsghdr... yes
+checking for struct in_pktinfo... yes
+checking for sa_family_t... yes
+checking for struct in_pktinfo.ipi_spec_dst... yes
+checking for struct sockaddr_in6... yes
+checking whether SO_MARK is declared... yes
+configure: checking anonymous union support...
+yes
+checking linker supports --wrap... yes
+checking whether SIGHUP is declared... yes
+checking whether SIGINT is declared... yes
+checking whether SIGUSR1 is declared... yes
+checking whether SIGUSR2 is declared... yes
+checking whether SIGTERM is declared... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for daemon... yes
+checking for chroot... yes
+checking for getpwnam... yes
+checking for setuid... yes
+checking for nice... yes
+checking for system... yes
+checking for getpid... yes
+checking for dup... yes
+checking for dup2... yes
+checking for getpass... yes
+checking for syslog... yes
+checking for openlog... yes
+checking for mlockall... yes
+checking for getgrnam... yes
+checking for setgid... yes
+checking for setgroups... yes
+checking for stat... yes
+checking for flock... yes
+checking for readv... yes
+checking for writev... yes
+checking for time... yes
+checking for gettimeofday... yes
+checking for ctime... yes
+checking for memset... yes
+checking for vsnprintf... yes
+checking for strdup... yes
+checking for setsid... yes
+checking for chdir... yes
+checking for putenv... yes
+checking for getpeername... yes
+checking for unlink... yes
+checking for chsize... no
+checking for ftruncate... yes
+checking for execve... yes
+checking for getpeereid... no
+checking for umask... yes
+checking for basename... yes
+checking for dirname... yes
+checking for access... yes
+checking for epoll_create... yes
+checking for strsep... yes
+checking for dlopen in -ldl... yes
+checking for inet_ntoa in -lnsl... no
+checking for socket in -lsocket... no
+checking for gethostbyname in -lresolv... yes
+checking for sendmsg... yes
+checking for recvmsg... yes
+checking for inet_ntop... yes
+checking for inet_pton... yes
+checking for socket... yes
+checking for recv... yes
+checking for recvfrom... yes
+checking for send... yes
+checking for sendto... yes
+checking for listen... yes
+checking for accept... yes
+checking for connect... yes
+checking for bind... yes
+checking for select... yes
+checking for gethostbyname... yes
+checking for inet_ntoa... yes
+checking for setsockopt... yes
+checking for getsockopt... yes
+checking for getsockname... yes
+checking for poll... yes
+checking for library containing __res_init... none required
+checking net/if_tun.h usability... no
+checking net/if_tun.h presence... no
+checking for net/if_tun.h... no
+checking net/tun/if_tun.h usability... no
+checking net/tun/if_tun.h presence... no
+checking for net/tun/if_tun.h... no
+checking linux/if_tun.h usability... yes
+checking linux/if_tun.h presence... yes
+checking for linux/if_tun.h... yes
+checking tap-windows.h usability... no
+checking tap-windows.h presence... no
+checking for tap-windows.h... no
+checking whether TUNSETPERSIST is declared... yes
+checking for setcon in -lselinux... no
+checking for pam_start in -lpam... no
+checking for PKCS11_HELPER... no
+checking for OPENSSL... yes
+checking for SSL_CTX_new... yes
+checking for EVP_CIPHER_CTX_set_key_length... yes
+checking for ENGINE_load_builtin_engines... yes
+checking for ENGINE_register_all_complete... yes
+checking for EVP_aes_256_gcm... yes
+checking for HMAC_CTX_new... yes
+checking for HMAC_CTX_free... yes
+checking for HMAC_CTX_reset... yes
+checking for EVP_MD_CTX_new... yes
+checking for EVP_MD_CTX_free... yes
+checking for EVP_MD_CTX_reset... yes
+checking for EVP_CIPHER_CTX_reset... yes
+checking for OpenSSL_version... yes
+checking for SSL_CTX_get_default_passwd_cb... yes
+checking for SSL_CTX_get_default_passwd_cb_userdata... yes
+checking for SSL_CTX_set1_groups... no
+checking for SSL_CTX_set_security_level... yes
+checking for X509_get0_notBefore... yes
+checking for X509_get0_notAfter... yes
+checking for X509_get0_pubkey... yes
+checking for X509_STORE_get0_objects... yes
+checking for X509_OBJECT_free... yes
+checking for X509_OBJECT_get_type... yes
+checking for EVP_PKEY_get0_RSA... yes
+checking for EVP_PKEY_get0_DSA... yes
+checking for EVP_PKEY_get0_EC_KEY... yes
+checking for RSA_set_flags... yes
+checking for RSA_bits... yes
+checking for RSA_get0_key... yes
+checking for RSA_set0_key... yes
+checking for DSA_get0_pqg... yes
+checking for DSA_bits... yes
+checking for RSA_meth_new... yes
+checking for RSA_meth_free... yes
+checking for RSA_meth_set_pub_enc... yes
+checking for RSA_meth_set_pub_dec... yes
+checking for RSA_meth_set_priv_enc... yes
+checking for RSA_meth_set_priv_dec... yes
+checking for RSA_meth_set_init... yes
+checking for RSA_meth_set_sign... yes
+checking for RSA_meth_set_finish... yes
+checking for RSA_meth_set0_app_data... yes
+checking for RSA_meth_get0_app_data... yes
+checking for EC_GROUP_order_bits... yes
+checking for lzo1x_1_15_compress in -llzo2... yes
+checking lzo/lzoutil.h usability... yes
+checking lzo/lzoutil.h presence... yes
+checking for lzo/lzoutil.h... yes
+checking lzo/lzo1x.h usability... yes
+checking lzo/lzo1x.h presence... yes
+checking for lzo/lzo1x.h... yes
+checking for LZ4... no
+checking lz4.h usability... no
+checking lz4.h presence... no
+checking for lz4.h... no
+		usable LZ4 library or header not found, using version in src/compat/compat-lz4.*
+checking git checkout... no
+checking whether the compiler accepts -Wno-stringop-truncation... yes
+checking whether the compiler accepts -Wall... yes
+checking for CMOCKA... no
+configure: WARNING: cmocka.pc not found on the system.  Unit tests disabled
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating version.sh
+config.status: creating Makefile
+config.status: creating build/Makefile
+config.status: creating build/msvc/Makefile
+config.status: creating build/msvc/msvc-generate/Makefile
+config.status: creating distro/Makefile
+config.status: creating distro/systemd/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/doxygen/Makefile
+config.status: creating doc/doxygen/openvpn.doxyfile
+config.status: creating include/Makefile
+config.status: creating sample/sample-plugins/Makefile
+config.status: creating src/Makefile
+config.status: creating src/compat/Makefile
+config.status: creating src/openvpn/Makefile
+config.status: creating src/openvpnmsica/Makefile
+config.status: creating src/openvpnserv/Makefile
+config.status: creating src/plugins/Makefile
+config.status: creating src/plugins/auth-pam/Makefile
+config.status: creating src/plugins/down-root/Makefile
+config.status: creating src/tapctl/Makefile
+config.status: creating tests/Makefile
+config.status: creating tests/unit_tests/Makefile
+config.status: creating tests/unit_tests/example_test/Makefile
+config.status: creating tests/unit_tests/openvpn/Makefile
+config.status: creating tests/unit_tests/plugins/Makefile
+config.status: creating tests/unit_tests/plugins/auth-pam/Makefile
+config.status: creating tests/unit_tests/engine-key/Makefile
+config.status: creating sample/Makefile
+config.status: creating tests/t_client.sh
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: creating include/openvpn-plugin.h
+config.status: include/openvpn-plugin.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] make -j2
+make  all-recursive
+make[1]: Entering directory '/sources/openvpn-2.5.7'
+Making all in build
+make[2]: Entering directory '/sources/openvpn-2.5.7/build'
+Making all in msvc
+make[3]: Entering directory '/sources/openvpn-2.5.7/build/msvc'
+Making all in msvc-generate
+make[4]: Entering directory '/sources/openvpn-2.5.7/build/msvc/msvc-generate'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/build/msvc/msvc-generate'
+make[4]: Entering directory '/sources/openvpn-2.5.7/build/msvc'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/build/msvc'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/build/msvc'
+make[3]: Entering directory '/sources/openvpn-2.5.7/build'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/build'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/build'
+Making all in distro
+make[2]: Entering directory '/sources/openvpn-2.5.7/distro'
+Making all in systemd
+make[3]: Entering directory '/sources/openvpn-2.5.7/distro/systemd'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/distro/systemd'
+make[3]: Entering directory '/sources/openvpn-2.5.7/distro'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/distro'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/distro'
+Making all in include
+make[2]: Entering directory '/sources/openvpn-2.5.7/include'
+make  all-am
+make[3]: Entering directory '/sources/openvpn-2.5.7/include'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/include'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/include'
+Making all in src
+make[2]: Entering directory '/sources/openvpn-2.5.7/src'
+Making all in compat
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/compat'
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include     -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-dirname.lo -MD -MP -MF .deps/compat-dirname.Tpo -c -o compat-dirname.lo compat-dirname.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include     -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-basename.lo -MD -MP -MF .deps/compat-basename.Tpo -c -o compat-basename.lo compat-basename.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-dirname.lo -MD -MP -MF .deps/compat-dirname.Tpo -c compat-dirname.c  -fPIC -DPIC -o .libs/compat-dirname.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-basename.lo -MD -MP -MF .deps/compat-basename.Tpo -c compat-basename.c  -fPIC -DPIC -o .libs/compat-basename.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-dirname.lo -MD -MP -MF .deps/compat-dirname.Tpo -c compat-dirname.c -o compat-dirname.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-basename.lo -MD -MP -MF .deps/compat-basename.Tpo -c compat-basename.c -o compat-basename.o >/dev/null 2>&1
+mv -f .deps/compat-dirname.Tpo .deps/compat-dirname.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include     -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-gettimeofday.lo -MD -MP -MF .deps/compat-gettimeofday.Tpo -c -o compat-gettimeofday.lo compat-gettimeofday.c
+mv -f .deps/compat-basename.Tpo .deps/compat-basename.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include     -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-daemon.lo -MD -MP -MF .deps/compat-daemon.Tpo -c -o compat-daemon.lo compat-daemon.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-gettimeofday.lo -MD -MP -MF .deps/compat-gettimeofday.Tpo -c compat-gettimeofday.c  -fPIC -DPIC -o .libs/compat-gettimeofday.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-daemon.lo -MD -MP -MF .deps/compat-daemon.Tpo -c compat-daemon.c  -fPIC -DPIC -o .libs/compat-daemon.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-gettimeofday.lo -MD -MP -MF .deps/compat-gettimeofday.Tpo -c compat-gettimeofday.c -o compat-gettimeofday.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-daemon.lo -MD -MP -MF .deps/compat-daemon.Tpo -c compat-daemon.c -o compat-daemon.o >/dev/null 2>&1
+mv -f .deps/compat-gettimeofday.Tpo .deps/compat-gettimeofday.Plo
+mv -f .deps/compat-daemon.Tpo .deps/compat-daemon.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include     -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-inet_ntop.lo -MD -MP -MF .deps/compat-inet_ntop.Tpo -c -o compat-inet_ntop.lo compat-inet_ntop.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include     -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-inet_pton.lo -MD -MP -MF .deps/compat-inet_pton.Tpo -c -o compat-inet_pton.lo compat-inet_pton.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-inet_ntop.lo -MD -MP -MF .deps/compat-inet_ntop.Tpo -c compat-inet_ntop.c  -fPIC -DPIC -o .libs/compat-inet_ntop.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-inet_pton.lo -MD -MP -MF .deps/compat-inet_pton.Tpo -c compat-inet_pton.c  -fPIC -DPIC -o .libs/compat-inet_pton.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-inet_ntop.lo -MD -MP -MF .deps/compat-inet_ntop.Tpo -c compat-inet_ntop.c -o compat-inet_ntop.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-inet_pton.lo -MD -MP -MF .deps/compat-inet_pton.Tpo -c compat-inet_pton.c -o compat-inet_pton.o >/dev/null 2>&1
+mv -f .deps/compat-inet_ntop.Tpo .deps/compat-inet_ntop.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include     -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-lz4.lo -MD -MP -MF .deps/compat-lz4.Tpo -c -o compat-lz4.lo compat-lz4.c
+mv -f .deps/compat-inet_pton.Tpo .deps/compat-inet_pton.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include     -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-strsep.lo -MD -MP -MF .deps/compat-strsep.Tpo -c -o compat-strsep.lo compat-strsep.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-lz4.lo -MD -MP -MF .deps/compat-lz4.Tpo -c compat-lz4.c  -fPIC -DPIC -o .libs/compat-lz4.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-strsep.lo -MD -MP -MF .deps/compat-strsep.Tpo -c compat-strsep.c  -fPIC -DPIC -o .libs/compat-strsep.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-strsep.lo -MD -MP -MF .deps/compat-strsep.Tpo -c compat-strsep.c -o compat-strsep.o >/dev/null 2>&1
+mv -f .deps/compat-strsep.Tpo .deps/compat-strsep.Plo
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compat-lz4.lo -MD -MP -MF .deps/compat-lz4.Tpo -c compat-lz4.c -o compat-lz4.o >/dev/null 2>&1
+mv -f .deps/compat-lz4.Tpo .deps/compat-lz4.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc  -Wall -Wno-stringop-truncation -g -O2 -std=c99   -o libcompat.la  compat-dirname.lo compat-basename.lo compat-gettimeofday.lo compat-daemon.lo compat-inet_ntop.lo compat-inet_pton.lo compat-lz4.lo compat-strsep.lo  
+libtool: link: ar cru .libs/libcompat.a .libs/compat-dirname.o .libs/compat-basename.o .libs/compat-gettimeofday.o .libs/compat-daemon.o .libs/compat-inet_ntop.o .libs/compat-inet_pton.o .libs/compat-lz4.o .libs/compat-strsep.o 
+libtool: link: ranlib .libs/libcompat.a
+libtool: link: ( cd ".libs" && rm -f "libcompat.la" && ln -s "../libcompat.la" "libcompat.la" )
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/compat'
+Making all in openvpn
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/openvpn'
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT argv.o -MD -MP -MF .deps/argv.Tpo -c -o argv.o argv.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT auth_token.o -MD -MP -MF .deps/auth_token.Tpo -c -o auth_token.o auth_token.c
+mv -f .deps/argv.Tpo .deps/argv.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT base64.o -MD -MP -MF .deps/base64.Tpo -c -o base64.o base64.c
+mv -f .deps/auth_token.Tpo .deps/auth_token.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT buffer.o -MD -MP -MF .deps/buffer.Tpo -c -o buffer.o buffer.c
+mv -f .deps/base64.Tpo .deps/base64.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT clinat.o -MD -MP -MF .deps/clinat.Tpo -c -o clinat.o clinat.c
+mv -f .deps/clinat.Tpo .deps/clinat.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT comp.o -MD -MP -MF .deps/comp.Tpo -c -o comp.o comp.c
+mv -f .deps/comp.Tpo .deps/comp.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT compstub.o -MD -MP -MF .deps/compstub.Tpo -c -o compstub.o compstub.c
+mv -f .deps/compstub.Tpo .deps/compstub.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT comp-lz4.o -MD -MP -MF .deps/comp-lz4.Tpo -c -o comp-lz4.o comp-lz4.c
+mv -f .deps/buffer.Tpo .deps/buffer.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT crypto.o -MD -MP -MF .deps/crypto.Tpo -c -o crypto.o crypto.c
+mv -f .deps/comp-lz4.Tpo .deps/comp-lz4.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT crypto_openssl.o -MD -MP -MF .deps/crypto_openssl.Tpo -c -o crypto_openssl.o crypto_openssl.c
+crypto_openssl.c:935:39: warning: argument 2 of type ‘unsigned char *’ declared as a pointer [-Warray-parameter=]
+  935 |                        unsigned char *src,
+      |                        ~~~~~~~~~~~~~~~^~~
+In file included from crypto.h:125,
+                 from crypto_openssl.c:42:
+crypto_backend.h:217:43: note: previously declared as an array ‘unsigned char[8]’
+  217 |                             unsigned char src[DES_KEY_LENGTH],
+      |                             ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+crypto_openssl.c:936:39: warning: argument 3 of type ‘unsigned char *’ declared as a pointer [-Warray-parameter=]
+  936 |                        unsigned char *dst)
+      |                        ~~~~~~~~~~~~~~~^~~
+In file included from crypto.h:125,
+                 from crypto_openssl.c:42:
+crypto_backend.h:218:43: note: previously declared as an array ‘unsigned char[8]’
+  218 |                             unsigned char dst[DES_KEY_LENGTH]);
+      |                             ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+mv -f .deps/crypto_openssl.Tpo .deps/crypto_openssl.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT crypto_mbedtls.o -MD -MP -MF .deps/crypto_mbedtls.Tpo -c -o crypto_mbedtls.o crypto_mbedtls.c
+mv -f .deps/crypto_mbedtls.Tpo .deps/crypto_mbedtls.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT dhcp.o -MD -MP -MF .deps/dhcp.Tpo -c -o dhcp.o dhcp.c
+mv -f .deps/dhcp.Tpo .deps/dhcp.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT env_set.o -MD -MP -MF .deps/env_set.Tpo -c -o env_set.o env_set.c
+mv -f .deps/env_set.Tpo .deps/env_set.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT error.o -MD -MP -MF .deps/error.Tpo -c -o error.o error.c
+mv -f .deps/crypto.Tpo .deps/crypto.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT event.o -MD -MP -MF .deps/event.Tpo -c -o event.o event.c
+mv -f .deps/event.Tpo .deps/event.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT fdmisc.o -MD -MP -MF .deps/fdmisc.Tpo -c -o fdmisc.o fdmisc.c
+mv -f .deps/error.Tpo .deps/error.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT forward.o -MD -MP -MF .deps/forward.Tpo -c -o forward.o forward.c
+mv -f .deps/fdmisc.Tpo .deps/fdmisc.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT fragment.o -MD -MP -MF .deps/fragment.Tpo -c -o fragment.o fragment.c
+mv -f .deps/fragment.Tpo .deps/fragment.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT gremlin.o -MD -MP -MF .deps/gremlin.Tpo -c -o gremlin.o gremlin.c
+mv -f .deps/gremlin.Tpo .deps/gremlin.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT helper.o -MD -MP -MF .deps/helper.Tpo -c -o helper.o helper.c
+mv -f .deps/helper.Tpo .deps/helper.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT httpdigest.o -MD -MP -MF .deps/httpdigest.Tpo -c -o httpdigest.o httpdigest.c
+mv -f .deps/forward.Tpo .deps/forward.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT lladdr.o -MD -MP -MF .deps/lladdr.Tpo -c -o lladdr.o lladdr.c
+mv -f .deps/httpdigest.Tpo .deps/httpdigest.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT init.o -MD -MP -MF .deps/init.Tpo -c -o init.o init.c
+mv -f .deps/lladdr.Tpo .deps/lladdr.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT interval.o -MD -MP -MF .deps/interval.Tpo -c -o interval.o interval.c
+mv -f .deps/interval.Tpo .deps/interval.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT list.o -MD -MP -MF .deps/list.Tpo -c -o list.o list.c
+mv -f .deps/list.Tpo .deps/list.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT lzo.o -MD -MP -MF .deps/lzo.Tpo -c -o lzo.o lzo.c
+mv -f .deps/lzo.Tpo .deps/lzo.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT manage.o -MD -MP -MF .deps/manage.Tpo -c -o manage.o manage.c
+mv -f .deps/init.Tpo .deps/init.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT mbuf.o -MD -MP -MF .deps/mbuf.Tpo -c -o mbuf.o mbuf.c
+mv -f .deps/mbuf.Tpo .deps/mbuf.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT misc.o -MD -MP -MF .deps/misc.Tpo -c -o misc.o misc.c
+mv -f .deps/misc.Tpo .deps/misc.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT platform.o -MD -MP -MF .deps/platform.Tpo -c -o platform.o platform.c
+mv -f .deps/manage.Tpo .deps/manage.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT console.o -MD -MP -MF .deps/console.Tpo -c -o console.o console.c
+mv -f .deps/console.Tpo .deps/console.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT console_builtin.o -MD -MP -MF .deps/console_builtin.Tpo -c -o console_builtin.o console_builtin.c
+mv -f .deps/platform.Tpo .deps/platform.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT console_systemd.o -MD -MP -MF .deps/console_systemd.Tpo -c -o console_systemd.o console_systemd.c
+mv -f .deps/console_systemd.Tpo .deps/console_systemd.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT mroute.o -MD -MP -MF .deps/mroute.Tpo -c -o mroute.o mroute.c
+mv -f .deps/console_builtin.Tpo .deps/console_builtin.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT mss.o -MD -MP -MF .deps/mss.Tpo -c -o mss.o mss.c
+mv -f .deps/mss.Tpo .deps/mss.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT mstats.o -MD -MP -MF .deps/mstats.Tpo -c -o mstats.o mstats.c
+mv -f .deps/mroute.Tpo .deps/mroute.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT mtcp.o -MD -MP -MF .deps/mtcp.Tpo -c -o mtcp.o mtcp.c
+mv -f .deps/mstats.Tpo .deps/mstats.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT mtu.o -MD -MP -MF .deps/mtu.Tpo -c -o mtu.o mtu.c
+mv -f .deps/mtu.Tpo .deps/mtu.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT mudp.o -MD -MP -MF .deps/mudp.Tpo -c -o mudp.o mudp.c
+mv -f .deps/mtcp.Tpo .deps/mtcp.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT multi.o -MD -MP -MF .deps/multi.Tpo -c -o multi.o multi.c
+mv -f .deps/mudp.Tpo .deps/mudp.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT networking_iproute2.o -MD -MP -MF .deps/networking_iproute2.Tpo -c -o networking_iproute2.o networking_iproute2.c
+mv -f .deps/networking_iproute2.Tpo .deps/networking_iproute2.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT networking_sitnl.o -MD -MP -MF .deps/networking_sitnl.Tpo -c -o networking_sitnl.o networking_sitnl.c
+mv -f .deps/networking_sitnl.Tpo .deps/networking_sitnl.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ntlm.o -MD -MP -MF .deps/ntlm.Tpo -c -o ntlm.o ntlm.c
+mv -f .deps/ntlm.Tpo .deps/ntlm.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT occ.o -MD -MP -MF .deps/occ.Tpo -c -o occ.o occ.c
+mv -f .deps/occ.Tpo .deps/occ.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT pkcs11.o -MD -MP -MF .deps/pkcs11.Tpo -c -o pkcs11.o pkcs11.c
+mv -f .deps/pkcs11.Tpo .deps/pkcs11.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT pkcs11_openssl.o -MD -MP -MF .deps/pkcs11_openssl.Tpo -c -o pkcs11_openssl.o pkcs11_openssl.c
+mv -f .deps/pkcs11_openssl.Tpo .deps/pkcs11_openssl.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT pkcs11_mbedtls.o -MD -MP -MF .deps/pkcs11_mbedtls.Tpo -c -o pkcs11_mbedtls.o pkcs11_mbedtls.c
+mv -f .deps/pkcs11_mbedtls.Tpo .deps/pkcs11_mbedtls.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT openvpn.o -MD -MP -MF .deps/openvpn.Tpo -c -o openvpn.o openvpn.c
+mv -f .deps/multi.Tpo .deps/multi.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT options.o -MD -MP -MF .deps/options.Tpo -c -o options.o options.c
+mv -f .deps/openvpn.Tpo .deps/openvpn.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT otime.o -MD -MP -MF .deps/otime.Tpo -c -o otime.o otime.c
+mv -f .deps/otime.Tpo .deps/otime.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT packet_id.o -MD -MP -MF .deps/packet_id.Tpo -c -o packet_id.o packet_id.c
+mv -f .deps/packet_id.Tpo .deps/packet_id.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT perf.o -MD -MP -MF .deps/perf.Tpo -c -o perf.o perf.c
+mv -f .deps/perf.Tpo .deps/perf.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT pf.o -MD -MP -MF .deps/pf.Tpo -c -o pf.o pf.c
+mv -f .deps/pf.Tpo .deps/pf.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ping.o -MD -MP -MF .deps/ping.Tpo -c -o ping.o ping.c
+mv -f .deps/ping.Tpo .deps/ping.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT plugin.o -MD -MP -MF .deps/plugin.Tpo -c -o plugin.o plugin.c
+mv -f .deps/plugin.Tpo .deps/plugin.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT pool.o -MD -MP -MF .deps/pool.Tpo -c -o pool.o pool.c
+mv -f .deps/pool.Tpo .deps/pool.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT proto.o -MD -MP -MF .deps/proto.Tpo -c -o proto.o proto.c
+mv -f .deps/proto.Tpo .deps/proto.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT proxy.o -MD -MP -MF .deps/proxy.Tpo -c -o proxy.o proxy.c
+mv -f .deps/proxy.Tpo .deps/proxy.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ps.o -MD -MP -MF .deps/ps.Tpo -c -o ps.o ps.c
+mv -f .deps/ps.Tpo .deps/ps.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT push.o -MD -MP -MF .deps/push.Tpo -c -o push.o push.c
+mv -f .deps/push.Tpo .deps/push.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT reliable.o -MD -MP -MF .deps/reliable.Tpo -c -o reliable.o reliable.c
+mv -f .deps/reliable.Tpo .deps/reliable.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT route.o -MD -MP -MF .deps/route.Tpo -c -o route.o route.c
+mv -f .deps/options.Tpo .deps/options.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT run_command.o -MD -MP -MF .deps/run_command.Tpo -c -o run_command.o run_command.c
+mv -f .deps/run_command.Tpo .deps/run_command.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT schedule.o -MD -MP -MF .deps/schedule.Tpo -c -o schedule.o schedule.c
+mv -f .deps/schedule.Tpo .deps/schedule.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT session_id.o -MD -MP -MF .deps/session_id.Tpo -c -o session_id.o session_id.c
+mv -f .deps/session_id.Tpo .deps/session_id.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT shaper.o -MD -MP -MF .deps/shaper.Tpo -c -o shaper.o shaper.c
+mv -f .deps/shaper.Tpo .deps/shaper.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT sig.o -MD -MP -MF .deps/sig.Tpo -c -o sig.o sig.c
+mv -f .deps/route.Tpo .deps/route.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT socket.o -MD -MP -MF .deps/socket.Tpo -c -o socket.o socket.c
+mv -f .deps/sig.Tpo .deps/sig.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT socks.o -MD -MP -MF .deps/socks.Tpo -c -o socks.o socks.c
+mv -f .deps/socks.Tpo .deps/socks.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ssl.o -MD -MP -MF .deps/ssl.Tpo -c -o ssl.o ssl.c
+mv -f .deps/socket.Tpo .deps/socket.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ssl_openssl.o -MD -MP -MF .deps/ssl_openssl.Tpo -c -o ssl_openssl.o ssl_openssl.c
+mv -f .deps/ssl_openssl.Tpo .deps/ssl_openssl.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ssl_mbedtls.o -MD -MP -MF .deps/ssl_mbedtls.Tpo -c -o ssl_mbedtls.o ssl_mbedtls.c
+mv -f .deps/ssl_mbedtls.Tpo .deps/ssl_mbedtls.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ssl_ncp.o -MD -MP -MF .deps/ssl_ncp.Tpo -c -o ssl_ncp.o ssl_ncp.c
+mv -f .deps/ssl.Tpo .deps/ssl.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ssl_verify.o -MD -MP -MF .deps/ssl_verify.Tpo -c -o ssl_verify.o ssl_verify.c
+mv -f .deps/ssl_ncp.Tpo .deps/ssl_ncp.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ssl_verify_openssl.o -MD -MP -MF .deps/ssl_verify_openssl.Tpo -c -o ssl_verify_openssl.o ssl_verify_openssl.c
+mv -f .deps/ssl_verify.Tpo .deps/ssl_verify.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT ssl_verify_mbedtls.o -MD -MP -MF .deps/ssl_verify_mbedtls.Tpo -c -o ssl_verify_mbedtls.o ssl_verify_mbedtls.c
+mv -f .deps/ssl_verify_mbedtls.Tpo .deps/ssl_verify_mbedtls.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT status.o -MD -MP -MF .deps/status.Tpo -c -o status.o status.c
+mv -f .deps/ssl_verify_openssl.Tpo .deps/ssl_verify_openssl.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT tls_crypt.o -MD -MP -MF .deps/tls_crypt.Tpo -c -o tls_crypt.o tls_crypt.c
+mv -f .deps/status.Tpo .deps/status.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT tun.o -MD -MP -MF .deps/tun.Tpo -c -o tun.o tun.c
+mv -f .deps/tun.Tpo .deps/tun.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT vlan.o -MD -MP -MF .deps/vlan.Tpo -c -o vlan.o vlan.c
+mv -f .deps/tls_crypt.Tpo .deps/tls_crypt.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT win32.o -MD -MP -MF .deps/win32.Tpo -c -o win32.o win32.c
+mv -f .deps/vlan.Tpo .deps/vlan.Po
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include  -I../../include -I../../src/compat        -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT cryptoapi.o -MD -MP -MF .deps/cryptoapi.Tpo -c -o cryptoapi.o cryptoapi.c
+mv -f .deps/win32.Tpo .deps/win32.Po
+mv -f .deps/cryptoapi.Tpo .deps/cryptoapi.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link gcc       -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\"  -Wall -Wno-stringop-truncation -g -O2 -std=c99   -o openvpn argv.o auth_token.o base64.o buffer.o clinat.o comp.o compstub.o comp-lz4.o crypto.o crypto_openssl.o crypto_mbedtls.o dhcp.o env_set.o error.o event.o fdmisc.o forward.o fragment.o gremlin.o helper.o httpdigest.o lladdr.o init.o interval.o list.o lzo.o manage.o mbuf.o misc.o platform.o console.o console_builtin.o console_systemd.o mroute.o mss.o mstats.o mtcp.o mtu.o mudp.o multi.o networking_iproute2.o networking_sitnl.o ntlm.o occ.o pkcs11.o pkcs11_openssl.o pkcs11_mbedtls.o openvpn.o options.o otime.o packet_id.o perf.o pf.o ping.o plugin.o pool.o proto.o proxy.o ps.o push.o reliable.o route.o run_command.o schedule.o session_id.o shaper.o sig.o socket.o socks.o ssl.o ssl_openssl.o ssl_mbedtls.o ssl_ncp.o ssl_verify.o ssl_verify_openssl.o ssl_verify_mbedtls.o status.o tls_crypt.o tun.o vlan.o win32.o cryptoapi.o  ../../src/compat/libcompat.la -lresolv -llzo2   -lssl -lcrypto   -ldl   
+libtool: link: gcc -DPLUGIN_LIBDIR=\"/usr/local/lib/openvpn/plugins\" -Wall -Wno-stringop-truncation -g -O2 -std=c99 -o openvpn argv.o auth_token.o base64.o buffer.o clinat.o comp.o compstub.o comp-lz4.o crypto.o crypto_openssl.o crypto_mbedtls.o dhcp.o env_set.o error.o event.o fdmisc.o forward.o fragment.o gremlin.o helper.o httpdigest.o lladdr.o init.o interval.o list.o lzo.o manage.o mbuf.o misc.o platform.o console.o console_builtin.o console_systemd.o mroute.o mss.o mstats.o mtcp.o mtu.o mudp.o multi.o networking_iproute2.o networking_sitnl.o ntlm.o occ.o pkcs11.o pkcs11_openssl.o pkcs11_mbedtls.o openvpn.o options.o otime.o packet_id.o perf.o pf.o ping.o plugin.o pool.o proto.o proxy.o ps.o push.o reliable.o route.o run_command.o schedule.o session_id.o shaper.o sig.o socket.o socks.o ssl.o ssl_openssl.o ssl_mbedtls.o ssl_ncp.o ssl_verify.o ssl_verify_openssl.o ssl_verify_mbedtls.o status.o tls_crypt.o tun.o vlan.o win32.o cryptoapi.o  ../../src/compat/.libs/libcompat.a -lresolv -llzo2 -lssl -lcrypto -ldl
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/openvpn'
+Making all in openvpnmsica
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/openvpnmsica'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/openvpnmsica'
+Making all in openvpnserv
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/openvpnserv'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/openvpnserv'
+Making all in plugins
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/plugins'
+Making all in auth-pam
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/plugins/auth-pam'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/plugins/auth-pam'
+Making all in down-root
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/plugins/down-root'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I../../.. -I../../../include    -I../../../include  -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT down-root.lo -MD -MP -MF .deps/down-root.Tpo -c -o down-root.lo down-root.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I../../../include -I../../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT down-root.lo -MD -MP -MF .deps/down-root.Tpo -c down-root.c  -fPIC -DPIC -o .libs/down-root.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I../../.. -I../../../include -I../../../include -Wall -Wno-stringop-truncation -g -O2 -std=c99 -MT down-root.lo -MD -MP -MF .deps/down-root.Tpo -c down-root.c -o down-root.o >/dev/null 2>&1
+mv -f .deps/down-root.Tpo .deps/down-root.Plo
+/bin/sh ../../../libtool  --tag=CC   --mode=link gcc -I../../../include  -Wall -Wno-stringop-truncation -g -O2 -std=c99  -export-symbols "./down-root.exports" -module -shared -avoid-version -no-undefined  -o openvpn-plugin-down-root.la -rpath /usr/local/lib/openvpn/plugins down-root.lo  
+libtool: link: echo "{ global:" > .libs/openvpn-plugin-down-root.ver
+libtool: link:  cat ./down-root.exports | sed -e "s/\(.*\)/\1;/" >> .libs/openvpn-plugin-down-root.ver
+libtool: link:  echo "local: *; };" >> .libs/openvpn-plugin-down-root.ver
+libtool: link:  gcc -shared  -fPIC -DPIC  .libs/down-root.o    -g -O2   -Wl,-soname -Wl,openvpn-plugin-down-root.so -Wl,-version-script -Wl,.libs/openvpn-plugin-down-root.ver -o .libs/openvpn-plugin-down-root.so
+libtool: link: ( cd ".libs" && rm -f "openvpn-plugin-down-root.la" && ln -s "../openvpn-plugin-down-root.la" "openvpn-plugin-down-root.la" )
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/plugins/down-root'
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/plugins'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/plugins'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/plugins'
+Making all in tapctl
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/tapctl'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/tapctl'
+make[3]: Entering directory '/sources/openvpn-2.5.7/src'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/src'
+Making all in sample
+make[2]: Entering directory '/sources/openvpn-2.5.7/sample'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/openvpn-2.5.7/sample'
+Making all in doc
+make[2]: Entering directory '/sources/openvpn-2.5.7/doc'
+Making all in doxygen
+make[3]: Entering directory '/sources/openvpn-2.5.7/doc/doxygen'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/doc/doxygen'
+make[3]: Entering directory '/sources/openvpn-2.5.7/doc'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/doc'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/doc'
+Making all in tests
+make[2]: Entering directory '/sources/openvpn-2.5.7/tests'
+Making all in unit_tests
+make[3]: Entering directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[4]: Entering directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[3]: Entering directory '/sources/openvpn-2.5.7/tests'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/tests'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/tests'
+make[2]: Entering directory '/sources/openvpn-2.5.7'
+make[2]: Leaving directory '/sources/openvpn-2.5.7'
+make[1]: Leaving directory '/sources/openvpn-2.5.7'
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] make install
+make  install-recursive
+make[1]: Entering directory '/sources/openvpn-2.5.7'
+Making install in build
+make[2]: Entering directory '/sources/openvpn-2.5.7/build'
+Making install in msvc
+make[3]: Entering directory '/sources/openvpn-2.5.7/build/msvc'
+Making install in msvc-generate
+make[4]: Entering directory '/sources/openvpn-2.5.7/build/msvc/msvc-generate'
+make[5]: Entering directory '/sources/openvpn-2.5.7/build/msvc/msvc-generate'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/sources/openvpn-2.5.7/build/msvc/msvc-generate'
+make[4]: Leaving directory '/sources/openvpn-2.5.7/build/msvc/msvc-generate'
+make[4]: Entering directory '/sources/openvpn-2.5.7/build/msvc'
+make[5]: Entering directory '/sources/openvpn-2.5.7/build/msvc'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/sources/openvpn-2.5.7/build/msvc'
+make[4]: Leaving directory '/sources/openvpn-2.5.7/build/msvc'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/build/msvc'
+make[3]: Entering directory '/sources/openvpn-2.5.7/build'
+make[4]: Entering directory '/sources/openvpn-2.5.7/build'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/build'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/build'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/build'
+Making install in distro
+make[2]: Entering directory '/sources/openvpn-2.5.7/distro'
+Making install in systemd
+make[3]: Entering directory '/sources/openvpn-2.5.7/distro/systemd'
+make[4]: Entering directory '/sources/openvpn-2.5.7/distro/systemd'
+make[4]: Nothing to be done for 'install-exec-am'.
+make  install-data-hook
+make[5]: Entering directory '/sources/openvpn-2.5.7/distro/systemd'
+make[5]: Nothing to be done for 'install-data-hook'.
+make[5]: Leaving directory '/sources/openvpn-2.5.7/distro/systemd'
+make[4]: Leaving directory '/sources/openvpn-2.5.7/distro/systemd'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/distro/systemd'
+make[3]: Entering directory '/sources/openvpn-2.5.7/distro'
+make[4]: Entering directory '/sources/openvpn-2.5.7/distro'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/distro'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/distro'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/distro'
+Making install in include
+make[2]: Entering directory '/sources/openvpn-2.5.7/include'
+make[3]: Entering directory '/sources/openvpn-2.5.7/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/local/include'
+ /usr/bin/install -c -m 644 openvpn-plugin.h openvpn-msg.h '/usr/local/include'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/include'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/include'
+Making install in src
+make[2]: Entering directory '/sources/openvpn-2.5.7/src'
+Making install in compat
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/compat'
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/compat'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/compat'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/compat'
+Making install in openvpn
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/openvpn'
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/openvpn'
+ /usr/bin/mkdir -p '/usr/sbin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c openvpn '/usr/sbin'
+libtool: install: /usr/bin/install -c openvpn /usr/sbin/openvpn
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/openvpn'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/openvpn'
+Making install in openvpnmsica
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/openvpnmsica'
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/openvpnmsica'
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/openvpnmsica'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/openvpnmsica'
+Making install in openvpnserv
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/openvpnserv'
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/openvpnserv'
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/openvpnserv'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/openvpnserv'
+Making install in plugins
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/plugins'
+Making install in auth-pam
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/plugins/auth-pam'
+make[5]: Entering directory '/sources/openvpn-2.5.7/src/plugins/auth-pam'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Leaving directory '/sources/openvpn-2.5.7/src/plugins/auth-pam'
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/plugins/auth-pam'
+Making install in down-root
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/plugins/down-root'
+make[5]: Entering directory '/sources/openvpn-2.5.7/src/plugins/down-root'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/local/share/doc/openvpn'
+ /usr/bin/install -c -m 644 README.down-root '/usr/local/share/doc/openvpn'
+ /usr/bin/mkdir -p '/usr/local/lib/openvpn/plugins'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   openvpn-plugin-down-root.la '/usr/local/lib/openvpn/plugins'
+libtool: install: /usr/bin/install -c .libs/openvpn-plugin-down-root.so /usr/local/lib/openvpn/plugins/openvpn-plugin-down-root.so
+libtool: install: /usr/bin/install -c .libs/openvpn-plugin-down-root.lai /usr/local/lib/openvpn/plugins/openvpn-plugin-down-root.la
+libtool: finish: PATH="/usr/bin:/usr/sbin:/opt/vc/bin:/sbin" ldconfig -n /usr/local/lib/openvpn/plugins
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib/openvpn/plugins
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[5]: Leaving directory '/sources/openvpn-2.5.7/src/plugins/down-root'
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/plugins/down-root'
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/plugins'
+make[5]: Entering directory '/sources/openvpn-2.5.7/src/plugins'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/sources/openvpn-2.5.7/src/plugins'
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/plugins'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/plugins'
+Making install in tapctl
+make[3]: Entering directory '/sources/openvpn-2.5.7/src/tapctl'
+make[4]: Entering directory '/sources/openvpn-2.5.7/src/tapctl'
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src/tapctl'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src/tapctl'
+make[3]: Entering directory '/sources/openvpn-2.5.7/src'
+make[4]: Entering directory '/sources/openvpn-2.5.7/src'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/src'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/src'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/src'
+Making install in sample
+make[2]: Entering directory '/sources/openvpn-2.5.7/sample'
+make[3]: Entering directory '/sources/openvpn-2.5.7/sample'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/sources/openvpn-2.5.7/sample'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/sample'
+Making install in doc
+make[2]: Entering directory '/sources/openvpn-2.5.7/doc'
+Making install in doxygen
+make[3]: Entering directory '/sources/openvpn-2.5.7/doc/doxygen'
+make[4]: Entering directory '/sources/openvpn-2.5.7/doc/doxygen'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/doc/doxygen'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/doc/doxygen'
+make[3]: Entering directory '/sources/openvpn-2.5.7/doc'
+make[4]: Entering directory '/sources/openvpn-2.5.7/doc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/local/share/doc/openvpn'
+ /usr/bin/install -c -m 644 management-notes.txt gui-notes.txt '/usr/local/share/doc/openvpn'
+ /usr/bin/mkdir -p '/usr/local/share/man/man5'
+ /usr/bin/install -c -m 644 openvpn-examples.5 '/usr/local/share/man/man5'
+ /usr/bin/mkdir -p '/usr/local/share/man/man8'
+ /usr/bin/install -c -m 644 openvpn.8 '/usr/local/share/man/man8'
+make[4]: Leaving directory '/sources/openvpn-2.5.7/doc'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/doc'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/doc'
+Making install in tests
+make[2]: Entering directory '/sources/openvpn-2.5.7/tests'
+Making install in unit_tests
+make[3]: Entering directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[4]: Entering directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[5]: Entering directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[4]: Leaving directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/tests/unit_tests'
+make[3]: Entering directory '/sources/openvpn-2.5.7/tests'
+make[4]: Entering directory '/sources/openvpn-2.5.7/tests'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/openvpn-2.5.7/tests'
+make[3]: Leaving directory '/sources/openvpn-2.5.7/tests'
+make[2]: Leaving directory '/sources/openvpn-2.5.7/tests'
+make[2]: Entering directory '/sources/openvpn-2.5.7'
+make[3]: Entering directory '/sources/openvpn-2.5.7'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/local/share/doc/openvpn'
+ /usr/bin/install -c -m 644 README README.IPv6 README.mbedtls Changes.rst COPYRIGHT.GPL COPYING '/usr/local/share/doc/openvpn'
+make[3]: Leaving directory '/sources/openvpn-2.5.7'
+make[2]: Leaving directory '/sources/openvpn-2.5.7'
+make[1]: Leaving directory '/sources/openvpn-2.5.7'
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] which openvpn
+/usr/sbin/openvpn
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 
+[root@0] [/sources/openvpn-2.5.7] 

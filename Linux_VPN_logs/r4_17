@@ -1,0 +1,1746 @@
+(lfs chroot) root:/sources/LVM2.2.03.13# PATH+=:/usr/sbin                \
+./configure --prefix=/usr       \
+            --enable-cmdlib     \
+            --enable-pkgconfig  \
+            --enable-udev_sync  \
+                        --with-usrlibdir=/usr/lib \
+                        --with-udevdir=/lib/udev/rules.d \
+                        --with-default-locking-dir=/run/lvm \
+                        --enable-lvmetad \
+                        --enable-udev_rules
+configure: WARNING: unrecognized options: --enable-lvmetad
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking target system type... aarch64-unknown-linux-gnu
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gawk... gawk
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking whether gcc needs -traditional... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for ranlib... ranlib
+checking for ar... ar
+checking for cflow... no
+checking for cscope... no
+checking for chmod... /usr/bin/chmod
+checking for wc... /usr/bin/wc
+checking for sort... /usr/bin/sort
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether sys/types.h defines makedev... no
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for ANSI C header files... (cached) yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking assert.h usability... yes
+checking assert.h presence... yes
+checking for assert.h... yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking float.h usability... yes
+checking float.h presence... yes
+checking for float.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for inttypes.h... (cached) yes
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking libgen.h usability... yes
+checking libgen.h presence... yes
+checking for libgen.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking for sys/stat.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking for sys/wait.h... (cached) yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking for unistd.h... (cached) yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking sys/timerfd.h usability... yes
+checking sys/timerfd.h presence... yes
+checking for sys/timerfd.h... yes
+checking sys/vfs.h usability... yes
+checking sys/vfs.h presence... yes
+checking for sys/vfs.h... yes
+checking linux/magic.h usability... yes
+checking linux/magic.h presence... yes
+checking for linux/magic.h... yes
+checking linux/fiemap.h usability... yes
+checking linux/fiemap.h presence... yes
+checking for linux/fiemap.h... yes
+checking libaio.h usability... no
+checking libaio.h presence... no
+checking for libaio.h... no
+checking asm/byteorder.h usability... yes
+checking asm/byteorder.h presence... yes
+checking for asm/byteorder.h... yes
+checking linux/fs.h usability... yes
+checking linux/fs.h presence... yes
+checking for linux/fs.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for struct stat.st_rdev... yes
+checking for ptrdiff_t... yes
+checking for struct stat.st_blocks... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for off_t... yes
+checking for pid_t... yes
+checking return type of signal handlers... void
+checking for size_t... yes
+checking for mode_t... yes
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for ssize_t... yes
+checking for uid_t in sys/types.h... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for __builtin_clz... yes
+checking for __builtin_clzll... yes
+checking for ftruncate... yes
+checking for gethostname... yes
+checking for getpagesize... yes
+checking for gettimeofday... yes
+checking for localtime_r... yes
+checking for memchr... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for mkfifo... yes
+checking for munmap... yes
+checking for nl_langinfo... yes
+checking for pselect... yes
+checking for realpath... yes
+checking for rmdir... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strcspn... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strndup... yes
+checking for strrchr... yes
+checking for strspn... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for uname... yes
+checking for prlimit... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether closedir returns void... no
+checking for unistd.h... (cached) yes
+checking for working chown... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether lstat accepts an empty string... no
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for working memcmp... yes
+checking for sys/time.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for sys/param.h... (cached) yes
+checking for alarm... yes
+checking for working mktime... yes
+checking for getpagesize... (cached) yes
+checking for working mmap... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking whether stat accepts an empty string... no
+checking for working strtod... yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking whether to enable dependency tracking... yes
+checking whether to build silently... yes
+checking whether to use static linking... no
+checking whether gcc accepts -pie flag... yes
+checking whether gcc accepts -Wl,-z,relro,-z,now ld flags... yes
+checking file owner... 
+checking group owner... 
+checking device node uid... 0
+checking device node gid... 0
+checking device node mode... 0600
+checking when to create device nodes... on resume
+checking default name mangling... auto
+checking whether to include snapshots... internal
+checking whether to include mirrors... internal
+checking whether to include thin provisioning... internal
+checking for thin_check... no
+configure: WARNING: thin_check not found in path /usr/bin:/usr/sbin:/usr/sbin
+configure: WARNING: /usr/sbin/thin_check: Bad version "" found
+checking for thin_dump... no
+configure: WARNING: thin_dump not found in path /usr/bin:/usr/sbin:/usr/sbin
+checking for thin_repair... no
+configure: WARNING: thin_repair not found in path /usr/bin:/usr/sbin:/usr/sbin
+checking for thin_restore... no
+configure: WARNING: thin_restore not found in path /usr/bin:/usr/sbin:/usr/sbin
+checking whether thin_check supports the needs-check flag... no
+checking whether to include cache... internal
+checking for cache_check... no
+configure: WARNING: cache_check not found in path /usr/bin:/usr/sbin:/usr/sbin
+configure: WARNING: /usr/sbin/cache_check: Bad version "" found
+checking for cache_dump... no
+configure: WARNING: cache_dump not found in path /usr/bin:/usr/sbin:/usr/sbin
+checking for cache_repair... no
+configure: WARNING: cache_repair not found in path /usr/bin:/usr/sbin:/usr/sbin
+checking for cache_restore... no
+configure: WARNING: cache_restore not found in path /usr/bin:/usr/sbin:/usr/sbin
+checking whether cache_check supports the needs-check flag... no
+checking whether to include vdo... internal
+checking for vdoformat... no
+configure: WARNING: vdoformat not found in path /usr/bin:/usr/sbin:/usr/sbin
+checking whether to include writecache... internal
+checking whether to include integrity... internal
+checking whether to enable realtime support... yes
+checking whether to enable OCF resource agents... no
+checking for default run directory... /run
+checking whether to build cluster mirror log daemon... no
+checking whether to enable debugging... no
+checking whether gcc accepts -Wjump-misses-init flag... yes
+checking whether gcc accepts -Wclobbered flag... yes
+checking whether gcc accepts -Wsync-nand flag... yes
+checking for C optimisation flag... -O2
+checking whether to use symbol versioning... gnu
+checking whether to gather gcov profiling data... no
+checking whether to enable valgrind awareness of pools... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for PKGCONFIGINIT... no
+pkg-config initialized
+checking for VALGRIND... no
+checking whether to use device-mapper... yes
+checking whether to build lvmpolld... no
+checking whether to build lvmlockdsanlock... no
+checking whether to build lvmlockddlm... no
+checking whether to build lvmlockddlmcontrol... no
+checking whether to build lvmlockdidm... no
+checking whether to build lvmlockd... no
+checking whether to build dmfilemapd... no
+checking whether to build notifydbus... no
+checking for BLKID... yes
+checking whether to enable libblkid detection of signatures when wiping... yes
+checking for SYSTEMD... no
+checking whether to use udev-systemd protocol for jobs in background... no
+checking whether to enable synchronisation with udev processing... yes
+checking for UDEV... yes
+checking for udev_device_get_is_initialized in -ludev... yes
+checking whether to enable installation of udev rules required for synchronisation... yes
+checking whether to enable executable path detection in udev rules... no
+checking whether udev supports built-in blkid... yes
+checking whether to enable O_DIRECT... yes
+checking whether to compile liblvm2cmd.so... yes
+checking whether to include Python D-Bus support... no
+checking whether to install fsadm... yes
+checking whether to install vdoimport... yes
+checking whether to install blkdeactivate... yes
+checking whether to use dmeventd... no
+checking for getline in -lc... yes
+checking for canonicalize_file_name in -lc... yes
+checking for dlopen in -ldl... yes
+checking for log10 in -lm... yes
+checking for pthread_mutex_lock in -lpthread... yes
+checking whether to enable selinux support... yes
+checking for sepol_check_context in -lsepol... no
+checking for is_selinux_enabled in -lselinux... no
+configure: WARNING: Disabling selinux
+checking for BLKZEROOUT in sys/ioctl.h.... yes
+checking whether to use BLKZEROOUT for device zeroing... yes
+checking for clock_gettime... yes
+checking for struct stat has st_ctim.... yes
+checking for getopt.h... (cached) yes
+checking for library containing tgetent... -lncurses
+checking for readline in -lreadline... yes
+checking for rl_line_buffer in -lreadline... yes
+checking for rl_completion_matches... yes
+checking whether to enable internationalisation... no
+Package systemd was not found in the pkg-config search path.
+Perhaps you should add the directory containing `systemd.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'systemd' found
+Package systemd was not found in the pkg-config search path.
+Perhaps you should add the directory containing `systemd.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'systemd' found
+checking readline/readline.h usability... yes
+checking readline/readline.h presence... yes
+checking for readline/readline.h... yes
+checking readline/history.h usability... yes
+checking readline/history.h presence... yes
+checking for readline/history.h... yes
+checking whether to enable readline... yes
+checking whether to enable editline... no
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking sys/ipc.h usability... yes
+checking sys/ipc.h presence... yes
+checking for sys/ipc.h... yes
+checking sys/sem.h usability... yes
+checking sys/sem.h presence... yes
+checking for sys/sem.h... yes
+checking for modprobe... /usr/sbin/modprobe
+checking for kernel interface choice... ioctl
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating make.tmpl
+config.status: creating libdm/make.tmpl
+config.status: creating daemons/Makefile
+config.status: creating daemons/cmirrord/Makefile
+config.status: creating daemons/dmeventd/Makefile
+config.status: creating daemons/dmeventd/libdevmapper-event.pc
+config.status: creating daemons/dmeventd/plugins/Makefile
+config.status: creating daemons/dmeventd/plugins/lvm2/Makefile
+config.status: creating daemons/dmeventd/plugins/raid/Makefile
+config.status: creating daemons/dmeventd/plugins/mirror/Makefile
+config.status: creating daemons/dmeventd/plugins/snapshot/Makefile
+config.status: creating daemons/dmeventd/plugins/thin/Makefile
+config.status: creating daemons/dmeventd/plugins/vdo/Makefile
+config.status: creating daemons/lvmdbusd/Makefile
+config.status: creating daemons/lvmdbusd/lvmdbusd
+config.status: creating daemons/lvmdbusd/lvmdb.py
+config.status: creating daemons/lvmdbusd/lvm_shell_proxy.py
+config.status: creating daemons/lvmdbusd/path.py
+config.status: creating daemons/lvmpolld/Makefile
+config.status: creating daemons/lvmlockd/Makefile
+config.status: creating conf/Makefile
+config.status: creating conf/example.conf
+config.status: creating conf/lvmlocal.conf
+config.status: creating conf/command_profile_template.profile
+config.status: creating conf/metadata_profile_template.profile
+config.status: creating include/Makefile
+config.status: creating lib/Makefile
+config.status: creating include/lvm-version.h
+config.status: creating libdaemon/Makefile
+config.status: creating libdaemon/client/Makefile
+config.status: creating libdaemon/server/Makefile
+config.status: creating libdm/Makefile
+config.status: creating libdm/dm-tools/Makefile
+config.status: creating libdm/libdevmapper.pc
+config.status: creating man/Makefile
+config.status: creating po/Makefile
+config.status: creating scripts/lvm2-pvscan.service
+config.status: creating scripts/blkdeactivate.sh
+config.status: creating scripts/blk_availability_init_red_hat
+config.status: creating scripts/blk_availability_systemd_red_hat.service
+config.status: creating scripts/cmirrord_init_red_hat
+config.status: creating scripts/com.redhat.lvmdbus1.service
+config.status: creating scripts/dm_event_systemd_red_hat.service
+config.status: creating scripts/dm_event_systemd_red_hat.socket
+config.status: creating scripts/lvm2_cmirrord_systemd_red_hat.service
+config.status: creating scripts/lvm2_lvmdbusd_systemd_red_hat.service
+config.status: creating scripts/lvm2_lvmpolld_init_red_hat
+config.status: creating scripts/lvm2_lvmpolld_systemd_red_hat.service
+config.status: creating scripts/lvm2_lvmpolld_systemd_red_hat.socket
+config.status: creating scripts/lvmlockd.service
+config.status: creating scripts/lvmlocks.service
+config.status: creating scripts/lvm2_monitoring_init_red_hat
+config.status: creating scripts/lvm2_monitoring_systemd_red_hat.service
+config.status: creating scripts/lvm2_tmpfiles_red_hat.conf
+config.status: creating scripts/lvmdump.sh
+config.status: creating scripts/Makefile
+config.status: creating test/Makefile
+config.status: creating tools/Makefile
+config.status: creating udev/Makefile
+config.status: creating include/configure.h
+configure: WARNING: unrecognized options: --enable-lvmetad
+configure: WARNING: Support for thin provisioning is limited since some thin provisioning tools are missing!
+configure: WARNING: You should also install latest thin_check vsn 0.7.0 (or later) for lvm2 thin provisioning
+configure: WARNING: Support for cache is limited since some cache tools are missing!
+configure: WARNING: You should install latest cache_check vsn 0.7.0 to use lvm2 cache metadata format 2
+configure: WARNING: Unrecognized 'vdoformat' tool is REQUIRED for VDO logical volume creation!
+configure: WARNING: Only libdm part can be build without libaio:  make [install_]device-mapper
+(lfs chroot) root:/sources/LVM2.2.03.13# make -j8
+/usr/bin/make -C libdm device-mapper
+/usr/bin/make -C conf device-mapper
+/usr/bin/make -C include device-mapper
+/usr/bin/make -C lib device-mapper
+/usr/bin/make -C libdaemon device-mapper
+/usr/bin/make -C man device-mapper
+/usr/bin/make -C scripts device-mapper
+/usr/bin/make -C udev device-mapper
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm'
+make[1]: Entering directory '/sources/LVM2.2.03.13/include'
+make[1]: Entering directory '/sources/LVM2.2.03.13/conf'
+make[1]: Entering directory '/sources/LVM2.2.03.13/lib'
+make[1]: Entering directory '/sources/LVM2.2.03.13/udev'
+make[1]: Entering directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Entering directory '/sources/LVM2.2.03.13/man'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/conf'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/include'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/udev'
+    [CC] bitset.c
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/scripts'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/lib'
+    [CC] hash.c
+    [CC] hash.c
+    [CC] list.c
+    [CC] list.c
+    [MAN] dmsetup.8
+    [CC] libdm-common.c
+    [CC] libdm-config.c
+    [MAN] dmstats.8
+    [MAN] blkdeactivate.8
+    [MAN] dmeventd.8
+    [MAN] dmfilemapd.8
+    [CC] libdm-deptree.c
+    [CC] radix-tree.c
+make[1]: Leaving directory '/sources/LVM2.2.03.13/man'
+    [CC] libdm-file.c
+    [CC] bitset.c
+    [CC] libdm-report.c
+    [CC] libdm-iface.c
+    [CC] libdm-common.c
+    [CC] libdm-stats.c
+    [CC] libdm-config.c
+    [CC] libdm-deptree.c
+In function ‘_find_dm_tree_node_by_uuid’,
+    inlined from ‘dm_tree_find_node_by_uuid’ at libdm-deptree.c:785:9:
+libdm-deptree.c:585:32: warning: ‘strncpy’ specified bound 129 equals destination size [-Wstringop-truncation]
+  585 |                         (void) strncpy(uuid_without_suffix, uuid, sizeof(uuid_without_suffix));
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘_lookup_dev_name’,
+    inlined from ‘_flatten’ at device_mapper/ioctl/libdm-iface.c:1240:8,
+    inlined from ‘_do_dm_ioctl’ at device_mapper/ioctl/libdm-iface.c:1841:8,
+    inlined from ‘dm_task_run’ at device_mapper/ioctl/libdm-iface.c:2068:14:
+device_mapper/ioctl/libdm-iface.c:1091:25: warning: ‘strncpy’ specified bound 128 equals destination size [-Wstringop-truncation]
+ 1091 |                         strncpy(buf, names->name, len);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘_flatten’,
+    inlined from ‘_do_dm_ioctl’ at device_mapper/ioctl/libdm-iface.c:1841:8,
+    inlined from ‘dm_task_run’ at device_mapper/ioctl/libdm-iface.c:2068:14:
+device_mapper/ioctl/libdm-iface.c:1253:17: warning: ‘strncpy’ specified bound 128 equals destination size [-Wstringop-truncation]
+ 1253 |                 strncpy(dmi->name, DEV_NAME(dmt), sizeof(dmi->name));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+device_mapper/ioctl/libdm-iface.c:1256:17: warning: ‘strncpy’ specified bound 129 equals destination size [-Wstringop-truncation]
+ 1256 |                 strncpy(dmi->uuid, DEV_UUID(dmt), sizeof(dmi->uuid));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [CC] libdm-string.c
+    [CC] libdm-targets.c
+    [CC] libdm-timestamp.c
+    [CC] libdm-file.c
+    [CC] dbg_malloc.c
+    [CC] libdm-report.c
+    [CC] libdm-string.c
+    [CC] libdm-targets.c
+    [CC] pool.c
+In function ‘_find_dm_tree_node_by_uuid’,
+    inlined from ‘dm_tree_find_node_by_uuid’ at device_mapper/libdm-deptree.c:823:9:
+device_mapper/libdm-deptree.c:623:32: warning: ‘strncpy’ specified bound 129 equals destination size [-Wstringop-truncation]
+  623 |                         (void) strncpy(uuid_without_suffix, uuid, sizeof(uuid_without_suffix));
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [CC] libdm-timestamp.c
+    [CC] matcher.c
+    [CC] parse_rx.c
+    [CC] ttree.c
+    [CC] pool.c
+    [CC] matcher.c
+    [CC] parse_rx.c
+    [CC] ttree.c
+    [CC] libdm-iface.c
+    [CC] status.c
+    [CC] vdo_target.c
+    [AR] base/libbase.a
+/usr/bin/ar: creating base/libbase.a
+In function ‘_lookup_dev_name’,
+    inlined from ‘_flatten’ at ioctl/libdm-iface.c:1231:8,
+    inlined from ‘_do_dm_ioctl’ at ioctl/libdm-iface.c:1817:8,
+    inlined from ‘dm_task_run’ at ioctl/libdm-iface.c:2046:14:
+ioctl/libdm-iface.c:1094:25: warning: ‘strncpy’ specified bound 128 equals destination size [-Wstringop-truncation]
+ 1094 |                         strncpy(buf, names->name, len);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘_flatten’,
+    inlined from ‘_do_dm_ioctl’ at ioctl/libdm-iface.c:1817:8,
+    inlined from ‘dm_task_run’ at ioctl/libdm-iface.c:2046:14:
+ioctl/libdm-iface.c:1248:17: warning: ‘strncpy’ specified bound 128 equals destination size [-Wstringop-truncation]
+ 1248 |                 strncpy(dmi->name, DEV_NAME(dmt), sizeof(dmi->name));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ioctl/libdm-iface.c:1251:17: warning: ‘strncpy’ specified bound 129 equals destination size [-Wstringop-truncation]
+ 1251 |                 strncpy(dmi->uuid, DEV_UUID(dmt), sizeof(dmi->uuid));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [CC] ioctl/libdevmapper.so.1.02
+    [LN] libdevmapper.so.1.02
+    [LN] ioctl/libdevmapper.so
+    [LN] ioctl/libdevmapper.so
+    [CHECK] ioctl/libdevmapper.so
+    [AR] device_mapper/libdevice-mapper.a
+/usr/bin/ar: creating device_mapper/libdevice-mapper.a
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm'
+/usr/bin/make -C daemons device-mapper
+/usr/bin/make -C tools device-mapper
+make[1]: Entering directory '/sources/LVM2.2.03.13/daemons'
+make[1]: Entering directory '/sources/LVM2.2.03.13/tools'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/daemons'
+    [GEN] command-lines-input.h
+    [GEN] cmds.h
+    [GEN] command-count.h
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/tools'
+/usr/bin/make -C libdm
+/usr/bin/make -C conf
+/usr/bin/make -C libdaemon
+/usr/bin/make -C include
+/usr/bin/make -C udev
+make[1]: Entering directory '/sources/LVM2.2.03.13/conf'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdm'
+make[1]: Entering directory '/sources/LVM2.2.03.13/libdaemon'
+make[1]: Entering directory '/sources/LVM2.2.03.13/include'
+make[1]: Entering directory '/sources/LVM2.2.03.13/udev'
+/usr/bin/make -C dm-tools device-mapper
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/include'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/LVM2.2.03.13/conf'
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+/usr/bin/make -C client device-mapper
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+    [CC] dmsetup.c
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+/usr/bin/make -C client
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/udev'
+    [CC] daemon-io.c
+    [CC] config-util.c
+    [CC] daemon-client.c
+    [AR] libdaemonclient.a
+/usr/bin/ar: creating libdaemonclient.a
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdaemon/client'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdaemon'
+/usr/bin/make -C lib
+make[1]: Entering directory '/sources/LVM2.2.03.13/lib'
+    [CC] integrity.c
+    [CC] writecache.c
+    [CC] cache.c
+    [CC] activate.c
+    [CC] config.c
+    [CC] lvmcache.c
+    [CC] toolcontext.c
+    [CC] btree.c
+    [CC] str_list.c
+    [CC] bcache.c
+    [CC] bcache-utils.c
+device/bcache.c:29:10: fatal error: libaio.h: No such file or directory
+   29 | #include <libaio.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [../make.tmpl:452: device/bcache.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+cache/lvmcache.c: In function ‘lvmcache_add’:
+cache/lvmcache.c:2252:17: warning: ‘strncpy’ specified bound 32 equals destination size [-Wstringop-truncation]
+ 2252 |                 strncpy((char *)&vgsummary.vgid, vgid, sizeof(vgsummary.vgid));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/sources/LVM2.2.03.13/lib'
+make: *** [make.tmpl:353: lib] Error 2
+make: *** Waiting for unfinished jobs....
+    [CC] dmsetup
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+/usr/bin/make -C dm-tools
+make[2]: Entering directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/LVM2.2.03.13/libdm/dm-tools'
+make[1]: Leaving directory '/sources/LVM2.2.03.13/libdm'
+(lfs chroot) root:/sources/LVM2.2.03.13# cpio
+bash: cpio: command not found
+(lfs chroot) root:/sources/LVM2.2.03.13# cd ..
+(lfs chroot) root:/sources# wget https://ftp.gnu.org/gnu/cpio/cpio-2.13.tar.bz2
+--2022-10-01 17:47:39--  https://ftp.gnu.org/gnu/cpio/cpio-2.13.tar.bz2
+Resolving ftp.gnu.org... 209.51.188.20, 2001:470:142:3::b
+Connecting to ftp.gnu.org|209.51.188.20|:443... connected.
+ERROR: cannot verify ftp.gnu.org's certificate, issued by ‘CN=R3,O=Let's Encrypt,C=US’:
+  Unable to locally verify the issuer's authority.
+To connect to ftp.gnu.org insecurely, use `--no-check-certificate'.
+(lfs chroot) root:/sources# wget https://ftp.gnu.org/gnu/cpio/cpio-2.13.tar.bz2 ^C
+(lfs chroot) root:/sources# ping google.com
+PING google.com (142.250.191.46): 56 data bytes
+64 bytes from 142.250.191.46: icmp_seq=0 ttl=57 time=9.064 ms
+64 bytes from 142.250.191.46: icmp_seq=1 ttl=57 time=12.041 ms
+^C--- google.com ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 9.064/10.553/12.041/1.489 ms
+(lfs chroot) root:/sources# wget --no-check-certificate https://ftp.gnu.org/gnu/cpio/cpio-2.13.tar.bz2
+--2022-10-01 17:48:11--  https://ftp.gnu.org/gnu/cpio/cpio-2.13.tar.bz2
+Resolving ftp.gnu.org... 209.51.188.20, 2001:470:142:3::b
+Connecting to ftp.gnu.org|209.51.188.20|:443... connected.
+WARNING: cannot verify ftp.gnu.org's certificate, issued by ‘CN=R3,O=Let's Encrypt,C=US’:
+  Unable to locally verify the issuer's authority.
+HTTP request sent, awaiting response... 200 OK
+Length: 1354559 (1.3M) [application/x-bzip2]
+Saving to: ‘cpio-2.13.tar.bz2’
+
+cpio-2.13.tar.bz2                                 100%[==========================================================================================================>]   1.29M  2.16MB/s    in 0.6s    
+
+2022-10-01 17:48:12 (2.16 MB/s) - ‘cpio-2.13.tar.bz2’ saved [1354559/1354559]
+
+(lfs chroot) root:/sources# l
+total 129M
+-rw-r--r--  1 root root  2.2M Jul 30  2021 btrfs-progs-v5.13.1.tar.xz
+-rw-r--r--  1 root root  1.3M Nov  6  2019 cpio-2.13.tar.bz2
+-rw-r--r--  1 root root  314K Dec  7  2021 dosfstools-4.2.tar.gz
+-rw-r--r--  1 root root  471K Jun 24 13:10 dracut-057.tar.gz
+-rw-r--r--  1 root root  313K Jan 18  2022 ethtool-5.16.tar.xz
+-rw-r--r--  1 root root  2.7M Dec  8  2021 fuse-3.10.4.tar.xz
+-rw-r--r--  1 root root  527K Mar  4  2011 jfsutils-1.1.15.tar.gz
+drwxrwxr-x 24 root root  4.0K Sep 30 19:36 linux-5.13.12
+-rw-r--r--  1 root root  114M Sep 30 15:05 linux-5.13.12.tar.xz
+drwxrwxr-x 19 root wheel 4.0K Oct  1 17:25 LVM2.2.03.13
+-rw-r--r--  1 root root  2.5M Aug 11  2021 LVM2.2.03.13.tgz
+-rw-r--r--  1 root root  431K Oct 26  2018 mdadm-4.1.tar.xz
+-rw-r--r--  1 root root  1.4M Jun 15  2021 nano-5.8.tar.xz
+-rw-r--r--  1 root root  1.3M Aug 22  2021 ntfs-3g_ntfsprogs-2021.8.22.tgz
+-rw-r--r--  1 root root  969K Dec 30  2020 smartmontools-7.2.tar.gz
+(lfs chroot) root:/sources# begin cpio-2.13 tar.bz2
+[lfs-scripts] Starting build of cpio-2.13 at Sat Oct  1 05:50:17 PM -03 2022
+(lfs chroot) root:/sources/cpio-2.13# sed -i '/The name/,+2 d' src/global.c
+(lfs chroot) root:/sources/cpio-2.13# ./configure --prefix=/usr \
+            --enable-mt   \
+            --with-rmt=/usr/libexec/rmt
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking whether gcc needs -traditional... no
+checking for ranlib... ranlib
+checking for bison... bison -y
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking for ar... (cached) ar
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for gcc option to accept ISO C99... none needed
+checking for gcc option to accept ISO Standard C... (cached) none needed
+checking for function prototypes... yes
+checking for special C compiler options needed for large files... (cached) no
+checking for _FILE_OFFSET_BITS value needed for large files... (cached) no
+checking return type of signal handlers... void
+checking for sys/types.h... (cached) yes
+checking for features.h... yes
+checking for linewrap.h... no
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for dirent.h... yes
+checking for wctype.h... yes
+checking for stdio_ext.h... yes
+checking for sys/stat.h... (cached) yes
+checking for getopt.h... yes
+checking for sys/time.h... yes
+checking for limits.h... yes
+checking for wchar.h... yes
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for sys/mman.h... yes
+checking for strings.h... (cached) yes
+checking for sysexits.h... yes
+checking for utime.h... yes
+checking for net/errno.h... no
+checking for sys/inet.h... no
+checking for netdb.h... yes
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for fcntl.h... yes
+checking for sys/wait.h... yes
+checking for sys/gentape.h... no
+checking for sys/tape.h... no
+checking for sys/device.h... no
+checking for sys/tprintf.h... no
+checking for sys/mtio.h... yes
+checking for sgtty.h... yes
+checking for sys/io/trioctl.h... no
+checking for locale.h... yes
+checking for pwd.h... yes
+checking for grp.h... yes
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking for an ANSI C-conforming const... yes
+checking for uid_t in sys/types.h... yes
+checking for gid_t... yes
+checking for ANSI C header files... (cached) yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for fchmod... yes
+checking for fchown... yes
+checking for setmode... no
+checking for getpwuid... yes
+checking for getpwnam... yes
+checking for getgrgid... yes
+checking for getgrnam... yes
+checking for pipe... yes
+checking for fork... yes
+checking for getuid... yes
+checking for geteuid... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for inline... inline
+checking for C/C++ restrict keyword... __restrict
+checking whether clearerr_unlocked is declared... yes
+checking whether feof_unlocked is declared... yes
+checking whether ferror_unlocked is declared... yes
+checking whether fflush_unlocked is declared... yes
+checking whether fgets_unlocked is declared... yes
+checking whether fputc_unlocked is declared... yes
+checking whether fputs_unlocked is declared... yes
+checking whether fread_unlocked is declared... yes
+checking whether fwrite_unlocked is declared... yes
+checking whether getc_unlocked is declared... yes
+checking whether getchar_unlocked is declared... yes
+checking whether putc_unlocked is declared... yes
+checking whether putchar_unlocked is declared... yes
+checking for flockfile... yes
+checking for funlockfile... yes
+checking for chown... yes
+checking for fchown... (cached) yes
+checking for _set_invalid_parameter_handler... no
+checking for fchdir... yes
+checking for fdopendir... yes
+checking for fcntl... yes
+checking for symlink... yes
+checking for mempcpy... yes
+checking for btowc... yes
+checking for isblank... yes
+checking for iswctype... yes
+checking for mbsrtowcs... yes
+checking for wmemchr... yes
+checking for wmemcpy... yes
+checking for wmempcpy... yes
+checking for fstatat... yes
+checking for getdelim... yes
+checking for getdtablesize... yes
+checking for getprogname... no
+checking for getexecname... no
+checking for gettimeofday... yes
+checking for nanotime... no
+checking for lchmod... yes
+checking for lstat... yes
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for mprotect... yes
+checking for tzset... yes
+checking for openat... yes
+checking for setenv... yes
+checking for sleep... yes
+checking for strdup... yes
+checking for strndup... yes
+checking for localtime_r... yes
+checking for timegm... yes
+checking for pipe... (cached) yes
+checking for futimes... yes
+checking for futimesat... yes
+checking for futimens... yes
+checking for utimensat... yes
+checking for lutimes... yes
+checking for vasnprintf... no
+checking for snprintf... yes
+checking for iswcntrl... yes
+checking for mkfifo... yes
+checking for setlocale... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... yes
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking for unistd.h... (cached) yes
+checking for working chown... yes
+checking whether chown dereferences symlinks... yes
+checking whether chown honors trailing slash... yes
+checking whether chown always updates ctime... yes
+checking whether the preprocessor supports include_next... yes
+checking whether system header files limit the line length... no
+checking whether // is distinct from /... no
+checking if environ is properly declared... yes
+checking for complete errno.h... yes
+checking whether fchdir is declared... yes
+checking for working fcntl.h... yes
+checking for pid_t... yes
+checking for mode_t... yes
+checking for mbstate_t... yes
+checking whether stdin defaults to large file offsets... yes
+checking whether fseeko is declared... yes
+checking for fseeko... yes
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking whether fchmodat is declared without a macro... yes
+checking whether fstat is declared without a macro... yes
+checking whether fstatat is declared without a macro... yes
+checking whether futimens is declared without a macro... yes
+checking whether lchmod is declared without a macro... yes
+checking whether lstat is declared without a macro... yes
+checking whether mkdirat is declared without a macro... yes
+checking whether mkfifo is declared without a macro... yes
+checking whether mkfifoat is declared without a macro... yes
+checking whether mknod is declared without a macro... yes
+checking whether mknodat is declared without a macro... yes
+checking whether stat is declared without a macro... yes
+checking whether utimensat is declared without a macro... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether getcwd (NULL, 0) allocates memory for result... yes
+checking for getcwd with POSIX signature... yes
+checking whether getcwd is declared... yes
+checking whether getdelim is declared... yes
+checking whether getdtablesize is declared... yes
+checking whether getline is declared... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... yes
+checking for working GNU getopt_long function... yes
+checking whether getenv is declared... yes
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking whether gettimeofday is declared without a macro... yes
+checking for off_t... yes
+checking whether limits.h has ULLONG_WIDTH etc.... yes
+checking for wint_t... yes
+checking whether wint_t is too small... no
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h predates C++11... no
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking whether imaxabs is declared without a macro... yes
+checking whether imaxdiv is declared without a macro... yes
+checking whether strtoimax is declared without a macro... yes
+checking whether strtoumax is declared without a macro... yes
+checking for inttypes.h... (cached) yes
+checking whether the inttypes.h PRIxNN macros are broken... no
+checking for nl_langinfo and CODESET... yes
+checking whether we are using the GNU C Library >= 2.1 or uClibc... yes
+checking whether malloc, realloc, calloc are POSIX compliant... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for a traditional japanese locale... none
+checking for a transitional chinese locale... none
+checking for a french Unicode locale... none
+checking for a traditional french locale... none
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether memrchr is declared... yes
+checking whether <limits.h> defines MIN and MAX... no
+checking whether <sys/param.h> defines MIN and MAX... yes
+checking whether time_t is signed... yes
+checking whether alarm is declared... yes
+checking for promoted mode_t type... mode_t
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for compound literals... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_gmtoff... yes
+checking for ssize_t... yes
+checking whether setenv is declared... yes
+checking search.h usability... yes
+checking search.h presence... yes
+checking for search.h... yes
+checking for tsearch... yes
+checking for sigset_t... yes
+checking for wchar_t... yes
+checking whether strdup is declared... yes
+checking whether strerror(0) succeeds... yes
+checking whether ffsl is declared without a macro... yes
+checking whether ffsll is declared without a macro... yes
+checking whether memmem is declared without a macro... yes
+checking whether mempcpy is declared without a macro... yes
+checking whether memrchr is declared without a macro... yes
+checking whether rawmemchr is declared without a macro... yes
+checking whether stpcpy is declared without a macro... yes
+checking whether stpncpy is declared without a macro... yes
+checking whether strchrnul is declared without a macro... yes
+checking whether strdup is declared without a macro... yes
+checking whether strncat is declared without a macro... yes
+checking whether strndup is declared without a macro... yes
+checking whether strnlen is declared without a macro... yes
+checking whether strpbrk is declared without a macro... yes
+checking whether strsep is declared without a macro... yes
+checking whether strcasestr is declared without a macro... yes
+checking whether strtok_r is declared without a macro... yes
+checking whether strerror_r is declared without a macro... yes
+checking whether strsignal is declared without a macro... yes
+checking whether strverscmp is declared without a macro... yes
+checking whether ffs is declared without a macro... yes
+checking whether strcasecmp is declared without a macro... yes
+checking whether strncasecmp is declared without a macro... yes
+checking whether strndup is declared... (cached) yes
+checking whether strnlen is declared... (cached) yes
+checking for struct timespec in <time.h>... yes
+checking whether unsetenv is declared... yes
+checking whether the utimes function works... yes
+checking for struct utimbuf... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for intmax_t... yes
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking whether snprintf returns a byte count as in C99... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... (cached) yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking whether vsnprintf is declared... yes
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for alloca as a compiler built-in... yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether program_invocation_name is defined... yes
+checking whether program_invocation_short_name is defined... yes
+checking for __builtin_expect... yes
+checking whether this system has an arbitrary file name length limit... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking for closedir... yes
+checking for d_ino member in directory struct... yes
+checking whether alphasort is declared without a macro... yes
+checking whether closedir is declared without a macro... yes
+checking whether dirfd is declared without a macro... yes
+checking whether fdopendir is declared without a macro... yes
+checking whether opendir is declared without a macro... yes
+checking whether readdir is declared without a macro... yes
+checking whether rewinddir is declared without a macro... yes
+checking whether scandir is declared without a macro... yes
+checking for dirfd... yes
+checking whether dirfd is declared... (cached) yes
+checking whether dirfd is a macro... no
+checking whether // is distinct from /... (cached) no
+checking whether dup works... yes
+checking whether dup2 works... yes
+checking for error_at_line... yes
+checking whether fcntl handles F_DUPFD correctly... yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... needs runtime check
+checking whether fcntl is declared without a macro... yes
+checking whether openat is declared without a macro... yes
+checking whether fdopendir is declared... (cached) yes
+checking whether fdopendir works... yes
+checking for struct stat.st_blocks... yes
+checking for flexible array member... yes
+checking whether conversion from 'int' to 'long double' works... yes
+checking for working GNU fnmatch... yes
+checking for __fpending... yes
+checking whether __fpending is declared... yes
+checking for fseeko... (cached) yes
+checking whether fstatat (..., 0) works... yes
+checking whether getcwd handles long file names properly... yes
+checking for getpagesize... yes
+checking whether getcwd aborts when 4k < cwd_length < 16k... no
+checking for working getdelim function... yes
+checking whether getdtablesize works... yes
+checking for getline... yes
+checking for working getline function... yes
+checking whether program_invocation_name is declared... (cached) yes
+checking whether program_invocation_short_name is declared... (cached) yes
+checking whether __argv is declared... no
+checking whether gettimeofday clobbers localtime buffer... no
+checking for gettimeofday with POSIX signature... yes
+checking whether INT32_MAX < INTMAX_MAX... yes
+checking whether INT64_MAX == LONG_MAX... yes
+checking whether UINT32_MAX < UINTMAX_MAX... yes
+checking whether UINT64_MAX == ULONG_MAX... yes
+checking for lchown... yes
+checking whether lseek detects pipes... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... (cached) yes
+checking whether mbrtowc handles incomplete characters... guessing yes
+checking whether mbrtowc works as well as mbtowc... guessing yes
+checking whether mbrtowc handles a NULL pwc argument... guessing yes
+checking whether mbrtowc handles a NULL string argument... guessing yes
+checking whether mbrtowc has a correct return value... guessing yes
+checking whether mbrtowc returns 0 when parsing a NUL character... guessing yes
+checking whether mbrtowc works on empty input... yes
+checking whether the C locale is free of encoding errors... no
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether mbsrtowcs works... guessing yes
+checking for mempcpy... (cached) yes
+checking for memrchr... yes
+checking for working mktime... yes
+checking for __mktime_internal... no
+checking for obstacks that work with any size object... no
+checking whether open recognizes a trailing slash... yes
+checking for opendir... yes
+checking for struct tm.tm_zone... yes
+checking whether program_invocation_name is declared... (cached) yes
+checking whether program_invocation_short_name is declared... (cached) yes
+checking for raise... yes
+checking for rawmemchr... yes
+checking for readdir... yes
+checking for rewinddir... yes
+checking whether setenv validates arguments... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking whether pthread_sigmask is declared without a macro... yes
+checking whether sigaction is declared without a macro... yes
+checking whether sigaddset is declared without a macro... yes
+checking whether sigdelset is declared without a macro... yes
+checking whether sigemptyset is declared without a macro... yes
+checking whether sigfillset is declared without a macro... yes
+checking whether sigismember is declared without a macro... yes
+checking whether sigpending is declared without a macro... yes
+checking whether sigprocmask is declared without a macro... yes
+checking whether sleep is declared... yes
+checking for working sleep... yes
+checking for ssize_t... (cached) yes
+checking whether stat handles trailing slashes on directories... yes
+checking whether stat handles trailing slashes on files... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for working stdalign.h... yes
+checking for va_copy... yes
+checking for max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking whether dprintf is declared without a macro... yes
+checking whether fpurge is declared without a macro... no
+checking whether fseeko is declared without a macro... yes
+checking whether ftello is declared without a macro... yes
+checking whether getdelim is declared without a macro... yes
+checking whether getline is declared without a macro... yes
+checking whether gets is declared without a macro... no
+checking whether pclose is declared without a macro... yes
+checking whether popen is declared without a macro... yes
+checking whether renameat is declared without a macro... yes
+checking whether snprintf is declared without a macro... yes
+checking whether tmpfile is declared without a macro... yes
+checking whether vdprintf is declared without a macro... yes
+checking whether vsnprintf is declared without a macro... yes
+checking whether _Exit is declared without a macro... yes
+checking whether atoll is declared without a macro... yes
+checking whether canonicalize_file_name is declared without a macro... yes
+checking whether getloadavg is declared without a macro... yes
+checking whether getsubopt is declared without a macro... yes
+checking whether grantpt is declared without a macro... yes
+checking whether initstate is declared without a macro... yes
+checking whether initstate_r is declared without a macro... yes
+checking whether mkdtemp is declared without a macro... yes
+checking whether mkostemp is declared without a macro... yes
+checking whether mkostemps is declared without a macro... yes
+checking whether mkstemp is declared without a macro... yes
+checking whether mkstemps is declared without a macro... yes
+checking whether posix_openpt is declared without a macro... yes
+checking whether ptsname is declared without a macro... yes
+checking whether ptsname_r is declared without a macro... yes
+checking whether qsort_r is declared without a macro... yes
+checking whether random is declared without a macro... yes
+checking whether random_r is declared without a macro... yes
+checking whether realpath is declared without a macro... yes
+checking whether rpmatch is declared without a macro... yes
+checking whether secure_getenv is declared without a macro... yes
+checking whether setenv is declared without a macro... yes
+checking whether setstate is declared without a macro... yes
+checking whether setstate_r is declared without a macro... yes
+checking whether srandom is declared without a macro... yes
+checking whether srandom_r is declared without a macro... yes
+checking whether strtod is declared without a macro... yes
+checking whether strtoll is declared without a macro... yes
+checking whether strtoull is declared without a macro... yes
+checking whether unlockpt is declared without a macro... yes
+checking whether unsetenv is declared without a macro... yes
+checking for stpcpy... yes
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking whether strncasecmp is declared... (cached) yes
+checking for strchrnul... yes
+checking whether strchrnul works... yes
+checking for working strerror function... yes
+checking for working strndup... yes
+checking for working strnlen... yes
+checking for strtol... yes
+checking for nlink_t... (cached) yes
+checking whether fchmodat is declared without a macro... (cached) yes
+checking whether fstat is declared without a macro... (cached) yes
+checking whether fstatat is declared without a macro... (cached) yes
+checking whether futimens is declared without a macro... (cached) yes
+checking whether lchmod is declared without a macro... (cached) yes
+checking whether lstat is declared without a macro... (cached) yes
+checking whether mkdirat is declared without a macro... (cached) yes
+checking whether mkfifo is declared without a macro... (cached) yes
+checking whether mkfifoat is declared without a macro... (cached) yes
+checking whether mknod is declared without a macro... (cached) yes
+checking whether mknodat is declared without a macro... (cached) yes
+checking whether stat is declared without a macro... (cached) yes
+checking whether utimensat is declared without a macro... (cached) yes
+checking whether localtime_r is declared... yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+checking for timezone_t... no
+checking whether chdir is declared without a macro... yes
+checking whether chown is declared without a macro... yes
+checking whether dup is declared without a macro... yes
+checking whether dup2 is declared without a macro... yes
+checking whether dup3 is declared without a macro... yes
+checking whether environ is declared without a macro... yes
+checking whether euidaccess is declared without a macro... yes
+checking whether faccessat is declared without a macro... yes
+checking whether fchdir is declared without a macro... yes
+checking whether fchownat is declared without a macro... yes
+checking whether fdatasync is declared without a macro... yes
+checking whether fsync is declared without a macro... yes
+checking whether ftruncate is declared without a macro... yes
+checking whether getcwd is declared without a macro... yes
+checking whether getdomainname is declared without a macro... yes
+checking whether getdtablesize is declared without a macro... yes
+checking whether getgroups is declared without a macro... yes
+checking whether gethostname is declared without a macro... yes
+checking whether getlogin is declared without a macro... yes
+checking whether getlogin_r is declared without a macro... yes
+checking whether getpagesize is declared without a macro... yes
+checking whether getusershell is declared without a macro... yes
+checking whether setusershell is declared without a macro... yes
+checking whether endusershell is declared without a macro... yes
+checking whether group_member is declared without a macro... yes
+checking whether isatty is declared without a macro... yes
+checking whether lchown is declared without a macro... yes
+checking whether link is declared without a macro... yes
+checking whether linkat is declared without a macro... yes
+checking whether lseek is declared without a macro... yes
+checking whether pipe is declared without a macro... yes
+checking whether pipe2 is declared without a macro... yes
+checking whether pread is declared without a macro... yes
+checking whether pwrite is declared without a macro... yes
+checking whether readlink is declared without a macro... yes
+checking whether readlinkat is declared without a macro... yes
+checking whether rmdir is declared without a macro... yes
+checking whether sethostname is declared without a macro... yes
+checking whether sleep is declared without a macro... yes
+checking whether symlink is declared without a macro... yes
+checking whether symlinkat is declared without a macro... yes
+checking whether ttyname_r is declared without a macro... yes
+checking whether unlink is declared without a macro... yes
+checking whether unlinkat is declared without a macro... yes
+checking whether usleep is declared without a macro... yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... yes
+checking whether utimensat works... yes
+checking for ptrdiff_t... yes
+checking for vsnprintf... yes
+checking whether snprintf respects a size of 1... yes
+checking whether printf supports POSIX/XSI format strings with positions... yes
+checking whether btowc is declared without a macro... yes
+checking whether wctob is declared without a macro... yes
+checking whether mbsinit is declared without a macro... yes
+checking whether mbrtowc is declared without a macro... yes
+checking whether mbrlen is declared without a macro... yes
+checking whether mbsrtowcs is declared without a macro... yes
+checking whether mbsnrtowcs is declared without a macro... yes
+checking whether wcrtomb is declared without a macro... yes
+checking whether wcsrtombs is declared without a macro... yes
+checking whether wcsnrtombs is declared without a macro... yes
+checking whether wcwidth is declared without a macro... yes
+checking whether wmemchr is declared without a macro... yes
+checking whether wmemcmp is declared without a macro... yes
+checking whether wmemcpy is declared without a macro... yes
+checking whether wmemmove is declared without a macro... yes
+checking whether wmemset is declared without a macro... yes
+checking whether wcslen is declared without a macro... yes
+checking whether wcsnlen is declared without a macro... yes
+checking whether wcscpy is declared without a macro... yes
+checking whether wcpcpy is declared without a macro... yes
+checking whether wcsncpy is declared without a macro... yes
+checking whether wcpncpy is declared without a macro... yes
+checking whether wcscat is declared without a macro... yes
+checking whether wcsncat is declared without a macro... yes
+checking whether wcscmp is declared without a macro... yes
+checking whether wcsncmp is declared without a macro... yes
+checking whether wcscasecmp is declared without a macro... yes
+checking whether wcsncasecmp is declared without a macro... yes
+checking whether wcscoll is declared without a macro... yes
+checking whether wcsxfrm is declared without a macro... yes
+checking whether wcsdup is declared without a macro... yes
+checking whether wcschr is declared without a macro... yes
+checking whether wcsrchr is declared without a macro... yes
+checking whether wcscspn is declared without a macro... yes
+checking whether wcsspn is declared without a macro... yes
+checking whether wcspbrk is declared without a macro... yes
+checking whether wcsstr is declared without a macro... yes
+checking whether wcstok is declared without a macro... yes
+checking whether wcswidth is declared without a macro... yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking whether wctype is declared without a macro... yes
+checking whether iswctype is declared without a macro... yes
+checking whether wctrans is declared without a macro... yes
+checking whether towctrans is declared without a macro... yes
+checking for stdint.h... (cached) yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for struct stat.st_blksize... yes
+checking for library containing setsockopt... none required
+checking for library containing setsockopt... (cached) none required
+checking for sys/mtio.h... (cached) yes
+checking which ioctl field to test for reversed bytes... mt_type
+checking whether to build rmt... no, use /usr/libexec/rmt instead
+checking for sys/buf.h... no
+checking for struct stat.st_blksize... (cached) yes
+checking for library containing gethostbyname... none required
+checking for getpwuid... (cached) yes
+checking for getpwnam... (cached) yes
+checking for getgrgid... (cached) yes
+checking for getgrnam... (cached) yes
+checking for pipe... (cached) yes
+checking for fork... (cached) yes
+checking for getuid... (cached) yes
+checking for geteuid... (cached) yes
+checking for getgid... yes
+checking for setuid... yes
+checking for setgid... yes
+checking for mknod... yes
+checking for symlink... (cached) yes
+checking for link... yes
+checking for chown... (cached) yes
+checking for structure packing via __attribute__((packed))... yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for fcntl.h... (cached) yes
+checking for pwd.h... (cached) yes
+checking for grp.h... (cached) yes
+checking for sys/io/trioctl.h... (cached) no
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking for getopt.h... (cached) yes
+checking for locale.h... (cached) yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking for sys/wait.h... (cached) yes
+checking for utime.h... (cached) yes
+checking for locale.h... (cached) yes
+checking process.h usability... no
+checking process.h presence... no
+checking for process.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking whether errno is declared... yes
+checking whether getpwnam is declared... yes
+checking whether getgrnam is declared... yes
+checking whether getgrgid is declared... yes
+checking whether strdup is declared... (cached) yes
+checking whether strerror is declared... yes
+checking whether getenv is declared... (cached) yes
+checking whether atoi is declared... yes
+checking whether exit is declared... yes
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking for iconv... yes
+checking for working iconv... yes
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating tests/Makefile
+config.status: creating tests/atlocal
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating gnu/Makefile
+config.status: creating lib/Makefile
+config.status: creating rmt/Makefile
+config.status: creating src/Makefile
+config.status: creating po/Makefile.in
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing tests/atconfig commands
+(lfs chroot) root:/sources/cpio-2.13# make
+make install
+/usr/bin/make  all-recursive
+make[1]: Entering directory '/sources/cpio-2.13'
+Making all in doc
+make[2]: Entering directory '/sources/cpio-2.13/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/cpio-2.13/doc'
+Making all in gnu
+make[2]: Entering directory '/sources/cpio-2.13/gnu'
+  GEN      alloca.h
+  GEN      configmake.h
+  GEN      c++defs.h
+  GEN      warn-on-use.h
+  GEN      arg-nonnull.h
+  GEN      limits.h
+  GEN      sys/types.h
+  GEN      wctype.h
+  GEN      dirent.h
+  GEN      fcntl.h
+  GEN      getopt.h
+  GEN      inttypes.h
+  GEN      signal.h
+  GEN      stdio.h
+  GEN      stdlib.h
+  GEN      string.h
+  GEN      strings.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      time.h
+  GEN      unistd.h
+  GEN      wchar.h
+/usr/bin/make  all-recursive
+make[3]: Entering directory '/sources/cpio-2.13/gnu'
+make[4]: Entering directory '/sources/cpio-2.13/gnu'
+  CC       argmatch.o
+  CC       argp-eexst.o
+  CC       argp-ba.o
+  CC       argp-fmtstream.o
+  CC       argp-fs-xinl.o
+  CC       argp-help.o
+  CC       argp-parse.o
+  CC       argp-pin.o
+  CC       argp-pv.o
+  CC       argp-pvh.o
+  CC       argp-xinl.o
+  CC       argp-version-etc.o
+  CC       bitrotate.o
+  CC       c-ctype.o
+  CC       c-strcasecmp.o
+  CC       c-strncasecmp.o
+  CC       cloexec.o
+  CC       close-stream.o
+  CC       closeout.o
+  CC       opendir-safer.o
+  CC       dirname.o
+  CC       basename.o
+  CC       dirname-lgpl.o
+  CC       basename-lgpl.o
+  CC       stripslash.o
+  CC       exitfail.o
+  CC       fd-hook.o
+  CC       filenamecat-lgpl.o
+  CC       full-write.o
+  CC       getprogname.o
+  CC       gettime.o
+  CC       hard-locale.o
+  CC       hash.o
+  CC       imaxtostr.o
+  CC       inttostr.o
+  CC       offtostr.o
+  CC       uinttostr.o
+  CC       umaxtostr.o
+  CC       localcharset.o
+  CC       malloca.o
+  CC       openat-die.o
+  CC       parse-datetime.o
+  CC       progname.o
+  CC       quotearg.o
+  CC       safe-read.o
+  CC       safe-write.o
+  CC       save-cwd.o
+  CC       savedir.o
+  CC       stat-time.o
+  CC       strftime.o
+  CC       strnlen1.o
+  CC       timespec.o
+  CC       unistd.o
+  CC       dup-safer.o
+  CC       fd-safer.o
+  CC       pipe-safer.o
+  CC       utimens.o
+  CC       version-etc.o
+  CC       version-etc-fsf.o
+  CC       wctype-h.o
+utimens.c: In function ‘fdutimens’:
+utimens.c:296:17: warning: ‘update_timespec’ accessing 16 bytes in a region of size 8 [-Wstringop-overflow=]
+  296 |       if (ts && update_timespec (&st, &ts))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+utimens.c:296:17: note: referencing argument 2 of type ‘struct timespec **’
+utimens.c:131:1: note: in a call to function ‘update_timespec’
+  131 | update_timespec (struct stat const *statbuf, struct timespec *ts[2])
+      | ^~~~~~~~~~~~~~~
+  CC       xmalloc.o
+  CC       xalloc-die.o
+utimens.c: In function ‘lutimens’:
+utimens.c:507:17: warning: ‘update_timespec’ accessing 16 bytes in a region of size 8 [-Wstringop-overflow=]
+  507 |       if (ts && update_timespec (&st, &ts))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+utimens.c:507:17: note: referencing argument 2 of type ‘struct timespec **’
+utimens.c:131:1: note: in a call to function ‘update_timespec’
+  131 | update_timespec (struct stat const *statbuf, struct timespec *ts[2])
+      | ^~~~~~~~~~~~~~~
+  CC       xgetcwd.o
+  CC       xsize.o
+  CC       xstrndup.o
+  CC       asnprintf.o
+  CC       chdir-long.o
+  CC       fcntl.o
+  CC       getopt.o
+  CC       getopt1.o
+  CC       mbrtowc.o
+  CC       mktime.o
+  CC       obstack.o
+  CC       openat-proc.o
+  CC       printf-args.o
+  CC       printf-parse.o
+  CC       time_rz.o
+  CC       vasnprintf.o
+  GEN      charset.alias
+  GEN      ref-add.sed
+  GEN      ref-del.sed
+  AR       libgnu.a
+make[4]: Leaving directory '/sources/cpio-2.13/gnu'
+make[3]: Leaving directory '/sources/cpio-2.13/gnu'
+make[2]: Leaving directory '/sources/cpio-2.13/gnu'
+Making all in lib
+make[2]: Entering directory '/sources/cpio-2.13/lib'
+  GEN      rmt-command.h
+/usr/bin/make  all-am
+make[3]: Entering directory '/sources/cpio-2.13/lib'
+  CC       paxexit.o
+  CC       paxexit-status.o
+  CC       rtapelib.o
+  CC       sysdep.o
+  CC       paxnames.o
+  CC       paxerror.o
+  AR       libpax.a
+make[3]: Leaving directory '/sources/cpio-2.13/lib'
+make[2]: Leaving directory '/sources/cpio-2.13/lib'
+Making all in rmt
+make[2]: Entering directory '/sources/cpio-2.13/rmt'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/cpio-2.13/rmt'
+Making all in src
+make[2]: Entering directory '/sources/cpio-2.13/src'
+  CC       copyout.o
+  CC       copyin.o
+  CC       dstring.o
+  CC       defer.o
+  CC       copypass.o
+  CC       global.o
+  CC       fatal.o
+  CC       main.o
+  CC       tar.o
+  CC       util.o
+  CC       filemode.o
+  CC       idcache.o
+  CC       makepath.o
+  CC       userspec.o
+  CC       mt.o
+  CCLD     mt
+  CCLD     cpio
+make[2]: Leaving directory '/sources/cpio-2.13/src'
+Making all in po
+make[2]: Entering directory '/sources/cpio-2.13/po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/cpio-2.13/po'
+Making all in tests
+make[2]: Entering directory '/sources/cpio-2.13/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/sources/cpio-2.13/tests'
+make[2]: Entering directory '/sources/cpio-2.13'
+make[2]: Leaving directory '/sources/cpio-2.13'
+make[1]: Leaving directory '/sources/cpio-2.13'
+Making install in doc
+make[1]: Entering directory '/sources/cpio-2.13/doc'
+make[2]: Entering directory '/sources/cpio-2.13/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man8'
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/mkdir -p '/usr/share/info'
+ /usr/bin/install -c -m 644 cpio.1 mt.1 '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 ./cpio.info '/usr/share/info'
+ install-info --info-dir='/usr/share/info' '/usr/share/info/cpio.info'
+make[2]: Leaving directory '/sources/cpio-2.13/doc'
+make[1]: Leaving directory '/sources/cpio-2.13/doc'
+Making install in gnu
+make[1]: Entering directory '/sources/cpio-2.13/gnu'
+/usr/bin/make  install-recursive
+make[2]: Entering directory '/sources/cpio-2.13/gnu'
+make[3]: Entering directory '/sources/cpio-2.13/gnu'
+make[4]: Entering directory '/sources/cpio-2.13/gnu'
+if test yes = no; then \
+  case 'linux-gnu' in \
+    darwin[56]*) \
+      need_charset_alias=true ;; \
+    darwin* | cygwin* | mingw* | pw32* | cegcc*) \
+      need_charset_alias=false ;; \
+    *) \
+      need_charset_alias=true ;; \
+  esac ; \
+else \
+  need_charset_alias=false ; \
+fi ; \
+if $need_charset_alias; then \
+  /bin/sh /sources/cpio-2.13/build-aux/install-sh -d /usr/lib ; \
+fi ; \
+if test -f /usr/lib/charset.alias; then \
+  sed -f ref-add.sed /usr/lib/charset.alias > /usr/lib/charset.tmp ; \
+  /usr/bin/install -c -m 644 /usr/lib/charset.tmp /usr/lib/charset.alias ; \
+  rm -f /usr/lib/charset.tmp ; \
+else \
+  if $need_charset_alias; then \
+    sed -f ref-add.sed charset.alias > /usr/lib/charset.tmp ; \
+    /usr/bin/install -c -m 644 /usr/lib/charset.tmp /usr/lib/charset.alias ; \
+    rm -f /usr/lib/charset.tmp ; \
+  fi ; \
+fi
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/sources/cpio-2.13/gnu'
+make[3]: Leaving directory '/sources/cpio-2.13/gnu'
+make[2]: Leaving directory '/sources/cpio-2.13/gnu'
+make[1]: Leaving directory '/sources/cpio-2.13/gnu'
+Making install in lib
+make[1]: Entering directory '/sources/cpio-2.13/lib'
+/usr/bin/make  install-am
+make[2]: Entering directory '/sources/cpio-2.13/lib'
+make[3]: Entering directory '/sources/cpio-2.13/lib'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/sources/cpio-2.13/lib'
+make[2]: Leaving directory '/sources/cpio-2.13/lib'
+make[1]: Leaving directory '/sources/cpio-2.13/lib'
+Making install in rmt
+make[1]: Entering directory '/sources/cpio-2.13/rmt'
+make[2]: Entering directory '/sources/cpio-2.13/rmt'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Leaving directory '/sources/cpio-2.13/rmt'
+make[1]: Leaving directory '/sources/cpio-2.13/rmt'
+Making install in src
+make[1]: Entering directory '/sources/cpio-2.13/src'
+make[2]: Entering directory '/sources/cpio-2.13/src'
+make[2]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/usr/bin'
+  /usr/bin/install -c cpio mt '/usr/bin'
+make[2]: Leaving directory '/sources/cpio-2.13/src'
+make[1]: Leaving directory '/sources/cpio-2.13/src'
+Making install in po
+make[1]: Entering directory '/sources/cpio-2.13/po'
+installing da.gmo as /usr/share/locale/da/LC_MESSAGES/cpio.mo
+installing de.gmo as /usr/share/locale/de/LC_MESSAGES/cpio.mo
+installing es.gmo as /usr/share/locale/es/LC_MESSAGES/cpio.mo
+installing fi.gmo as /usr/share/locale/fi/LC_MESSAGES/cpio.mo
+installing fr.gmo as /usr/share/locale/fr/LC_MESSAGES/cpio.mo
+installing ga.gmo as /usr/share/locale/ga/LC_MESSAGES/cpio.mo
+installing gl.gmo as /usr/share/locale/gl/LC_MESSAGES/cpio.mo
+installing hr.gmo as /usr/share/locale/hr/LC_MESSAGES/cpio.mo
+installing hu.gmo as /usr/share/locale/hu/LC_MESSAGES/cpio.mo
+installing id.gmo as /usr/share/locale/id/LC_MESSAGES/cpio.mo
+installing it.gmo as /usr/share/locale/it/LC_MESSAGES/cpio.mo
+installing ja.gmo as /usr/share/locale/ja/LC_MESSAGES/cpio.mo
+installing ko.gmo as /usr/share/locale/ko/LC_MESSAGES/cpio.mo
+installing nl.gmo as /usr/share/locale/nl/LC_MESSAGES/cpio.mo
+installing pl.gmo as /usr/share/locale/pl/LC_MESSAGES/cpio.mo
+installing pt.gmo as /usr/share/locale/pt/LC_MESSAGES/cpio.mo
+installing pt_BR.gmo as /usr/share/locale/pt_BR/LC_MESSAGES/cpio.mo
+installing ro.gmo as /usr/share/locale/ro/LC_MESSAGES/cpio.mo
+installing ru.gmo as /usr/share/locale/ru/LC_MESSAGES/cpio.mo
+installing sr.gmo as /usr/share/locale/sr/LC_MESSAGES/cpio.mo
+installing sv.gmo as /usr/share/locale/sv/LC_MESSAGES/cpio.mo
+installing tr.gmo as /usr/share/locale/tr/LC_MESSAGES/cpio.mo
+installing uk.gmo as /usr/share/locale/uk/LC_MESSAGES/cpio.mo
+installing vi.gmo as /usr/share/locale/vi/LC_MESSAGES/cpio.mo
+installing zh_CN.gmo as /usr/share/locale/zh_CN/LC_MESSAGES/cpio.mo
+installing zh_TW.gmo as /usr/share/locale/zh_TW/LC_MESSAGES/cpio.mo
+if test "cpio" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/sources/cpio-2.13/po'
+Making install in tests
+make[1]: Entering directory '/sources/cpio-2.13/tests'
+make[2]: Entering directory '/sources/cpio-2.13/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/cpio-2.13/tests'
+make[1]: Leaving directory '/sources/cpio-2.13/tests'
+make[1]: Entering directory '/sources/cpio-2.13'
+make[2]: Entering directory '/sources/cpio-2.13'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/sources/cpio-2.13'
+make[1]: Leaving directory '/sources/cpio-2.13'
+(lfs chroot) root:/sources/cpio-2.13# cpio
+/usr/bin/cpio: You must specify one of -oipt options.
+Try '/usr/bin/cpio --help' or '/usr/bin/cpio --usage' for more information.
+(lfs chroot) root:/sources/cpio-2.13# finish
+[lfs-scripts] Finishing build of cpio-2.13 at Sat Oct  1 05:59:24 PM -03 2022
+(lfs chroot) root:/sources# 

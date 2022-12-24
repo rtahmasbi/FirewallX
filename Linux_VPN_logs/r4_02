@@ -1,0 +1,98 @@
+(lfs chroot) root:/sources# find /usr/lib /usr/libexec -name \*.la -delete
+find /usr -depth -name $(uname -m)-lfs-linux-gnu\* | xargs rm -rf
+(lfs chroot) root:/sources# # 9.2. LFS-Bootscripts-20210608
+begin lfs-bootscripts-20210608 tar.xz
+make install
+finish
+[lfs-scripts] Starting build of lfs-bootscripts-20210608 at Wed Sep 14 02:27:38 -03 2022
+install -d -m 755  /etc/rc.d/rc0.d
+install -d -m 755  /etc/rc.d/rc1.d
+install -d -m 755  /etc/rc.d/rc2.d
+install -d -m 755  /etc/rc.d/rc3.d
+install -d -m 755  /etc/rc.d/rc4.d
+install -d -m 755  /etc/rc.d/rc5.d
+install -d -m 755  /etc/rc.d/rc6.d
+install -d -m 755  /etc/rc.d/rcS.d
+install -d -m 755  /etc/rc.d/init.d
+install -d -m 755  /etc/sysconfig
+install -d -m 755  /lib
+install -d -m 755  /lib/services
+install -d -m 755  /usr/share/man/man8
+install -d -m 755  /sbin
+ln -sfn       services    /lib/lsb
+ln -sfn       rc.d/init.d /etc/init.d
+install -m 754 lfs/init.d/checkfs       /etc/rc.d/init.d/
+install -m 754 lfs/init.d/cleanfs       /etc/rc.d/init.d/
+install -m 754 lfs/init.d/halt          /etc/rc.d/init.d/
+install -m 754 lfs/init.d/console       /etc/rc.d/init.d/
+install -m 754 lfs/init.d/localnet      /etc/rc.d/init.d/
+install -m 754 lfs/init.d/modules       /etc/rc.d/init.d/
+install -m 754 lfs/init.d/mountfs       /etc/rc.d/init.d/
+install -m 754 lfs/init.d/mountvirtfs   /etc/rc.d/init.d/
+install -m 754 lfs/init.d/network       /etc/rc.d/init.d/
+install -m 754 lfs/init.d/rc            /etc/rc.d/init.d/
+install -m 754 lfs/init.d/reboot        /etc/rc.d/init.d/
+install -m 754 lfs/init.d/sendsignals   /etc/rc.d/init.d/
+install -m 754 lfs/init.d/setclock      /etc/rc.d/init.d/
+install -m 754 lfs/init.d/swap          /etc/rc.d/init.d/
+install -m 754 lfs/init.d/sysctl        /etc/rc.d/init.d/
+install -m 754 lfs/init.d/sysklogd      /etc/rc.d/init.d/
+install -m 754 lfs/init.d/template      /etc/rc.d/init.d/
+install -m 754 lfs/init.d/udev          /etc/rc.d/init.d/
+install -m 754 lfs/init.d/udev_retry    /etc/rc.d/init.d/
+install -m 754 lfs/sbin/ifup            /sbin
+install -m 754 lfs/sbin/ifdown          /sbin
+install -m 644 lfs/sbin/ifup.8      /usr/share/man/man8
+ln -sf  ifup.8                              /usr/share/man/man8/ifdown.8
+install -m 754     lfs/lib/services/ipv4-static-route  /lib/services
+install -m 754     lfs/lib/services/ipv4-static        /lib/services
+install -m 644 lfs/lib/services/init-functions     /lib/services
+if [ ! -f /etc/sysconfig/createfiles ]; then \
+          install -m 644 lfs/sysconfig/createfiles /etc/sysconfig/ ;\
+        fi
+if [ ! -f /etc/sysconfig/modules     ]; then \
+          install -m 644 lfs/sysconfig/modules     /etc/sysconfig/ ;\
+        fi
+if [ ! -f /etc/sysconfig/udev_retry  ]; then \
+          install -m 644 lfs/sysconfig/udev_retry  /etc/sysconfig/ ;\
+        fi
+if [ ! -f /etc/sysconfig/rc.site     ]; then \
+          install -m 644 lfs/sysconfig/rc.site     /etc/sysconfig/ ;\
+        fi
+ln -sf ../init.d/mountvirtfs /etc/rc.d/rcS.d/S00mountvirtfs
+ln -sf ../init.d/network     /etc/rc.d/rc0.d/K80network
+ln -sf ../init.d/network     /etc/rc.d/rc1.d/K80network
+ln -sf ../init.d/network     /etc/rc.d/rc2.d/K80network
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc3.d/S10sysklogd
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc4.d/S10sysklogd
+ln -sf ../init.d/modules     /etc/rc.d/rcS.d/S05modules
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc0.d/K90sysklogd
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc1.d/K90sysklogd
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc2.d/K90sysklogd
+ln -sf ../init.d/network     /etc/rc.d/rc3.d/S20network
+ln -sf ../init.d/network     /etc/rc.d/rc4.d/S20network
+ln -sf ../init.d/localnet    /etc/rc.d/rcS.d/S08localnet
+ln -sf ../init.d/sendsignals /etc/rc.d/rc0.d/S60sendsignals
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc5.d/S10sysklogd
+ln -sf ../init.d/network     /etc/rc.d/rc6.d/K80network
+ln -sf ../init.d/udev        /etc/rc.d/rcS.d/S10udev
+ln -sf ../init.d/swap        /etc/rc.d/rc0.d/S65swap
+ln -sf ../init.d/network     /etc/rc.d/rc5.d/S20network
+ln -sf ../init.d/sysklogd    /etc/rc.d/rc6.d/K90sysklogd
+ln -sf ../init.d/swap        /etc/rc.d/rcS.d/S20swap
+ln -sf ../init.d/mountfs     /etc/rc.d/rc0.d/S70mountfs
+ln -sf ../init.d/sendsignals /etc/rc.d/rc6.d/S60sendsignals
+ln -sf ../init.d/checkfs     /etc/rc.d/rcS.d/S30checkfs
+ln -sf ../init.d/localnet    /etc/rc.d/rc0.d/S90localnet
+ln -sf ../init.d/swap        /etc/rc.d/rc6.d/S65swap
+ln -sf ../init.d/mountfs     /etc/rc.d/rcS.d/S40mountfs
+ln -sf ../init.d/halt        /etc/rc.d/rc0.d/S99halt
+ln -sf ../init.d/mountfs     /etc/rc.d/rc6.d/S70mountfs
+ln -sf ../init.d/cleanfs     /etc/rc.d/rcS.d/S45cleanfs
+ln -sf ../init.d/localnet    /etc/rc.d/rc6.d/S90localnet
+ln -sf ../init.d/udev_retry  /etc/rc.d/rcS.d/S50udev_retry
+ln -sf ../init.d/reboot      /etc/rc.d/rc6.d/S99reboot
+ln -sf ../init.d/console     /etc/rc.d/rcS.d/S70console
+ln -sf ../init.d/sysctl      /etc/rc.d/rcS.d/S90sysctl
+[lfs-scripts] Finishing build of lfs-bootscripts-20210608 at Wed Sep 14 02:27:39 -03 2022
+(lfs chroot) root:/sources# 

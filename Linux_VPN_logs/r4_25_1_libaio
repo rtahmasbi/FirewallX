@@ -1,0 +1,79 @@
+(lfs chroot) root:/sources# mv libaio_0.3.112.orig.tar.xz libaio-0.3.112.tar.xz
+(lfs chroot) root:/sources# l
+total 160M
+-rw-r--r--  1 root root 725K Oct  1 20:19 057.zip
+-rw-r--r--  1 root root 2.2M Jul 30  2021 btrfs-progs-v5.13.1.tar.xz
+-rw-r--r--  1 root root 2.9K Oct 26  2006 ChangeLog
+-rw-r--r--  1 root root 1.3M Nov  6  2019 cpio-2.13.tar.bz2
+-rw-r--r--  1 root root  97K Oct  2 00:16 docbook-xml-4.5.zip
+-rw-r--r--  1 root root 1.8K Aug 31 17:51 docbook-xsl-nons-1.79.2-stack_fix-1.patch
+-rw-r--r--  1 root root  23M Dec  7  2021 docbook-xsl-nons-1.79.2.tar.bz2
+-rw-r--r--  1 root root 314K Dec  7  2021 dosfstools-4.2.tar.gz
+-rw-r--r--  1 root root 471K Jun 24 13:10 dracut-057.tar.gz
+-rw-r--r--  1 root root 313K Jan 18  2022 ethtool-5.16.tar.xz
+-rw-r--r--  1 root root 2.7M Dec  8  2021 fuse-3.10.4.tar.xz
+-rw-r--r--  1 root root 527K Mar  4  2011 jfsutils-1.1.15.tar.gz
+-rw-r--r--  1 root root  38K Feb 24  2019 libaio-0.3.112.tar.xz
+-rw-r--r--  1 root root 1.7M Nov  9  2021 libtasn1-4.18.0.tar.gz
+-rw-r--r--  1 root root 2.6M Aug 29 11:56 libxml2-2.10.2.tar.xz
+-rw-r--r--  1 root root 1.6M Aug 17 10:42 libxslt-1.1.36.tar.xz
+drwxrwxr-x 24 root root 4.0K Sep 30 19:36 linux-5.13.12
+-rw-r--r--  1 root root 114M Sep 30 15:05 linux-5.13.12.tar.xz
+-rw-r--r--  1 root root 2.5M Aug 11  2021 LVM2.2.03.13.tgz
+-rw-r--r--  1 root root  31K Jan 10  2022 make-ca-1.10.tar.xz
+-rw-r--r--  1 root root 431K Oct 26  2018 mdadm-4.1.tar.xz
+-rw-r--r--  1 root root 1.4M Jun 15  2021 nano-5.8.tar.xz
+-rw-r--r--  1 root root 1.3M Aug 22  2021 ntfs-3g_ntfsprogs-2021.8.22.tgz
+-rw-r--r--  1 root root 819K Jan 17  2022 p11-kit-0.24.1.tar.xz
+-rw-r--r--  1 root root  601 Aug 31 17:51 sgml-common-0.6.3-manpage-1.patch
+-rw-r--r--  1 root root  75K May 25  2001 sgml-common-0.6.3.tgz
+-rw-r--r--  1 root root 969K Dec 30  2020 smartmontools-7.2.tar.gz
+-rw-r--r--  1 root root 597K Mar  1  2022 unzip-6.0-consolidated_fixes-1.patch
+-rw-r--r--  1 root root 1.4M Apr 30  2009 unzip60.tar.gz
+(lfs chroot) root:/sources# begin libaio-0.3.112 tar.xz
+[lfs-scripts] Starting build of libaio-0.3.112 at Sun Oct  2 12:49:36 AM -03 2022
+(lfs chroot) root:/sources/libaio-0.3.112# sed -i '/install.*libaio.a/s/^/#/' src/Makefile
+(lfs chroot) root:/sources/libaio-0.3.112# make
+make[1]: Entering directory '/sources/libaio-0.3.112/src'
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_queue_init.ol io_queue_init.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_queue_release.ol io_queue_release.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_queue_wait.ol io_queue_wait.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_queue_run.ol io_queue_run.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_getevents.ol io_getevents.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_submit.ol io_submit.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_cancel.ol io_cancel.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_setup.ol io_setup.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_destroy.ol io_destroy.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_pgetevents.ol io_pgetevents.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o raw_syscall.ol raw_syscall.c
+cc -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o compat-0_1.ol compat-0_1.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_queue_init.os io_queue_init.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_queue_release.os io_queue_release.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_queue_wait.os io_queue_wait.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_queue_run.os io_queue_run.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_getevents.os io_getevents.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_submit.os io_submit.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_cancel.os io_cancel.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_setup.os io_setup.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_destroy.os io_destroy.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o io_pgetevents.os io_pgetevents.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o raw_syscall.os raw_syscall.c
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -c -o compat-0_1.os compat-0_1.c
+rm -f libaio.a
+ar r libaio.a io_queue_init.ol io_queue_release.ol io_queue_wait.ol io_queue_run.ol io_getevents.ol io_submit.ol io_cancel.ol io_setup.ol io_destroy.ol io_pgetevents.ol raw_syscall.ol compat-0_1.ol
+/usr/bin/ar: creating libaio.a
+ranlib libaio.a
+cc -shared -g -fomit-frame-pointer -O2 -nostdlib -nostartfiles -Wall -I. -fPIC -Wl,--version-script=libaio.map -Wl,-soname=libaio.so.1 -o libaio.so.1.0.1 io_queue_init.os io_queue_release.os io_queue_wait.os io_queue_run.os io_getevents.os io_submit.os io_cancel.os io_setup.os io_destroy.os io_pgetevents.os raw_syscall.os compat-0_1.os 
+make[1]: Leaving directory '/sources/libaio-0.3.112/src'
+(lfs chroot) root:/sources/libaio-0.3.112# sed 's/-Werror//' -i harness/Makefile
+
+make install
+make[1]: Entering directory '/sources/libaio-0.3.112/src'
+install -D -m 644 libaio.h /usr/include/libaio.h
+install -D -m 755 libaio.so.1.0.1 /usr/lib/libaio.so.1.0.1
+ln -sf libaio.so.1.0.1 /usr/lib/libaio.so.1
+ln -sf libaio.so.1.0.1 /usr/lib/libaio.so
+make[1]: Leaving directory '/sources/libaio-0.3.112/src'
+(lfs chroot) root:/sources/libaio-0.3.112# finish 
+[lfs-scripts] Finishing build of libaio-0.3.112 at Sun Oct  2 12:50:45 AM -03 2022
+(lfs chroot) root:/sources# 

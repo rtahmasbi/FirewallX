@@ -1,0 +1,197 @@
+(lfs chroot) root:/sources# # 8.24. Libcap-2.53
+begin libcap-2.53 tar.xz
+sed -i '/install -m.*STA/d' libcap/Makefile
+make prefix=/usr lib=lib
+make prefix=/usr lib=lib install
+chmod -v 755 /usr/lib/lib{cap,psx}.so.2.53
+finish
+[lfs-scripts] Starting build of libcap-2.53 at Mon Sep 12 23:39:11 -03 2022
+/usr/bin/make -C libcap all
+make[1]: Entering directory '/sources/libcap-2.53/libcap'
+sed -e 's,@prefix@,/usr,' \
+	-e 's,@exec_prefix@,/usr,' \
+	-e 's,@libdir@,/usr/lib,' \
+	-e 's,@includedir@,/usr/include,' \
+	-e 's,@VERSION@,2.53,' \
+	-e 's,@deps@,,' \
+	libcap.pc.in >libcap.pc
+=> making cap_names.list.h from /sources/libcap-2.53/libcap/../libcap/include/uapi/linux/capability.h
+perl -e 'while ($l=<>) { if ($l =~ /^\#define[ \t](CAP[_A-Z]+)[ \t]+([0-9]+)\s+$/) { $tok=$1; $val=$2; $tok =~ tr/A-Z/a-z/; print "{\"$tok\",$val},\n"; } }' /sources/libcap-2.53/libcap/../libcap/include/uapi/linux/capability.h | fgrep -v 0x > cap_names.list.h
+/usr/bin/make libpsx.pc
+make[2]: Entering directory '/sources/libcap-2.53/libcap'
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include _makenames.c -o _makenames
+sed -e 's,@prefix@,/usr,' \
+	-e 's,@exec_prefix@,/usr,' \
+	-e 's,@libdir@,/usr/lib,' \
+	-e 's,@includedir@,/usr/include,' \
+	-e 's,@VERSION@,2.53,' \
+	-e 's,@deps@,,' \
+	libpsx.pc.in >libpsx.pc
+make[2]: Leaving directory '/sources/libcap-2.53/libcap'
+./_makenames > cap_names.h
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -c cap_alloc.c -o cap_alloc.o
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -c cap_proc.c -o cap_proc.o
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -c cap_extint.c -o cap_extint.o
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -c cap_flag.c -o cap_flag.o
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include  -c cap_text.c -o cap_text.o
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -c cap_file.c -o cap_file.o
+ar rcs libcap.a cap_alloc.o cap_proc.o cap_extint.o cap_flag.o cap_text.o cap_file.o
+ranlib libcap.a
+/usr/bin/make libcap.so
+make[2]: Entering directory '/sources/libcap-2.53/libcap'
+gcc -o empty empty.c
+objcopy --dump-section .interp=loader.txt empty
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -DLIBRARY_VERSION=\"libcap-2.53\" -DSHARED_LOADER=\"/lib/ld-linux-aarch64.so.1\" -c execable.c -o cap_magic.o
+gcc -Wl,-x -shared -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g   -Wl,-soname,libcap.so.2 -o libcap.so.2.53 cap_alloc.o cap_proc.o cap_extint.o cap_flag.o cap_text.o cap_file.o cap_magic.o -Wl,-e,__so_start
+ln -sf libcap.so.2.53 libcap.so.2
+ln -sf libcap.so.2 libcap.so
+make[2]: Leaving directory '/sources/libcap-2.53/libcap'
+/usr/bin/make libpsx.a
+make[2]: Entering directory '/sources/libcap-2.53/libcap'
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -c ../psx/psx.c -o ../psx/psx.o
+rm -f include/sys/psx_syscall.h
+ln -s ../../../psx/psx_syscall.h include/sys/psx_syscall.h
+ar rcs libpsx.a ../psx/psx.o
+ranlib libpsx.a
+make[2]: Leaving directory '/sources/libcap-2.53/libcap'
+/usr/bin/make libpsx.so
+make[2]: Entering directory '/sources/libcap-2.53/libcap'
+objcopy --dump-section .interp=loader.txt empty
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -DLIBRARY_VERSION=\"libpsx-2.53\" -DSHARED_LOADER=\"/lib/ld-linux-aarch64.so.1\" -c execable.c -o psx_magic.o
+gcc -Wl,-x -shared -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g   -Wl,-soname,libpsx.so.2 -o libpsx.so.2.53 ../psx/psx.o psx_magic.o -Wl,-e,__so_start -lpthread -Wl,-wrap,pthread_create
+ln -sf libpsx.so.2.53 libpsx.so.2
+ln -sf libpsx.so.2 libpsx.so
+make[2]: Leaving directory '/sources/libcap-2.53/libcap'
+make[1]: Leaving directory '/sources/libcap-2.53/libcap'
+/usr/bin/make -C tests all
+make[1]: Entering directory '/sources/libcap-2.53/tests'
+/usr/bin/make libcap_launch_test uns_test
+make[2]: Entering directory '/sources/libcap-2.53/tests'
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include libcap_launch_test.c -o libcap_launch_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lcap 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include uns_test.c -o uns_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lcap 
+make[2]: Leaving directory '/sources/libcap-2.53/tests'
+/usr/bin/make psx_test libcap_psx_test libcap_psx_launch_test
+make[2]: Entering directory '/sources/libcap-2.53/tests'
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include psx_test.c -o psx_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lpsx -lpthread -Wl,-wrap,pthread_create 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include libcap_psx_test.c -o libcap_psx_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lcap -L/sources/libcap-2.53/tests/../libcap -lpsx -lpthread -Wl,-wrap,pthread_create 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include -DWITH_PTHREADS libcap_launch_test.c -o libcap_psx_launch_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lcap -L/sources/libcap-2.53/tests/../libcap -lpsx -lpthread -Wl,-wrap,pthread_create 
+make[2]: Leaving directory '/sources/libcap-2.53/tests'
+make[1]: Leaving directory '/sources/libcap-2.53/tests'
+/usr/bin/make -C progs all
+make[1]: Entering directory '/sources/libcap-2.53/progs'
+gcc -fPIC -I/sources/libcap-2.53/progs/../libcap/include/uapi -I/sources/libcap-2.53/progs/../libcap/include -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -c getpcaps.c -o getpcaps.o
+gcc -fPIC -I/sources/libcap-2.53/progs/../libcap/include/uapi -I/sources/libcap-2.53/progs/../libcap/include -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -c getcap.c -o getcap.o
+gcc -fPIC -I/sources/libcap-2.53/progs/../libcap/include/uapi -I/sources/libcap-2.53/progs/../libcap/include -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -c setcap.c -o setcap.o
+./mkcapshdoc.sh > capshdoc.h.cf
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -o getpcaps getpcaps.o -L/sources/libcap-2.53/progs/../libcap -lcap 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -o getcap getcap.o -L/sources/libcap-2.53/progs/../libcap -lcap 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -o setcap setcap.o -L/sources/libcap-2.53/progs/../libcap -lcap 
+diff -u capshdoc.h capshdoc.h.cf || (rm capshdoc.h.cf ; exit 1)
+gcc -fPIC -I/sources/libcap-2.53/progs/../libcap/include/uapi -I/sources/libcap-2.53/progs/../libcap/include  -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -o capsh capsh.c -L/sources/libcap-2.53/progs/../libcap -lcap 
+make[1]: Leaving directory '/sources/libcap-2.53/progs'
+/usr/bin/make -C doc all
+make[1]: Entering directory '/sources/libcap-2.53/doc'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/sources/libcap-2.53/doc'
+/usr/bin/make -C kdebug all
+make[1]: Entering directory '/sources/libcap-2.53/kdebug'
+cd to kdebug to test a kernel build
+make[1]: Leaving directory '/sources/libcap-2.53/kdebug'
+/usr/bin/make -C libcap install
+make[1]: Entering directory '/sources/libcap-2.53/libcap'
+mkdir -p -m 0755 /usr/include/sys
+mkdir -p -m 0755 /usr/lib/pkgconfig
+mkdir -p -m 0755 /usr/lib
+install -m 0644 include/sys/capability.h /usr/include/sys
+install -m 0644 libcap.pc /usr/lib/pkgconfig/libcap.pc
+/usr/bin/make install-static-psx
+make[2]: Entering directory '/sources/libcap-2.53/libcap'
+mkdir -p -m 0755 /usr/include/sys
+mkdir -p -m 0755 /usr/lib/pkgconfig
+mkdir -p -m 0755 /usr/lib
+install -m 0644 include/sys/psx_syscall.h /usr/include/sys
+install -m 0644 libpsx.pc /usr/lib/pkgconfig/libpsx.pc
+make[2]: Leaving directory '/sources/libcap-2.53/libcap'
+/usr/bin/make install-shared
+make[2]: Entering directory '/sources/libcap-2.53/libcap'
+mkdir -p -m 0755 /usr/include/sys
+objcopy --dump-section .interp=loader.txt empty
+mkdir -p -m 0755 /usr/lib/pkgconfig
+mkdir -p -m 0755 /usr/lib
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -DLIBRARY_VERSION=\"libcap-2.53\" -DSHARED_LOADER=\"/lib/ld-linux-aarch64.so.1\" -c execable.c -o cap_magic.o
+install -m 0644 include/sys/capability.h /usr/include/sys
+gcc -Wl,-x -shared -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g   -Wl,-soname,libcap.so.2 -o libcap.so.2.53 cap_alloc.o cap_proc.o cap_extint.o cap_flag.o cap_text.o cap_file.o cap_magic.o -Wl,-e,__so_start
+install -m 0644 libcap.pc /usr/lib/pkgconfig/libcap.pc
+ln -sf libcap.so.2.53 libcap.so.2
+ln -sf libcap.so.2 libcap.so
+install -m 0644 libcap.so.2.53 /usr/lib/libcap.so.2.53
+ln -sf libcap.so.2.53 /usr/lib/libcap.so.2
+ln -sf libcap.so.2 /usr/lib/libcap.so
+/sbin/ldconfig
+/usr/bin/make install-shared-psx
+make[3]: Entering directory '/sources/libcap-2.53/libcap'
+mkdir -p -m 0755 /usr/include/sys
+objcopy --dump-section .interp=loader.txt empty
+mkdir -p -m 0755 /usr/lib/pkgconfig
+mkdir -p -m 0755 /usr/lib
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/libcap/../libcap/include/uapi -I/sources/libcap-2.53/libcap/../libcap/include -DLIBRARY_VERSION=\"libpsx-2.53\" -DSHARED_LOADER=\"/lib/ld-linux-aarch64.so.1\" -c execable.c -o psx_magic.o
+install -m 0644 include/sys/psx_syscall.h /usr/include/sys
+gcc -Wl,-x -shared -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g   -Wl,-soname,libpsx.so.2 -o libpsx.so.2.53 ../psx/psx.o psx_magic.o -Wl,-e,__so_start -lpthread -Wl,-wrap,pthread_create
+install -m 0644 libpsx.pc /usr/lib/pkgconfig/libpsx.pc
+ln -sf libpsx.so.2.53 libpsx.so.2
+ln -sf libpsx.so.2 libpsx.so
+install -m 0644 libpsx.so.2.53 /usr/lib/libpsx.so.2.53
+ln -sf libpsx.so.2.53 /usr/lib/libpsx.so.2
+ln -sf libpsx.so.2 /usr/lib/libpsx.so
+/sbin/ldconfig
+make[3]: Leaving directory '/sources/libcap-2.53/libcap'
+make[2]: Leaving directory '/sources/libcap-2.53/libcap'
+make[1]: Leaving directory '/sources/libcap-2.53/libcap'
+/usr/bin/make -C tests install
+make[1]: Entering directory '/sources/libcap-2.53/tests'
+/usr/bin/make libcap_launch_test uns_test
+make[2]: Entering directory '/sources/libcap-2.53/tests'
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include libcap_launch_test.c -o libcap_launch_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lcap 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include uns_test.c -o uns_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lcap 
+make[2]: Leaving directory '/sources/libcap-2.53/tests'
+/usr/bin/make psx_test libcap_psx_test libcap_psx_launch_test
+make[2]: Entering directory '/sources/libcap-2.53/tests'
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include psx_test.c -o psx_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lpsx -lpthread -Wl,-wrap,pthread_create 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include libcap_psx_test.c -o libcap_psx_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lcap -L/sources/libcap-2.53/tests/../libcap -lpsx -lpthread -Wl,-wrap,pthread_create 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -fPIC -I/sources/libcap-2.53/tests/../libcap/include/uapi -I/sources/libcap-2.53/tests/../libcap/include -DWITH_PTHREADS libcap_launch_test.c -o libcap_psx_launch_test -Wl,-rpath,../libcap -L/sources/libcap-2.53/tests/../libcap -lcap -L/sources/libcap-2.53/tests/../libcap -lpsx -lpthread -Wl,-wrap,pthread_create 
+make[2]: Leaving directory '/sources/libcap-2.53/tests'
+make[1]: Leaving directory '/sources/libcap-2.53/tests'
+/usr/bin/make -C progs install
+make[1]: Entering directory '/sources/libcap-2.53/progs'
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -o getpcaps getpcaps.o -L/sources/libcap-2.53/progs/../libcap -lcap 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -o getcap getcap.o -L/sources/libcap-2.53/progs/../libcap -lcap 
+gcc -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -o setcap setcap.o -L/sources/libcap-2.53/progs/../libcap -lcap 
+gcc -fPIC -I/sources/libcap-2.53/progs/../libcap/include/uapi -I/sources/libcap-2.53/progs/../libcap/include  -O2 -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -g  -o capsh capsh.c -L/sources/libcap-2.53/progs/../libcap -lcap 
+mkdir -p -m 0755 /usr/sbin
+for p in getpcaps getcap setcap capsh ; do \
+	install -m 0755 $p /usr/sbin ; \
+done
+make[1]: Leaving directory '/sources/libcap-2.53/progs'
+/usr/bin/make -C doc install
+make[1]: Entering directory '/sources/libcap-2.53/doc'
+mkdir -p -m 755 /usr/share/man/man1 /usr/share/man/man3 /usr/share/man/man8
+for man in \
+	/usr/share/man/man1 capsh.1 \
+	/usr/share/man/man3 cap_init.3 cap_free.3 cap_dup.3 cap_clear.3 cap_clear_flag.3 cap_get_flag.3 cap_set_flag.3 cap_compare.3 cap_get_proc.3 cap_get_pid.3 cap_set_proc.3 cap_get_file.3 cap_get_fd.3 cap_set_file.3 cap_set_fd.3 cap_copy_ext.3 cap_size.3 cap_copy_int.3 cap_mode.3 cap_from_text.3 cap_to_text.3 cap_from_name.3 cap_to_name.3 capsetp.3 capgetp.3 libcap.3 cap_get_bound.3 cap_drop_bound.3 cap_get_mode.3 cap_set_mode.3 cap_mode_name.3 cap_get_secbits.3 cap_set_secbits.3 cap_setuid.3 cap_setgroups.3 cap_launch.3 cap_func_launcher.3 cap_launcher_callback.3 cap_launcher_set_chroot.3 cap_launcher_set_mode.3 cap_launcher_setgroups.3 cap_launcher_setuid.3 cap_launcher_set_iab.3 cap_new_launcher.3 cap_iab.3 cap_iab_init.3 cap_iab_get_proc.3 cap_iab_set_proc.3 cap_iab_to_text.3 cap_iab_from_text.3 cap_iab_get_vector.3 cap_iab_set_vector.3 cap_iab_fill.3 psx_syscall.3 psx_syscall3.3 psx_syscall6.3 libpsx.3 \
+	/usr/share/man/man8 getcap.8 setcap.8 getpcaps.8 \
+	; \
+do \
+	case $man in \
+	/*)	sub=$man ; continue ;; \
+	esac; \
+	install -m 644 $man $sub ; \
+done
+make[1]: Leaving directory '/sources/libcap-2.53/doc'
+/usr/bin/make -C kdebug install
+make[1]: Entering directory '/sources/libcap-2.53/kdebug'
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/sources/libcap-2.53/kdebug'
+mode of '/usr/lib/libcap.so.2.53' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+mode of '/usr/lib/libpsx.so.2.53' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+[lfs-scripts] Finishing build of libcap-2.53 at Mon Sep 12 23:39:50 -03 2022
+(lfs chroot) root:/sources# 

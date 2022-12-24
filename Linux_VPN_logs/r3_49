@@ -1,0 +1,52 @@
+(lfs chroot) root:/sources# # 8.51. Ninja-1.10.2
+begin ninja-1.10.2 tar.gz
+sed -i '/int Guess/a \
+  int   j = 0;\
+  char* jobs = getenv( "NINJAJOBS" );\
+  if ( jobs != NULL ) j = atoi( jobs );\
+  if ( j > 0 ) return j;\
+' src/ninja.cc
+python3 configure.py --bootstrap
+install -vm755 ninja /usr/bin/
+install -vDm644 misc/bash-completion /usr/share/bash-completion/completions/ninja
+install -vDm644 misc/zsh-completion  /usr/share/zsh/site-functions/_ninja
+finish
+[lfs-scripts] Starting build of ninja-1.10.2 at Tue Sep 13 19:06:48 -03 2022
+bootstrapping ninja...
+warning: A compatible version of re2c (>= 0.11.3) was not found; changes to src/*.in.cc will not affect your build.
+wrote build.ninja.
+bootstrap complete.  rebuilding...
+[29/29] LINK ninja
+'ninja' -> '/usr/bin/ninja'
+'misc/bash-completion' -> '/usr/share/bash-completion/completions/ninja'
+/usr/bin/install: creating directory '/usr/share/zsh'
+/usr/bin/install: creating directory '/usr/share/zsh/site-functions'
+'misc/zsh-completion' -> '/usr/share/zsh/site-functions/_ninja'
+[lfs-scripts] Finishing build of ninja-1.10.2 at Tue Sep 13 19:09:57 -03 2022
+(lfs chroot) root:/sources# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

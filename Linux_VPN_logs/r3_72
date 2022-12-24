@@ -1,0 +1,150 @@
+(lfs chroot) root:/sources# # 8.74. Sysklogd-1.5.1
+begin sysklogd-1.5.1 tar.gz
+sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c
+sed -i 's/union wait/int/' syslogd.c
+make
+make BINDIR=/sbin install
+cat > /etc/syslog.conf << "EOF"
+# Begin /etc/syslog.conf
+auth,authpriv.* -/var/log/auth.log
+*.*;auth,authpriv.none -/var/log/sys.log
+daemon.* -/var/log/daemon.log
+kern.* -/var/log/kern.log
+mail.* -/var/log/mail.log
+user.* -/var/log/user.log
+*.emerg *
+# End /etc/syslog.conf
+EOF
+finish
+
+
+# Approximate build time: less than 0.1 SBU
+[lfs-scripts] Starting build of sysklogd-1.5.1 at Wed Sep 14 02:18:47 -03 2022
+gcc  -O3 -DSYSV -fomit-frame-pointer -Wall -fno-strength-reduce -DSYSLOG_INET -DSYSLOG_UNIXAF -DNO_SCCS -DFSSTND -DSYSLOGD_PIDNAME=\"syslogd.pid\"  -c syslogd.c
+gcc    -c -o pidfile.o pidfile.c
+gcc  -O3 -DSYSV -fomit-frame-pointer -Wall -fno-strength-reduce -DFSSTND   -c klogd.c
+gcc  -O3 -DSYSV -fomit-frame-pointer -Wall -fno-strength-reduce -DALLOW_KERNEL_LOGGING -c syslog.c
+gcc  -O3 -DSYSV -fomit-frame-pointer -Wall -fno-strength-reduce -DFSSTND  -c ksym.c
+gcc  -O3 -DSYSV -fomit-frame-pointer -Wall -fno-strength-reduce -DFSSTND  -c ksym_mod.c
+ksym.c: In function 'ExpandKadds':
+ksym.c:769:25: warning: variable 'dlm' set but not used [-Wunused-but-set-variable]
+  769 |         auto char       dlm,
+      |                         ^~~
+syslog.c:96:9: warning: 'format' attribute cannot be applied to a function that does not take variable arguments [-Wattributes]
+   96 |         int pri;
+      |         ^~~
+syslogd.c: In function 'fprintlog':
+syslogd.c:2227:61: warning: '%s' directive output may be truncated writing up to 199 bytes into a region of size 91 [-Wformat-truncation=]
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                                                             ^~
+syslogd.c:2227:24: note: 'snprintf' output 12 or more bytes (assuming 211) into a destination of size 100
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c:2225:61: warning: '%s' directive output may be truncated writing up to 199 bytes into a region of size 91 [-Wformat-truncation=]
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                                                             ^~
+syslogd.c:2225:24: note: 'snprintf' output between 10 and 209 bytes into a destination of size 100
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c:2227:61: warning: '%s' directive output may be truncated writing up to 199 bytes into a region of size 91 [-Wformat-truncation=]
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                                                             ^~
+syslogd.c:2227:24: note: 'snprintf' output 12 or more bytes (assuming 211) into a destination of size 100
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c:2225:61: warning: '%s' directive output may be truncated writing up to 199 bytes into a region of size 91 [-Wformat-truncation=]
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                                                             ^~
+syslogd.c:2225:24: note: 'snprintf' output between 10 and 209 bytes into a destination of size 100
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -s -o klogd klogd.o syslog.o pidfile.o ksym.o \
+	ksym_mod.o 
+syslogd.c: In function 'logmsg':
+syslogd.c:1731:32: warning: 'strncpy' specified bound 65 equals destination size [-Wstringop-truncation]
+ 1731 |                         (void) strncpy(f->f_prevhost, from,
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1732 |                                         sizeof(f->f_prevhost));
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c: In function 'cfline':
+syslogd.c:2664:102: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size 177 [-Wformat-truncation=]
+ 2664 |                                         (void) snprintf(xbuf, sizeof(xbuf), "unknown facility name \"%s\"", buf);
+      |                                                                                                      ^~     ~~~
+syslogd.c:2664:48: note: 'snprintf' output between 25 and 1048 bytes into a destination of size 200
+ 2664 |                                         (void) snprintf(xbuf, sizeof(xbuf), "unknown facility name \"%s\"", buf);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c:2227:61: warning: '%s' directive output may be truncated writing up to 199 bytes into a region of size 91 [-Wformat-truncation=]
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                                                             ^~
+......
+ 2665 |                                         logerror(xbuf);
+      |                                                  ~~~~        
+syslogd.c:2227:24: note: 'snprintf' output 12 or more bytes (assuming 211) into a destination of size 100
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c:2225:61: warning: '%s' directive output may be truncated writing up to 199 bytes into a region of size 91 [-Wformat-truncation=]
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                                                             ^~
+......
+ 2665 |                                         logerror(xbuf);
+      |                                                  ~~~~        
+syslogd.c:2225:24: note: 'snprintf' output between 10 and 209 bytes into a destination of size 100
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c:2617:86: warning: '%s' directive output may be truncated writing up to 1023 bytes into a region of size 177 [-Wformat-truncation=]
+ 2617 |                         (void) snprintf(xbuf, sizeof(xbuf), "unknown priority name \"%s\"", buf);
+      |                                                                                      ^~     ~~~
+syslogd.c:2617:32: note: 'snprintf' output between 25 and 1048 bytes into a destination of size 200
+ 2617 |                         (void) snprintf(xbuf, sizeof(xbuf), "unknown priority name \"%s\"", buf);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c:2227:61: warning: '%s' directive output may be truncated writing up to 199 bytes into a region of size 91 [-Wformat-truncation=]
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                                                             ^~
+......
+ 2618 |                         logerror(xbuf);
+      |                                  ~~~~                        
+syslogd.c:2227:24: note: 'snprintf' output 12 or more bytes (assuming 211) into a destination of size 100
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c:2225:61: warning: '%s' directive output may be truncated writing up to 199 bytes into a region of size 91 [-Wformat-truncation=]
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                                                             ^~
+......
+ 2618 |                         logerror(xbuf);
+      |                                  ~~~~                        
+syslogd.c:2225:24: note: 'snprintf' output between 10 and 209 bytes into a destination of size 100
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function 'create_unix_socket',
+    inlined from 'init' at syslogd.c:2452:19:
+syslogd.c:1262:16: warning: 'strncpy' specified bound 108 equals destination size [-Wstringop-truncation]
+ 1262 |         (void) strncpy(sunx.sun_path, path, sizeof(sunx.sun_path));
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c: In function 'init':
+syslogd.c:2227:61: warning: '%s' directive output may be truncated writing up to 1024 bytes into a region of size 91 [-Wformat-truncation=]
+ 1268 |                 logerror(line);
+      |                          ~~~~                                
+......
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                                                             ^~
+syslogd.c:2227:24: note: 'snprintf' output 12 or more bytes (assuming 1036) into a destination of size 100
+ 2227 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s: %s", type, strerror(errno));
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syslogd.c:2225:61: warning: '%s' directive output may be truncated writing up to 1024 bytes into a region of size 91 [-Wformat-truncation=]
+ 1268 |                 logerror(line);
+      |                          ~~~~                                
+......
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                                                             ^~
+syslogd.c:2225:24: note: 'snprintf' output between 10 and 1034 bytes into a destination of size 100
+ 2225 |                 (void) snprintf(buf, sizeof(buf), "syslogd: %s", type);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -s -o syslogd syslogd.o pidfile.o 
+/usr/bin/install -o root -g root -m 644 sysklogd.8 /usr/share/man/man8/sysklogd.8
+/usr/bin/install -m 500 -s syslogd /sbin/syslogd
+/usr/bin/install -o root -g root -m 644 syslogd.8 /usr/share/man/man8/syslogd.8
+/usr/bin/install -o root -g root -m 644 syslog.conf.5 /usr/share/man/man5/syslog.conf.5
+/usr/bin/install -m 500 -s klogd /sbin/klogd
+/usr/bin/install -o root -g root -m 644 klogd.8 /usr/share/man/man8/klogd.8
+[lfs-scripts] Finishing build of sysklogd-1.5.1 at Wed Sep 14 02:18:53 -03 2022
+(lfs chroot) root:/sources# 

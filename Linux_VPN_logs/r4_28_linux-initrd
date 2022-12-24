@@ -1,0 +1,174 @@
+(lfs chroot) root:/# dracut --force --kver 5.13.12 --kernel-only --strip /boot/initramfs-5.13.12.img
+dracut: Executing: /usr/bin/dracut --force --kver 5.13.12 --kernel-only --strip /boot/initramfs-5.13.12.img
+dracut: dracut module 'dash' will not be installed, because command 'dash' could not be found!
+dracut: dracut module 'mksh' will not be installed, because command 'mksh' could not be found!
+dracut: dracut module 'systemd' will not be installed, because command '/systemd' could not be found!
+dracut: dracut module 'systemd-ask-password' will not be installed, because command 'systemd-ask-password' could not be found!
+dracut: dracut module 'systemd-ask-password' will not be installed, because command 'systemd-tty-ask-password-agent' could not be found!
+dracut: dracut module 'systemd-coredump' will not be installed, because command 'coredumpctl' could not be found!
+dracut: dracut module 'systemd-coredump' will not be installed, because command '/systemd-coredump' could not be found!
+dracut: dracut module 'systemd-hostnamed' will not be installed, because command 'hostnamectl' could not be found!
+dracut: dracut module 'systemd-hostnamed' will not be installed, because command '/systemd-hostnamed' could not be found!
+dracut: dracut module 'systemd' will not be installed, because command '/systemd' could not be found!
+dracut: dracut module 'systemd-initrd' depends on 'systemd', which can't be installed
+dracut: dracut module 'systemd-integritysetup' will not be installed, because command '/systemd-integritysetup' could not be found!
+dracut: dracut module 'systemd-integritysetup' will not be installed, because command '/system-generators/systemd-integritysetup-generator' could not be found!
+dracut: dracut module 'systemd-journald' will not be installed, because command 'journalctl' could not be found!
+dracut: dracut module 'systemd-journald' will not be installed, because command '/systemd-journald' could not be found!
+dracut: dracut module 'systemd-modules-load' will not be installed, because command '/systemd-modules-load' could not be found!
+dracut: dracut module 'systemd-networkd' will not be installed, because command 'networkctl' could not be found!
+dracut: dracut module 'systemd-networkd' will not be installed, because command '/systemd-networkd' could not be found!
+dracut: dracut module 'systemd-networkd' will not be installed, because command '/systemd-network-generator' could not be found!
+dracut: dracut module 'systemd-networkd' will not be installed, because command '/systemd-networkd-wait-online' could not be found!
+dracut: dracut module 'systemd-repart' will not be installed, because command 'systemd-repart' could not be found!
+dracut: dracut module 'systemd-resolved' will not be installed, because command 'resolvectl' could not be found!
+dracut: dracut module 'systemd-resolved' will not be installed, because command '/systemd-resolved' could not be found!
+dracut: dracut module 'systemd-rfkill' will not be installed, because command '/systemd-rfkill' could not be found!
+dracut: dracut module 'systemd-sysctl' will not be installed, because command '/systemd-sysctl' could not be found!
+dracut: dracut module 'systemd-sysext' will not be installed, because command 'systemd-sysext' could not be found!
+dracut: dracut module 'systemd-sysusers' will not be installed, because command 'systemd-sysusers' could not be found!
+dracut: dracut module 'systemd-timedated' will not be installed, because command 'timedatectl' could not be found!
+dracut: dracut module 'systemd-timedated' will not be installed, because command '/systemd-timedated' could not be found!
+dracut: dracut module 'systemd-timesyncd' will not be installed, because command '/systemd-timesyncd' could not be found!
+dracut: dracut module 'systemd-timesyncd' will not be installed, because command '/systemd-time-wait-sync' could not be found!
+dracut: dracut module 'systemd-tmpfiles' will not be installed, because command 'systemd-tmpfiles' could not be found!
+dracut: dracut module 'systemd-udevd' will not be installed, because command '/systemd-udevd' could not be found!
+dracut: dracut module 'systemd-veritysetup' will not be installed, because command '/systemd-veritysetup' could not be found!
+dracut: dracut module 'systemd-veritysetup' will not be installed, because command '/system-generators/systemd-veritysetup-generator' could not be found!
+dracut: dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut: dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut: dracut module 'dbus-broker' will not be installed, because command 'busctl' could not be found!
+dracut: dracut module 'dbus-daemon' will not be installed, because command 'busctl' could not be found!
+dracut: dracut module 'rngd' will not be installed, because command 'rngd' could not be found!
+dracut: dracut module 'connman' will not be installed, because command 'connmand' could not be found!
+dracut: dracut module 'connman' will not be installed, because command 'connmanctl' could not be found!
+dracut: dracut module 'connman' will not be installed, because command 'connmand-wait-online' could not be found!
+dracut: dracut module 'network-legacy' will not be installed, because command 'dhclient' could not be found!
+dracut: dracut module 'network-wicked' will not be installed, because command 'wicked' could not be found!
+dracut: dracut module 'url-lib' will not be installed, because command 'curl' could not be found!
+dracut: 62bluetooth: Could not find any command of '/usr/lib/bluetooth/bluetoothd /usr/libexec/bluetooth/bluetoothd'!
+dracut: dracut module 'btrfs' will not be installed, because command 'btrfs' could not be found!
+dracut: 90crypt: Could not find any command of '/systemd-cryptsetup cryptsetup'!
+dracut: dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut: dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut: dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut: dracut module 'crypt-gpg' will not be installed, because command 'gpg' could not be found!
+dracut: dracut module 'pcsc' will not be installed, because command 'pcscd' could not be found!
+dracut: dracut module 'tpm2-tss' will not be installed, because command 'tpm2' could not be found!
+dracut: dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'dcbtool' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'fipvlan' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'lldpad' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'fcoemon' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'fcoeadm' could not be found!
+dracut: dracut module 'fcoe-uefi' will not be installed, because command 'dcbtool' could not be found!
+dracut: dracut module 'fcoe-uefi' will not be installed, because command 'fipvlan' could not be found!
+dracut: dracut module 'fcoe-uefi' will not be installed, because command 'lldpad' could not be found!
+dracut: dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+dracut: dracut module 'iscsi' will not be installed, because command 'iscsiadm' could not be found!
+dracut: dracut module 'iscsi' will not be installed, because command 'iscsid' could not be found!
+dracut: dracut module 'nbd' will not be installed, because command 'nbd-client' could not be found!
+dracut: 95nfs: Could not find any command of 'rpcbind portmap'!
+dracut: dracut module 'nvmf' will not be installed, because command 'nvme' could not be found!
+dracut: dracut module 'ssh-client' will not be installed, because command 'ssh' could not be found!
+dracut: dracut module 'ssh-client' will not be installed, because command 'scp' could not be found!
+dracut: dracut module 'biosdevname' will not be installed, because command 'biosdevname' could not be found!
+dracut: dracut module 'systemd-initrd' depends on 'systemd', which can't be installed
+dracut: dracut module 'dracut-systemd' depends on 'systemd-initrd', which can't be installed
+dracut: dracut module 'memstrack' will not be installed, because command 'memstrack' could not be found!
+dracut: memstrack is not available
+dracut: If you need to use rd.memdebug>=4, please install memstrack and procps-ng
+dracut: dracut module 'squash' will not be installed, because command 'mksquashfs' could not be found!
+dracut: dracut module 'squash' will not be installed, because command 'unsquashfs' could not be found!
+dracut: *** Including module: i18n ***
+dracut: *** Including module: dm ***
+dracut: *** Including module: kernel-modules ***
+dracut: *** Including module: kernel-modules-extra ***
+dracut: *** Including module: lvm ***
+dracut: *** Including module: mdraid ***
+dracut: *** Including module: nvdimm ***
+dracut: *** Including module: qemu ***
+dracut: *** Including module: qemu-net ***
+dracut: *** Including module: lunmask ***
+dracut: *** Including module: resume ***
+dracut: *** Including module: rootfs-block ***
+dracut: *** Including module: terminfo ***
+dracut: *** Including module: udev-rules ***
+dracut: *** Including module: virtiofs ***
+dracut: *** Including module: usrmount ***
+dracut: *** Including module: base ***
+dracut: *** Including module: fs-lib ***
+dracut: *** Including module: shutdown ***
+dracut: *** Including modules done ***
+dracut: *** Installing kernel module dependencies ***
+dracut: *** Installing kernel module dependencies done ***
+dracut: *** Hardlinking files ***
+dracut: Mode:           real
+dracut: Files:          559
+dracut: Linked:         0 files
+dracut: Compared:       0 xattrs
+dracut: Compared:       4 files
+dracut: Saved:          0 B
+dracut: Duration:       0.010350 seconds
+dracut: *** Hardlinking files done ***
+dracut: *** Store current command line parameters ***
+dracut: *** Stripping files ***
+dracut: *** Stripping files done ***
+dracut: *** Creating image file '/boot/initramfs-5.13.12.img' ***
+dracut: *** Creating initramfs image file '/boot/initramfs-5.13.12.img' done ***
+(lfs chroot) root:/# l /boot/initramfs-5.13.12.img
+-rwxr-xr-x 1 root root 5.9M Oct  4 00:57 /boot/initramfs-5.13.12.img
+(lfs chroot) root:/# cd /boot
+(lfs chroot) root:/boot# l
+total 59M
+-rwxr-xr-x 1 root root  49K Sep 30 21:11 bcm2711-rpi-4-b.dtb
+-rwxr-xr-x 1 root root   71 Sep 30 20:05 bcm2711-rpi-4-b.dts
+-rwxr-xr-x 1 root root 2.4K Jul  7 18:56 boot.cmd
+-rwxr-xr-x 1 root root  52K Nov 18  2021 bootcode.bin
+-rwxr-xr-x 1 root root   67 Jul  7 18:56 boot.mk
+-rwxr-xr-x 1 root root 2.5K Jul  7 18:56 boot.scr
+-rwxr-xr-x 1 root root 199K Oct  2 13:25 config-5.13.12
+-rwxr-xr-x 1 root root 1.9K Sep 30 21:06 config.txt
+drwxr-xr-x 3 root root 2.0K Oct  2 13:41 dtb-5.13.12
+drwxr-xr-x 3 root root  16K Dec 31  1969 efi
+-rwxr-xr-x 1 root root 3.2K Nov 18  2021 fixup4cd.dat
+-rwxr-xr-x 1 root root 5.3K Nov 18  2021 fixup4.dat
+-rwxr-xr-x 1 root root 8.3K Nov 18  2021 fixup4db.dat
+-rwxr-xr-x 1 root root 8.3K Nov 18  2021 fixup4x.dat
+-rwxr-xr-x 1 root root 3.2K Nov 18  2021 fixup_cd.dat
+-rwxr-xr-x 1 root root 7.2K Nov 18  2021 fixup.dat
+-rwxr-xr-x 1 root root  11K Nov 18  2021 fixup_db.dat
+-rwxr-xr-x 1 root root  11K Nov 18  2021 fixup_x.dat
+drwxr-xr-x 5 root root 2.0K Jul  7 19:15 grub
+-rwxr-xr-x 1 root root 5.9M Oct  4 00:57 initramfs-5.13.12.img
+-rwxr-xr-x 1 root root 783K Nov 18  2021 start4cd.elf
+-rwxr-xr-x 1 root root 3.6M Nov 18  2021 start4db.elf
+-rwxr-xr-x 1 root root 2.2M Nov 18  2021 start4.elf
+-rwxr-xr-x 1 root root 2.9M Nov 18  2021 start4x.elf
+-rwxr-xr-x 1 root root 783K Nov 18  2021 start_cd.elf
+-rwxr-xr-x 1 root root 4.6M Nov 18  2021 start_db.elf
+-rwxr-xr-x 1 root root 2.9M Nov 18  2021 start.elf
+-rwxr-xr-x 1 root root 3.6M Nov 18  2021 start_x.elf
+-rwxr-xr-x 1 root root 4.8M Oct  2 13:25 System.map-5.13.12
+-rwxr-xr-x 1 root root 128K Jul  7 18:56 uboot.env
+-rwxr-xr-x 1 root root 544K Jul  7 18:55 u-boot-rpi3.bin
+-rwxr-xr-x 1 root root 605K Oct  4 00:51 u-boot-rpi4.bin
+-rwxr-xr-x 1 root root  114 Jul  7 19:15 uEnv.txt
+-rwxr-xr-x 1 root root  25M Oct  2 13:25 vmlinuz-5.13.12
+(lfs chroot) root:/boot# l initramfs-5.13.12.img 
+-rwxr-xr-x 1 root root 5.9M Oct  4 00:57 initramfs-5.13.12.img
+(lfs chroot) root:/boot# l uInit-5.13.12
+/usr/bin/ls: cannot access 'uInit-5.13.12': No such file or directory
+(lfs chroot) root:/boot# mkimage -A arm64 -T ramdisk -C lzma -d initramfs-5.13.12.img uInit-5.13.12
+bash: mkimage: command not found
+(lfs chroot) root:/boot# which mkimage
+/usr/bin/which: no mkimage in (/usr/bin:/usr/sbin)
+(lfs chroot) root:/boot# 
+(lfs chroot) root:/boot# /u-boot/tools/mkimage -A arm64 -T ramdisk -C lzma -d initramfs-5.13.12.img uInit-5.13.12
+Image Name:   
+Created:      Tue Oct  4 01:00:10 2022
+Image Type:   AArch64 Linux RAMDisk Image (lzma compressed)
+Data Size:    6149747 Bytes = 6005.61 KiB = 5.86 MiB
+Load Address: 00000000
+Entry Point:  00000000
+(lfs chroot) root:/boot# 
