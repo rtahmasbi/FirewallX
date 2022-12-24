@@ -2,10 +2,16 @@
 I'd like to share my efforts for making a Next Generation Virtual Private Network here. This is an ongoing project and everything is from scratch.
 
 For this project, I did the following steps and will explain each one separately:
-1. Making hardware (aka assembling the hardware components)
-2. Making Linux from scratch as the VPN OS
-3. Configurations and settings
-4. Making the components
+1. [Making hardware](#hardware) (aka assembling the hardware components)
+2. [Making Linux from scratch as the VPN OS](#linux-os)
+3. [Configurations and settings](#configurations-and-settings)
+4. [Making the components](#components)
+
+
+
+
+
+
 
 
 # Hardware
@@ -36,6 +42,11 @@ YES. I used two hardwares:
 
 
 I like the Raspberry pi 4 hardware, it is powerful, cheap, small, low power consumption, light weight with the minimal hardware headache.
+
+
+
+
+
 
 
 
@@ -71,7 +82,7 @@ Before you start making a linux, you need to know the
 
 
 
-### List of packages to make the minimal Linux OS
+## List of packages to make the minimal Linux OS
 For making a minimal Linux distribution, you need to compile ~ 100 packages.
 Here is a list of the fundamental packages:
 
@@ -128,7 +139,7 @@ The log files are provided [here](Linux_VPN_logs/)
 (todo: complete the list of codes and logs)
 
 
-### booting
+## Booting
 One of the challenging part was to boot the hardware with my new Linux distribution. 
 
 Raspberry Pi has no BIOS! To boot the Raspberry Pi, I tried more than 350 times with different bootloaders:
@@ -138,6 +149,11 @@ EFI
 U-boot
 Dracut
 ```
+
+
+
+
+
 
 
 
@@ -153,6 +169,10 @@ If you have two Ethernet ports on a computer, with different networks on each, y
 We have two interfaces (`eth0` and `wlan0`) in the device (firewall), which one should be the default router?
 
 For example in the device, you `ping google.com`, how to tell it should it route through `wlan0` while keeping both ports as default?
+
+
+
+
 
 
 
@@ -235,6 +255,11 @@ $ curl -v -x http://192.168.0.1:3128 http://www.facebook.com/
 ## QoS
 ## UI
 ## ML
+
+
+
+
+
 
 
 # Can we make it as the Cloud VPN?
